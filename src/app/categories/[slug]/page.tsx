@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { categories, products } from "@/lib/catalog";
 import { ProductArt } from "@/components/storefront";
 import CatalogBrowser from "@/components/catalog-browser";
+import SalesGrowthPage from "@/components/sales-growth-page";
 export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.id }));
 }
@@ -23,6 +24,7 @@ export default async function CategoryPage({
   const { slug } = await params;
   const category = categories.find((c) => c.id === slug);
   if (!category) notFound();
+  if (slug === "sales") return <SalesGrowthPage />;
   return (
     <>
       <div className="browse-header page-width">
