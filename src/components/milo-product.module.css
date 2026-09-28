@@ -1,0 +1,45 @@
+.page { padding-top: 38px; padding-bottom: 85px; }
+.content { max-width: 1100px; margin: 0 auto; }
+.identity { margin: 36px 0 38px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+.identity h1 { font-size: clamp(44px, 6vw, 72px); letter-spacing: -2px; margin: 12px 0 15px; }
+.subtitle { font-size: clamp(17px, 2vw, 22px); color: var(--muted); }
+.message { max-width: 800px; margin-bottom: 30px; }
+.message h2 { font-size: clamp(32px, 4vw, 46px); letter-spacing: -1.3px; margin-bottom: 20px; }
+.description { color: var(--muted); font-size: 18px; }
+.reassurance { margin-top: 18px; font-weight: 600; font-size: 15px; }
+.demo { margin: 0; }
+.media { position: relative; aspect-ratio: 5 / 2; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--sage); }
+.poster, .video { width: 100%; height: 100%; object-fit: contain; }
+.video { position: absolute; inset: 0; }
+.demo figcaption { margin-top: 12px; font-size: 14px; color: var(--muted); }
+.deliverables { margin-top: 48px; }
+.deliverables h2, .installation h2 { font-size: clamp(26px, 3vw, 34px); letter-spacing: -0.8px; margin-bottom: 18px; }
+.deliverables > p { max-width: 800px; color: var(--muted); }
+.fields { list-style: none; padding: 0; margin: 25px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.fields li { padding: 17px 18px; background: var(--sage); border-radius: var(--radius); display: flex; align-items: center; gap: 10px; font-size: 15px; }
+.fields svg { color: var(--green); }
+.purchase { margin-top: 38px; padding: 32px; border: 1px solid #bcc9b4; border-radius: var(--radius); background: var(--sage); display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.purchase h2 { margin: 9px 0; font-size: 28px; letter-spacing: -0.6px; }
+.purchase p { color: var(--muted); }
+.purchaseAction { display: grid; gap: 10px; min-width: 250px; }
+.purchaseAction button { width: 100%; background: #d1d6cb; color: #555e4f; }
+.purchaseAction small { color: #56624e; text-align: center; }
+.installation { margin-top: 58px; }
+.steps { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.steps li { border-top: 1px solid var(--line); padding-top: 20px; }
+.steps span { display: block; color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+.steps p { font-size: 17px; }
+@media (prefers-reduced-motion: reduce) { .video { display: none; } }
+@media (max-width: 800px) {
+  .fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .purchase { align-items: stretch; flex-direction: column; }
+  .purchaseAction { min-width: 0; }
+  .steps { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 500px) {
+  .page { padding-top: 25px; padding-bottom: 55px; }
+  .identity { margin-top: 28px; }
+  .fields { grid-template-columns: 1fr; gap: 8px; }
+  .purchase { padding: 24px; }
+  .description { font-size: 16px; }
+}
