@@ -84,6 +84,7 @@ export default function Home() {
               src="/images/categories/sales-growth-iceberg.webp"
               width={800}
               height={800}
+              loading="eager"
               unoptimized
               alt="An iceberg showing three market layers: A at the tip, B above the waterline, and a much larger C beneath the surface."
             />
