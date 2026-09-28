@@ -1,0 +1,33 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+*.log
+.env*
+.qa/
+
+# Generated output and local tooling
+build/
+dist/
+coverage/
+.vercel/
+.turbo/
+next-env.d.ts
+.DS_Store
+Thumbs.db
+
+# Local credentials and secrets
+.npmrc
+.netrc
+_netrc
+.git-credentials
+.aws/
+.ssh/
+secrets/
+credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account*.json
