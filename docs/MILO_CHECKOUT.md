@@ -17,9 +17,12 @@ duplicate-delivery coverage. Local and Vercel production builds verified all thr
 approved asset hashes and server traces. Deployed smoke checks verified the $99
 page, disabled Buy Now, checkout 503, unsigned webhook 400, and private-file 404s.
 
-Database provisioning is waiting for the account owner to accept Neon's marketplace
-terms. The requested dedicated database is `milo-fulfillment`, free plan, region
-`iad1`, with optional Neon Auth disabled. Live Stripe credentials and existing
+The dedicated database `milo-fulfillment` is provisioned on Neon's free plan in
+`iad1`, with optional Neon Auth disabled, and connected only to this project's
+production environment. Its TLS connection was verified and the existing delivery
+ledger schema initialized with zero orders. `DATABASE_URL` is stored privately
+locally and encrypted in Vercel, with certificate verification enabled.
+Live Stripe credentials and existing
 Product/Price IDs are still unconfigured; no Stripe product, webhook, charge, or
 Checkout Session has been created. The existing local Resend key returned 401 on a
 read-only check, so sender authorization still needs a valid account credential.
