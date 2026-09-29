@@ -10,7 +10,8 @@ The separate Vercel project `simple-digital-help-store` is linked under
 `henry-pazs-projects-2f739818`. Its initial production deployment is available at
 https://simple-digital-help-store.vercel.app with checkout and delivery explicitly
 disabled. The existing `steelford-quote-agent` project was not modified.
-The custom domain has not been moved from its existing project.
+The custom domains now belong to this project. `simpledigitalhelp.com` retains its
+redirect to `www.simpledigitalhelp.com`; `APP_URL` uses that canonical HTTPS origin.
 
 All 21 local automated tests passed, including durable database restart and
 duplicate-delivery coverage. Local and Vercel production builds verified all three
@@ -28,8 +29,12 @@ in the new project's production environment. The existing active Milo product is
 `price_1UKi3rCzRwKdX10NQ1RmVZj1`; both IDs are configured locally and in Vercel.
 An existing enabled webhook, `we_1TT4dXCzRwKdX10N4ZhJeLvZ`, points to
 `https://www.simpledigitalhelp.com/api/webhooks/stripe` and subscribes to
-`checkout.session.completed`. Its signing secret still needs to be supplied;
-the domain still points to the previous application. No Stripe product, webhook,
+`checkout.session.completed` and `checkout.session.async_payment_succeeded`.
+Its supplied signing secret is encrypted in production. A signed no-op request was
+accepted by the deployed handler and an altered body rejected; this verifies use
+of the supplied secret, not yet that Stripe itself signs with the same secret.
+Stripe-originated confirmation remains part of the final acceptance flow.
+No Stripe product, webhook,
 charge, or Checkout Session has been created by this release work.
 The existing local Resend key returned 401 on a
 read-only check, so sender authorization still needs a valid account credential.
