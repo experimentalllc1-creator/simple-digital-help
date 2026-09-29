@@ -22,9 +22,16 @@ The dedicated database `milo-fulfillment` is provisioned on Neon's free plan in
 production environment. Its TLS connection was verified and the existing delivery
 ledger schema initialized with zero orders. `DATABASE_URL` is stored privately
 locally and encrypted in Vercel, with certificate verification enabled.
-Live Stripe credentials and existing
-Product/Price IDs are still unconfigured; no Stripe product, webhook, charge, or
-Checkout Session has been created. The existing local Resend key returned 401 on a
+The live Stripe credential was verified against Experimental LLC and saved encrypted
+in the new project's production environment. The existing active Milo product is
+`prod_VLOrNcbMrvcBca`, with one-time USD 9900 price
+`price_1UKi3rCzRwKdX10NQ1RmVZj1`; both IDs are configured locally and in Vercel.
+An existing enabled webhook, `we_1TT4dXCzRwKdX10N4ZhJeLvZ`, points to
+`https://www.simpledigitalhelp.com/api/webhooks/stripe` and subscribes to
+`checkout.session.completed`. Its signing secret still needs to be supplied;
+the domain still points to the previous application. No Stripe product, webhook,
+charge, or Checkout Session has been created by this release work.
+The existing local Resend key returned 401 on a
 read-only check, so sender authorization still needs a valid account credential.
 No delivery email has been sent.
 
