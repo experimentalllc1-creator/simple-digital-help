@@ -4,6 +4,10 @@ out/
 *.tsbuildinfo
 *.log
 .env*
+!.env.example
+
+# Paid delivery assets stay local/private; provision separately on the server.
+docs/Products/MILO/
 .qa/
 
 # Generated output and local tooling

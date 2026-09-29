@@ -45,10 +45,10 @@ qualifying prospects with publicly available business email addresses.
 
 ### Purchase placeholder
 
-Immediately after the demonstration and deliverables: one-time payment model,
-“Price to be confirmed”, and a prominent disabled “Buy Now” button with the status
-“Unavailable until checkout is ready.” No numeric price, purchase link, fake checkout,
-payment handling or delivery behavior is implemented.
+Immediately after the demonstration and deliverables: $99 one-time payment and a
+prominent disabled “Buy Now” button with “Unavailable until checkout is ready.”
+The button is wired to server-side Stripe Checkout but stays disabled unless both
+checkout and delivery switches are explicitly enabled. See [MILO_CHECKOUT.md](MILO_CHECKOUT.md).
 
 ### Installation
 
@@ -72,10 +72,9 @@ homepage or category styling.
 
 ## Remaining commercial work — next phase
 
-- Confirm the one-time price.
-- Wire Stripe/checkout and activate Buy Now only when ready.
-- Implement purchase fulfillment and delivery emails.
-- Finalize installation materials and verify the real installation flow.
-- Complete an end-to-end purchase test.
+- Configure the existing Stripe product/Price and durable delivery database.
+- Verify the real installation flow with the approved v1.2 materials.
+- Align older product copy/demo claims with v1.2 before launch.
+- Complete an authorized end-to-end purchase/delivery test, then activate only when approved.
 
 No production deployment is part of this milestone.

@@ -1,3 +1,4 @@
+import "server-only";
 import { env } from "node:process";
 
 export const SUPPORT_EMAIL = "support@simpledigitalhelp.com";
@@ -8,6 +9,7 @@ export type EmailMessage = {
   text: string;
   // Reuse for retries of the same logical email; use a new value for a new email.
   idempotencyKey: string;
+  attachments?: { filename: string; content: string }[];
 };
 
 export class EmailSendError extends Error {
@@ -45,6 +47,7 @@ export async function sendEmail(message: EmailMessage): Promise<{ id: string }> 
         to: [message.to],
         subject: message.subject,
         text: message.text,
+        ...(message.attachments ? { attachments: message.attachments } : {}),
       }),
       signal: AbortSignal.timeout(20_000),
       redirect: "error",

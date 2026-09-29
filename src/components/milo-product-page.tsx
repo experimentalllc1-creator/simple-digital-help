@@ -4,11 +4,13 @@ import { salesPaths, type DiscoveryProduct } from "@/lib/sales-catalog";
 import type { MiloPresentation } from "@/lib/milo-presentations";
 import MiloDemo from "./milo-demo";
 import styles from "./milo-product.module.css";
+import { checkoutEnabled } from "@/lib/milo-config.server";
 
 export default function MiloProductPage({ product, presentation }: {
   product: DiscoveryProduct;
   presentation: MiloPresentation;
 }) {
+  const canBuy = checkoutEnabled();
   return (
     <div className={`page-width ${styles.page}`}>
       <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -37,12 +39,14 @@ export default function MiloProductPage({ product, presentation }: {
         <section className={styles.purchase} aria-labelledby="milo-purchase">
           <div>
             <p className="eyebrow">ONE-TIME PAYMENT</p>
-            <h2 id="milo-purchase">Price to be confirmed</h2>
-            <p>Purchase availability coming next.</p>
+            <h2 id="milo-purchase">$99</h2>
+            <p>{canBuy ? "Milo v1.2 delivered by email after payment." : "Purchase availability coming next."}</p>
           </div>
           <div className={styles.purchaseAction}>
-            <button className="button" disabled aria-describedby="checkout-status">Buy Now</button>
-            <small id="checkout-status">Unavailable until checkout is ready.</small>
+            <form action="/api/checkout/milo" method="post">
+              <button className="button" disabled={!canBuy} aria-describedby="checkout-status">Buy Now</button>
+            </form>
+            <small id="checkout-status">{canBuy ? "Secure one-time payment through Stripe." : "Unavailable until checkout is ready."}</small>
           </div>
         </section>
         <section className={styles.installation} aria-labelledby="milo-installation">
