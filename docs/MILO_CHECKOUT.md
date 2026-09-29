@@ -7,9 +7,10 @@ or public email-sending endpoint is installed.
 ## Release status (2026-09-29)
 
 The separate Vercel project `simple-digital-help-store` is linked under
-`henry-pazs-projects-2f739818`. Its initial production deployment is available at
-https://simple-digital-help-store.vercel.app with checkout and delivery explicitly
-disabled. The existing `steelford-quote-agent` project was not modified.
+`henry-pazs-projects-2f739818`. At the owner's explicit authorization, production
+checkout and automatic delivery are now enabled at https://www.simpledigitalhelp.com.
+Deployment: `dpl_HLj2QWPFjtiTb3dytAt9UrucAyFT`. Local activation switches remain off.
+The existing `steelford-quote-agent` project was not modified.
 The custom domains now belong to this project. `simpledigitalhelp.com` retains its
 redirect to `www.simpledigitalhelp.com`; `APP_URL` uses that canonical HTTPS origin.
 
@@ -36,9 +37,24 @@ of the supplied secret, not yet that Stripe itself signs with the same secret.
 Stripe-originated confirmation remains part of the final acceptance flow.
 No Stripe product, webhook,
 charge, or Checkout Session has been created by this release work.
-The existing local Resend key returned 401 on a
-read-only check, so sender authorization still needs a valid account credential.
-No delivery email has been sent.
+The replacement Resend key passed a read-only domain check: `simpledigitalhelp.com`
+is verified. The key is encrypted in the production environment; the existing sender
+is `support@simpledigitalhelp.com`. No delivery email has been sent by release checks.
+
+Final essential checks passed: live $99 product and enabled Buy Now, wrong-origin
+checkout rejection (403), signed no-op acceptance, tampered-body rejection (400),
+private attachment URL rejection (404), and a ready database with zero orders before
+activation. The production build confirmed all three approved files remain in server
+bundles only. No new product code or materials were changed for activation.
+
+## Customer #001 acceptance still required
+
+Open https://www.simpledigitalhelp.com/products/milo-florida-roofing-contractors,
+choose Buy Now, and complete the real $99 purchase using the desired delivery email.
+After purchase, verify Stripe's successful payment and webhook delivery, the ledger's
+`sent` state and Resend message ID, and receipt of all three attachments plus
+https://youtu.be/C52gIS4fVNc. Do not repeat the purchase if email is delayed; inspect
+the existing payment and ledger first. The paid end-to-end flow is not yet proven.
 
 ## Flow
 
