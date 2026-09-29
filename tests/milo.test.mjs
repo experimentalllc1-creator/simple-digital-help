@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile, mkdtemp, mkdir, rm, access } from "node:fs/promises";
+import { readFile, mkdtemp, rm, access } from "node:fs/promises";
+import { tmpdir } from "node:os";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import Stripe from "stripe";
@@ -177,8 +178,8 @@ test("Milo payment and durable fulfillment", async t => {
 });
 
 test("delivery suppression survives a durable database restart", async () => {
-  await mkdir(".qa", { recursive: true });
-  const directory = await mkdtemp(path.join(process.cwd(), ".qa", "milo-db-"));
+  // Keep database restart fixtures outside the OneDrive-synced source tree.
+  const directory = await mkdtemp(path.join(tmpdir(), "milo-db-"));
   let db = new PGlite(directory);
   try {
     await db.exec(await readFile("db/migrations/001_milo_deliveries.sql", "utf8"));

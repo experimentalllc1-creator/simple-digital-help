@@ -4,6 +4,27 @@ Implemented in the existing storefront. Both activation switches default to off.
 No Stripe products or Prices are created. No scheduler, public download endpoint,
 or public email-sending endpoint is installed.
 
+## Release status (2026-09-29)
+
+The separate Vercel project `simple-digital-help-store` is linked under
+`henry-pazs-projects-2f739818`. Its initial production deployment is available at
+https://simple-digital-help-store.vercel.app with checkout and delivery explicitly
+disabled. The existing `steelford-quote-agent` project was not modified.
+The custom domain has not been moved from its existing project.
+
+All 21 local automated tests passed, including durable database restart and
+duplicate-delivery coverage. Local and Vercel production builds verified all three
+approved asset hashes and server traces. Deployed smoke checks verified the $99
+page, disabled Buy Now, checkout 503, unsigned webhook 400, and private-file 404s.
+
+Database provisioning is waiting for the account owner to accept Neon's marketplace
+terms. The requested dedicated database is `milo-fulfillment`, free plan, region
+`iad1`, with optional Neon Auth disabled. Live Stripe credentials and existing
+Product/Price IDs are still unconfigured; no Stripe product, webhook, charge, or
+Checkout Session has been created. The existing local Resend key returned 401 on a
+read-only check, so sender authorization still needs a valid account credential.
+No delivery email has been sent.
+
 ## Flow
 
 1. The existing Milo page displays $99. Its form remains disabled until both
@@ -36,12 +57,21 @@ Keep these files, unchanged, under `docs/Products/MILO/` on the server:
 - `Milo_Video_Disclaimer_v1.2.txt`
 
 They remain in their existing local location and are Git-ignored to avoid publishing
-paid content in a potentially public repository. Provision them separately through
-a private build/server process before any future deployment. Next.js output tracing
+paid content in a potentially public repository. Deploy from the local checkout
+using Vercel CLI: `.vercelignore` includes only application inputs and these three
+approved files. Automatic Git deployments are disabled in `vercel.json` because
+a Git checkout lacks the delivery package. Next.js output tracing
 includes them only in the checkout/webhook **server** bundles. Never copy them to
 `public/`, static hosting, client modules, or a public download URL. A clean clone
 does not contain these files. Missing or modified files stop new checkout creation.
 SHA-256 values in `src/lib/milo-assets.server.ts` pin the approved release.
+
+`npm run build:vercel` verifies the approved hashes before building, then verifies
+that both server route traces contain all three attachments and that their contents
+are absent from `public/` and browser bundles. Before uploading, inspect
+`vercel deploy --dry --format=json` to confirm all three files are included and
+`.env.local`, `.qa`, and local Vercel credentials are excluded. CLI directory
+allowlist entries must omit trailing slashes.
 
 The email includes https://youtu.be/C52gIS4fVNc and the notice that the video shows an
 older installation. The v1.2 files remain authoritative. No Milo functionality or
@@ -57,7 +87,7 @@ See `.env.example`; do not replace existing `.env.local` or commit secrets.
 | `STRIPE_WEBHOOK_SECRET` | Signing secret for this endpoint/listener |
 | `STRIPE_MILO_PRODUCT_ID` | Existing Milo `prod_...` ID |
 | `STRIPE_MILO_PRICE_ID` | Existing $99 USD one-time `price_...` ID belonging to that product |
-| `STRIPE_MODE` | `test` by default; `live` requires explicit later authorization |
+| `STRIPE_MODE` | `live` for the authorized owner purchase; activation switches stay off until final approval |
 | `APP_URL` | Exact trusted origin; HTTPS except local HTTP in test mode |
 | `DATABASE_URL` | Durable PostgreSQL connection URL, shared by all app instances |
 | `RESEND_API_KEY` | Existing server key; sender remains `support@simpledigitalhelp.com` |

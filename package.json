@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
+    "build:vercel": "npm run verify:assets && next build && npm run verify:package",
+    "verify:assets": "node --conditions=react-server --import tsx scripts/verify-milo-package.mjs --assets-only",
+    "verify:package": "node --conditions=react-server --import tsx scripts/verify-milo-package.mjs",
     "start": "next start --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "test": "node --conditions=react-server --import tsx --test tests/*.test.mjs",
