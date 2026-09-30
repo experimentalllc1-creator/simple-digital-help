@@ -202,20 +202,38 @@ test("configuration rejects accidental live keys and untrusted origins", () => {
 
 let privateAssetsPresent = true;
 try { await access("docs/Products/MILO/Milo_Illustrated_Installation_Guide_v1.2.pdf"); } catch { privateAssetsPresent = false; }
-test("approved private files are attached byte-for-byte with video and disclaimer", { skip: !privateAssetsPresent && "Provision private Milo assets to run this release check" }, async () => {
+test("all three private files validate while the email sends only the prompt and guide with approved copy", { skip: !privateAssetsPresent && "Provision private Milo assets to run this release check" }, async () => {
   const attachments = await miloAttachments();
+  assert.equal(attachments.length, 3);
   assert.deepEqual(attachments.map(a => a.filename), MILO_FILES.map(a => a.filename));
   for (const [i, attachment] of attachments.entries()) {
     assert.equal(createHash("sha256").update(Buffer.from(attachment.content, "base64")).digest("hex"), MILO_FILES[i].sha256);
   }
   const email = await miloEmail("buyer@example.test", "cs_test_milo");
-  assert.match(email.text, /https:\/\/youtu.be\/C52gIS4fVNc/);
-  assert.match(email.text, /does not research, collect, or populate email addresses or phone numbers/);
+  assert.equal(email.subject, "Your Milo files and installation instructions");
+  assert.equal(email.text, `Thank you for purchasing Milo - Florida Roofing Prospect Discovery ($99 one-time).
+
+Your Milo installation files are attached.
+
+1. Download Milo_FL_Roofing_Installation_Prompt_v1.2.txt and upload it to ChatGPT. Tell ChatGPT: “Install Milo using the attached file.”
+2. Use the Milo Illustrated Installation Guide if you need help during setup.
+3. Installation video: https://youtu.be/C52gIS4fVNc
+
+Video note: The video shows an earlier installation with Email and Phone columns. The current Milo uses Date Added, Business Name, City, Website, and Contacted? only.
+
+Once installed, Milo will create your prospect spreadsheet and guide you through connecting your Google account and activating recurring prospect discovery.
+
+Need help? Reply to support@simpledigitalhelp.com.`);
+  assert.deepEqual(email.attachments.map(a => a.filename), [
+    "Milo_FL_Roofing_Installation_Prompt_v1.2.txt",
+    "Milo_Illustrated_Installation_Guide_v1.2.pdf",
+  ]);
+  assert.deepEqual(email.attachments, attachments.slice(0, 2));
   let payload;
   const oldFetch = globalThis.fetch;
   try {
     globalThis.fetch = async (_url, options) => { payload = JSON.parse(options.body); return Response.json({ id: resendId }); };
     await sendEmail(email);
-    assert.deepEqual(payload.attachments, attachments); assert.equal(payload.to[0], "buyer@example.test");
+    assert.deepEqual(payload.attachments, attachments.slice(0, 2)); assert.equal(payload.to[0], "buyer@example.test");
   } finally { globalThis.fetch = oldFetch; }
 });
