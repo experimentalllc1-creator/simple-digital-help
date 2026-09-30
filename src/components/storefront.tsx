@@ -15,7 +15,6 @@ import {
   CornerDownRight,
 } from "lucide-react";
 import {
-  categories,
   categoryFor,
   type Product,
   type ArtKind,
@@ -56,26 +55,14 @@ export function Brand() {
 export function Header() {
   return (
     <>
-      <div className="preview-strip">
-        A store full of possibilities.{" "}
-        <span>Design preview — all products and prices are illustrative.</span>
-      </div>
       <header className="site-header">
         <div className="header-inner">
           <Brand />
           <nav className="desktop-nav" aria-label="Main navigation">
-            <Link href="/store">Shop all</Link>
-            <Link href="/#categories">Categories</Link>
-            <Link href="/#collections">The collections</Link>
+            <Link href="/">Home</Link>
+            <Link href="/#sales-growth">Sales &amp; Growth</Link>
+            <Link href="/#marketing-content">Marketing &amp; Content</Link>
           </nav>
-          <Link
-            href="/store#catalog-search"
-            className="header-search"
-            aria-label="Find your help"
-          >
-            <Search size={19} strokeWidth={1.5} />
-            <span>Find your help</span>
-          </Link>
           <MobileNav />
         </div>
       </header>
@@ -88,33 +75,14 @@ export function Footer() {
       <div className="footer-top">
         <div>
           <Brand />
-          <p>
-            A little help.
-            <br />A lot of possibility.
-          </p>
+          <p>Small helpers. Big possibilities.</p>
         </div>
-        <div className="footer-links">
+        <div className="footer-links" style={{ gridTemplateColumns: "1fr" }}>
           <div>
             <span>EXPLORE</span>
-            <Link href="/store">All digital products</Link>
-            <Link href="/#collections">Curated collections</Link>
-            <Link href="/#how-it-works">How it works</Link>
-          </div>
-          <div>
-            <span>SHOP BY NEED</span>
-            {categories.slice(0, 3).map((c) => (
-              <Link key={c.id} href={`/categories/${c.id}`}>
-                {c.name}
-              </Link>
-            ))}
-          </div>
-          <div>
-            <span>A LITTLE MORE HELP</span>
-            {categories.slice(3).map((c) => (
-              <Link key={c.id} href={`/categories/${c.id}`}>
-                {c.name}
-              </Link>
-            ))}
+            <Link href="/#sales-growth">Sales &amp; Growth</Link>
+            <Link href="/#marketing-content">Marketing &amp; Content</Link>
+            <Link href="/legal">Legal</Link>
           </div>
         </div>
       </div>
@@ -123,7 +91,6 @@ export function Footer() {
           © {new Date().getFullYear()} Simple Digital Help. Operated by
           Experimental LLC.
         </span>
-        <span>Design preview · No purchases or live AI services</span>
       </div>
     </footer>
   );

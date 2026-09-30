@@ -16,9 +16,9 @@ export default function MobileNav() {
     }}>
       <summary aria-label="Open navigation"><Menu size={24} /></summary>
       <nav aria-label="Mobile navigation" onClick={close}>
-        <Link href="/store">Shop all</Link>
-        <Link href="/#categories">Categories</Link>
-        <Link href="/#collections">The collections</Link>
+        <Link href="/">Home</Link>
+        <Link href="/#sales-growth">Sales &amp; Growth</Link>
+        <Link href="/#marketing-content">Marketing &amp; Content</Link>
       </nav>
     </details>
   );
