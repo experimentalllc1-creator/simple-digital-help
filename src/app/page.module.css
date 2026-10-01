@@ -49,7 +49,7 @@
   letter-spacing: -0.6px;
 }
 
-.categoryHeading a {
+.salesHeading {
   display: flex;
   justify-content: space-between;
   align-items: center;

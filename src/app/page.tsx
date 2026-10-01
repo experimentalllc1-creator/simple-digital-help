@@ -41,12 +41,10 @@ export default function Home() {
           title="Find help where you need it."
         />
         <div className={styles.categoryPanels}>
-          <article className={styles.categoryPanel} id="sales-growth" aria-labelledby="sales-heading">
-            <h3 className={styles.categoryHeading} id="sales-heading">
-              <Link href="/categories/sales">
-                Sales &amp; Growth
-                <ArrowUpRight size={22} aria-hidden="true" />
-              </Link>
+          <Link href="/categories/sales" className={styles.categoryPanel} id="sales-growth" aria-labelledby="sales-heading">
+            <h3 className={`${styles.categoryHeading} ${styles.salesHeading}`} id="sales-heading">
+              Sales &amp; Growth
+              <ArrowUpRight size={22} aria-hidden="true" />
             </h3>
             <Image
               className={styles.categoryVisual}
@@ -76,7 +74,7 @@ export default function Home() {
                 A is already within reach. Good sales teams work hard to pursue B. Milo opens the door to C.
               </p>
             </div>
-          </article>
+          </Link>
           <article className={styles.categoryPanel} id="marketing-content" aria-labelledby="marketing-heading">
             <h3 className={styles.categoryHeading} id="marketing-heading">Marketing &amp; Content</h3>
             <div className={styles.marketingPlaceholder}>

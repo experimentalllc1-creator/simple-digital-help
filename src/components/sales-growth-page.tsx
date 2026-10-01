@@ -11,28 +11,28 @@ export default function SalesGrowthPage() {
         <Link href="/">Home</Link><span>/</span><span aria-current="page">Sales &amp; Growth</span>
       </nav>
       <header className={styles.intro}>
-        <p className="eyebrow">MORE OPPORTUNITIES. ROOM TO GROW.</p>
+        <p className="eyebrow">STOP BUYING SYSTEMS. START SOLVING PROBLEMS.</p>
         <h1>Sales &amp; Growth</h1>
-        <p>There is more to your market than the businesses you already know. Find practical digital solutions to reach more opportunities and develop them consistently.</p>
+        <p>Inside this category you will find a catalog of small AI agents that bring consistency to the sales work that often gets neglected. Each AI agent handles one specific job, from finding prospects to first contact and follow-up. Start with one and expand later at your own pace and according to your real needs. They are designed to work together.</p>
       </header>
-      <section className={styles.explanation} aria-label="Three layers of your market">
+      <section className={styles.explanation} aria-label="Sales tasks our agents can help with">
         <Image className={styles.iceberg} src="/images/categories/sales-growth-iceberg.webp" width={800} height={800} loading="eager" unoptimized alt="An iceberg with A at the tip, B above the waterline, and a much larger C below the surface." />
         <div>
           <div className={styles.marketList}>
             <div className={styles.market}><span className={styles.letter}>A</span><div>
-              <h2>The market already being served</h2>
-              <p>Your existing customers, established relationships and familiar opportunities. This is the visible tip: the part of the market already within reach.</p>
+              <h2>Need to find new prospects?</h2>
+              <p>One of our agents can take care of that, day in and day out.</p>
             </div></div>
             <div className={styles.market}><span className={styles.letter}>B</span><div>
-              <h2>The market actively being pursued</h2>
-              <p>The businesses you seek out through prospecting, networking, events, lists and manual research. Sales teams work hard to find these opportunities and move conversations forward.</p>
+              <h2>Having trouble making that first contact?</h2>
+              <p>Let one of our agents do it for you.</p>
             </div></div>
             <div className={styles.market}><span className={styles.letter}>C</span><div>
-              <h2>The market barely being reached</h2>
-              <p>The much larger market beneath the surface: businesses you rarely reach, or do not reach at all. Finding them takes consistent discovery, beyond the names already on your list.</p>
+              <h2>Is follow-up the problem?</h2>
+              <p>One of our agents can take care of that as well.</p>
             </div></div>
           </div>
-          <p className={styles.summary}>Sales &amp; Growth products help you discover more of that market and develop opportunities consistently, from finding potential customers to contact, follow-up and proposals.</p>
+          <p className={styles.summary}>Use only the help you need, or combine agents so the work can move from one step to the next.</p>
         </div>
       </section>
       <section className={styles.section} aria-labelledby="sales-needs">
