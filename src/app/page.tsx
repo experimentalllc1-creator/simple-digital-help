@@ -6,6 +6,7 @@ import {
   SectionHeading,
 } from "@/components/storefront";
 import styles from "./page.module.css";
+import { marketingPlaceholders } from "@/lib/marketing-catalog";
 
 export const metadata: Metadata = {
   title: { absolute: "Simple Digital Help — Small helpers. Big possibilities." },
@@ -75,12 +76,12 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <article className={styles.categoryPanel} id="marketing-content" aria-labelledby="marketing-heading">
-            <h3 className={styles.categoryHeading} id="marketing-heading">Marketing &amp; Content</h3>
+          <Link href="/categories/marketing" className={styles.categoryPanel} id="marketing-content" aria-labelledby="marketing-heading">
+            <h3 className={`${styles.categoryHeading} ${styles.salesHeading}`} id="marketing-heading">Marketing &amp; Content <ArrowUpRight size={22} aria-hidden="true" /></h3>
             <div className={styles.marketingPlaceholder}>
-              <p>More coming soon.</p>
+              <p>{marketingPlaceholders.icon}</p>
             </div>
-          </article>
+          </Link>
         </div>
       </section>
     </>
