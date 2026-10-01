@@ -41,18 +41,13 @@ export default function SalesGrowthPage() {
           <Link className={`${styles.card} ${styles.active}`} href={salesPaths.discovery}>
             <span className={styles.cardLabel}>EXPLORE <ArrowRight size={19} aria-hidden="true" /></span>
             <h3>Find New Customers</h3>
-            <p>Find potential customers in the industries and geographic markets you want to reach.</p>
+            <p>Find businesses or organizations that could become your customers.</p>
           </Link>
-          <div className={`${styles.card} ${styles.future}`}>
-            <span className={styles.cardLabel}>COMING LATER</span>
-            <h3>Contact &amp; Follow Up</h3>
-            <p>Help with initial contact and keeping conversations moving.</p>
-          </div>
-          <div className={`${styles.card} ${styles.future}`}>
-            <span className={styles.cardLabel}>COMING LATER</span>
-            <h3>Quotes &amp; Proposals</h3>
-            <p>Help preparing, organizing and following up on sales proposals.</p>
-          </div>
+          <Link className={`${styles.card} ${styles.active}`} href={salesPaths.opportunities}>
+            <span className={styles.cardLabel}>EXPLORE <ArrowRight size={19} aria-hidden="true" /></span>
+            <h3>Find New Opportunities</h3>
+            <p>Find projects and developments that could create new sales opportunities.</p>
+          </Link>
         </div>
       </section>
       <section className={styles.section} aria-labelledby="featured-product">

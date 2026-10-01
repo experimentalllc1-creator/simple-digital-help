@@ -1,16 +1,29 @@
 export const salesPaths = {
   category: "/categories/sales",
   discovery: "/categories/sales/find-new-customers",
+  opportunities: "/categories/sales/find-new-opportunities",
 } as const;
 
 export const discoveryIndustries = [
   "Roofing Contractors",
   "HVAC Contractors",
-  "Landscaping Contractors",
   "Plumbing Contractors",
+  "Electrical Contractors",
+  "Landscaping Contractors",
+  "General Contractors",
+  "Builders / Homebuilders",
+  "Architects",
+  "Property Managers",
+  "HOAs",
+  "Distributors",
+  "Hotels / Resorts",
+  "Restaurants",
+  "Medical Practices",
+  "Dental Practices",
+  "Municipalities / Public Agencies",
 ] as const;
 export const discoveryRegions = [
-  "Florida", "Texas", "California", "Georgia", "New York",
+  "Florida", "Texas",
 ] as const;
 
 export type DiscoveryProduct = {
@@ -56,4 +69,10 @@ export const discoveryVideo = {
   captions: "/videos/find-new-customers-intro.vtt",
   completionKey: "sdh:find-new-customers:video-complete:v1",
   closing: "If this sounds like something you need, click below. Let's find the right version for your business.",
+} as const;
+
+export const opportunityDiscovery = {
+  type: "Projects & Developments",
+  regions: ["Florida", "Texas"],
+  completionKey: "sdh:find-new-opportunities:video-complete:v1",
 } as const;

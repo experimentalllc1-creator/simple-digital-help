@@ -47,18 +47,12 @@ export default function FindNewCustomers() {
         I Want to Know More <ArrowRight size={17} aria-hidden="true" />
       </button>
       <p className={styles.videoNote} role="status">
-        {videoError ? "The video could not load. Please reload the page to try again." : completed ? "You're ready. Choose your industry and region below." : "Watch the short introduction to continue. Playback is up to you."}
+        {videoError ? "The video could not load. Please reload the page to try again." : completed ? "You're ready. Choose your customer type and region below." : "Watch the short introduction to continue. Playback is up to you."}
       </p>
-      <details className={styles.transcript}>
-        <summary>Temporary introduction · Read the video text</summary>
-        <p>Find businesses that could become your customers.</p>
-        <p>Milo helps you discover potential customers in the industries and geographic markets you want to reach.</p>
-        <p>{discoveryVideo.closing}</p>
-      </details>
       <section id="discovery-selection" className={styles.selector} hidden={!revealed} aria-labelledby="discovery-selection-heading">
-        <h2 id="discovery-selection-heading" ref={heading} tabIndex={-1}>Select your industry and region of interest.</h2>
+        <h2 id="discovery-selection-heading" ref={heading} tabIndex={-1}>Select your customer type and region of interest.</h2>
         <div className={styles.fields}>
-          <label>Industry<select aria-label="Industry" value={industry} onChange={(event) => setIndustry(event.target.value)}>{discoveryIndustries.map((item) => <option key={item}>{item}</option>)}</select></label>
+          <label>Customer Type<select aria-label="Customer Type" value={industry} onChange={(event) => setIndustry(event.target.value)}>{discoveryIndustries.map((item) => <option key={item}>{item}</option>)}</select></label>
           <label>Region<select aria-label="Region" value={region} onChange={(event) => setRegion(event.target.value)}>{discoveryRegions.map((item) => <option key={item}>{item}</option>)}</select></label>
         </div>
         <div className={styles.result} aria-live="polite" aria-atomic="true">
