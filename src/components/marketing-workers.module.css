@@ -1,0 +1,12 @@
+.page { --category-sales: #6F5B78; --category-sales-hover: #5E4D66; }
+.video, .art { background: #f1edf3; border-color: #ddd4e1; color: #6F5B78; }
+.card { border-color: #ddd4e1; }
+.section + .section { margin-top: 48px; padding-top: 32px; border-top: 1px solid #ddd4e1; }
+.grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.badge { font-size: 11px; font-weight: 700; border-radius: 30px; padding: 5px 10px; background: #f1edf3; color: #5E4D66; }
+.commercial { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: auto; color: var(--muted); font-size: 13px; }
+.price { color: #6F5B78; font-size: 28px; }
+.availability { margin-top: 6px; font-size: 11px; font-weight: 700; border-radius: 30px; padding: 5px 10px; background: #f1edf3; color: #5E4D66; }
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .grid { grid-template-columns: minmax(0, 1fr); } }

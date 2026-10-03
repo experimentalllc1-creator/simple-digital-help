@@ -4,7 +4,7 @@ import { categories, products } from "@/lib/catalog";
 import { ProductArt } from "@/components/storefront";
 import CatalogBrowser from "@/components/catalog-browser";
 import SalesGrowthPage from "@/components/sales-growth-page";
-import { MarketingCategoryPage } from "@/components/marketing-pages";
+import MarketingWorkersPage from "@/components/marketing-workers-page";
 export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.id }));
 }
@@ -15,7 +15,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const category = categories.find((c) => c.id === slug);
-  return { title: slug === "sales" ? "Agents specialized in Sales" : category?.name || "Category not found" };
+  return { title: slug === "sales" ? "Agents specialized in Sales" : slug === "marketing" ? "Agents specialized in Marketing" : category?.name || "Category not found" };
 }
 export default async function CategoryPage({
   params,
@@ -26,7 +26,7 @@ export default async function CategoryPage({
   const category = categories.find((c) => c.id === slug);
   if (!category) notFound();
   if (slug === "sales") return <SalesGrowthPage />;
-  if (slug === "marketing") return <MarketingCategoryPage />;
+  if (slug === "marketing") return <MarketingWorkersPage />;
   return (
     <>
       <div className="browse-header page-width">
