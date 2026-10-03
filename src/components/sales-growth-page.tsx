@@ -33,8 +33,8 @@ export default function SalesGrowthPage() {
           </div></article>)}</div>
       </section>
       <section className={styles.addons} aria-labelledby="addons-title">
-        <div className={styles.sectionHeading}><h2 id="addons-title">Universal Sales Team Add-ons</h2>
-          <p>Hire each worker once. While active, it works across all active Discovery agents in your shared Sales workspace, including regions added later.</p></div>
+        <div className={styles.sectionHeading}><h2 id="addons-title">Universal Sales Agents</h2>
+          <p>Hire each agent once. While active, it works across all your active Prospect Discovery agents in your shared Sales workspace, including regions added later.</p></div>
         <div className={styles.addonGrid}>{universalSalesWorkers.map((worker) => <article className={styles.card} key={worker.id}><div className={styles.cardBody}>
           <span className={worker.active ? styles.available : styles.soon}>{worker.active ? "Available" : "Coming soon"}</span>
           <h3>{worker.name}</h3><p>{worker.description}</p><p className={styles.price}>$99 <small>for 52 weeks</small></p>

@@ -11,6 +11,7 @@ export const salesWorkers: { id: string; customerType: string; name?: string; de
     ["restaurants", "Restaurants"], ["medical", "Medical Practices"],
     ["dental", "Dental Practices"], ["municipalities", "Municipalities / Public Agencies"],
   ].map(([id, customerType]) => ({ id, customerType, description: `Finds qualified ${customerType.toLowerCase()} in your selected regions and keeps the prospect list organized.`, activeRegions: [] })),
+  { id: "projects-developments", customerType: "Projects & Developments", description: "Finds new construction, major renovations, expansions, capital improvements, and other significant projects that may create sales opportunities in your selected market.", activeRegions: [] },
 ];
 export const universalSalesWorkers = [
   { id: "first-contact", name: "Universal First Contact Agent", active: false, description: "Finds an available public business email for new prospects, sends the approved first-contact message, records successful contact, and identifies prospects where a usable email could not be found." },

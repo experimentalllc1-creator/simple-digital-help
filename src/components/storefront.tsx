@@ -60,7 +60,7 @@ export function Header() {
           <Brand />
           <nav className="desktop-nav" aria-label="Main navigation">
             <Link href="/">Home</Link>
-            <Link href="/#sales-growth">Sales &amp; Growth</Link>
+            <Link href="/#sales-growth">Sales</Link>
             <Link href="/#marketing-content">Marketing &amp; Content</Link>
           </nav>
           <MobileNav />
