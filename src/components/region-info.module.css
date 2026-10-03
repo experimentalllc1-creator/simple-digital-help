@@ -1,8 +1,5 @@
-.info { flex-shrink: 0; color: var(--category-sales); }
-.info summary { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid #b7c6d4; border-radius: 50%; font-size: 13px; font-weight: 700; cursor: pointer; list-style: none; }
-.info summary::-webkit-details-marker { display: none; }
-.info summary:focus-visible { outline: 2px solid var(--category-sales); outline-offset: 3px; }
-.info summary:hover { background: #edf1f5; }
-.info[open] { width: 100%; }
-.panel { margin-top: 10px; padding: 12px; background: #edf1f5; border-radius: 6px; font-size: 12px; line-height: 1.6; }
+.trigger { display: grid; place-items: center; flex-shrink: 0; width: 28px; height: 28px; padding: 0; background: transparent; color: var(--category-sales); border: 1px solid #b7c6d4; border-radius: 50%; font-size: 13px; font-weight: 700; cursor: pointer; }
+.trigger:focus-visible { outline: 2px solid var(--category-sales); outline-offset: 3px; }
+.trigger:hover, .trigger[aria-expanded="true"] { background: #edf1f5; }
+.panel { position: fixed; z-index: 1000; width: min(260px, calc(100vw - 24px)); max-height: min(220px, calc(100dvh - 24px)); overflow-y: auto; padding: 14px; background: #edf1f5; color: var(--category-sales); border: 1px solid #b7c6d4; border-radius: 8px; box-shadow: 0 6px 24px rgb(25 45 65 / 16%); font-size: 12px; line-height: 1.6; }
 .panel p { margin: 6px 0 0; color: var(--muted); }
