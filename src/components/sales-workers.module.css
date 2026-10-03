@@ -1,0 +1,50 @@
+.page { padding-block: 48px 80px; }
+.header h1 { font-size: clamp(30px, 4vw, 48px); line-height: 1.15; margin: 0 0 30px; color: var(--category-sales); }
+.video { aspect-ratio: 16 / 9; display: grid; place-items: center; background: #edf1f5; border: 1px solid #d5dfe8; border-radius: 12px; color: #4f6f8f; text-align: center; padding: 24px; margin-bottom: 48px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; align-items: start; }
+.sectionHeading { margin-bottom: 24px; }
+.sectionHeading h2 { font-size: 26px; color: var(--category-sales); margin: 0 0 12px; }
+.sectionHeading p { color: var(--muted); line-height: 1.6; margin: 8px 0; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.card { border: 1px solid #d5dfe8; background: var(--white, #fff); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.art { min-height: 170px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; padding: 24px; background: #edf1f5; color: var(--category-sales); text-align: center; }
+.art span { font-size: 10px; letter-spacing: 1.6px; }
+.art strong { font-size: 21px; line-height: 1.3; }
+.art small { font-size: 11px; }
+.cardBody { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.cardBody h3 { font-size: 19px; line-height: 1.35; margin: 14px 0 10px; }
+.cardBody p { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0 0 20px; }
+.available, .soon { align-self: flex-start; font-size: 11px; font-weight: 700; border-radius: 30px; padding: 5px 10px; background: #edf1f5; color: #435e7a; }
+.available { background: #e7efe8; color: #35583c; }
+.regions { padding: 0; border: 0; margin: auto 0 14px; min-width: 0; }
+.regions legend { font-weight: 600; font-size: 13px; margin-bottom: 10px; }
+.cardBody label { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; }
+.regions label { border-top: 1px solid #e8edf1; padding-block: 8px; }
+.regions label span { flex: 1; }
+.regions strong { float: right; font-weight: 500; }
+.regions small { display: block; font-size: 11px; margin-top: 4px; }
+.cardBody input { width: 18px; height: 18px; accent-color: var(--category-sales); flex-shrink: 0; }
+.cardBody input:focus-visible { outline: 2px solid var(--category-sales); outline-offset: 3px; }
+.disabled { color: #737d88; }
+.term { font-size: 11px; color: var(--muted); line-height: 1.5; }
+.addons { margin-top: 48px; padding-top: 32px; border-top: 1px solid #d5dfe8; }
+.addonGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.cardBody .price { color: var(--category-sales); font-size: 23px; font-weight: 700; margin-top: auto; }
+.price small { font-size: 13px; font-weight: 400; }
+.summary { position: sticky; top: 110px; background: #f0f4f7; border: 1px solid #d5dfe8; border-radius: 12px; padding: 24px; }
+.summary h2 { font-size: 23px; margin: 0 0 26px; color: var(--category-sales); }
+.summary h3 { font-size: 13px; margin: 22px 0 10px; }
+.summary p { font-size: 13px; color: var(--muted); line-height: 1.6; margin: 0; }
+.summary ul { padding: 0; list-style: none; margin: 0; }
+.summary li { display: flex; gap: 12px; justify-content: space-between; padding-block: 8px; font-size: 13px; }
+.summary li small { display: block; margin-top: 4px; color: var(--muted); }
+.summaryTerm { border-top: 1px solid #d5dfe8; margin-top: 22px; padding-top: 18px; font-size: 13px; }
+.total { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #d5dfe8; padding-top: 20px; margin-top: 20px; }
+.total strong { font-size: 28px; color: var(--category-sales); }
+.hire { width: 100%; min-height: 48px; border: 0; border-radius: 6px; background: var(--category-sales); color: white; margin-block: 20px 12px; font: inherit; font-weight: 600; }
+.hire:disabled { opacity: .65; cursor: not-allowed; }
+.summary .checkoutStatus { font-size: 12px; }
+.summary .workspace { border-top: 1px solid #d5dfe8; margin-top: 20px; padding-top: 18px; font-size: 12px; }
+@media (min-width: 1400px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 1000px) { .layout { grid-template-columns: minmax(0, 1fr); } .summary { position: static; } }
+@media (max-width: 600px) { .page { padding-block: 30px 48px; } .grid, .addonGrid { grid-template-columns: minmax(0, 1fr); } .video { margin-bottom: 32px; font-size: 13px; } .art { min-height: 150px; } }

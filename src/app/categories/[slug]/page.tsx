@@ -15,7 +15,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const category = categories.find((c) => c.id === slug);
-  return { title: category?.name || "Category not found" };
+  return { title: slug === "sales" ? "Agents specialized in Sales" : category?.name || "Category not found" };
 }
 export default async function CategoryPage({
   params,
