@@ -1,0 +1,21 @@
+.callout { display: flex; align-items: center; gap: 32px; padding: 26px; margin-bottom: 40px; background: #edf2ee; border: 1px solid #cfded4; border-radius: 12px; }
+.callout h2 { margin: 0 0 10px; font-size: 22px; line-height: 1.3; color: var(--green); }
+.callout p { margin: 0; line-height: 1.6; font-size: 14px; color: var(--muted); }
+.callout .support { margin-top: 10px; font-size: 13px; }
+.callout > a { flex-shrink: 0; text-align: center; }
+.bottomLink { margin: 32px 0 0; line-height: 1.6; font-size: 14px; }
+.bottomLink a { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+.page { max-width: 960px; padding-block: 48px 80px; }
+.header h1 { color: var(--green); font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin: 0 0 24px; }
+.header h2 { font-size: clamp(24px, 3vw, 32px); line-height: 1.3; margin: 0 0 18px; }
+.page p { color: var(--muted); line-height: 1.7; }
+.panel { margin-top: 28px; border: 1px solid var(--line); border-radius: 12px; padding: 28px; background: var(--white, #fff); }
+.panel h2 { margin: 0 0 16px; font-size: 24px; color: var(--green); line-height: 1.3; }
+.panel ul { padding-left: 22px; margin: 0; }
+.panel li { padding-block: 6px; line-height: 1.6; }
+.guarantee { background: #edf2ee; border-color: #cfded4; }
+.credit { display: block; color: var(--green); font-size: 23px; line-height: 1.4; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.purchase { margin-top: 28px; }
+.purchase p { font-size: 13px; margin: 10px 0 0; }
+@media (max-width: 700px) { .callout { flex-direction: column; align-items: stretch; gap: 20px; padding: 22px; } .page { padding-block: 30px 48px; } .panel { padding: 22px; } }

@@ -35,6 +35,14 @@
   border-radius: var(--radius);
 }
 
+.auditButton {
+  display: flex;
+  width: 100%;
+  min-height: 72px;
+  margin-top: 24px;
+  text-align: center;
+}
+
 .categoryLinks {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

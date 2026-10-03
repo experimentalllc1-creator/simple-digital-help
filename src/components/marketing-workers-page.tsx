@@ -1,4 +1,5 @@
 import { marketingCommercialModels, marketingWorkers, type MarketingCommercialModel } from "@/lib/marketing-workers";
+import { AgentFitAuditCallout, AgentFitAuditBottomLink } from "./agent-fit-audit";
 import shared from "./sales-workers.module.css";
 import styles from "./marketing-workers.module.css";
 
@@ -6,6 +7,7 @@ export default function MarketingWorkersPage() {
   return <div className={`page-width ${shared.page} ${styles.page}`}>
     <header className={shared.header}><h1>Agents specialized in Marketing</h1></header>
     <div className={`${shared.video} ${styles.video}`}><p>Marketing agents explainer video coming soon</p></div>
+    <AgentFitAuditCallout />
     {(Object.keys(marketingCommercialModels) as MarketingCommercialModel[]).map((model) => {
       const commercial = marketingCommercialModels[model];
       return <section className={styles.section} key={model} aria-labelledby={`marketing-${model}`}>
@@ -26,5 +28,6 @@ export default function MarketingWorkersPage() {
           </article>)}</div>
       </section>;
     })}
+    <AgentFitAuditBottomLink />
   </div>;
 }

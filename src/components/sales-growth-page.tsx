@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { AgentFitAuditCallout, AgentFitAuditBottomLink } from "./agent-fit-audit";
 import { salesWorkers, salesRegions, universalSalesWorkers, createSalesOrder } from "@/lib/sales-order";
 import styles from "./sales-workers.module.css";
 
@@ -13,6 +14,7 @@ export default function SalesGrowthPage() {
   return <div className={`page-width ${styles.page}`}>
     <header className={styles.header}><h1>Agents specialized in Sales</h1></header>
     <div className={styles.video}><p>Sales agents explainer video coming soon</p></div>
+    <AgentFitAuditCallout />
     <div className={styles.layout}><div>
       <section aria-labelledby="discovery-title">
         <div className={styles.sectionHeading}><h2 id="discovery-title">Prospect Discovery Agents</h2>
@@ -52,5 +54,6 @@ export default function SalesGrowthPage() {
         <p id="sales-checkout-status" className={styles.checkoutStatus}>Hiring checkout coming soon. You can select your team and see its total here; payment is not available yet.</p>
         <p className={styles.workspace}>One customer, one shared Sales prospect workspace. All Discovery agents feed it.</p>
       </aside></div>
+    <AgentFitAuditBottomLink />
   </div>;
 }

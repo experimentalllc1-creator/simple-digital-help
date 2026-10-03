@@ -41,6 +41,9 @@ export default function Home() {
           unoptimized
           alt="AI agents working together in an office."
         />
+        <Link href="/agent-fit-audit" className={`button button-dark ${styles.auditButton}`}>
+          Not sure where to start? Get an Agent Fit Audit — $199
+        </Link>
         <div className={styles.categoryLinks}>
           <Link href="/categories/sales" className={`button ${styles.categoryButton} ${styles.salesButton}`} id="sales-growth">
             Explore our agents specialized in Sales
