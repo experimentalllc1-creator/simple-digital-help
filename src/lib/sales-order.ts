@@ -1,7 +1,8 @@
-export const salesRegions = [{ id: "florida", name: "Florida" }, { id: "texas", name: "Texas" }];
+import { geographicRegions, type RegionId } from "./geographic-regions";
+export const salesRegions = geographicRegions;
 export const SALES_ASSIGNMENT_CENTS = 9900;
-export const salesWorkers: { id: string; customerType: string; name?: string; description: string; activeRegions: string[] }[] = [
-  { id: "roofing", customerType: "Roofing Contractors", name: "Milo", description: "Finds new qualified roofing contractors consistently and keeps the prospect list organized.", activeRegions: ["florida"] },
+export const salesWorkers: { id: string; customerType: string; name?: string; description: string; regionBased: boolean; activeRegions: RegionId[] }[] = [
+  { id: "roofing", customerType: "Roofing Contractors", name: "Milo", description: "Finds new qualified roofing contractors consistently and keeps the prospect list organized.", regionBased: true, activeRegions: ["florida"] },
   ...[
     ["hvac", "HVAC Contractors"], ["plumbing", "Plumbing Contractors"],
     ["electrical", "Electrical Contractors"], ["landscaping", "Landscaping Companies"],
@@ -10,12 +11,12 @@ export const salesWorkers: { id: string; customerType: string; name?: string; de
     ["hoas", "HOAs"], ["distributors", "Distributors"], ["hotels", "Hotels / Resorts"],
     ["restaurants", "Restaurants"], ["medical", "Medical Practices"],
     ["dental", "Dental Practices"], ["municipalities", "Municipalities / Public Agencies"],
-  ].map(([id, customerType]) => ({ id, customerType, description: `Finds qualified ${customerType.toLowerCase()} in your selected regions and keeps the prospect list organized.`, activeRegions: [] })),
-  { id: "projects-developments", customerType: "Projects & Developments", description: "Finds new construction, major renovations, expansions, capital improvements, and other significant projects that may create sales opportunities in your selected market.", activeRegions: [] },
+  ].map(([id, customerType]) => ({ id, customerType, description: `Finds qualified ${customerType.toLowerCase()} in your selected regions and keeps the prospect list organized.`, regionBased: true, activeRegions: [] })),
+  { id: "projects-developments", customerType: "Projects & Developments", description: "Finds new construction, major renovations, expansions, capital improvements, and other significant projects that may create sales opportunities in your selected market.", regionBased: true, activeRegions: [] },
 ];
 export const universalSalesWorkers = [
-  { id: "first-contact", name: "Universal First Contact Agent", active: false, description: "Finds an available public business email for new prospects, sends the approved first-contact message, records successful contact, and identifies prospects where a usable email could not be found." },
-  { id: "follow-up", name: "Universal Follow-Up Agent", active: false, description: "Monitors the conversations handled by the Sales team and performs the configured follow-up work." },
+  { id: "first-contact", name: "Universal First Contact Agent", active: false, regionBased: false, description: "Finds an available public business email for new prospects, sends the approved first-contact message, records successful contact, and identifies prospects where a usable email could not be found." },
+  { id: "follow-up", name: "Universal Follow-Up Agent", active: false, regionBased: false, description: "Monitors the conversations handled by the Sales team and performs the configured follow-up work." },
 ];
 // Future checkout must revalidate this selection on the server and associate it
 // with the customer's existing shared workspace, never a workspace per region.
@@ -24,8 +25,8 @@ export function createSalesOrder(assignmentKeys: string[], universalIds: string[
     const [agentId, regionId, extra] = key.split(":");
     const worker = salesWorkers.find((item) => item.id === agentId);
     const region = salesRegions.find((item) => item.id === regionId);
-    if (extra !== undefined || !worker || !region || !worker.activeRegions.includes(regionId)) throw new Error("Unavailable Discovery assignment");
-    return { agentId, customerType: worker.customerType, regionId, region: region.name, amountCents: SALES_ASSIGNMENT_CENTS };
+    if (extra !== undefined || !worker || !worker.regionBased || !region || !worker.activeRegions.includes(region.id)) throw new Error("Unavailable Discovery assignment");
+    return { agentId, customerType: worker.customerType, regionId: region.id, region: region.name, states: region.states.map((state) => state.code), amountCents: SALES_ASSIGNMENT_CENTS };
   });
   const universalWorkers = [...new Set(universalIds)].map((id) => {
     const worker = universalSalesWorkers.find((item) => item.id === id && item.active);
@@ -41,3 +42,4 @@ export function createSalesOrder(assignmentKeys: string[], universalIds: string[
     totalCents: (discoveryAssignments.length + universalWorkers.length) * SALES_ASSIGNMENT_CENTS,
   } as const;
 }
+

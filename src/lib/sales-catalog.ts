@@ -1,3 +1,4 @@
+import { geographicRegions } from "./geographic-regions";
 export const salesPaths = {
   category: "/categories/sales",
   discovery: "/categories/sales/find-new-customers",
@@ -22,9 +23,7 @@ export const discoveryIndustries = [
   "Dental Practices",
   "Municipalities / Public Agencies",
 ] as const;
-export const discoveryRegions = [
-  "Florida", "Texas",
-] as const;
+export const discoveryRegions = geographicRegions.map((region) => region.name);
 
 export type DiscoveryProduct = {
   slug: string;
@@ -73,6 +72,7 @@ export const discoveryVideo = {
 
 export const opportunityDiscovery = {
   type: "Projects & Developments",
-  regions: ["Florida", "Texas"],
+  regions: discoveryRegions,
   completionKey: "sdh:find-new-opportunities:video-complete:v1",
 } as const;
+

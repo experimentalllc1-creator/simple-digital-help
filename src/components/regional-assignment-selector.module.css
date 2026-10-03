@@ -1,0 +1,8 @@
+.regions { padding: 0; border: 0; margin: auto 0 14px; min-width: 0; }
+.regions legend { font-weight: 600; font-size: 13px; margin-bottom: 10px; }
+.regions .explanation { font-size: 11px; margin: 0 0 10px; color: var(--muted); line-height: 1.5; }
+.row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; border-top: 1px solid #e8edf1; padding-block: 8px; }
+.row label { flex: 1; min-width: 0; }
+.row small { display: block; font-size: 11px; margin-top: 4px; }
+.disabled { color: #737d88; }
+.price { font-size: 14px; font-weight: 500; color: var(--muted); }

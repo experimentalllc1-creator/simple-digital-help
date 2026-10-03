@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { AgentFitAuditCallout, AgentFitAuditBottomLink } from "./agent-fit-audit";
-import { salesWorkers, salesRegions, universalSalesWorkers, createSalesOrder } from "@/lib/sales-order";
+import { salesWorkers, universalSalesWorkers, createSalesOrder, SALES_ASSIGNMENT_CENTS } from "@/lib/sales-order";
+import RegionalAssignmentSelector from "./regional-assignment-selector";
 import styles from "./sales-workers.module.css";
 
 export default function SalesGrowthPage() {
@@ -25,13 +26,8 @@ export default function SalesGrowthPage() {
           <div className={styles.cardBody}>
             <span className={worker.activeRegions.length ? styles.available : styles.soon}>{worker.activeRegions.length ? "Available in Florida" : "Coming soon"}</span>
             <h3>{worker.name ? `${worker.name} · ${worker.customerType}` : worker.customerType}</h3><p>{worker.description}</p>
-            <fieldset className={styles.regions}><legend>Select regions</legend>{salesRegions.map((region) => {
-              const active = worker.activeRegions.includes(region.id);
-              const key = `${worker.id}:${region.id}`;
-              return <label key={region.id} className={!active ? styles.disabled : undefined}>
-                <input type="checkbox" checked={assignments.includes(key)} disabled={!active} onChange={() => toggle(key, assignments, setAssignments)} />
-                <span>{region.name} <strong>$99</strong>{!active && <small>Coming soon</small>}</span></label>;
-            })}</fieldset><small className={styles.term}>$99 × selected regions · 52 weeks each</small>
+            <RegionalAssignmentSelector product={worker} selectedKeys={assignments} onToggle={(key) => toggle(key, assignments, setAssignments)} priceCents={SALES_ASSIGNMENT_CENTS} />
+            <small className={styles.term}>$99 × selected regions · 52 weeks each</small>
           </div></article>)}</div>
       </section>
       <section className={styles.addons} aria-labelledby="addons-title">
