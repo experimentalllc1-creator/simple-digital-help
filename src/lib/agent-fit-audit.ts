@@ -3,7 +3,7 @@ export const agentFitAudit = {
   name: "Agent Fit Audit",
   priceCents: 19900,
   currency: "usd",
-  creditCents: 9950,
+  creditCents: 9900,
   creditValidityDays: 30,
   creditStartsAt: "audit-delivery",
   creditScope: "agents-specifically-recommended-in-the-audit",

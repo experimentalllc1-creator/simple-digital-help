@@ -32,7 +32,7 @@ export default function AgentFitAuditPage() {
     </section>
     <section className={styles.panel} aria-labelledby="audit-credit">
       <h2 id="audit-credit">Put your audit toward your recommended agents</h2>
-      <p>If we recommend agents, 50% of your audit fee becomes a credit toward the agents included in your recommended plan.</p>
+      <p>If we recommend agents, you receive a $99 credit toward the agents included in your recommended plan.</p>
       <strong className={styles.credit}>${agentFitAudit.creditCents / 100} credit toward recommended agents.</strong>
       <p>The credit applies only to agents specifically recommended in the audit. It is valid for {agentFitAudit.creditValidityDays} days from delivery of the audit.</p>
     </section>
