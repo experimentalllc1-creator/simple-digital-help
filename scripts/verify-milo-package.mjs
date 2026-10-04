@@ -49,6 +49,7 @@ if (process.argv.includes("--assets-only")) {
   assert.ok(!hiddenHtml.includes('href="/videos/milo-installation-v2-2.mp4"'));
   const successHtml = await readFile(path.join(root, ".next/server/app/checkout/success.html"), "utf8");
   assert.ok(successHtml.includes("Milo v2.2") && !successHtml.includes("v1.2"));
+  assert.ok(!/video/i.test(successHtml), "Success page must not promise video delivery");
   for (const file of ["src/components/storefront.tsx", "src/components/mobile-nav.tsx", "src/lib/sales-catalog.ts"]) {
     assert.ok(!(await readFile(path.join(root, file), "utf8")).includes("/support/milo-installation-v2-2"));
   }

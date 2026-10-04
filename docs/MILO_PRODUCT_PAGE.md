@@ -8,5 +8,5 @@ Promise: Up to 5 new qualified prospects per scheduled workday when available.
 Fields: Date Added, Business Name, City, Region, Customer Type, verified Website, Contacted?. Milo does not research email addresses or phone numbers; separate First Contact Agent handles contact research.
 The existing spreadsheet demo is illustrative; the v2.2 guide defines the current workspace.
 
-After payment, email provides the v2.2 prompt and illustrated guide as two attachments, plus a link to the hidden Simple Digital Help installation-video page. This page has noindex/nofollow metadata and is absent from site navigation and catalog links. Service starts at successful activation, not payment.
+After payment, email provides the v2.2 prompt and illustrated guide as exactly two attachments. No video is included in the active purchase package. The hidden Simple Digital Help installation-video page remains live but is not linked from fulfillment. This page has noindex/nofollow metadata and is absent from site navigation and catalog links. Service starts at successful activation, not payment.
 Presentation remains in src/lib/milo-presentations.ts and src/components/milo-product-page.tsx. See MILO_CHECKOUT.md for payment, delivery and acceptance verification.

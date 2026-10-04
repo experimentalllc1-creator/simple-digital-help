@@ -221,13 +221,13 @@ test("configuration rejects accidental live keys and untrusted origins", () => {
   } finally { process.env.STRIPE_SECRET_KEY = previousKey; process.env.APP_URL = previousUrl; }
 });
 
-test("v2.2 delivers exactly two hash-valid attachments and hidden video link", async () => {
+test("v2.2 delivers exactly two hash-valid attachments without a video reference", async () => {
   const attachments = await miloAttachments();
   assert.deepEqual(attachments.map(a => a.filename), ["Milo_FL_Roofing_Installation_Prompt_v2.2.txt", "Milo_Illustrated_Installation_Guide_v2.2.pdf"]);
   for (const [i, attachment] of attachments.entries()) assert.equal(createHash("sha256").update(Buffer.from(attachment.content, "base64")).digest("hex"), MILO_FILES[i].sha256);
   const email = await miloEmail("buyer@example.test", "cs_test_milo");
   assert.deepEqual(email.attachments, attachments);
-  assert.ok(email.text.includes("http://127.0.0.1:3000/support/milo-installation-v2-2"));
+  assert.doesNotMatch(email.text, /video|milo-installation-v2-2/i);
   assert.match(email.text, /52 weeks of service from successful activation/);
   assert.doesNotMatch(JSON.stringify(email), /v1\.2|youtu|Archive|Product_Spec|\.mp4|Other Leads/);
   let payload; const oldFetch = globalThis.fetch;

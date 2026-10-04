@@ -3,7 +3,6 @@ import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import type { EmailMessage } from "./email.server";
-import { appOrigin, MILO_VIDEO_PAGE } from "./milo-config.server";
 
 export const MILO_FILES = [
   {
@@ -31,7 +30,6 @@ export async function miloEmail(to: string, sessionId: string): Promise<EmailMes
       "Your purchase includes 52 weeks of service from successful activation.",
       "Start with the attached Milo v2.2 Illustrated Installation Guide. The attached installation TXT file is the file you will upload to ChatGPT.",
       "1. Save the attached Milo installation TXT file somewhere easy to find.\n2. Open a new ChatGPT conversation.\n3. Upload the TXT file.\n4. Type: Install Milo using the attached file.\n5. Follow the illustrated guide for Google connection, permissions, scheduling, and the first run.",
-      `Watch the Milo Installation Video: ${appOrigin()}${MILO_VIDEO_PAGE}`,
       "Need help? Reply to support@simpledigitalhelp.com.",
     ].join("\n\n"),
     attachments: await miloAttachments(),
