@@ -1,14 +1,14 @@
 "use client";
 import { useState } from "react";
 import { AgentFitAuditCallout, AgentFitAuditBottomLink } from "./agent-fit-audit";
-import { salesWorkers, universalSalesWorkers, createSalesOrder, SALES_ASSIGNMENT_CENTS } from "@/lib/sales-order";
+import { salesWorkers, universalSalesWorkers, salesCheckoutState, SALES_ASSIGNMENT_CENTS } from "@/lib/sales-order";
 import RegionalAssignmentSelector from "./regional-assignment-selector";
 import styles from "./sales-workers.module.css";
 
-export default function SalesGrowthPage() {
+export default function SalesGrowthPage({ miloCheckoutEnabled }: { miloCheckoutEnabled: boolean }) {
   const [assignments, setAssignments] = useState<string[]>([]);
   const [universals, setUniversals] = useState<string[]>([]);
-  const order = createSalesOrder(assignments, universals);
+  const { order, canCheckout, status } = salesCheckoutState(assignments, universals, miloCheckoutEnabled);
   function toggle(key: string, selected: string[], update: (value: string[]) => void) {
     update(selected.includes(key) ? selected.filter((item) => item !== key) : [...selected, key]);
   }
@@ -46,8 +46,10 @@ export default function SalesGrowthPage() {
           {order.universalWorkers.length ? <ul>{order.universalWorkers.map((item) => <li key={item.id}><span>{item.name}</span><strong>$99</strong></li>)}</ul> : <p>None selected.</p>}
           <div className={styles.summaryTerm}><strong>52-week term</strong><p>Each assignment starts from successful activation.</p></div>
           <div className={styles.total}><span>Total</span><strong>${order.totalCents / 100}</strong></div></div>
-        <button className={styles.hire} disabled aria-describedby="sales-checkout-status">Hire these agents</button>
-        <p id="sales-checkout-status" className={styles.checkoutStatus}>Hiring checkout coming soon. You can select your team and see its total here; payment is not available yet.</p>
+        <form action={canCheckout ? "/api/checkout/milo" : undefined} method="post" onSubmit={(event) => { if (!canCheckout) event.preventDefault(); }}>
+          <button type="submit" className={styles.hire} disabled={!canCheckout} aria-describedby="sales-checkout-status">Hire these agents</button>
+        </form>
+        <p id="sales-checkout-status" className={styles.checkoutStatus}>{status}</p>
         <p className={styles.workspace}>One customer, one shared Sales prospect workspace. All Discovery agents feed it.</p>
       </aside></div>
     <AgentFitAuditBottomLink />

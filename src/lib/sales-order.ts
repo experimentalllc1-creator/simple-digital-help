@@ -43,3 +43,23 @@ export function createSalesOrder(assignmentKeys: string[], universalIds: string[
   } as const;
 }
 
+
+// This entry point can purchase only the existing fixed Milo package.
+export function salesCheckoutState(assignmentKeys: string[], universalIds: string[], checkoutEnabled: boolean) {
+  try {
+    const order = createSalesOrder(assignmentKeys, universalIds);
+    const miloOnly = order.discoveryAssignments.length === 1 &&
+      order.discoveryAssignments[0].agentId === "roofing" &&
+      order.discoveryAssignments[0].regionId === "florida" && order.universalWorkers.length === 0;
+    return {
+      order,
+      canCheckout: checkoutEnabled && miloOnly,
+      status: !checkoutEnabled ? "Checkout is currently unavailable." : miloOnly ?
+        "Secure $99 one-time payment for Milo — Florida Roofing through Stripe." :
+        "Select Roofing Contractors and Florida to hire Milo. Only available agents can be hired.",
+    };
+  } catch {
+    return { order: createSalesOrder([], []), canCheckout: false,
+      status: "Only available agents can be hired. Remove Coming Soon or unavailable selections to continue." };
+  }
+}
