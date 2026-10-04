@@ -1,0 +1,4 @@
+BEGIN;
+ALTER TABLE milo_deliveries ADD COLUMN IF NOT EXISTS product_code text NOT NULL DEFAULT 'PD-ROOF-FL';
+ALTER TABLE milo_deliveries ADD COLUMN IF NOT EXISTS release_version text NOT NULL DEFAULT '1.2';
+COMMIT;

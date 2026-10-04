@@ -2,7 +2,7 @@ import "server-only";
 import type Stripe from "stripe";
 import { randomUUID } from "node:crypto";
 import { appOrigin, checkoutEnabled, deliveryEnabled, MILO_AMOUNT, MILO_CURRENCY, MILO_PATH,
-  MILO_SLUG, MILO_VERSION, paymentConfig, required } from "./milo-config.server";
+  MILO_SLUG, MILO_VERSION, MILO_PRODUCT_CODE, paymentConfig, required } from "./milo-config.server";
 import { stripeClient } from "./stripe.server";
 import { deliveryStore } from "./milo-store.server";
 import { miloAttachments, miloEmail } from "./milo-assets.server";
@@ -44,7 +44,8 @@ export async function handleCheckout(request: Request, overrides: Partial<Depend
       line_items: [{ price: config.priceId, quantity: 1 }],
       allow_promotion_codes: false,
       automatic_tax: { enabled: false },
-      metadata: { product: MILO_SLUG, version: MILO_VERSION },
+      metadata: { product: MILO_SLUG, version: MILO_VERSION, product_code: MILO_PRODUCT_CODE, release_version: MILO_VERSION },
+      payment_intent_data: { metadata: { product: MILO_SLUG, product_code: MILO_PRODUCT_CODE, release_version: MILO_VERSION } },
       success_url: `${origin}/checkout/success`,
       cancel_url: `${origin}${MILO_PATH}`,
     }, { idempotencyKey: `milo-checkout/${randomUUID()}` });

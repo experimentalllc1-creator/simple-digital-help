@@ -5,7 +5,7 @@ universal workers through src/lib/sales-order.ts. Only roofing/Florida is select
 First Contact and Follow-Up are coming soon; neither has sale-ready checkout here.
 
 The hiring CTA is disabled. Existing /api/checkout/milo sells one fixed $99 Milo
-v1.2 installation package and delivers approved files by email. It does not record
+v2.2 installation package (PD-ROOF-FL), attaches the prompt and guide by email, and links to the hidden installation-video page. It does not record
 regions, universal workers, a shared workspace, or activation-based hiring terms.
 The category does not submit hiring selections to that endpoint.
 

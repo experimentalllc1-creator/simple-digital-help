@@ -1,49 +1,27 @@
 import assert from "node:assert/strict";
-import { spawn } from "node:child_process";
-import { once } from "node:events";
-import { createServer } from "node:net";
-import path from "node:path";
-
-const reservation = createServer();
-await new Promise(resolve => reservation.listen(0, "127.0.0.1", resolve));
-const port = reservation.address().port;
-await new Promise(resolve => reservation.close(resolve));
-const origin = `http://127.0.0.1:${port}`;
-const server = spawn(process.execPath, [path.resolve("node_modules/next/dist/bin/next"), "start", "--hostname", "127.0.0.1", "--port", String(port)], {
-  windowsHide: true,
-  env: { ...process.env, MILO_CHECKOUT_ENABLED: "false", MILO_DELIVERY_ENABLED: "false", NEXT_TELEMETRY_DISABLED: "1" },
-  stdio: "ignore",
-});
-let spawnError;
-server.on("error", error => { spawnError = error; });
-try {
-  let page;
-  for (let attempt = 0; attempt < 120; attempt++) {
-    if (spawnError || server.exitCode !== null) throw new Error("Local production server could not start");
-    try {
-      page = await fetch(`${origin}/products/milo-florida-roofing-contractors`, { signal: AbortSignal.timeout(1000) });
-      if (page.ok) break;
-    } catch { /* Wait for startup, with no external requests. */ }
-    await new Promise(resolve => setTimeout(resolve, 250));
-  }
-  assert.ok(page?.ok, "Milo product page loads");
-  const html = await page.text();
-  assert.match(html, /\$99/);
-  assert.match(html, /<button[^>]*disabled[^>]*>Buy Now<\/button>/);
-  assert.equal((await fetch(`${origin}/api/checkout/milo`, { method: "POST", headers: { origin } })).status, 503);
-  assert.equal((await fetch(`${origin}/api/checkout/milo`)).status, 405);
-  assert.equal((await fetch(`${origin}/api/webhooks/stripe`, { method: "POST", body: "{}" })).status, 400);
-  assert.equal((await fetch(`${origin}/checkout/success`)).status, 200);
-  for (const file of ["Milo_FL_Roofing_Installation_Prompt_v1.2.txt", "Milo_Illustrated_Installation_Guide_v1.2.pdf", "Milo_Video_Disclaimer_v1.2.txt"]) {
-    for (const prefix of ["/docs/Products/MILO/", "/MILO/", "/"]) {
-      assert.equal((await fetch(`${origin}${prefix}${file}`)).status, 404, "Paid file is not publicly served");
-    }
-  }
-  console.log("Local production smoke checks passed: $99 page, disabled Buy Now/checkout, signature requirement, success page, and private-file 404s.");
-} finally {
-  if (server.exitCode === null && !spawnError) {
-    const exited = once(server, "exit");
-    server.kill();
-    await exited;
-  }
+const origin = process.argv[2];
+if (!origin || new URL(origin).protocol !== "https:") throw new Error("Pass the deployed HTTPS origin; no local preview is started.");
+const get = (path, options = {}) => fetch(origin + path, { ...options, redirect: "manual", signal: AbortSignal.timeout(20000) });
+const html = await (await get("/products/milo-florida-roofing-contractors")).text();
+assert.match(html, /\$99/);
+assert.ok(html.includes("Up to 5 new qualified prospects"));
+assert.ok(html.includes("Milo does not research email addresses or phone numbers"));
+assert.ok(!html.includes("/support/milo-installation-v2-2"));
+assert.equal((await get("/api/checkout/milo", { method: "POST", headers: { origin: "https://invalid.example" } })).status, 403);
+assert.equal((await get("/api/webhooks/stripe", { method: "POST", body: "{}" })).status, 400);
+const success = await (await get("/checkout/success")).text();
+assert.ok(success.includes("Milo v2.2")); assert.ok(!success.includes("v1.2"));
+const videoPage = await get("/support/milo-installation-v2-2"); assert.equal(videoPage.status, 200);
+const videoHtml = await videoPage.text();
+assert.ok(videoHtml.includes("noindex, nofollow")); assert.ok(videoHtml.includes("<video"));
+assert.ok(videoHtml.includes("/videos/milo-installation-v2-2.mp4"));
+const video = await get("/videos/milo-installation-v2-2.mp4", { headers: { Range: "bytes=0-1023" } });
+assert.equal(video.status, 206); assert.match(video.headers.get("content-type"), /video\/mp4/);
+assert.equal((await video.arrayBuffer()).byteLength, 1024);
+for (const route of ["/", "/categories/sales", "/categories/sales/find-new-customers", "/sitemap.xml"]) {
+  const response = await get(route); if (response.status === 200) assert.ok(!(await response.text()).includes("/support/milo-installation-v2-2"));
 }
+for (const file of ["Milo_FL_Roofing_Installation_Prompt_v2.2.txt", "Milo_Illustrated_Installation_Guide_v2.2.pdf", "Milo_FL_Roofing_Product_Spec_v2.2.md", "Archive/Milo_FL_Roofing_Installation_Prompt_v1.2.txt"]) {
+  for (const prefix of ["/docs/Products/MILO/", "/MILO/", "/"]) assert.equal((await get(prefix + file)).status, 404);
+}
+console.log("Production smoke passed: product/success copy, origin/signature protection, hidden noindex video with range playback, navigation exclusion, private asset 404s.");

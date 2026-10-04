@@ -1,194 +1,36 @@
-# Milo checkout and private delivery
+# Milo v2.2 checkout and fulfillment
 
-Implemented in the existing storefront. Both activation switches default to off.
-No Stripe products or Prices are created. No scheduler, public download endpoint,
-or public email-sending endpoint is installed.
-
-## Release status (2026-09-29)
-
-The separate Vercel project `simple-digital-help-store` is linked under
-`henry-pazs-projects-2f739818`. At the owner's explicit authorization, production
-checkout and automatic delivery are now enabled at https://www.simpledigitalhelp.com.
-Deployment: `dpl_HLj2QWPFjtiTb3dytAt9UrucAyFT`. Local activation switches remain off.
-The existing `steelford-quote-agent` project was not modified.
-The custom domains now belong to this project. `simpledigitalhelp.com` retains its
-redirect to `www.simpledigitalhelp.com`; `APP_URL` uses that canonical HTTPS origin.
-
-All 21 local automated tests passed, including durable database restart and
-duplicate-delivery coverage. Local and Vercel production builds verified all three
-approved asset hashes and server traces. Deployed smoke checks verified the $99
-page, disabled Buy Now, checkout 503, unsigned webhook 400, and private-file 404s.
-
-The dedicated database `milo-fulfillment` is provisioned on Neon's free plan in
-`iad1`, with optional Neon Auth disabled, and connected only to this project's
-production environment. Its TLS connection was verified and the existing delivery
-ledger schema initialized with zero orders. `DATABASE_URL` is stored privately
-locally and encrypted in Vercel, with certificate verification enabled.
-The live Stripe credential was verified against Experimental LLC and saved encrypted
-in the new project's production environment. The existing active Milo product is
-`prod_VLOrNcbMrvcBca`, with one-time USD 9900 price
-`price_1UKi3rCzRwKdX10NQ1RmVZj1`; both IDs are configured locally and in Vercel.
-An existing enabled webhook, `we_1TT4dXCzRwKdX10N4ZhJeLvZ`, points to
-`https://www.simpledigitalhelp.com/api/webhooks/stripe` and subscribes to
-`checkout.session.completed` and `checkout.session.async_payment_succeeded`.
-Its supplied signing secret is encrypted in production. A signed no-op request was
-accepted by the deployed handler and an altered body rejected; this verifies use
-of the supplied secret, not yet that Stripe itself signs with the same secret.
-Stripe-originated confirmation remains part of the final acceptance flow.
-No Stripe product, webhook,
-charge, or Checkout Session has been created by this release work.
-The replacement Resend key passed a read-only domain check: `simpledigitalhelp.com`
-is verified. The key is encrypted in the production environment; the existing sender
-is `support@simpledigitalhelp.com`. No delivery email has been sent by release checks.
-
-Final essential checks passed: live $99 product and enabled Buy Now, wrong-origin
-checkout rejection (403), signed no-op acceptance, tampered-body rejection (400),
-private attachment URL rejection (404), and a ready database with zero orders before
-activation. The production build confirmed all three approved files remain in server
-bundles only. No new product code or materials were changed for activation.
-
-## Customer #001 acceptance still required
-
-Open https://www.simpledigitalhelp.com/products/milo-florida-roofing-contractors,
-choose Buy Now, and complete the real $99 purchase using the desired delivery email.
-After purchase, verify Stripe's successful payment and webhook delivery, the ledger's
-`sent` state and Resend message ID, and receipt of all three attachments plus
-https://youtu.be/C52gIS4fVNc. Do not repeat the purchase if email is delayed; inspect
-the existing payment and ledger first. The paid end-to-end flow is not yet proven.
+Product: Milo — Florida Roofing Prospect Discovery. Product code: PD-ROOF-FL.
+The existing Stripe Product and one-time $99 USD Price are retained. No new Stripe objects are created.
 
 ## Flow
 
-1. The existing Milo page displays $99. Its form remains disabled until both
-   `MILO_CHECKOUT_ENABLED=true` and `MILO_DELIVERY_ENABLED=true` are explicitly set.
-2. `POST /api/checkout/milo` requires the configured same-origin browser request.
-   It checks database readiness, approved private files, required settings, and
-   the existing Stripe Price (active, USD 9900, one-time, expected Product and mode).
-   It creates a hosted card Checkout Session for exactly one unit. Customer input
-   cannot choose the price, quantity, discount, currency, or redirect destination.
-3. `POST /api/webhooks/stripe` verifies the raw body and timestamp with Stripe's SDK.
-   It handles `checkout.session.completed` and `checkout.session.async_payment_succeeded`.
-   Other events and unrelated products are ignored. It retrieves the session,
-   line items, and PaymentIntent from Stripe and checks successful payment,
-   expected Product/Price, version, quantity, amount, currency, and mode.
-4. A PostgreSQL row keyed by Checkout Session (also unique by PaymentIntent) stores
-   the recipient and exact email/attachment payload before any email request.
-   An atomic two-minute lease prevents concurrent workers sending independently.
-5. The existing Resend sender sends all three approved attachments and the video
-   link to the email address recorded by Stripe Checkout. A successful Resend API
-   response is persisted with its message ID. `sent` means provider acceptance,
-   not proof of inbox delivery. The success page never triggers fulfillment and
-   does not treat a browser redirect as proof of payment.
+Buy Now on /products/milo-florida-roofing-contractors posts to /api/checkout/milo.
+Both MILO_CHECKOUT_ENABLED and MILO_DELIVERY_ENABLED must be true. Same-origin checking, database readiness, private attachment integrity and active Product/Price validation precede session creation.
+New sessions include product slug, version 2.2, product_code PD-ROOF-FL and release_version 2.2. PaymentIntent metadata also contains slug, code and release.
+Success redirects to /checkout/success; cancellation returns to the Milo product page.
 
-## Private approved release
+The signed /api/webhooks/stripe endpoint handles checkout.session.completed and checkout.session.async_payment_succeeded. It retrieves and verifies the paid session, line items and succeeded PaymentIntent, including exactly one unit at USD 9900 and the configured Product/Price and mode.
+PostgreSQL milo_deliveries records paid order identity, recipient, exact email snapshot, status, leases and Resend acceptance ID.
+Migration 002 adds product_code and release_version without removing records. Existing rows default to PD-ROOF-FL / 1.2. Run npm run db:migrate against the intended production database before deploying the new handler.
 
-Keep these files, unchanged, under `docs/Products/MILO/` on the server:
+## Customer delivery
 
-- `Milo_FL_Roofing_Installation_Prompt_v1.2.txt`
-- `Milo_Illustrated_Installation_Guide_v1.2.pdf`
-- `Milo_Video_Disclaimer_v1.2.txt`
+Resend sends from support@simpledigitalhelp.com to customer_details.email.
+Exactly two private attachments:
+- Milo_FL_Roofing_Installation_Prompt_v2.2.txt
+- Milo_Illustrated_Installation_Guide_v2.2.pdf
 
-They remain in their existing local location and are Git-ignored to avoid publishing
-paid content in a potentially public repository. Deploy from the local checkout
-using Vercel CLI: `.vercelignore` includes only application inputs and these three
-approved files. Automatic Git deployments are disabled in `vercel.json` because
-a Git checkout lacks the delivery package. Next.js output tracing
-includes them only in the checkout/webhook **server** bundles. Never copy them to
-`public/`, static hosting, client modules, or a public download URL. A clean clone
-does not contain these files. Missing or modified files stop new checkout creation.
-SHA-256 values in `src/lib/milo-assets.server.ts` pin the approved release.
+Email links to /support/milo-installation-v2-2 on APP_URL. This unlisted noindex/nofollow page plays Milo_Installation_Video_v2.2.mp4. The video is copied at build time to public/videos/milo-installation-v2-2.mp4; it is web-accessible for playback, not access-controlled. There is no download CTA or authentication portal. No MP4 attachment, product spec or Archive file is delivered.
+Prompt and guide remain private server assets with pinned hashes. Video hash is pinned by package verification. CLI upload rules include only these three source assets; paid source materials remain Git-ignored. Automatic Git deployment remains disabled. Use the linked production project's existing Vercel CLI workflow.
 
-`npm run build:vercel` verifies the approved hashes before building, then verifies
-that both server route traces contain all three attachments and that their contents
-are absent from `public/` and browser bundles. Before uploading, inspect
-`vercel deploy --dry --format=json` to confirm all three files are included and
-`.env.local`, `.qa`, and local Vercel credentials are excluded. CLI directory
-allowlist entries must omit trailing slashes.
+## Historical compatibility
 
-The email includes https://youtu.be/C52gIS4fVNc and the notice that the video shows an
-older installation. The v1.2 files remain authoritative. No Milo functionality or
-installation scheduling has been modified or executed.
+Legacy sessions with slug and version 1.2 are verified against the existing Price/Product. Sent ledger records never resend. Pending legacy records reuse their stored message and idempotency key, without automatic upgrade. A legacy paid session without a message snapshot is recorded as manual_review and requires operator reconciliation; no archived files are packaged or new legacy email composed.
+Atomic two-minute leases suppress concurrent sends. Uncertain sends after 23 hours require manual review. Stripe receives 503 for unresolved delivery and can retry. Resend acceptance is not proof of inbox receipt; inspect bounces in Resend. Do not reset completed ledger records.
 
-## Configuration still required
+## Configuration and acceptance
 
-See `.env.example`; do not replace existing `.env.local` or commit secrets.
-
-| Setting | Required value |
-| --- | --- |
-| `STRIPE_SECRET_KEY` | Server key for the existing account and selected mode |
-| `STRIPE_WEBHOOK_SECRET` | Signing secret for this endpoint/listener |
-| `STRIPE_MILO_PRODUCT_ID` | Existing Milo `prod_...` ID |
-| `STRIPE_MILO_PRICE_ID` | Existing $99 USD one-time `price_...` ID belonging to that product |
-| `STRIPE_MODE` | `live` for the authorized owner purchase; activation switches stay off until final approval |
-| `APP_URL` | Exact trusted origin; HTTPS except local HTTP in test mode |
-| `DATABASE_URL` | Durable PostgreSQL connection URL, shared by all app instances |
-| `RESEND_API_KEY` | Existing server key; sender remains `support@simpledigitalhelp.com` |
-| `MILO_CHECKOUT_ENABLED` | Leave `false` until approved |
-| `MILO_DELIVERY_ENABLED` | Leave `false` until email sending is approved |
-
-Use a durable PostgreSQL service with backups and the provider's verified TLS
-configuration; do not use ephemeral serverless storage as the ledger. Run
-`npm run db:migrate` against the intended database before enabling checkout.
-The command loads `.env.local` if present and only installs the idempotent schema.
-It neither sends email nor creates Stripe objects. No external migration was run
-as part of implementation. Preserve the ledger across deployments and restores.
-
-Stripe test and live catalogs are separate: select the existing Price in the
-appropriate mode. This code never creates or copies a product to fill a missing
-configuration. Hosted Checkout does not require a browser publishable key.
-
-Before activation, configure the Stripe endpoint for the two events above, verify
-the Resend sender domain/key, and check the existing product/Price IDs read-only.
-For an approved local test, Stripe CLI can forward events to
-`http://127.0.0.1:3000/api/webhooks/stripe`; its signing secret differs from a
-dashboard endpoint secret. No listener or scheduled task has been started.
-
-## Retry and reconciliation policy
-
-The ledger permanently suppresses completed deliveries, regardless of webhook event
-ID, repeat event type, process restart, or elapsed time. Transient failures return
-503 so Stripe can retry. Recoverable retries use the same stored payload and
-deterministic Resend idempotency key. No separate background scheduler is needed.
-
-Resend retains idempotency keys for 24 hours. If acceptance is uncertain and the
-first attempt is over 23 hours old, the row becomes `manual_review` and automatic
-resending stops. This avoids a duplicate after the provider forgets its key.
-Exactly-once delivery cannot be guaranteed across independent systems without
-this reconciliation path. Do not delete/reset these rows to force a resend.
-
-Inspect pending work manually with:
-
-```sql
-SELECT session_id, status, attempts, first_attempt_at, lease_until, resend_id
-FROM milo_deliveries WHERE status <> 'sent' ORDER BY created_at;
-```
-
-For `manual_review`, look up the order in Stripe and the message in Resend. If
-accepted, record the verified Resend message ID and mark the row `sent` with its
-acceptance timestamp. If confirmed never accepted, an operator can authorize a
-fresh delivery attempt after ensuring no original worker remains active. Do not
-clear `first_attempt_at` merely because a request timed out. Once Stripe's retry
-window expires, manually resend the original Stripe event after resolving the
-issue; do not create a new purchase. Review Resend bounces/failures in its dashboard.
-No automated reconciliation or notification schedule is configured.
-
-## Verification
-
-- `npm test`: mocked Stripe/Resend, real embedded PostgreSQL (PGlite) SQL, signature
-  validation, invalid payments, concurrency, persistence across reopen, and failures
-  before/after Resend acceptance. No `.env.local` loading or real messages.
-- The private-file test checks all three attachment bytes/hashes and the video link.
-  It explicitly skips on a clean clone without the private files; provision them to
-  run the release check before activation.
-- `npm run typecheck` and `npm run build`.
-- `npm run test:smoke` after build: starts an isolated local production server with
-  both switches forced off, checks disabled checkout and private-file 404s, and stops
-  its own server. It does not invoke a valid payment or email request.
-
-## Remaining launch work
-
-Supply the existing Stripe IDs/keys and durable database, apply the migration,
-and verify the external settings. Authorize a controlled test-mode checkout and
-delivery to verify actual receipt and installation before live activation/deployment.
-The current product copy/demo still advertises email/phone fields and five prospects
-every day; approved v1.2 excludes those fields and targets up to five verified
-prospects. Resolve that copy mismatch before launch without changing Milo itself.
+Existing variable names: STRIPE_MILO_PRODUCT_ID, STRIPE_MILO_PRICE_ID, STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, STRIPE_MODE, APP_URL, DATABASE_URL, RESEND_API_KEY, MILO_CHECKOUT_ENABLED, MILO_DELIVERY_ENABLED. Do not expose credentials.
+Run npm test, npm run typecheck and npm run build:vercel. Package verification checks server traces and private asset exclusion from public/browser output. Run npm run test:smoke -- https://www.simpledigitalhelp.com after deployment for read-only production verification.
+Henry's real $99 purchase must confirm Stripe webhook processing, ledger sent status, email receipt, two correct attachments and video playback. A clean installation must confirm Google permissions, shared workspace and seven columns, schedule, first run and 52-week expiry. Payment does not start the service clock; successful activation does. The storefront does not automate activation tracking.

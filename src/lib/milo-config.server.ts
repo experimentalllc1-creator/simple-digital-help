@@ -2,7 +2,9 @@ import "server-only";
 
 export const MILO_SLUG = "milo-florida-roofing-contractors";
 export const MILO_PATH = `/products/${MILO_SLUG}`;
-export const MILO_VERSION = "1.2";
+export const MILO_VERSION = "2.2";
+export const MILO_PRODUCT_CODE = "PD-ROOF-FL";
+export const MILO_VIDEO_PAGE = "/support/milo-installation-v2-2";
 export const MILO_AMOUNT = 9900;
 export const MILO_CURRENCY = "usd";
 

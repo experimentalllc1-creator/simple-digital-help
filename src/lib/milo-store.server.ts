@@ -4,7 +4,7 @@ import { Pool } from "pg";
 import type { EmailMessage } from "./email.server";
 import { required } from "./milo-config.server";
 
-export type PaidOrder = { sessionId: string; paymentIntentId: string; email: string; livemode: boolean };
+export type PaidOrder = { sessionId: string; paymentIntentId: string; email: string; livemode: boolean; productCode: string; releaseVersion: string };
 type Row = { status: string; message: EmailMessage };
 // This query contract also runs against an embedded PostgreSQL engine in tests.
 export type Database = { query: (sql: string, values?: unknown[]) => Promise<{ rows: Record<string, unknown>[] }> };
@@ -13,7 +13,7 @@ export class DeliveryStore {
   constructor(private readonly db: Database) {}
 
   async ready() {
-    await this.db.query("SELECT session_id FROM milo_deliveries LIMIT 0");
+    await this.db.query("SELECT session_id, product_code, release_version FROM milo_deliveries LIMIT 0");
   }
 
   async find(sessionId: string): Promise<Row | undefined> {
@@ -23,9 +23,16 @@ export class DeliveryStore {
 
   async prepare(order: PaidOrder, message: EmailMessage) {
     await this.db.query(`INSERT INTO milo_deliveries
-      (session_id, payment_intent_id, livemode, recipient, message)
-      VALUES ($1, $2, $3, $4, $5::jsonb) ON CONFLICT (session_id) DO NOTHING`,
-    [order.sessionId, order.paymentIntentId, order.livemode, order.email, JSON.stringify(message)]);
+      (session_id, payment_intent_id, livemode, recipient, message, product_code, release_version)
+      VALUES ($1, $2, $3, $4, $5::jsonb, $6, $7) ON CONFLICT (session_id) DO NOTHING`,
+    [order.sessionId, order.paymentIntentId, order.livemode, order.email, JSON.stringify(message), order.productCode, order.releaseVersion]);
+  }
+
+  async reviewLegacy(order: PaidOrder) {
+    await this.db.query(`INSERT INTO milo_deliveries
+      (session_id, payment_intent_id, livemode, recipient, message, product_code, release_version, status)
+      VALUES ($1, $2, $3, $4, '{}'::jsonb, $5, $6, 'manual_review') ON CONFLICT (session_id) DO NOTHING`,
+    [order.sessionId, order.paymentIntentId, order.livemode, order.email, order.productCode, order.releaseVersion]);
   }
 
   async claim(sessionId: string): Promise<{ token: string; message: EmailMessage } | "sent"> {

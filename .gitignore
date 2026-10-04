@@ -35,3 +35,6 @@ credentials/
 *.pfx
 credentials.json
 service-account*.json
+
+# Generated from the private installation-video source during build.
+public/videos/milo-installation-v2-2.mp4

@@ -1,12 +1,15 @@
 import "server-only";
 import type Stripe from "stripe";
-import { MILO_AMOUNT, MILO_CURRENCY, MILO_SLUG, MILO_VERSION, paymentConfig } from "./milo-config.server";
+import { MILO_AMOUNT, MILO_CURRENCY, MILO_SLUG, MILO_VERSION, MILO_PRODUCT_CODE, paymentConfig } from "./milo-config.server";
 import { miloEmail } from "./milo-assets.server";
 import { sendEmail } from "./email.server";
 import type { DeliveryStore, PaidOrder } from "./milo-store.server";
 
 export function verifiedOrder(session: Stripe.Checkout.Session, config: ReturnType<typeof paymentConfig>): PaidOrder | null {
-  if (session.metadata?.product !== MILO_SLUG || session.metadata?.version !== MILO_VERSION) {
+  const metadata = session.metadata;
+  const legacy = metadata?.version === "1.2" && !metadata.release_version && !metadata.product_code;
+  if (metadata?.product !== MILO_SLUG || (!legacy &&
+      (metadata?.version !== MILO_VERSION || metadata.release_version !== MILO_VERSION || metadata.product_code !== MILO_PRODUCT_CODE))) {
     throw new Error("Checkout metadata does not match the Milo release");
   }
   if (session.payment_status !== "paid") return null;
@@ -27,12 +30,17 @@ export function verifiedOrder(session: Stripe.Checkout.Session, config: ReturnTy
   }
   const email = session.customer_details?.email;
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error("Paid order has no valid checkout email");
-  return { sessionId: session.id, paymentIntentId: intent.id, email, livemode: session.livemode };
+  return { sessionId: session.id, paymentIntentId: intent.id, email, livemode: session.livemode,
+    productCode: MILO_PRODUCT_CODE, releaseVersion: legacy ? "1.2" : MILO_VERSION };
 }
 
 export async function fulfillOrder(order: PaidOrder, store: DeliveryStore, makeEmail = miloEmail, send = sendEmail) {
   const existing = await store.find(order.sessionId);
   if (existing?.status === "sent") return;
+  if (!existing && order.releaseVersion === "1.2") {
+    await store.reviewLegacy(order);
+    throw new Error("Legacy order requires manual reconciliation; no automatic release upgrade");
+  }
   if (!existing) await store.prepare(order, await makeEmail(order.email, order.sessionId));
   const claim = await store.claim(order.sessionId);
   if (claim === "sent") return;

@@ -40,7 +40,8 @@ export default function MiloProductPage({ product, presentation }: {
           <div>
             <p className="eyebrow">ONE-TIME PAYMENT</p>
             <h2 id="milo-purchase">$99</h2>
-            <p>{canBuy ? "Milo v1.2 delivered by email after payment." : "Purchase availability coming next."}</p>
+            <p>52 weeks of service from successful activation.</p>
+            <p>{canBuy ? "Milo v2.2 prompt and guide delivered by email after payment, with an installation video link." : "Purchase availability coming next."}</p>
           </div>
           <div className={styles.purchaseAction}>
             <form action="/api/checkout/milo" method="post">

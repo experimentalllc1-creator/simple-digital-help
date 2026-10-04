@@ -4,9 +4,9 @@ export const metadata = { title: "Milo checkout", robots: { index: false, follow
 
 export default function CheckoutSuccess() {
   return <div className="page-width" style={{ paddingBlock: 64 }}>
-    <h1>Thank you for choosing Milo</h1>
-    <p>After your payment is verified, your Milo v1.2 files and installation video link will be emailed to the address you entered at checkout.</p>
-    <p>Check your inbox and spam folder. If the email does not arrive, contact <a href="mailto:support@simpledigitalhelp.com">support@simpledigitalhelp.com</a>.</p>
+    <h1>Payment successful — thank you for choosing Milo</h1>
+    <p>After payment verification, your Milo v2.2 installation materials will be sent to the email address used during checkout. The email contains the installation prompt and illustrated guide as attachments, plus a link to the installation video.</p>
+    <p>Your 52 weeks of service start only after successful activation. Check your spam/junk folder if the email does not arrive shortly. If the email does not arrive, contact <a href="mailto:support@simpledigitalhelp.com">support@simpledigitalhelp.com</a>.</p>
     <Link className="button" href="/products/milo-florida-roofing-contractors">Return to Milo</Link>
   </div>;
 }
