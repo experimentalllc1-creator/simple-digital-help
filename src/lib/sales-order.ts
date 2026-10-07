@@ -1,31 +1,34 @@
 import { geographicRegions, type RegionId } from "./geographic-regions";
+import { miloAssignments } from "./milo-assignments";
 export const salesRegions = geographicRegions;
 export const SALES_ASSIGNMENT_CENTS = 9900;
-export const salesWorkers: { id: string; customerType: string; name?: string; description: string; regionBased: boolean; activeRegions: RegionId[] }[] = [
-  { id: "roofing", customerType: "Roofing Contractors", name: "Milo", description: "Finds new qualified roofing contractors consistently and keeps the prospect list organized.", regionBased: true, activeRegions: ["florida"] },
+export const salesWorkers: { id: string; customerType: string; name?: string; description: string; regionBased: boolean; activeRegions: (RegionId | "united-states")[] }[] = [
+  { id: "roofing", customerType: "Roofing Contractors", name: "Milo", description: "Finds new qualified roofing contractors consistently and keeps the prospect list organized.", regionBased: true, activeRegions: miloAssignments.filter(item => item.agentId === "roofing" && item.available).map(item => item.regionId) },
+  { id: "hvac", customerType: "HVAC Contractors", name: "Milo HVAC", description: "Finds new qualified HVAC contractors consistently and keeps the prospect list organized.", regionBased: true, activeRegions: miloAssignments.filter(item => item.agentId === "hvac" && item.available).map(item => item.regionId) },
+  { id: "plumbing", customerType: "Plumbing Contractors", name: "Milo Plumbing", description: "Finds new qualified plumbing contractors consistently and keeps the prospect list organized.", regionBased: true, activeRegions: miloAssignments.filter(item => item.agentId === "plumbing" && item.available).map(item => item.regionId) },
+  { id: "electrical", customerType: "Electrical Contractors", name: "Milo Electrical", description: "Finds new qualified electrical contractors consistently and keeps the prospect list organized.", regionBased: true, activeRegions: miloAssignments.filter(item => item.agentId === "electrical" && item.available).map(item => item.regionId) },
+  { id: "general-contractors", customerType: "General Contractors", name: "Milo General Contractors", description: "Finds new qualified general contractors consistently and keeps the prospect list organized.", regionBased: true, activeRegions: miloAssignments.filter(item => item.agentId === "general-contractors" && item.available).map(item => item.regionId) },
   ...[
-    ["hvac", "HVAC Contractors"], ["plumbing", "Plumbing Contractors"],
-    ["electrical", "Electrical Contractors"], ["landscaping", "Landscaping Companies"],
-    ["general-contractors", "General Contractors"], ["builders", "Builders / Homebuilders"],
+    ["landscaping", "Landscaping Companies"],
+    ["builders", "Builders / Homebuilders"],
     ["architects", "Architects"], ["property-managers", "Property Managers"],
     ["hoas", "HOAs"], ["distributors", "Distributors"], ["hotels", "Hotels / Resorts"],
     ["restaurants", "Restaurants"], ["medical", "Medical Practices"],
     ["dental", "Dental Practices"], ["municipalities", "Municipalities / Public Agencies"],
   ].map(([id, customerType]) => ({ id, customerType, description: `Finds qualified ${customerType.toLowerCase()} in your selected regions and keeps the prospect list organized.`, regionBased: true, activeRegions: [] })),
   { id: "projects-developments", customerType: "Projects & Developments", description: "Finds new construction, major renovations, expansions, capital improvements, and other significant projects that may create sales opportunities in your selected market.", regionBased: true, activeRegions: [] },
+  { id: "building-materials-manufacturers", name: "Milo", customerType: "U.S. Building Materials Manufacturers", description: "Finds up to 2 verified building materials manufacturers across the United States each Monday at 9:00 AM customer local time. One nationwide assignment; $99 for 52 weeks.", regionBased: false, activeRegions: ["united-states"] },
 ];
-export const universalSalesWorkers = [
-  { id: "first-contact", name: "Universal First Contact Agent", active: false, regionBased: false, description: "Finds an available public business email for new prospects, sends the approved first-contact message, records successful contact, and identifies prospects where a usable email could not be found." },
-  { id: "follow-up", name: "Universal Follow-Up Agent", active: false, regionBased: false, description: "Monitors the conversations handled by the Sales team and performs the configured follow-up work." },
-];
+// Experimental workers are not public storefront offerings.
+export const universalSalesWorkers: { id: string; name: string; active: boolean; regionBased: boolean; description: string }[] = [];
 // Future checkout must revalidate this selection on the server and associate it
 // with the customer's existing shared workspace, never a workspace per region.
 export function createSalesOrder(assignmentKeys: string[], universalIds: string[]) {
   const discoveryAssignments = [...new Set(assignmentKeys)].map((key) => {
     const [agentId, regionId, extra] = key.split(":");
     const worker = salesWorkers.find((item) => item.id === agentId);
-    const region = salesRegions.find((item) => item.id === regionId);
-    if (extra !== undefined || !worker || !worker.regionBased || !region || !worker.activeRegions.includes(region.id)) throw new Error("Unavailable Discovery assignment");
+    const region = worker?.id === "building-materials-manufacturers" && regionId === "united-states" ? { id: "united-states" as const, name: "United States", states: [] } : salesRegions.find((item) => item.id === regionId);
+    if (extra !== undefined || !worker || !region || !worker.activeRegions.includes(region.id)) throw new Error("Unavailable Discovery assignment");
     return { agentId, customerType: worker.customerType, regionId: region.id, region: region.name, states: region.states.map((state) => state.code), amountCents: SALES_ASSIGNMENT_CENTS };
   });
   const universalWorkers = [...new Set(universalIds)].map((id) => {
@@ -44,22 +47,26 @@ export function createSalesOrder(assignmentKeys: string[], universalIds: string[
 }
 
 
-// This entry point can purchase only the existing fixed Milo package.
+// Each selected available Discovery assignment becomes its own Stripe line item.
 export function salesCheckoutState(assignmentKeys: string[], universalIds: string[], checkoutEnabled: boolean) {
   try {
     const order = createSalesOrder(assignmentKeys, universalIds);
-    const miloOnly = order.discoveryAssignments.length === 1 &&
-      order.discoveryAssignments[0].agentId === "roofing" &&
-      order.discoveryAssignments[0].regionId === "florida" && order.universalWorkers.length === 0;
+    const products = order.discoveryAssignments.map(assignment => miloAssignments.find(item =>
+      item.available && item.agentId === assignment.agentId && item.regionId === assignment.regionId));
+    const miloOnly = products.length > 0 && products.every(Boolean) && order.universalWorkers.length === 0;
+    const productSlugs = miloOnly ? products.map(item => item!.slug) : [];
     return {
       order,
       canCheckout: checkoutEnabled && miloOnly,
+      productSlugs,
+      productSlug: productSlugs.length === 1 ? productSlugs[0] : undefined,
       status: !checkoutEnabled ? "Checkout is currently unavailable." : miloOnly ?
-        "Secure $99 one-time payment for Milo — Florida Roofing through Stripe." :
-        "Select Roofing Contractors and Florida to hire Milo. Only available agents can be hired.",
+        (productSlugs.length === 1 ? `Secure $99 one-time payment for Milo — ${order.discoveryAssignments[0].region} ${order.discoveryAssignments[0].agentId === "building-materials-manufacturers" ? "Building Materials Manufacturers" : order.discoveryAssignments[0].agentId === "general-contractors" ? "General Contractors" : order.discoveryAssignments[0].agentId === "electrical" ? "Electrical" : order.discoveryAssignments[0].agentId === "plumbing" ? "Plumbing" : order.discoveryAssignments[0].agentId === "hvac" ? "HVAC" : "Roofing"} through Stripe.` :
+          `Secure $${order.totalCents / 100} one-time payment for your selected Discovery regions through Stripe.`) :
+        "Select one or more available Discovery regions to hire Milo. Only available agents can be hired.",
     };
   } catch {
-    return { order: createSalesOrder([], []), canCheckout: false,
+    return { order: createSalesOrder([], []), canCheckout: false, productSlug: undefined, productSlugs: [],
       status: "Only available agents can be hired. Remove Coming Soon or unavailable selections to continue." };
   }
 }

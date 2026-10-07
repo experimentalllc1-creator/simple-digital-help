@@ -1,0 +1,362 @@
+[
+  {
+    "slug": "milo-florida-roofing-contractors",
+    "productCode": "PD-ROOF-FL",
+    "agentId": "roofing",
+    "regionId": "florida",
+    "region": "Florida",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PRICE_ID"
+  },
+  {
+    "slug": "milo-texas-roofing-contractors",
+    "productCode": "PD-ROOF-TX",
+    "agentId": "roofing",
+    "regionId": "texas",
+    "region": "Texas",
+    "available": true,
+    "productEnv": "STRIPE_MILO_TX_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_TX_PRICE_ID"
+  },
+  {
+    "slug": "milo-california-roofing-contractors",
+    "productCode": "PD-ROOF-CA",
+    "agentId": "roofing",
+    "regionId": "california",
+    "region": "California",
+    "available": true,
+    "productEnv": "STRIPE_MILO_CA_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_CA_PRICE_ID"
+  },
+  {
+    "slug": "milo-northeast-roofing-contractors",
+    "productCode": "PD-ROOF-NORTHEAST",
+    "agentId": "roofing",
+    "regionId": "northeast",
+    "region": "Northeast",
+    "available": true,
+    "productEnv": "STRIPE_MILO_NORTHEAST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_NORTHEAST_PRICE_ID"
+  },
+  {
+    "slug": "milo-southeast-roofing-contractors",
+    "productCode": "PD-ROOF-SOUTHEAST",
+    "agentId": "roofing",
+    "regionId": "southeast",
+    "region": "Southeast",
+    "available": true,
+    "productEnv": "STRIPE_MILO_SOUTHEAST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_SOUTHEAST_PRICE_ID"
+  },
+  {
+    "slug": "milo-midwest-roofing-contractors",
+    "productCode": "PD-ROOF-MIDWEST",
+    "agentId": "roofing",
+    "regionId": "midwest",
+    "region": "Midwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_MIDWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_MIDWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-southwest-roofing-contractors",
+    "productCode": "PD-ROOF-SOUTHWEST",
+    "agentId": "roofing",
+    "regionId": "southwest",
+    "region": "Southwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_SOUTHWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_SOUTHWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-mountain-west-roofing-contractors",
+    "productCode": "PD-ROOF-MOUNTAIN-WEST",
+    "agentId": "roofing",
+    "regionId": "mountain-west",
+    "region": "Mountain West",
+    "available": true,
+    "productEnv": "STRIPE_MILO_MOUNTAIN_WEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_MOUNTAIN_WEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-pacific-northwest-roofing-contractors",
+    "productCode": "PD-ROOF-PACIFIC-NORTHWEST",
+    "agentId": "roofing",
+    "regionId": "pacific-northwest",
+    "region": "Pacific Northwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PACIFIC_NORTHWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PACIFIC_NORTHWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-florida-hvac-contractors",
+    "productCode": "PD-HVAC-FL",
+    "agentId": "hvac",
+    "regionId": "florida",
+    "region": "Florida",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_FL_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_FL_PRICE_ID"
+  },
+  {
+    "slug": "milo-texas-hvac-contractors",
+    "productCode": "PD-HVAC-TX",
+    "agentId": "hvac",
+    "regionId": "texas",
+    "region": "Texas",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_TX_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_TX_PRICE_ID"
+  },
+  {
+    "slug": "milo-california-hvac-contractors",
+    "productCode": "PD-HVAC-CA",
+    "agentId": "hvac",
+    "regionId": "california",
+    "region": "California",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_CA_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_CA_PRICE_ID"
+  },
+  {
+    "slug": "milo-northeast-hvac-contractors",
+    "productCode": "PD-HVAC-NORTHEAST",
+    "agentId": "hvac",
+    "regionId": "northeast",
+    "region": "Northeast",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_NORTHEAST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_NORTHEAST_PRICE_ID"
+  },
+  {
+    "slug": "milo-southeast-hvac-contractors",
+    "productCode": "PD-HVAC-SOUTHEAST",
+    "agentId": "hvac",
+    "regionId": "southeast",
+    "region": "Southeast",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_SOUTHEAST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_SOUTHEAST_PRICE_ID"
+  },
+  {
+    "slug": "milo-midwest-hvac-contractors",
+    "productCode": "PD-HVAC-MIDWEST",
+    "agentId": "hvac",
+    "regionId": "midwest",
+    "region": "Midwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_MIDWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_MIDWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-southwest-hvac-contractors",
+    "productCode": "PD-HVAC-SOUTHWEST",
+    "agentId": "hvac",
+    "regionId": "southwest",
+    "region": "Southwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_SOUTHWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_SOUTHWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-mountain-west-hvac-contractors",
+    "productCode": "PD-HVAC-MOUNTAIN-WEST",
+    "agentId": "hvac",
+    "regionId": "mountain-west",
+    "region": "Mountain West",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_MOUNTAIN_WEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_MOUNTAIN_WEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-pacific-northwest-hvac-contractors",
+    "productCode": "PD-HVAC-PACIFIC-NORTHWEST",
+    "agentId": "hvac",
+    "regionId": "pacific-northwest",
+    "region": "Pacific Northwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_HVAC_PACIFIC_NORTHWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_HVAC_PACIFIC_NORTHWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-florida-plumbing-contractors",
+    "productCode": "PD-PLUMB-FL",
+    "agentId": "plumbing",
+    "regionId": "florida",
+    "region": "Florida",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_FL_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_FL_PRICE_ID"
+  },
+  {
+    "slug": "milo-texas-plumbing-contractors",
+    "productCode": "PD-PLUMB-TX",
+    "agentId": "plumbing",
+    "regionId": "texas",
+    "region": "Texas",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_TX_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_TX_PRICE_ID"
+  },
+  {
+    "slug": "milo-california-plumbing-contractors",
+    "productCode": "PD-PLUMB-CA",
+    "agentId": "plumbing",
+    "regionId": "california",
+    "region": "California",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_CA_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_CA_PRICE_ID"
+  },
+  {
+    "slug": "milo-northeast-plumbing-contractors",
+    "productCode": "PD-PLUMB-NORTHEAST",
+    "agentId": "plumbing",
+    "regionId": "northeast",
+    "region": "Northeast",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_NORTHEAST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_NORTHEAST_PRICE_ID"
+  },
+  {
+    "slug": "milo-southeast-plumbing-contractors",
+    "productCode": "PD-PLUMB-SOUTHEAST",
+    "agentId": "plumbing",
+    "regionId": "southeast",
+    "region": "Southeast",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_SOUTHEAST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_SOUTHEAST_PRICE_ID"
+  },
+  {
+    "slug": "milo-midwest-plumbing-contractors",
+    "productCode": "PD-PLUMB-MIDWEST",
+    "agentId": "plumbing",
+    "regionId": "midwest",
+    "region": "Midwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_MIDWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_MIDWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-southwest-plumbing-contractors",
+    "productCode": "PD-PLUMB-SOUTHWEST",
+    "agentId": "plumbing",
+    "regionId": "southwest",
+    "region": "Southwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_SOUTHWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_SOUTHWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-mountain-west-plumbing-contractors",
+    "productCode": "PD-PLUMB-MOUNTAIN-WEST",
+    "agentId": "plumbing",
+    "regionId": "mountain-west",
+    "region": "Mountain West",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_MOUNTAIN_WEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_MOUNTAIN_WEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-pacific-northwest-plumbing-contractors",
+    "productCode": "PD-PLUMB-PACIFIC-NORTHWEST",
+    "agentId": "plumbing",
+    "regionId": "pacific-northwest",
+    "region": "Pacific Northwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_PLUMB_PACIFIC_NORTHWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_PLUMB_PACIFIC_NORTHWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-florida-electrical-contractors",
+    "productCode": "PD-ELEC-FL",
+    "agentId": "electrical",
+    "regionId": "florida",
+    "region": "Florida",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_FL_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_FL_PRICE_ID"
+  },
+  {
+    "slug": "milo-texas-electrical-contractors",
+    "productCode": "PD-ELEC-TX",
+    "agentId": "electrical",
+    "regionId": "texas",
+    "region": "Texas",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_TX_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_TX_PRICE_ID"
+  },
+  {
+    "slug": "milo-california-electrical-contractors",
+    "productCode": "PD-ELEC-CA",
+    "agentId": "electrical",
+    "regionId": "california",
+    "region": "California",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_CA_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_CA_PRICE_ID"
+  },
+  {
+    "slug": "milo-northeast-electrical-contractors",
+    "productCode": "PD-ELEC-NORTHEAST",
+    "agentId": "electrical",
+    "regionId": "northeast",
+    "region": "Northeast",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_NORTHEAST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_NORTHEAST_PRICE_ID"
+  },
+  {
+    "slug": "milo-southeast-electrical-contractors",
+    "productCode": "PD-ELEC-SOUTHEAST",
+    "agentId": "electrical",
+    "regionId": "southeast",
+    "region": "Southeast",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_SOUTHEAST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_SOUTHEAST_PRICE_ID"
+  },
+  {
+    "slug": "milo-midwest-electrical-contractors",
+    "productCode": "PD-ELEC-MIDWEST",
+    "agentId": "electrical",
+    "regionId": "midwest",
+    "region": "Midwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_MIDWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_MIDWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-southwest-electrical-contractors",
+    "productCode": "PD-ELEC-SOUTHWEST",
+    "agentId": "electrical",
+    "regionId": "southwest",
+    "region": "Southwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_SOUTHWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_SOUTHWEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-mountain-west-electrical-contractors",
+    "productCode": "PD-ELEC-MOUNTAIN-WEST",
+    "agentId": "electrical",
+    "regionId": "mountain-west",
+    "region": "Mountain West",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_MOUNTAIN_WEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_MOUNTAIN_WEST_PRICE_ID"
+  },
+  {
+    "slug": "milo-pacific-northwest-electrical-contractors",
+    "productCode": "PD-ELEC-PACIFIC-NORTHWEST",
+    "agentId": "electrical",
+    "regionId": "pacific-northwest",
+    "region": "Pacific Northwest",
+    "available": true,
+    "productEnv": "STRIPE_MILO_ELEC_PACIFIC_NORTHWEST_PRODUCT_ID",
+    "priceEnv": "STRIPE_MILO_ELEC_PACIFIC_NORTHWEST_PRICE_ID"
+  }
+]

@@ -5,7 +5,10 @@
 .sectionHeading { margin-bottom: 24px; }
 .sectionHeading h2 { font-size: 26px; color: var(--category-sales); margin: 0 0 12px; }
 .sectionHeading p { color: var(--muted); line-height: 1.6; margin: 8px 0; }
-.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.auditRow { grid-column: 1 / -1; }
+.auditRow > section { margin-bottom: 0; }
+.catalogAudit { margin-top: 48px; }
 .card { border: 1px solid #d5dfe8; background: var(--white, #fff); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
 .art { min-height: 170px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; padding: 24px; background: #edf1f5; color: var(--category-sales); text-align: center; }
 .art span { font-size: 10px; letter-spacing: 1.6px; }
@@ -45,6 +48,5 @@
 .hire:disabled { opacity: .65; cursor: not-allowed; }
 .summary .checkoutStatus { font-size: 12px; }
 .summary .workspace { border-top: 1px solid #d5dfe8; margin-top: 20px; padding-top: 18px; font-size: 12px; }
-@media (min-width: 1400px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 1000px) { .layout { grid-template-columns: minmax(0, 1fr); } .summary { position: static; } }
 @media (max-width: 600px) { .page { padding-block: 30px 48px; } .grid, .addonGrid { grid-template-columns: minmax(0, 1fr); } .video { margin-bottom: 32px; font-size: 13px; } .art { min-height: 150px; } }

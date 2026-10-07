@@ -12,11 +12,15 @@
     "typecheck": "tsc --noEmit",
     "test": "node --conditions=react-server --import tsx --test tests/*.test.mjs",
     "test:smoke": "node scripts/smoke-milo.mjs",
-    "db:migrate": "node --env-file-if-exists=.env.local scripts/migrate-milo.mjs"
+    "db:migrate": "node --env-file-if-exists=.env.local scripts/migrate-milo.mjs",
+    "test:milo": "node scripts/test-milo.mjs"
   },
   "dependencies": {
+    "imapflow": "^2.2.5",
     "lucide-react": "^0.468.0",
+    "mailparser": "^3.9.36",
     "next": "^16.2.0",
+    "nodemailer": "^10.0.15",
     "pg": "^8.23.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
@@ -26,6 +30,7 @@
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.8",
     "@types/node": "^22.10.0",
+    "@types/nodemailer": "^8.0.2",
     "@types/pg": "^8.23.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

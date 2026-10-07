@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import type { MiloPresentation } from "@/lib/milo-presentations";
 import styles from "./milo-product.module.css";
 
-export default function MiloDemo({ demo }: { demo: MiloPresentation["demo"] }) {
+export default function MiloDemo({ demo }: { demo: NonNullable<MiloPresentation["demo"]> }) {
   const video = useRef<HTMLVideoElement>(null);
   const [failed, setFailed] = useState(false);
 

@@ -4,7 +4,7 @@ import pg from "pg";
 if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL must be configured before migration.");
 const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, connectionTimeoutMillis: 5000 });
 try {
-  for (const filename of ["001_milo_deliveries.sql", "002_milo_identity.sql"]) {
+  for (const filename of ["001_milo_deliveries.sql", "002_milo_identity.sql", "003_milo_product_codes.sql"]) {
     const sql = await readFile(new URL(`../db/migrations/${filename}`, import.meta.url), "utf8");
     await pool.query(sql);
   }

@@ -29,7 +29,7 @@ export default function MiloProductPage({ product, presentation }: {
           <p className={styles.description}>{presentation.description}</p>
           <p className={styles.reassurance}>{presentation.reassurance}</p>
         </section>
-        <MiloDemo demo={presentation.demo} />
+        {presentation.demo && <MiloDemo demo={presentation.demo} />}
         <section className={styles.deliverables} aria-labelledby="milo-deliverables">
           <h2 id="milo-deliverables">{presentation.deliverablesHeading}</h2>
           <p>{presentation.deliverablesCopy}</p>
@@ -41,10 +41,11 @@ export default function MiloProductPage({ product, presentation }: {
             <p className="eyebrow">ONE-TIME PAYMENT</p>
             <h2 id="milo-purchase">$99</h2>
             <p>52 weeks of service from successful activation.</p>
-            <p>{canBuy ? "Milo v2.2 installation prompt and illustrated guide delivered by email after payment." : "Purchase availability coming next."}</p>
+            <p>{canBuy ? "Milo v2.4 installation prompt and illustrated guide delivered by email after payment." : "Purchase availability coming next."}</p>
           </div>
           <div className={styles.purchaseAction}>
             <form action="/api/checkout/milo" method="post">
+              <input type="hidden" name="product" value={product.slug} />
               <button className="button" disabled={!canBuy} aria-describedby="checkout-status">Buy Now</button>
             </form>
             <small id="checkout-status">{canBuy ? "Secure one-time payment through Stripe." : "Unavailable until checkout is ready."}</small>

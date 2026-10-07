@@ -53,7 +53,7 @@ export default function FindNewCustomers() {
         <h2 id="discovery-selection-heading" ref={heading} tabIndex={-1}>Select your customer type and region of interest.</h2>
         <div className={styles.fields}>
           <label>Customer Type<select aria-label="Customer Type" value={industry} onChange={(event) => setIndustry(event.target.value)}>{discoveryIndustries.map((item) => <option key={item}>{item}</option>)}</select></label>
-          <label>Region<select aria-label="Region" value={region} onChange={(event) => setRegion(event.target.value)}>{discoveryRegions.map((item) => <option key={item}>{item}</option>)}</select></label>
+          <label>Region<select aria-label="Region" disabled={industry === "Building Materials Manufacturer"} value={industry === "Building Materials Manufacturer" ? "United States" : region} onChange={(event) => setRegion(event.target.value)}>{industry === "Building Materials Manufacturer" ? <option>United States</option> : discoveryRegions.map((item) => <option key={item}>{item}</option>)}</select></label>
         </div>
         <div className={styles.result} aria-live="polite" aria-atomic="true">
           {matches.length ? matches.map((product) => (

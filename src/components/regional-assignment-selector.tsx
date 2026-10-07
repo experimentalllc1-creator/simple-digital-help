@@ -4,15 +4,17 @@ import RegionInfo from "./region-info";
 import styles from "./regional-assignment-selector.module.css";
 
 type Props = {
-  product: { id: string; regionBased: boolean; activeRegions: RegionId[] };
+  product: { id: string; regionBased: boolean; activeRegions: (RegionId | "united-states")[] };
   selectedKeys: string[];
   onToggle: (key: string) => void;
   priceCents: number;
 };
 export default function RegionalAssignmentSelector({ product, selectedKeys, onToggle, priceCents }: Props) {
   if (!product.regionBased) return null;
-  return <fieldset className={styles.regions}>
-    <legend>Select regions</legend><p className={styles.explanation}>{regionBoundaryExplanation}</p>
+  return <details className={styles.disclosure}>
+    <summary>Select regions</summary>
+    <fieldset className={styles.regions}>
+    <legend className={styles.legend}>Regions</legend><p className={styles.explanation}>{regionBoundaryExplanation}</p>
     {regionsForProduct(product).map((region) => {
       const active = product.activeRegions.includes(region.id);
       const key = `${product.id}:${region.id}`;
@@ -24,5 +26,7 @@ export default function RegionalAssignmentSelector({ product, selectedKeys, onTo
         <strong className={styles.price}>${priceCents / 100}</strong><RegionInfo region={region} />
       </div>;
     })}
-  </fieldset>;
+    </fieldset>
+    <small className={styles.term}>$99 × selected regions · 52 weeks each</small>
+  </details>;
 }

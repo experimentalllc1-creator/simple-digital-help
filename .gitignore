@@ -5,6 +5,7 @@ out/
 *.log
 .env*
 !.env.example
+!.env.first-contact.staging.example
 
 # Paid delivery assets stay local/private; provision separately on the server.
 docs/Products/MILO/
@@ -21,6 +22,9 @@ next-env.d.ts
 Thumbs.db
 
 # Local credentials and secrets
+# Environment exports and copies may not start with .env.
+*.env
+*env*.txt
 .npmrc
 .netrc
 _netrc

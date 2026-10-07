@@ -1,0 +1,462 @@
+{
+  "PD-ROOF-FL": [
+    {
+      "filename": "Milo_FL_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "598b27f1c2b7fe587cfdbacac1822ea97c9caf63d4dd4c6959184d5101a0c3fb"
+    },
+    {
+      "filename": "Milo_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "61ef56d68488fec0e1d1ae151d8491ecef1718758f7ad762b3e97f05fd14b580"
+    }
+  ],
+  "PD-ROOF-TX": [
+    {
+      "filename": "Milo_TX_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "ed3239b6a3bdeda6a60a1d4dc132376640d075a0370263d3e4e7c6496b34db35"
+    },
+    {
+      "filename": "Milo_TX_Roofing_Installation_Guide_v2.4.pdf",
+      "sha256": "05b708b619aab13f0ba77ac5fd0b206551f54bb83c6f7e0ef31328918c0b7ab5"
+    }
+  ],
+  "PD-ROOF-CA": [
+    {
+      "filename": "Milo_CA_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "95a795c20b698648518571e0aa14a546427f7cea4560d6d41f8743dea5a8a739"
+    },
+    {
+      "filename": "Milo_CA_Roofing_Installation_Guide_v2.4.pdf",
+      "sha256": "4304d32ec28f8a0ef76705b0d93670ea1f9818fb2e0b64c3855ca0a32cd858a5"
+    }
+  ],
+  "PD-ROOF-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "adda2c3c1847a9d762b192c98ea9117cc565d12fba9b0634a2d0bf58ce402d52"
+    },
+    {
+      "filename": "Milo_Northeast_Roofing_Installation_Guide_v2.4.pdf",
+      "sha256": "c5fe2b674cb409c9bc03bdfe48c039f345c3fdf8da9148e31cdf90783e7d2733"
+    }
+  ],
+  "PD-ROOF-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "6f3b7097cc17258fa593d7887b518a5188a1cea11f3f88e787518616f83ce972"
+    },
+    {
+      "filename": "Milo_Southeast_Roofing_Installation_Guide_v2.4.pdf",
+      "sha256": "ba66f0665f7a38a4bcd85d2c6a57f4baace0b64717b518b2af4e56883a2d7534"
+    }
+  ],
+  "PD-ROOF-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "d9cdb0667b096b6459444b0f2c2aec45ed484a1928b47a56e8cb83989a80913d"
+    },
+    {
+      "filename": "Milo_Midwest_Roofing_Installation_Guide_v2.4.pdf",
+      "sha256": "d004e50dd347450920fe736bb515bead6874dbe86650adc578ff3fca1ae448b8"
+    }
+  ],
+  "PD-ROOF-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "4dc8bb5059ddf5321fa0c0a15a323274adc7a0526f1c9be3a89c37b0a6cbb9b4"
+    },
+    {
+      "filename": "Milo_Southwest_Roofing_Installation_Guide_v2.4.pdf",
+      "sha256": "e19c4991521cf2abe4e83bde00c598a1f1f5a72d50aaecef4c87029a0cc2e7c8"
+    }
+  ],
+  "PD-ROOF-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "cdba5bffb23083dbe0d9f0e49a34d5f26a810ebb1b94bba34e2cbb05f581b614"
+    },
+    {
+      "filename": "Milo_Mountain_West_Roofing_Installation_Guide_v2.4.pdf",
+      "sha256": "8d30284572ee5b2acea17e6ce450a86d0e3322a715d5bfed64113168f366c85b"
+    }
+  ],
+  "PD-ROOF-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Roofing_Installation_Prompt_v2.4.txt",
+      "sha256": "310dba92dbb0b9263164a4c31ef43e10aefe3c03a2983580757bd4cc40468066"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Roofing_Installation_Guide_v2.4.pdf",
+      "sha256": "843703a274e17dcac4cc99a802c09a68f113557c8121372cb4140cd4597b1c92"
+    }
+  ],
+  "PD-HVAC-FL": [
+    {
+      "filename": "Milo_FL_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "ce85e8cfe2d9dfed30d55979aa827a9020bca38e0673839f954909acef479281"
+    },
+    {
+      "filename": "Milo_FL_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "408d836b584182c1ba7df50cc28bdfa8b36f117997cae4da75362003f3707a91"
+    }
+  ],
+  "PD-HVAC-TX": [
+    {
+      "filename": "Milo_TX_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "69cf4c1bb68325420e5e4babb24ba0e53e239654ea44f67f7c0ce28bef2b6c31"
+    },
+    {
+      "filename": "Milo_TX_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "cad2c6022a8f0a49bcea10035f0a09eeb6666ed35e98a8306bb4f3d4f07cbe49"
+    }
+  ],
+  "PD-HVAC-CA": [
+    {
+      "filename": "Milo_CA_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "bcc4c07de632c1eb6759624df78041407a6d4d11970fc694861f5d7800e80900"
+    },
+    {
+      "filename": "Milo_CA_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "c09995cc02373fe12f701f0d689c792622b20cbc771d44d1fadc26e641b674d4"
+    }
+  ],
+  "PD-HVAC-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "4346096eed09726fef4273171fdaf0ac5c2b2e58a7c97fe1943bac0566596125"
+    },
+    {
+      "filename": "Milo_Northeast_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "0862ddd408c4e0cff0846813bd1d99457e6fa6c78fda6dcd94c5394b282443bd"
+    }
+  ],
+  "PD-HVAC-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "ed9b6ee044b845c947378cb5dddb2d8513fa7208d24588484f5073cb4e99dbc0"
+    },
+    {
+      "filename": "Milo_Southeast_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "add13c3e29b081a97b3637dfde5e3ff1c46d4c01c86030e65a6ee1e46d3e110c"
+    }
+  ],
+  "PD-HVAC-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "04a8dcaddce271c5fc701a807720b654b40e242892e554ea14eef51a7e00c2e3"
+    },
+    {
+      "filename": "Milo_Midwest_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "690235a7920bf135018ed30b81c2b7b7d8726055186f2462f7631db01df5f82a"
+    }
+  ],
+  "PD-HVAC-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "9ed1637fd9ebb30c7e9fb648916fe39b8abf4537fbbebbf8c82c5b541253fa2e"
+    },
+    {
+      "filename": "Milo_Southwest_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "374d4d3e2a46f4cec3dfc9a9ec8bed25e216cae22edfa1ea53b794e2e14749ed"
+    }
+  ],
+  "PD-HVAC-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "1b654d291a261b55f4c4edad189995c49952f71daaa0aedd355880dc6a1a9f6f"
+    },
+    {
+      "filename": "Milo_Mountain_West_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "754ed5c93249cca4d062e8c0c277388418f2ef194dbb4bc275578e5144c6d64e"
+    }
+  ],
+  "PD-HVAC-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_HVAC_Installation_Prompt_v2.4.txt",
+      "sha256": "2ae95cdf76500cd6336fe1dd9ba1e54ebbf1cf2600acaa41ff6dcd9ec35bae1f"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "2e014714553c701ef4e304af03ea957cf055a998737da234d9a9d023566daa33"
+    }
+  ],
+  "PD-PLUMB-FL": [
+    {
+      "filename": "Milo_FL_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "59cfcb0ac83a7e0c8c913da3fbc9bf6d939f0c946948d3b67b650ae10db0ebc1"
+    },
+    {
+      "filename": "Milo_FL_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "ca195258832206ae0b5df84992ca62b607eeb01102fbad81515785065e01fa5a"
+    }
+  ],
+  "PD-PLUMB-TX": [
+    {
+      "filename": "Milo_TX_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "287c169590e13429fd3bda81636005d9bb5edb905fdd10ecb11e84ac13b834ef"
+    },
+    {
+      "filename": "Milo_TX_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "00e190d1d8d42e09dc0667907ec3a8a8aa8f3b9c4297e79147031fb65226ecfa"
+    }
+  ],
+  "PD-PLUMB-CA": [
+    {
+      "filename": "Milo_CA_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "a301c441b2fd4d0570059e781ec14885d2af7986abfcdf088e6fc711989d30a4"
+    },
+    {
+      "filename": "Milo_CA_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "af019cba66b3cc64f0754cd03380289ede9190239e1c4c3eb4b11b85a7b98016"
+    }
+  ],
+  "PD-PLUMB-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "fbefe29b673fde5a7cd6d57de6ca11cad696ed928b4e894d9ed7eb96296feae9"
+    },
+    {
+      "filename": "Milo_Northeast_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "4f2f6555c4299ff0ac510e9535287fe4eb335fe345374bf0546f099bfa7017a4"
+    }
+  ],
+  "PD-PLUMB-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "d603f40e23b16facaaec5cef88e3c61b5eae48aec957e7c799bb28eaf23c63a8"
+    },
+    {
+      "filename": "Milo_Southeast_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "5ef37bf1ea7bf465655bca8cdead430bbff8cb42b9f5624a4879c77973b4863b"
+    }
+  ],
+  "PD-PLUMB-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "71cf0791ff6f989598bfd9691fcf1b771e943146ce052030610012fded8b4390"
+    },
+    {
+      "filename": "Milo_Midwest_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a13a30678248fe390658b8661af2b0c755331c1da45f09774496e5e383bf67c2"
+    }
+  ],
+  "PD-PLUMB-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "1a2a5d7b67f2d6a68226fa7bb8326f141f1102eb6a1c455a153164497ec21f64"
+    },
+    {
+      "filename": "Milo_Southwest_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a2a0a40ffbb5d36a1098596239cbb80ce2b4eb22a8989e7fadd2e550cbc62e44"
+    }
+  ],
+  "PD-PLUMB-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "691d29789ca9d9d12769bfba56984c467f11c28d5e213ddfb88ef10055c4281f"
+    },
+    {
+      "filename": "Milo_Mountain_West_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "65a1fe0d00b213149349dbb0343851026816abcfd5d434579a5d1931734c8892"
+    }
+  ],
+  "PD-PLUMB-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Plumbing_Installation_Prompt_v2.4.txt",
+      "sha256": "561e420306f32d50e48e5364104559400afc9337b16e75acfaaf5ba67c97659c"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "1014d1ae3d2b2b7773729d5badf19a907a399317afd7dcc8e7e5a1602bc6deed"
+    }
+  ],
+  "PD-ELEC-FL": [
+    {
+      "filename": "Milo_FL_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "9492835fe8544a918c7e4b5342f39f458304ab7efa785a357d83f189a833054f"
+    },
+    {
+      "filename": "Milo_FL_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "c7d3c1eae793a6967f52749eff66ae20148d36ecee4ed7e66d1fb0120e61d882"
+    }
+  ],
+  "PD-ELEC-TX": [
+    {
+      "filename": "Milo_TX_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "03c41f7f9c5922f83de46d4e8d8dc29d4f455c510f5a32674454f3d4e01e2c6e"
+    },
+    {
+      "filename": "Milo_TX_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "568b17ed892194d8bd18fd502c417ad108bba5777f5ea75ea5ad75ae6e9e2d6e"
+    }
+  ],
+  "PD-ELEC-CA": [
+    {
+      "filename": "Milo_CA_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "b799c420e83526bcefa26b8444f5a39a018c7c9693cb6ebc9bace6854d42ceb4"
+    },
+    {
+      "filename": "Milo_CA_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "4dd46912a7fe4605956a8002236c2960064a39f863c4f7b3bff7237b81d47fa9"
+    }
+  ],
+  "PD-ELEC-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "0d6b62d2d590ef241c0e015f22a2a97a167a8d735d314e1cb19ccd5bf2049a0d"
+    },
+    {
+      "filename": "Milo_Northeast_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "5d5ff83a8fd20a787d438ec60e0ff235b9caffd2c6eada60334d7abbcd9e8197"
+    }
+  ],
+  "PD-ELEC-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "9fc216b8899ab9686718221cdf200c1e52fd56cc1edf578b11168e882e3ad48d"
+    },
+    {
+      "filename": "Milo_Southeast_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "197e804539db85403c635bc98a40aa058faf1fa134d313ad81b6b1f2a209461d"
+    }
+  ],
+  "PD-ELEC-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "ce94f1170924d26b2fc3d5b3c0494e77f4a9927aba1c74031ea3179b2f38b844"
+    },
+    {
+      "filename": "Milo_Midwest_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a80df8400d36a1fd7ec474cb05633e9a9501409b25c1454f689b23b2eb19d008"
+    }
+  ],
+  "PD-ELEC-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "e3c383494a6243e3300f7b5c7c5ebc40811df5aa7c75820acdce66aece7edd4d"
+    },
+    {
+      "filename": "Milo_Southwest_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "bc2abc0eb8d4bfcc7589692c0db983e4e05708780e515f6d60ae4ea710d5016a"
+    }
+  ],
+  "PD-ELEC-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "30f54043aeefe3b569b85547010ff34cfa326aaf7d3f0e096117dc6c173ceb83"
+    },
+    {
+      "filename": "Milo_Mountain_West_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "de93b9459faa0493b4587b609fbf0af2809c6b4f6cfa99432aeda0229f2acdcc"
+    }
+  ],
+  "PD-ELEC-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Electrical_Installation_Prompt_v2.4.txt",
+      "sha256": "544cd0f6a4aa5e3471dfa2604a648593e1888ebfc2f07655e74b73327b64c0f7"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "e24568e8aca5d6d849ab31b9feb202ef3012625454a9f0bdd1bf4f4cd0ce67b7"
+    }
+  ],
+  "PD-GC-FL": [
+    {
+      "filename": "Milo_FL_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "b15aa08a9d08781ca8512228367216d6f567a9152112e645511c74d69e1d0eb8"
+    },
+    {
+      "filename": "Milo_FL_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "090b01c4b9bad24bab82d1ac29d7ac3d95c137d0c3b8e50337df5f5da76f3446"
+    }
+  ],
+  "PD-GC-TX": [
+    {
+      "filename": "Milo_TX_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "dd962c4e43ae9797a09b6851a77a4ca127eb8a84a664a3356ccd567b029bf17f"
+    },
+    {
+      "filename": "Milo_TX_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "0003a6bbcbd37be2bdfeccf6c04525a91354117d2205f2ef9316a8bdaa3fd842"
+    }
+  ],
+  "PD-GC-CA": [
+    {
+      "filename": "Milo_CA_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "cf954603729f01dddcb49bacca6510d5ae90c0a66e3d0dc84eff5db39d9a861c"
+    },
+    {
+      "filename": "Milo_CA_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "6ce2052b08265fb46b20eb55e102e808342aeb1ed96676180da90959151779b1"
+    }
+  ],
+  "PD-GC-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "c32b4171f79cc106f67fd9e9796f07f0c449bc41b3eaa5ab4f76bfbb4653082d"
+    },
+    {
+      "filename": "Milo_Northeast_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "eb8db06aac785dfd6f973af66df6459b9103ff1587ae76a52e95fc16b6195f59"
+    }
+  ],
+  "PD-GC-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "2b590b3b0801dc8dd60358248c7a2d8a73935879447818c87ececef48f10b2da"
+    },
+    {
+      "filename": "Milo_Southeast_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "ae191e5c67f3c7f2789fa93af4b197795927518d6a22e09039bb7e439ee56145"
+    }
+  ],
+  "PD-GC-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "aabe651a9fb2ab4ccb70e4885627d5f9e8b3d36b40f5c2a6f19bb65a0bc1f935"
+    },
+    {
+      "filename": "Milo_Midwest_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "fac429837872eb73648f8aee3cda451799c0ec3cf246703d2ffb96f0297831b5"
+    }
+  ],
+  "PD-GC-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "4b8e0e6079f3bc217fd1b9a7c1abffeb969b58594f71af747c37f0b0b7a31cf0"
+    },
+    {
+      "filename": "Milo_Southwest_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "40f66699d862259a3fa02c385d5761f9c65f9b04c514433c8518f18e0756ec00"
+    }
+  ],
+  "PD-GC-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "9572722e1e80005b973297b8f2041e49d5b868b01ea7a3f62c221cc53f5dd528"
+    },
+    {
+      "filename": "Milo_Mountain_West_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "21814331e3463fa56f665dbc8283673967ab53ca66ccb75b70da31098d709817"
+    }
+  ],
+  "PD-GC-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_General_Contractors_Installation_Prompt_v2.4.txt",
+      "sha256": "02377767ab884462b5ed121dbbcefefa4bcaaf9bbe6f24b930e8b58e30e589de"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "2e0cc84db898b68d32b46b7ff44958704bb8dbe1b23b178cdd3811894ec0ba2b"
+    }
+  ],
+  "PD-BMM-US": [
+    {
+      "filename": "Milo_US_Building_Materials_Manufacturers_Installation_Prompt_v2.4.txt",
+      "sha256": "7af9343d617b501d18f7978ad35b3add5f5713234a92817499c192aaa4e82030"
+    },
+    {
+      "filename": "Milo_US_Building_Materials_Manufacturers_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "3f0bf1e6233bc6fdc61cab745630a849c4828969ab3fedf0a139102f02ed2511"
+    }
+  ]
+}

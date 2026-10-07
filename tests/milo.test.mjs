@@ -27,13 +27,13 @@ const price = { id: "price_milo", active: true, type: "one_time", unit_amount: 9
 const paidSession = {
   id: "cs_test_milo", object: "checkout.session", mode: "payment", status: "complete", payment_status: "paid", livemode: false,
   amount_subtotal: 9900, amount_total: 9900, currency: "usd",
-  metadata: { product: "milo-florida-roofing-contractors", version: "2.2", product_code: "PD-ROOF-FL", release_version: "2.2" },
+  metadata: { product: "milo-florida-roofing-contractors", version: "2.4", product_code: "PD-ROOF-FL", release_version: "2.4" },
   customer_details: { email: "buyer@example.test" },
   payment_intent: { id: "pi_milo", status: "succeeded", amount_received: 9900, currency: "usd", livemode: false },
   line_items: { has_more: false, data: [{ quantity: 1, amount_subtotal: 9900, amount_total: 9900, price }] },
 };
 const message = { to: "buyer@example.test", subject: "Milo", text: "Install Milo", idempotencyKey: "milo-v1.2/cs_test_milo", attachments: [{ filename: "fixture.txt", content: "dGVzdA==" }] };
-const order = { sessionId: paidSession.id, paymentIntentId: "pi_milo", email: message.to, livemode: false, productCode: "PD-ROOF-FL", releaseVersion: "2.2" };
+const order = { sessionId: paidSession.id, paymentIntentId: "pi_milo", email: message.to, livemode: false, productCode: "PD-ROOF-FL", releaseVersion: "2.4" };
 const resendId = "12345678-1234-1234-1234-123456789abc";
 function webhook({ eventId = "evt_local", type = "checkout.session.completed", session = paidSession, livemode = false, timestamp, mutate = false } = {}) {
   const payload = JSON.stringify({ id: eventId, object: "event", type, livemode, data: { object: session } });
@@ -50,6 +50,7 @@ test("Milo payment and durable fulfillment", async t => {
   const db = new PGlite();
   await db.exec(await readFile("db/migrations/001_milo_deliveries.sql", "utf8"));
   await db.exec(await readFile("db/migrations/002_milo_identity.sql", "utf8"));
+  await db.exec(await readFile("db/migrations/003_milo_product_codes.sql", "utf8"));
   const store = new DeliveryStore(db);
   let sends = 0, created = 0, retrieved = 0, session = structuredClone(paidSession), checkoutParams;
   const stripe = {
@@ -81,9 +82,9 @@ test("Milo payment and durable fulfillment", async t => {
       const result = await handleCheckout(checkout(undefined, JSON.stringify({ price: "price_evil", amount: 1, success_url: "https://attacker.test" })), deps);
       assert.equal(result.status, 303); assert.equal(created, 1);
       assert.deepEqual(checkoutParams.line_items, [{ price: "price_milo", quantity: 1 }]);
-      assert.deepEqual(checkoutParams.metadata, { product: "milo-florida-roofing-contractors", version: "2.2", product_code: "PD-ROOF-FL", release_version: "2.2" });
+      assert.deepEqual(checkoutParams.metadata, { product: "milo-florida-roofing-contractors", version: "2.4", product_code: "PD-ROOF-FL", release_version: "2.4" });
       assert.equal(checkoutParams.payment_intent_data.metadata.product_code, "PD-ROOF-FL");
-      assert.equal(checkoutParams.payment_intent_data.metadata.release_version, "2.2");
+      assert.equal(checkoutParams.payment_intent_data.metadata.release_version, "2.4");
       assert.equal(checkoutParams.mode, "payment"); assert.equal(checkoutParams.allow_promotion_codes, false);
       assert.equal(checkoutParams.currency, "usd"); assert.equal(checkoutParams.adaptive_pricing.enabled, false);
       assert.equal(checkoutParams.success_url, "http://127.0.0.1:3000/checkout/success");
@@ -204,6 +205,7 @@ test("delivery suppression survives a durable database restart", async () => {
   try {
     await db.exec(await readFile("db/migrations/001_milo_deliveries.sql", "utf8"));
   await db.exec(await readFile("db/migrations/002_milo_identity.sql", "utf8"));
+  await db.exec(await readFile("db/migrations/003_milo_product_codes.sql", "utf8"));
     await fulfillOrder(order, new DeliveryStore(db), async () => message, async () => ({ id: resendId }));
     await db.close(); db = new PGlite(directory);
     await fulfillOrder(order, new DeliveryStore(db), async () => { throw Error("must not build email"); }, async () => { throw Error("must not resend"); });
@@ -221,9 +223,9 @@ test("configuration rejects accidental live keys and untrusted origins", () => {
   } finally { process.env.STRIPE_SECRET_KEY = previousKey; process.env.APP_URL = previousUrl; }
 });
 
-test("v2.2 delivers exactly two hash-valid attachments without a video reference", async () => {
+test("v2.4 delivers exactly two hash-valid attachments without a video reference", async () => {
   const attachments = await miloAttachments();
-  assert.deepEqual(attachments.map(a => a.filename), ["Milo_FL_Roofing_Installation_Prompt_v2.2.txt", "Milo_Illustrated_Installation_Guide_v2.2.pdf"]);
+  assert.deepEqual(attachments.map(a => a.filename), ["Milo_FL_Roofing_Installation_Prompt_v2.4.txt", "Milo_Illustrated_Installation_Guide_v2.4.pdf"]);
   for (const [i, attachment] of attachments.entries()) assert.equal(createHash("sha256").update(Buffer.from(attachment.content, "base64")).digest("hex"), MILO_FILES[i].sha256);
   const email = await miloEmail("buyer@example.test", "cs_test_milo");
   assert.deepEqual(email.attachments, attachments);

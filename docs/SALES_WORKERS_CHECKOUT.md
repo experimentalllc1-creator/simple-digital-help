@@ -1,30 +1,29 @@
 # Sales hiring checkout
 
-The category supports customer type/region assignments and once-per-customer
-universal workers through src/lib/sales-order.ts. Only roofing/Florida is selectable.
-First Contact and Follow-Up are coming soon; neither has sale-ready checkout here.
+The Sales selector supports currently available Discovery assignments from
+`src/lib/milo-assignments.ts`. Florida, Texas, California, Northeast, Southeast, Midwest, Southwest, Mountain West and Pacific Northwest roofing are available at $99 USD
+each. First Contact, Follow-Up and unavailable regions remain disabled.
 
-The hiring CTA posts to the existing /api/checkout/milo only for Roofing Contractors + Florida with no additional selections, and only when both existing Milo feature flags are enabled. Empty, Coming Soon, mixed or unsupported selections remain blocked with explanatory status text. Coming Soon selectors remain disabled.
+The form posts one `product` value per selected assignment to `/api/checkout/milo`.
+Single regions use their existing Stripe Price as one line item; selecting multiple regions
+uses their existing Prices in one Checkout Session ($198 for two, $297 for three, $396 for four, $495 for five, $594 for six, $693 for seven, $792 for eight, $891 for all nine). Prices and availability
+are validated server-side. No Stripe objects or universal-worker charges are created.
 
-Existing /api/checkout/milo sells one fixed $99 Milo
-v2.2 installation package (PD-ROOF-FL), delivers only the prompt and illustrated guide as email attachments. The hidden installation-video page remains in the site but is not part of active fulfillment. It does not record
-regions, universal workers, a shared workspace, or activation-based hiring terms.
-The category uses the existing fixed-package checkout, without introducing multi-agent charges, changing PD-ROOF-FL / 2.2 metadata or changing fulfillment.
+Single-region metadata and redirects retain their existing behavior. Multi-region
+sessions use `milo-discovery-regions` metadata containing all selected product
+slugs and product codes, and return to `/checkout/success/regions`. The signed
+webhook verifies every paid line item against the configured Price and Product,
+including amount, quantity, currency and live/test mode.
 
-Remaining work before enabling broader multi-agent hiring payments:
-- Configure verified Stripe products/prices for hiring assignments and ready
-  universal workers, using the existing Stripe client and same-origin protection.
-- Validate availability and calculate totals server-side. Persist customer and
-  shared workspace identity, craft/region assignments, universal flags and term.
-- Resolve returning customers to their existing workspace and active universal
-  workers so adding a region does not charge for those workers again.
-- Create validated Checkout line items with a durable order reference; extend the
-  signed webhook and idempotent fulfillment to recognize hiring orders separately
-  from legacy installation-package delivery.
-- Persist successful activation and 52-week expiry for each assignment/worker;
-  verify real payment and activation before enabling the hiring CTA.
+Migration `003_milo_product_codes.sql` adds `product_codes` to the existing
+ledger and backfills historical single-region rows. `product_code` retains the
+first code for compatibility. One session keeps one durable record and lease. Each purchased Milo has its own email snapshot and idempotency key, with only its regional TXT and PDF. Successful regional sends are recorded before proceeding; retries skip completed regions and reuse pending snapshots. Single-region idempotency keys and attachments are preserved. Historical unsent combined snapshots require manual reconciliation.
 
-No new Stripe objects, charges, workspace schema or runtime are created here.
-The order builder rejects unavailable configurations, deduplicates assignments
-and universal workers, and exposes the full future order payload. Client totals
-are not payment authority.
+Each installation retains its 52-week term, schedule, qualification and shared
+spreadsheet instructions. Future regions need a registry entry, approved private
+package and existing-pattern Stripe environment configuration. Checkout and
+payment verification iterate over the registry.
+
+Validation: `npm test`, `npm run typecheck`, `npm run build:vercel`, followed by
+browser verification of single and combined hosted checkout without payment.
+Apply `npm run db:migrate` before deploying the new handler.
