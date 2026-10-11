@@ -1,0 +1,10 @@
+.trigger { display: block; width: 100%; padding: 0; margin: 0; border: 0; border-radius: 0; background: transparent; color: inherit; font: inherit; text-align: inherit; cursor: pointer; }
+.trigger:focus-visible { outline: 3px solid var(--category-sales, #435e7a); outline-offset: -3px; }
+.dialog { width: min(900px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); padding: 0; border: 0; border-radius: 12px; background: #fff; color: #24384b; overflow: auto; overscroll-behavior: contain; }
+.dialog::backdrop { background: rgb(0 0 0 / 75%); }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; }
+.header h2 { font-size: 18px; margin: 0; }
+.close { flex-shrink: 0; min-height: 44px; padding: 8px 12px; border: 1px solid #435e7a; border-radius: 6px; background: #fff; color: #24384b; font: inherit; cursor: pointer; }
+.close:focus-visible { outline: 3px solid #435e7a; outline-offset: 2px; }
+.video { display: block; width: 100%; max-height: calc(100dvh - 120px); background: #000; }
+.error { padding: 0 16px 16px; }
