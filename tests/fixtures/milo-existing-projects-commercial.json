@@ -1,0 +1,2507 @@
+{
+  "assignments": [
+    {
+      "slug": "milo-florida-roofing-contractors",
+      "productCode": "PD-ROOF-FL",
+      "agentId": "roofing",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-roofing-contractors",
+      "productCode": "PD-ROOF-TX",
+      "agentId": "roofing",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-roofing-contractors",
+      "productCode": "PD-ROOF-CA",
+      "agentId": "roofing",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-roofing-contractors",
+      "productCode": "PD-ROOF-NORTHEAST",
+      "agentId": "roofing",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-roofing-contractors",
+      "productCode": "PD-ROOF-SOUTHEAST",
+      "agentId": "roofing",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-roofing-contractors",
+      "productCode": "PD-ROOF-MIDWEST",
+      "agentId": "roofing",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-roofing-contractors",
+      "productCode": "PD-ROOF-SOUTHWEST",
+      "agentId": "roofing",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-roofing-contractors",
+      "productCode": "PD-ROOF-MOUNTAIN-WEST",
+      "agentId": "roofing",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-roofing-contractors",
+      "productCode": "PD-ROOF-PACIFIC-NORTHWEST",
+      "agentId": "roofing",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-hvac-contractors",
+      "productCode": "PD-HVAC-FL",
+      "agentId": "hvac",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-hvac-contractors",
+      "productCode": "PD-HVAC-TX",
+      "agentId": "hvac",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-hvac-contractors",
+      "productCode": "PD-HVAC-CA",
+      "agentId": "hvac",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-hvac-contractors",
+      "productCode": "PD-HVAC-NORTHEAST",
+      "agentId": "hvac",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-hvac-contractors",
+      "productCode": "PD-HVAC-SOUTHEAST",
+      "agentId": "hvac",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-hvac-contractors",
+      "productCode": "PD-HVAC-MIDWEST",
+      "agentId": "hvac",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-hvac-contractors",
+      "productCode": "PD-HVAC-SOUTHWEST",
+      "agentId": "hvac",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-hvac-contractors",
+      "productCode": "PD-HVAC-MOUNTAIN-WEST",
+      "agentId": "hvac",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-hvac-contractors",
+      "productCode": "PD-HVAC-PACIFIC-NORTHWEST",
+      "agentId": "hvac",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HVAC_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HVAC_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-plumbing-contractors",
+      "productCode": "PD-PLUMB-FL",
+      "agentId": "plumbing",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-plumbing-contractors",
+      "productCode": "PD-PLUMB-TX",
+      "agentId": "plumbing",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-plumbing-contractors",
+      "productCode": "PD-PLUMB-CA",
+      "agentId": "plumbing",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-plumbing-contractors",
+      "productCode": "PD-PLUMB-NORTHEAST",
+      "agentId": "plumbing",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-plumbing-contractors",
+      "productCode": "PD-PLUMB-SOUTHEAST",
+      "agentId": "plumbing",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-plumbing-contractors",
+      "productCode": "PD-PLUMB-MIDWEST",
+      "agentId": "plumbing",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-plumbing-contractors",
+      "productCode": "PD-PLUMB-SOUTHWEST",
+      "agentId": "plumbing",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-plumbing-contractors",
+      "productCode": "PD-PLUMB-MOUNTAIN-WEST",
+      "agentId": "plumbing",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-plumbing-contractors",
+      "productCode": "PD-PLUMB-PACIFIC-NORTHWEST",
+      "agentId": "plumbing",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PLUMB_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PLUMB_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-electrical-contractors",
+      "productCode": "PD-ELEC-FL",
+      "agentId": "electrical",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-electrical-contractors",
+      "productCode": "PD-ELEC-TX",
+      "agentId": "electrical",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-electrical-contractors",
+      "productCode": "PD-ELEC-CA",
+      "agentId": "electrical",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-electrical-contractors",
+      "productCode": "PD-ELEC-NORTHEAST",
+      "agentId": "electrical",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-electrical-contractors",
+      "productCode": "PD-ELEC-SOUTHEAST",
+      "agentId": "electrical",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-electrical-contractors",
+      "productCode": "PD-ELEC-MIDWEST",
+      "agentId": "electrical",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-electrical-contractors",
+      "productCode": "PD-ELEC-SOUTHWEST",
+      "agentId": "electrical",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-electrical-contractors",
+      "productCode": "PD-ELEC-MOUNTAIN-WEST",
+      "agentId": "electrical",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-electrical-contractors",
+      "productCode": "PD-ELEC-PACIFIC-NORTHWEST",
+      "agentId": "electrical",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ELEC_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ELEC_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-general-contractors",
+      "productCode": "PD-GC-FL",
+      "agentId": "general-contractors",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-general-contractors",
+      "productCode": "PD-GC-TX",
+      "agentId": "general-contractors",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-general-contractors",
+      "productCode": "PD-GC-CA",
+      "agentId": "general-contractors",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-general-contractors",
+      "productCode": "PD-GC-NORTHEAST",
+      "agentId": "general-contractors",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-general-contractors",
+      "productCode": "PD-GC-SOUTHEAST",
+      "agentId": "general-contractors",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-general-contractors",
+      "productCode": "PD-GC-MIDWEST",
+      "agentId": "general-contractors",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-general-contractors",
+      "productCode": "PD-GC-SOUTHWEST",
+      "agentId": "general-contractors",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-general-contractors",
+      "productCode": "PD-GC-MOUNTAIN-WEST",
+      "agentId": "general-contractors",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-general-contractors",
+      "productCode": "PD-GC-PACIFIC-NORTHWEST",
+      "agentId": "general-contractors",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_GC_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_GC_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-architects",
+      "productCode": "PD-ARCH-FL",
+      "agentId": "architects",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-architects",
+      "productCode": "PD-ARCH-TX",
+      "agentId": "architects",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-architects",
+      "productCode": "PD-ARCH-CA",
+      "agentId": "architects",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-architects",
+      "productCode": "PD-ARCH-NORTHEAST",
+      "agentId": "architects",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-architects",
+      "productCode": "PD-ARCH-SOUTHEAST",
+      "agentId": "architects",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-architects",
+      "productCode": "PD-ARCH-MIDWEST",
+      "agentId": "architects",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-architects",
+      "productCode": "PD-ARCH-SOUTHWEST",
+      "agentId": "architects",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-architects",
+      "productCode": "PD-ARCH-MOUNTAIN-WEST",
+      "agentId": "architects",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-architects",
+      "productCode": "PD-ARCH-PACIFIC-NORTHWEST",
+      "agentId": "architects",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_ARCH_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_ARCH_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-us-production-homebuilders-developers",
+      "productCode": "PD-BUILD-US",
+      "agentId": "builders",
+      "regionId": "united-states",
+      "region": "United States",
+      "available": true,
+      "productEnv": "STRIPE_MILO_BUILD_US_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_BUILD_US_PRICE_ID"
+    },
+    {
+      "slug": "milo-us-building-materials-manufacturers",
+      "productCode": "PD-BMM-US",
+      "agentId": "building-materials-manufacturers",
+      "regionId": "united-states",
+      "region": "United States",
+      "available": true,
+      "productEnv": "STRIPE_MILO_BMM_US_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_BMM_US_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-landscaping-companies",
+      "productCode": "PD-LAND-FL",
+      "agentId": "landscaping",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-landscaping-companies",
+      "productCode": "PD-LAND-TX",
+      "agentId": "landscaping",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-landscaping-companies",
+      "productCode": "PD-LAND-CA",
+      "agentId": "landscaping",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-landscaping-companies",
+      "productCode": "PD-LAND-NORTHEAST",
+      "agentId": "landscaping",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-landscaping-companies",
+      "productCode": "PD-LAND-SOUTHEAST",
+      "agentId": "landscaping",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-landscaping-companies",
+      "productCode": "PD-LAND-MIDWEST",
+      "agentId": "landscaping",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-landscaping-companies",
+      "productCode": "PD-LAND-SOUTHWEST",
+      "agentId": "landscaping",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-landscaping-companies",
+      "productCode": "PD-LAND-MOUNTAIN-WEST",
+      "agentId": "landscaping",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-landscaping-companies",
+      "productCode": "PD-LAND-PACIFIC-NORTHWEST",
+      "agentId": "landscaping",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_LAND_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_LAND_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-property-management-companies",
+      "productCode": "PD-PM-FL",
+      "agentId": "property-managers",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-property-management-companies",
+      "productCode": "PD-PM-TX",
+      "agentId": "property-managers",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-property-management-companies",
+      "productCode": "PD-PM-CA",
+      "agentId": "property-managers",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-property-management-companies",
+      "productCode": "PD-PM-NORTHEAST",
+      "agentId": "property-managers",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-property-management-companies",
+      "productCode": "PD-PM-SOUTHEAST",
+      "agentId": "property-managers",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-property-management-companies",
+      "productCode": "PD-PM-MIDWEST",
+      "agentId": "property-managers",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-property-management-companies",
+      "productCode": "PD-PM-SOUTHWEST",
+      "agentId": "property-managers",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-property-management-companies",
+      "productCode": "PD-PM-MOUNTAIN-WEST",
+      "agentId": "property-managers",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-property-management-companies",
+      "productCode": "PD-PM-PACIFIC-NORTHWEST",
+      "agentId": "property-managers",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_PM_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_PM_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-hoas",
+      "productCode": "PD-HOA-FL",
+      "agentId": "hoas",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-hoas",
+      "productCode": "PD-HOA-TX",
+      "agentId": "hoas",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-hoas",
+      "productCode": "PD-HOA-CA",
+      "agentId": "hoas",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-hoas",
+      "productCode": "PD-HOA-NORTHEAST",
+      "agentId": "hoas",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-hoas",
+      "productCode": "PD-HOA-SOUTHEAST",
+      "agentId": "hoas",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-hoas",
+      "productCode": "PD-HOA-MIDWEST",
+      "agentId": "hoas",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-hoas",
+      "productCode": "PD-HOA-SOUTHWEST",
+      "agentId": "hoas",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-hoas",
+      "productCode": "PD-HOA-MOUNTAIN-WEST",
+      "agentId": "hoas",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-hoas",
+      "productCode": "PD-HOA-PACIFIC-NORTHWEST",
+      "agentId": "hoas",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOA_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOA_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-distributors",
+      "productCode": "PD-DIST-FL",
+      "agentId": "distributors",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-distributors",
+      "productCode": "PD-DIST-TX",
+      "agentId": "distributors",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-distributors",
+      "productCode": "PD-DIST-CA",
+      "agentId": "distributors",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-distributors",
+      "productCode": "PD-DIST-NORTHEAST",
+      "agentId": "distributors",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-distributors",
+      "productCode": "PD-DIST-SOUTHEAST",
+      "agentId": "distributors",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-distributors",
+      "productCode": "PD-DIST-MIDWEST",
+      "agentId": "distributors",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-distributors",
+      "productCode": "PD-DIST-SOUTHWEST",
+      "agentId": "distributors",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-distributors",
+      "productCode": "PD-DIST-MOUNTAIN-WEST",
+      "agentId": "distributors",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-distributors",
+      "productCode": "PD-DIST-PACIFIC-NORTHWEST",
+      "agentId": "distributors",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_DIST_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_DIST_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-hotels-resorts",
+      "productCode": "PD-HOTEL-FL",
+      "agentId": "hotels",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-hotels-resorts",
+      "productCode": "PD-HOTEL-TX",
+      "agentId": "hotels",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-hotels-resorts",
+      "productCode": "PD-HOTEL-CA",
+      "agentId": "hotels",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-hotels-resorts",
+      "productCode": "PD-HOTEL-NORTHEAST",
+      "agentId": "hotels",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-hotels-resorts",
+      "productCode": "PD-HOTEL-SOUTHEAST",
+      "agentId": "hotels",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-hotels-resorts",
+      "productCode": "PD-HOTEL-MIDWEST",
+      "agentId": "hotels",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-hotels-resorts",
+      "productCode": "PD-HOTEL-SOUTHWEST",
+      "agentId": "hotels",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-hotels-resorts",
+      "productCode": "PD-HOTEL-MOUNTAIN-WEST",
+      "agentId": "hotels",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-hotels-resorts",
+      "productCode": "PD-HOTEL-PACIFIC-NORTHWEST",
+      "agentId": "hotels",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HOTEL_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HOTEL_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-restaurants",
+      "productCode": "PD-REST-FL",
+      "agentId": "restaurants",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-restaurants",
+      "productCode": "PD-REST-TX",
+      "agentId": "restaurants",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-restaurants",
+      "productCode": "PD-REST-CA",
+      "agentId": "restaurants",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-restaurants",
+      "productCode": "PD-REST-NORTHEAST",
+      "agentId": "restaurants",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-restaurants",
+      "productCode": "PD-REST-SOUTHEAST",
+      "agentId": "restaurants",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-restaurants",
+      "productCode": "PD-REST-MIDWEST",
+      "agentId": "restaurants",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-restaurants",
+      "productCode": "PD-REST-SOUTHWEST",
+      "agentId": "restaurants",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-restaurants",
+      "productCode": "PD-REST-MOUNTAIN-WEST",
+      "agentId": "restaurants",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-restaurants",
+      "productCode": "PD-REST-PACIFIC-NORTHWEST",
+      "agentId": "restaurants",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_REST_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_REST_PACIFIC_NORTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-florida-healthcare-practices",
+      "productCode": "PD-HEALTH-FL",
+      "agentId": "healthcare",
+      "regionId": "florida",
+      "region": "Florida",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_FL_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_FL_PRICE_ID"
+    },
+    {
+      "slug": "milo-texas-healthcare-practices",
+      "productCode": "PD-HEALTH-TX",
+      "agentId": "healthcare",
+      "regionId": "texas",
+      "region": "Texas",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_TX_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_TX_PRICE_ID"
+    },
+    {
+      "slug": "milo-california-healthcare-practices",
+      "productCode": "PD-HEALTH-CA",
+      "agentId": "healthcare",
+      "regionId": "california",
+      "region": "California",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_CA_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_CA_PRICE_ID"
+    },
+    {
+      "slug": "milo-northeast-healthcare-practices",
+      "productCode": "PD-HEALTH-NORTHEAST",
+      "agentId": "healthcare",
+      "regionId": "northeast",
+      "region": "Northeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_NORTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_NORTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southeast-healthcare-practices",
+      "productCode": "PD-HEALTH-SOUTHEAST",
+      "agentId": "healthcare",
+      "regionId": "southeast",
+      "region": "Southeast",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_SOUTHEAST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_SOUTHEAST_PRICE_ID"
+    },
+    {
+      "slug": "milo-midwest-healthcare-practices",
+      "productCode": "PD-HEALTH-MIDWEST",
+      "agentId": "healthcare",
+      "regionId": "midwest",
+      "region": "Midwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_MIDWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_MIDWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-southwest-healthcare-practices",
+      "productCode": "PD-HEALTH-SOUTHWEST",
+      "agentId": "healthcare",
+      "regionId": "southwest",
+      "region": "Southwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_SOUTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_SOUTHWEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-mountain-west-healthcare-practices",
+      "productCode": "PD-HEALTH-MOUNTAIN-WEST",
+      "agentId": "healthcare",
+      "regionId": "mountain-west",
+      "region": "Mountain West",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_MOUNTAIN_WEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_MOUNTAIN_WEST_PRICE_ID"
+    },
+    {
+      "slug": "milo-pacific-northwest-healthcare-practices",
+      "productCode": "PD-HEALTH-PACIFIC-NORTHWEST",
+      "agentId": "healthcare",
+      "regionId": "pacific-northwest",
+      "region": "Pacific Northwest",
+      "available": true,
+      "productEnv": "STRIPE_MILO_HEALTH_PACIFIC_NORTHWEST_PRODUCT_ID",
+      "priceEnv": "STRIPE_MILO_HEALTH_PACIFIC_NORTHWEST_PRICE_ID"
+    }
+  ],
+  "packages": {
+    "PD-ROOF-FL": [
+      {
+        "filename": "Milo_FL_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "598b27f1c2b7fe587cfdbacac1822ea97c9caf63d4dd4c6959184d5101a0c3fb"
+      },
+      {
+        "filename": "Milo_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "61ef56d68488fec0e1d1ae151d8491ecef1718758f7ad762b3e97f05fd14b580"
+      }
+    ],
+    "PD-ROOF-TX": [
+      {
+        "filename": "Milo_TX_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "ed3239b6a3bdeda6a60a1d4dc132376640d075a0370263d3e4e7c6496b34db35"
+      },
+      {
+        "filename": "Milo_TX_Roofing_Installation_Guide_v2.4.pdf",
+        "sha256": "05b708b619aab13f0ba77ac5fd0b206551f54bb83c6f7e0ef31328918c0b7ab5"
+      }
+    ],
+    "PD-ROOF-CA": [
+      {
+        "filename": "Milo_CA_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "95a795c20b698648518571e0aa14a546427f7cea4560d6d41f8743dea5a8a739"
+      },
+      {
+        "filename": "Milo_CA_Roofing_Installation_Guide_v2.4.pdf",
+        "sha256": "4304d32ec28f8a0ef76705b0d93670ea1f9818fb2e0b64c3855ca0a32cd858a5"
+      }
+    ],
+    "PD-ROOF-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "adda2c3c1847a9d762b192c98ea9117cc565d12fba9b0634a2d0bf58ce402d52"
+      },
+      {
+        "filename": "Milo_Northeast_Roofing_Installation_Guide_v2.4.pdf",
+        "sha256": "c5fe2b674cb409c9bc03bdfe48c039f345c3fdf8da9148e31cdf90783e7d2733"
+      }
+    ],
+    "PD-ROOF-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "6f3b7097cc17258fa593d7887b518a5188a1cea11f3f88e787518616f83ce972"
+      },
+      {
+        "filename": "Milo_Southeast_Roofing_Installation_Guide_v2.4.pdf",
+        "sha256": "ba66f0665f7a38a4bcd85d2c6a57f4baace0b64717b518b2af4e56883a2d7534"
+      }
+    ],
+    "PD-ROOF-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "d9cdb0667b096b6459444b0f2c2aec45ed484a1928b47a56e8cb83989a80913d"
+      },
+      {
+        "filename": "Milo_Midwest_Roofing_Installation_Guide_v2.4.pdf",
+        "sha256": "d004e50dd347450920fe736bb515bead6874dbe86650adc578ff3fca1ae448b8"
+      }
+    ],
+    "PD-ROOF-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "4dc8bb5059ddf5321fa0c0a15a323274adc7a0526f1c9be3a89c37b0a6cbb9b4"
+      },
+      {
+        "filename": "Milo_Southwest_Roofing_Installation_Guide_v2.4.pdf",
+        "sha256": "e19c4991521cf2abe4e83bde00c598a1f1f5a72d50aaecef4c87029a0cc2e7c8"
+      }
+    ],
+    "PD-ROOF-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "cdba5bffb23083dbe0d9f0e49a34d5f26a810ebb1b94bba34e2cbb05f581b614"
+      },
+      {
+        "filename": "Milo_Mountain_West_Roofing_Installation_Guide_v2.4.pdf",
+        "sha256": "8d30284572ee5b2acea17e6ce450a86d0e3322a715d5bfed64113168f366c85b"
+      }
+    ],
+    "PD-ROOF-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Roofing_Installation_Prompt_v2.4.txt",
+        "sha256": "310dba92dbb0b9263164a4c31ef43e10aefe3c03a2983580757bd4cc40468066"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Roofing_Installation_Guide_v2.4.pdf",
+        "sha256": "843703a274e17dcac4cc99a802c09a68f113557c8121372cb4140cd4597b1c92"
+      }
+    ],
+    "PD-HVAC-FL": [
+      {
+        "filename": "Milo_FL_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "ce85e8cfe2d9dfed30d55979aa827a9020bca38e0673839f954909acef479281"
+      },
+      {
+        "filename": "Milo_FL_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "408d836b584182c1ba7df50cc28bdfa8b36f117997cae4da75362003f3707a91"
+      }
+    ],
+    "PD-HVAC-TX": [
+      {
+        "filename": "Milo_TX_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "69cf4c1bb68325420e5e4babb24ba0e53e239654ea44f67f7c0ce28bef2b6c31"
+      },
+      {
+        "filename": "Milo_TX_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "cad2c6022a8f0a49bcea10035f0a09eeb6666ed35e98a8306bb4f3d4f07cbe49"
+      }
+    ],
+    "PD-HVAC-CA": [
+      {
+        "filename": "Milo_CA_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "bcc4c07de632c1eb6759624df78041407a6d4d11970fc694861f5d7800e80900"
+      },
+      {
+        "filename": "Milo_CA_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "c09995cc02373fe12f701f0d689c792622b20cbc771d44d1fadc26e641b674d4"
+      }
+    ],
+    "PD-HVAC-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "4346096eed09726fef4273171fdaf0ac5c2b2e58a7c97fe1943bac0566596125"
+      },
+      {
+        "filename": "Milo_Northeast_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "0862ddd408c4e0cff0846813bd1d99457e6fa6c78fda6dcd94c5394b282443bd"
+      }
+    ],
+    "PD-HVAC-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "ed9b6ee044b845c947378cb5dddb2d8513fa7208d24588484f5073cb4e99dbc0"
+      },
+      {
+        "filename": "Milo_Southeast_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "add13c3e29b081a97b3637dfde5e3ff1c46d4c01c86030e65a6ee1e46d3e110c"
+      }
+    ],
+    "PD-HVAC-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "04a8dcaddce271c5fc701a807720b654b40e242892e554ea14eef51a7e00c2e3"
+      },
+      {
+        "filename": "Milo_Midwest_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "690235a7920bf135018ed30b81c2b7b7d8726055186f2462f7631db01df5f82a"
+      }
+    ],
+    "PD-HVAC-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "9ed1637fd9ebb30c7e9fb648916fe39b8abf4537fbbebbf8c82c5b541253fa2e"
+      },
+      {
+        "filename": "Milo_Southwest_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "374d4d3e2a46f4cec3dfc9a9ec8bed25e216cae22edfa1ea53b794e2e14749ed"
+      }
+    ],
+    "PD-HVAC-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "1b654d291a261b55f4c4edad189995c49952f71daaa0aedd355880dc6a1a9f6f"
+      },
+      {
+        "filename": "Milo_Mountain_West_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "754ed5c93249cca4d062e8c0c277388418f2ef194dbb4bc275578e5144c6d64e"
+      }
+    ],
+    "PD-HVAC-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_HVAC_Installation_Prompt_v2.4.txt",
+        "sha256": "2ae95cdf76500cd6336fe1dd9ba1e54ebbf1cf2600acaa41ff6dcd9ec35bae1f"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_HVAC_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "2e014714553c701ef4e304af03ea957cf055a998737da234d9a9d023566daa33"
+      }
+    ],
+    "PD-PLUMB-FL": [
+      {
+        "filename": "Milo_FL_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "59cfcb0ac83a7e0c8c913da3fbc9bf6d939f0c946948d3b67b650ae10db0ebc1"
+      },
+      {
+        "filename": "Milo_FL_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "ca195258832206ae0b5df84992ca62b607eeb01102fbad81515785065e01fa5a"
+      }
+    ],
+    "PD-PLUMB-TX": [
+      {
+        "filename": "Milo_TX_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "287c169590e13429fd3bda81636005d9bb5edb905fdd10ecb11e84ac13b834ef"
+      },
+      {
+        "filename": "Milo_TX_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "00e190d1d8d42e09dc0667907ec3a8a8aa8f3b9c4297e79147031fb65226ecfa"
+      }
+    ],
+    "PD-PLUMB-CA": [
+      {
+        "filename": "Milo_CA_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "a301c441b2fd4d0570059e781ec14885d2af7986abfcdf088e6fc711989d30a4"
+      },
+      {
+        "filename": "Milo_CA_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "af019cba66b3cc64f0754cd03380289ede9190239e1c4c3eb4b11b85a7b98016"
+      }
+    ],
+    "PD-PLUMB-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "fbefe29b673fde5a7cd6d57de6ca11cad696ed928b4e894d9ed7eb96296feae9"
+      },
+      {
+        "filename": "Milo_Northeast_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "4f2f6555c4299ff0ac510e9535287fe4eb335fe345374bf0546f099bfa7017a4"
+      }
+    ],
+    "PD-PLUMB-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "d603f40e23b16facaaec5cef88e3c61b5eae48aec957e7c799bb28eaf23c63a8"
+      },
+      {
+        "filename": "Milo_Southeast_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "5ef37bf1ea7bf465655bca8cdead430bbff8cb42b9f5624a4879c77973b4863b"
+      }
+    ],
+    "PD-PLUMB-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "71cf0791ff6f989598bfd9691fcf1b771e943146ce052030610012fded8b4390"
+      },
+      {
+        "filename": "Milo_Midwest_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a13a30678248fe390658b8661af2b0c755331c1da45f09774496e5e383bf67c2"
+      }
+    ],
+    "PD-PLUMB-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "1a2a5d7b67f2d6a68226fa7bb8326f141f1102eb6a1c455a153164497ec21f64"
+      },
+      {
+        "filename": "Milo_Southwest_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a2a0a40ffbb5d36a1098596239cbb80ce2b4eb22a8989e7fadd2e550cbc62e44"
+      }
+    ],
+    "PD-PLUMB-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "691d29789ca9d9d12769bfba56984c467f11c28d5e213ddfb88ef10055c4281f"
+      },
+      {
+        "filename": "Milo_Mountain_West_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "65a1fe0d00b213149349dbb0343851026816abcfd5d434579a5d1931734c8892"
+      }
+    ],
+    "PD-PLUMB-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Plumbing_Installation_Prompt_v2.4.txt",
+        "sha256": "561e420306f32d50e48e5364104559400afc9337b16e75acfaaf5ba67c97659c"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Plumbing_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "1014d1ae3d2b2b7773729d5badf19a907a399317afd7dcc8e7e5a1602bc6deed"
+      }
+    ],
+    "PD-ELEC-FL": [
+      {
+        "filename": "Milo_FL_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "9492835fe8544a918c7e4b5342f39f458304ab7efa785a357d83f189a833054f"
+      },
+      {
+        "filename": "Milo_FL_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "c7d3c1eae793a6967f52749eff66ae20148d36ecee4ed7e66d1fb0120e61d882"
+      }
+    ],
+    "PD-ELEC-TX": [
+      {
+        "filename": "Milo_TX_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "03c41f7f9c5922f83de46d4e8d8dc29d4f455c510f5a32674454f3d4e01e2c6e"
+      },
+      {
+        "filename": "Milo_TX_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "568b17ed892194d8bd18fd502c417ad108bba5777f5ea75ea5ad75ae6e9e2d6e"
+      }
+    ],
+    "PD-ELEC-CA": [
+      {
+        "filename": "Milo_CA_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "b799c420e83526bcefa26b8444f5a39a018c7c9693cb6ebc9bace6854d42ceb4"
+      },
+      {
+        "filename": "Milo_CA_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "4dd46912a7fe4605956a8002236c2960064a39f863c4f7b3bff7237b81d47fa9"
+      }
+    ],
+    "PD-ELEC-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "0d6b62d2d590ef241c0e015f22a2a97a167a8d735d314e1cb19ccd5bf2049a0d"
+      },
+      {
+        "filename": "Milo_Northeast_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "5d5ff83a8fd20a787d438ec60e0ff235b9caffd2c6eada60334d7abbcd9e8197"
+      }
+    ],
+    "PD-ELEC-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "9fc216b8899ab9686718221cdf200c1e52fd56cc1edf578b11168e882e3ad48d"
+      },
+      {
+        "filename": "Milo_Southeast_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "197e804539db85403c635bc98a40aa058faf1fa134d313ad81b6b1f2a209461d"
+      }
+    ],
+    "PD-ELEC-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "ce94f1170924d26b2fc3d5b3c0494e77f4a9927aba1c74031ea3179b2f38b844"
+      },
+      {
+        "filename": "Milo_Midwest_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a80df8400d36a1fd7ec474cb05633e9a9501409b25c1454f689b23b2eb19d008"
+      }
+    ],
+    "PD-ELEC-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "e3c383494a6243e3300f7b5c7c5ebc40811df5aa7c75820acdce66aece7edd4d"
+      },
+      {
+        "filename": "Milo_Southwest_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "bc2abc0eb8d4bfcc7589692c0db983e4e05708780e515f6d60ae4ea710d5016a"
+      }
+    ],
+    "PD-ELEC-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "30f54043aeefe3b569b85547010ff34cfa326aaf7d3f0e096117dc6c173ceb83"
+      },
+      {
+        "filename": "Milo_Mountain_West_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "de93b9459faa0493b4587b609fbf0af2809c6b4f6cfa99432aeda0229f2acdcc"
+      }
+    ],
+    "PD-ELEC-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Electrical_Installation_Prompt_v2.4.txt",
+        "sha256": "544cd0f6a4aa5e3471dfa2604a648593e1888ebfc2f07655e74b73327b64c0f7"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Electrical_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "e24568e8aca5d6d849ab31b9feb202ef3012625454a9f0bdd1bf4f4cd0ce67b7"
+      }
+    ],
+    "PD-GC-FL": [
+      {
+        "filename": "Milo_FL_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "b15aa08a9d08781ca8512228367216d6f567a9152112e645511c74d69e1d0eb8"
+      },
+      {
+        "filename": "Milo_FL_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "090b01c4b9bad24bab82d1ac29d7ac3d95c137d0c3b8e50337df5f5da76f3446"
+      }
+    ],
+    "PD-GC-TX": [
+      {
+        "filename": "Milo_TX_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "dd962c4e43ae9797a09b6851a77a4ca127eb8a84a664a3356ccd567b029bf17f"
+      },
+      {
+        "filename": "Milo_TX_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "0003a6bbcbd37be2bdfeccf6c04525a91354117d2205f2ef9316a8bdaa3fd842"
+      }
+    ],
+    "PD-GC-CA": [
+      {
+        "filename": "Milo_CA_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "cf954603729f01dddcb49bacca6510d5ae90c0a66e3d0dc84eff5db39d9a861c"
+      },
+      {
+        "filename": "Milo_CA_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "6ce2052b08265fb46b20eb55e102e808342aeb1ed96676180da90959151779b1"
+      }
+    ],
+    "PD-GC-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "c32b4171f79cc106f67fd9e9796f07f0c449bc41b3eaa5ab4f76bfbb4653082d"
+      },
+      {
+        "filename": "Milo_Northeast_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "eb8db06aac785dfd6f973af66df6459b9103ff1587ae76a52e95fc16b6195f59"
+      }
+    ],
+    "PD-GC-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "2b590b3b0801dc8dd60358248c7a2d8a73935879447818c87ececef48f10b2da"
+      },
+      {
+        "filename": "Milo_Southeast_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "ae191e5c67f3c7f2789fa93af4b197795927518d6a22e09039bb7e439ee56145"
+      }
+    ],
+    "PD-GC-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "aabe651a9fb2ab4ccb70e4885627d5f9e8b3d36b40f5c2a6f19bb65a0bc1f935"
+      },
+      {
+        "filename": "Milo_Midwest_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "fac429837872eb73648f8aee3cda451799c0ec3cf246703d2ffb96f0297831b5"
+      }
+    ],
+    "PD-GC-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "4b8e0e6079f3bc217fd1b9a7c1abffeb969b58594f71af747c37f0b0b7a31cf0"
+      },
+      {
+        "filename": "Milo_Southwest_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "40f66699d862259a3fa02c385d5761f9c65f9b04c514433c8518f18e0756ec00"
+      }
+    ],
+    "PD-GC-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "9572722e1e80005b973297b8f2041e49d5b868b01ea7a3f62c221cc53f5dd528"
+      },
+      {
+        "filename": "Milo_Mountain_West_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "21814331e3463fa56f665dbc8283673967ab53ca66ccb75b70da31098d709817"
+      }
+    ],
+    "PD-GC-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_General_Contractors_Installation_Prompt_v2.4.txt",
+        "sha256": "02377767ab884462b5ed121dbbcefefa4bcaaf9bbe6f24b930e8b58e30e589de"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_General_Contractors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "2e0cc84db898b68d32b46b7ff44958704bb8dbe1b23b178cdd3811894ec0ba2b"
+      }
+    ],
+    "PD-BMM-US": [
+      {
+        "filename": "Milo_US_Building_Materials_Manufacturers_Installation_Prompt_v2.4.txt",
+        "sha256": "ccd27c732f0b6a04894bc4ea32c2ea7acf0778c0600346b28be29216460e2ca5"
+      },
+      {
+        "filename": "Milo_US_Building_Materials_Manufacturers_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "deaab98603b1b1462a60af99d2da7abe683ed1a038fea6fbd58c512b8be58c30"
+      }
+    ],
+    "PD-BUILD-US": [
+      {
+        "filename": "Milo_US_Production_Homebuilders_Developers_Installation_Prompt_v2.4.txt",
+        "sha256": "47f93aa1fae0292f74c59a00a85f32bde173b1d0a1dc171885a8c5c2e797fd91"
+      },
+      {
+        "filename": "Milo_US_Production_Homebuilders_Developers_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a1a500305d2bbdd0702a6c6a429f973b0cbd0aeac9e0e1324ef7a2e2658fa1ce"
+      }
+    ],
+    "PD-ARCH-FL": [
+      {
+        "filename": "Milo_FL_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "c8ffd74f1d90e4af3a7b4486e16cfbc96b977b4395365de9f803ed9a82496b29"
+      },
+      {
+        "filename": "Milo_FL_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "fc98b3cd700011502aa2f144f806031c04c789a722e1ef94a0d07b37f62de35f"
+      }
+    ],
+    "PD-ARCH-TX": [
+      {
+        "filename": "Milo_TX_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "4819fd1c43d4a6cc739f916f34a3262a94120f25363a9918b01b8862cf2f31a5"
+      },
+      {
+        "filename": "Milo_TX_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "41c0d3048dfc86e17e7f4142aa766a9fd0ef551ca6ea97ef02cbb386a891c8f7"
+      }
+    ],
+    "PD-ARCH-CA": [
+      {
+        "filename": "Milo_CA_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "1cd0516f9d29e552b37e067b81599d6e702dcd4ec1ca293bc4f2608904803f46"
+      },
+      {
+        "filename": "Milo_CA_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "268e92fff8e2baaf65ffb93a66a02cbc70677a00867c1a7d7eb660dc20b2b848"
+      }
+    ],
+    "PD-ARCH-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "f36d90ee8f75736f3815573ea71f54297973c927d8c29a53930377e91d71baac"
+      },
+      {
+        "filename": "Milo_Northeast_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "6deeb90f6b20027e1e5c061a9f9acf0ba8f41be3aad97411e86abaa144b33cec"
+      }
+    ],
+    "PD-ARCH-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "514f908e0ab7b94d0dd1c02e72ed76c2f7fa25fc114486c1d657dcfc88ce3206"
+      },
+      {
+        "filename": "Milo_Southeast_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "201a2a2f80bdd412b7f682ca29b74c6e3ea82838d0a3d802a102b829283fc2dd"
+      }
+    ],
+    "PD-ARCH-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "9e31886d1ccfec21517b98cbd757a7dde37afc0a37fd63b66075133334b42bf3"
+      },
+      {
+        "filename": "Milo_Midwest_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "0c7eac7172ce400016fb424d9b7200f832f41e98ca48e91adeea9d21dc15e82c"
+      }
+    ],
+    "PD-ARCH-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "f29ac905a9e1e9c99af44d3cf72605c601ac492c9378c5b1f37c6b9ab674aafe"
+      },
+      {
+        "filename": "Milo_Southwest_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "5343b44fc558e58db6388372da05c94ab64038fd6f7df0d62e9711aa8fd0a8fb"
+      }
+    ],
+    "PD-ARCH-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "6b440bb393eb68a5f781bc513c14124899bf59374af59a33508a134f4a5c72d1"
+      },
+      {
+        "filename": "Milo_Mountain_West_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "6102e1cdadef8e6420eef6be89ea6471be08be0972eb0dd0068c3353cf3f26c3"
+      }
+    ],
+    "PD-ARCH-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Architects_Installation_Prompt_v2.4.txt",
+        "sha256": "2b35eaa0e5c5f263e2c4bd9b245f1258c7f760fa2e284ca640e7e128a36d1374"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "1c05677338cef607714c6293594829d635a5e3a1ec7432dc26ad3fadf2fed8b8"
+      }
+    ],
+    "PD-LAND-FL": [
+      {
+        "filename": "Milo_FL_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "ec6053b9bcfdc95b7e29ba1b23c35946fbb1bacab6aaa4312374a5f1e83c009a"
+      },
+      {
+        "filename": "Milo_FL_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "1027953734392aaf59771de261339bad9e9bba972f5adb06682b000ffac60ab8"
+      }
+    ],
+    "PD-LAND-TX": [
+      {
+        "filename": "Milo_TX_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "217661a5f152559f9f10197a211e5cfea419b344e4a6b07b854bfd27f971c4aa"
+      },
+      {
+        "filename": "Milo_TX_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "2208bf298bafb55c442a7a56b9d8c699707140711432982a6de0e64938056db6"
+      }
+    ],
+    "PD-LAND-CA": [
+      {
+        "filename": "Milo_CA_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "f4433579c3629cabb6e780b03607d48762fb675b4fdbf93b7a58eb9e90968d8f"
+      },
+      {
+        "filename": "Milo_CA_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "7d27b3fd480ed218247b0112a7f11f85af9f0b04ae0278b7f5380e86b4ebc3df"
+      }
+    ],
+    "PD-LAND-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "4e6de5d676c3a94a47452b4793cdc60114b14cdfc0cd3ee543982707e4c2b4e2"
+      },
+      {
+        "filename": "Milo_Northeast_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "c38ea9eeb0d06e732bf650d76076a5e516c59facdd028b20b5107f3d32077f3f"
+      }
+    ],
+    "PD-LAND-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "0e1fb616dc46f1efd221a35a2a01ea8091f1f33f7dc0414327dfd139725309b3"
+      },
+      {
+        "filename": "Milo_Southeast_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "7642095e8aa4afff628efaa5249eb49459e07fc8950f7ffeeaeb8e35bae8fa4e"
+      }
+    ],
+    "PD-LAND-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "665758918f91e28c8efa53715eaad24013d6752d8bca701b87ff448df3c13df4"
+      },
+      {
+        "filename": "Milo_Midwest_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "ddc8dd37966c5f2f10d6e35fd75d58b68cff3b9bdecba41dffddd25f33a01ff6"
+      }
+    ],
+    "PD-LAND-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "b3ffed0125ca5802e271ee22b295c0e285bddb397a994b59ef5a6751e6bbd200"
+      },
+      {
+        "filename": "Milo_Southwest_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "6a066dd0ce670f4ddee2b97c1e8864c97ac84e98c7ac211203e7d9a0f65266c1"
+      }
+    ],
+    "PD-LAND-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "be9ef14f9804089609de4fc24ccea58387cd9a97d75fc772c7d5c54a7519efde"
+      },
+      {
+        "filename": "Milo_Mountain_West_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "fee0fc5cb2e504e3ac5d1dac4ec4a5d71ace55c37edc725cd6aed66399d05724"
+      }
+    ],
+    "PD-LAND-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "9e97d3eb3a6846855aadc2f6664dd2626e3161d03da0b6a7f18015a04abc3ae9"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "2296e573ee3b944a86f832ea3a11b668af1de0b12f8657f889440ecd5c319fe3"
+      }
+    ],
+    "PD-PM-FL": [
+      {
+        "filename": "Milo_FL_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "098bc521fbddec4b38cac1f6cabcb5b7491975f528e9f04300010ab0a95f8807"
+      },
+      {
+        "filename": "Milo_FL_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "16b930778e025d2f5d8ab84e261f0805de219c8631ba6070911547128b52c246"
+      }
+    ],
+    "PD-PM-TX": [
+      {
+        "filename": "Milo_TX_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "526d5bb02b3d86bfa58244111730ac71924675b62ee53c9504a7c83534e9a406"
+      },
+      {
+        "filename": "Milo_TX_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "9acdbbb6c402bbee5454335aaa27849b636b2e81e1173aa0861558c82ecde281"
+      }
+    ],
+    "PD-PM-CA": [
+      {
+        "filename": "Milo_CA_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "15dfcf52e96597f205a45ab350ad4cae21ac2f2d46c6bc197aa7a6a942928599"
+      },
+      {
+        "filename": "Milo_CA_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "68d2b77a619244e47bf99ad61b0f23d4b5e3b15073812de832ab308d3bbc2d9f"
+      }
+    ],
+    "PD-PM-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "2757690fca28ba1fa11f918e52fb6df11b01cea564b8f56a0f52747c1fe95fb8"
+      },
+      {
+        "filename": "Milo_Northeast_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "5e81a635f4c93d5e3e1f9a86ac2e84a5d9a523ae520be339ab8232f82f5f51bf"
+      }
+    ],
+    "PD-PM-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "dc41cfe596f32f73597acea2a7a298af58396703c1ed3729d8ca5587929ac105"
+      },
+      {
+        "filename": "Milo_Southeast_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "0f841585e990ae5dd61e69a9070b2ae6187fc81309d7047da6ce1771180fe82f"
+      }
+    ],
+    "PD-PM-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "10f14142bc8f0cc92259daf1996350c86edee3b60508a76f1f3cb7b7711972f7"
+      },
+      {
+        "filename": "Milo_Midwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "eb3ec922cc0f7f5ec8fec543a56531aa638d39656292bf5e4e0cd7cf8c23c776"
+      }
+    ],
+    "PD-PM-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "36a524096b39a4be5dac77ea86435e0e501697b975999e4f98677ec5905501c4"
+      },
+      {
+        "filename": "Milo_Southwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "915d97aaf69bc5e7abae96b65e52607eddd027755ecb94fdf9ce7c981d66e994"
+      }
+    ],
+    "PD-PM-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "b8f7567da48d5ba48702b7a0b96bb2cfeb51c65a4785db7bebc4fdd259a8392d"
+      },
+      {
+        "filename": "Milo_Mountain_West_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "c50697652bd06242920910d07a9325f964c0a20855f1f242d918371ae18bece0"
+      }
+    ],
+    "PD-PM-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+        "sha256": "3a04b8363325e08cb6a83c37606c89dfec525ecab5f3280b5c09f419a8e69221"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "1b5403b3c880ee42cbbc6bac1a31f1cc18decffb950347dbd7fad37948117315"
+      }
+    ],
+    "PD-HOA-FL": [
+      {
+        "filename": "Milo_FL_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "582b4fbe48ad9dc4fc76d80508facf70deb7ba71bd95db72a21eeeab35f7dba9"
+      },
+      {
+        "filename": "Milo_FL_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a5c5b7a9f7337ad8ad319e5762e2ca32beaf6eaccc64abe9665b25416af424ce"
+      }
+    ],
+    "PD-HOA-TX": [
+      {
+        "filename": "Milo_TX_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "e9f8e1a717c7846ca0e90d9dbb3ba6b37bf10e236d4c6a9dd5593a223559f6a3"
+      },
+      {
+        "filename": "Milo_TX_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "4c04b88fa49c068c22786ae427ed4fad147e2bfa6f34dba2c4de249372e62d70"
+      }
+    ],
+    "PD-HOA-CA": [
+      {
+        "filename": "Milo_CA_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "54ecee97e1ca043a8e1f78992ce1248006afcfe159f13bae9dbee92f3fd745fe"
+      },
+      {
+        "filename": "Milo_CA_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "f856d0404a5e952bfb8b419a5aaa47f5808343daf335f3bf1907134f813a8540"
+      }
+    ],
+    "PD-HOA-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "1b76ca236b251e70145b07427dd1e16441e5b42e4d2d8517845aa6bc9994aa12"
+      },
+      {
+        "filename": "Milo_Northeast_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "6a800e157ef52d326a26d0108d9f54a1dfe0eed94eedf262c5516c6d770f50df"
+      }
+    ],
+    "PD-HOA-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "4d17a092b25e878aedd17ac8d971dfdbea164cfab8eb4537938f44e59ee0f3b3"
+      },
+      {
+        "filename": "Milo_Southeast_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "292a0e1707dddf30624b8624255eab8cf7154ae7a9b255a71f2ac2331396bb4c"
+      }
+    ],
+    "PD-HOA-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "228d986c1d742fcd50bac0b6f3acf43294e56275ebfd4c43e9c2d453bfd4ccc7"
+      },
+      {
+        "filename": "Milo_Midwest_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "3c4f1743436656ff7db475cc36a3d2eebe027a552339f217156144415529054e"
+      }
+    ],
+    "PD-HOA-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "ff50bddd1efd8c1674793bf8b08d1800fffe44e1c5701a5a1f062724987c61ed"
+      },
+      {
+        "filename": "Milo_Southwest_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "42c4045e9338e7d240f496967652fb781dc3e8c00c82d30d8c42f2e155085943"
+      }
+    ],
+    "PD-HOA-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "a765056cc53cb90593eb4e55bbae3f9086ef5e2b5a4b2ccda6e1f98e208ad520"
+      },
+      {
+        "filename": "Milo_Mountain_West_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "aa77d9279edb339e936d2fa34f6f0b260c2fde811e962527e837544ba62abe73"
+      }
+    ],
+    "PD-HOA-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_HOAs_Installation_Prompt_v2.4.txt",
+        "sha256": "eb490a32a3ae3668a4b93b14c57b2ec17a4fed0f691b39cb38eeb63578a936a8"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "c175743a2ff5a40beb2ccbb59c7d288ac2b6721bfb8249e2b2428128d818d044"
+      }
+    ],
+    "PD-DIST-FL": [
+      {
+        "filename": "Milo_FL_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "1074eba51c7158b5a8657e63a9f974de5cf279717521d5655e2ede5a84c84fc3"
+      },
+      {
+        "filename": "Milo_FL_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "ed3fb4d7b5a7303ced83119dda1ca5124a99e71ac9e4c2915a1af958d12c7af3"
+      }
+    ],
+    "PD-DIST-TX": [
+      {
+        "filename": "Milo_TX_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "2073a36cc5474b3aebe8f25371d888ed07671d175e909fedfe2f3303fa737e21"
+      },
+      {
+        "filename": "Milo_TX_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a1d27d0de51a1d06ecf3997fb00acd053cc56f522ed41b1dfac82acdea2cd74e"
+      }
+    ],
+    "PD-DIST-CA": [
+      {
+        "filename": "Milo_CA_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "81e181483f2080629128512766b365b5b0c9045cf6273f132450e6d6ceaa9d77"
+      },
+      {
+        "filename": "Milo_CA_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "ea2cad4f525cdb9fe216b47b19904b63d6bdacb04c9ebf4b5fb76c294f9718c4"
+      }
+    ],
+    "PD-DIST-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "aa14c40265841eef05eefbda6f8e5c960510e34b8ebb533c6a35617131469108"
+      },
+      {
+        "filename": "Milo_Northeast_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "23a493d4543b2c8f785951e0a5cee8b6b04ea3f67fea380a75a0077d16d70592"
+      }
+    ],
+    "PD-DIST-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "284d01869c74932f3646b7d749c6adb85bb7e8ee1d877ab51eff25f7e9d8766b"
+      },
+      {
+        "filename": "Milo_Southeast_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "3c12713da6173409a981f8dbd035eff1c79e0586905a35692c18b459223c21a7"
+      }
+    ],
+    "PD-DIST-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "03a59e49a38cfee7420391699471bd1dce58b560275c438b021bfa63bd99116d"
+      },
+      {
+        "filename": "Milo_Midwest_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "9866358bdc82238490cbbf463eeea54b840812df252382fa6e7e51e4cda2069a"
+      }
+    ],
+    "PD-DIST-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "2d0afd215d85df932c6869a6b36e1a5868a14853d91c1a4aef474a845f25c3de"
+      },
+      {
+        "filename": "Milo_Southwest_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "93a50d63217d2ec6891718e3a7fbb3e93c752dbdbb96e668d4df4099d2becdea"
+      }
+    ],
+    "PD-DIST-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "2bfd907db3f1d8951d248a2f10bac46e829b5cad405d6f2292575bf9ef4d2c23"
+      },
+      {
+        "filename": "Milo_Mountain_West_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "ba39de1f893b3c76a8046b18ca74f84b56b8f20ce62e70ef61d92631aa52dbd2"
+      }
+    ],
+    "PD-DIST-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Distributors_Installation_Prompt_v2.4.txt",
+        "sha256": "ded24d616f5c6f12f05cafbc69d9a30f3c00051d1cd2167b287fe811824b2568"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "94a0d5559491213759e70b925eca4bce9b3b2a2947fa122729294dc61c9661d8"
+      }
+    ],
+    "PD-HOTEL-FL": [
+      {
+        "filename": "Milo_FL_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "6593f42747b92109a0acd6e86d5c1f149f94c5f3d598e9ec8525d762d17586a9"
+      },
+      {
+        "filename": "Milo_FL_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "d5e3818b90feb8a980c34fe89c6dbe827c22af03412d6152121f5b35e0fc5eb3"
+      }
+    ],
+    "PD-HOTEL-TX": [
+      {
+        "filename": "Milo_TX_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "91c8a2382a6a007e32ce1a8bb3a5a2f0dac002bdd27d50aba572844e40dcad02"
+      },
+      {
+        "filename": "Milo_TX_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "c7a77db71286f9afc4bdff91054a630fb53357aee37609105efa7135474aef0f"
+      }
+    ],
+    "PD-HOTEL-CA": [
+      {
+        "filename": "Milo_CA_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "1bdc477e2a4e1aa78373b0633cd3e4655eb47c1f7eff47a08116c28427ebdd1d"
+      },
+      {
+        "filename": "Milo_CA_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "caa58297c27e8519230530569b65794536c7223fcdcd277392756f7cf452b4f1"
+      }
+    ],
+    "PD-HOTEL-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "538861b3e2f8c1df051d1198e5dce0112d40c7c15b72b1f1283b03160a51b1c4"
+      },
+      {
+        "filename": "Milo_Northeast_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "6aeb419cc67f71364ce130d3eb800711f34882126e61d9f4ee9ce7a57a039676"
+      }
+    ],
+    "PD-HOTEL-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "ce52384cae67bb376745aec307d0862bac4bcfebfd2fec8a5f4de6b9def464f8"
+      },
+      {
+        "filename": "Milo_Southeast_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "8d3f6cc1b528c3daaef7d79dc8b91d902e76aeb61c9333552c6d5d3fff4b625e"
+      }
+    ],
+    "PD-HOTEL-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "32c487fcb4ac11ba8e78d45ac7bcc9bb045286bd4f65c6a628d0814734dab428"
+      },
+      {
+        "filename": "Milo_Midwest_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a1b6171609acc4cc315ec8affbc05195aa7bc8ba73000c282b8316398c19428f"
+      }
+    ],
+    "PD-HOTEL-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "0b80e850f7af6fbacb98c20fa1dce367b3d67b29777cdd1113c9e6e00a03bc74"
+      },
+      {
+        "filename": "Milo_Southwest_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "676fca7d1cc0e5363395fb2151f47ceb3cd349aa9435427666ed5a232f0d298b"
+      }
+    ],
+    "PD-HOTEL-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "291b8559172eb4bc5625c7b66e9af82a960a2f8cb45817ab0ca73ed6b7afc9ae"
+      },
+      {
+        "filename": "Milo_Mountain_West_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "2b58f501eda0ef8b949dd89a0b57ba7c449042ceed98196b70b221f54b02a4a0"
+      }
+    ],
+    "PD-HOTEL-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+        "sha256": "5cdf57c213f9139f095287988cd81ffc35b815efd44f0e4f354bcf58fe427325"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "89f8a31fc704a4e15ed70113e8035357d1497d6d93f6eb993b21a2cc3fcac269"
+      }
+    ],
+    "PD-REST-FL": [
+      {
+        "filename": "Milo_FL_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "6ed4eef572d2ec7258902972cf095ae072561c165c2b75c681802a604bec519f"
+      },
+      {
+        "filename": "Milo_FL_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "618d00d6cf420d39670aa326a70c57d275f294cc419503598df7d54dbacd0fa6"
+      }
+    ],
+    "PD-REST-TX": [
+      {
+        "filename": "Milo_TX_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "58c695e20ea9b11429bed76125a5abaf9e40b448df9cc54842f50de14fc798ac"
+      },
+      {
+        "filename": "Milo_TX_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "1ba52de1f8b9e76eba6b35bb715837742ae8d14a800bf0b7bb785421807e05ca"
+      }
+    ],
+    "PD-REST-CA": [
+      {
+        "filename": "Milo_CA_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "b56dda2e945e2ba63ac7809aa077993e510773998ce27f06d6b9f3ff6c34de48"
+      },
+      {
+        "filename": "Milo_CA_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "f718be9cf58dad463126bd180492b13ce63194cb43314ad391d8d4ed86b98d08"
+      }
+    ],
+    "PD-REST-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "c16222308335f512032c972a4f209d377c8bbf6b049ae06849ac2d2f8d18278d"
+      },
+      {
+        "filename": "Milo_Northeast_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "f9024ec5aacc2e2d0344998f9eeb86a763464c044313f721b9d20dcf9e74189d"
+      }
+    ],
+    "PD-REST-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "0857ce12ba4ac9ae539e4df1012d7ba539acd17e0d48b262d9749a06c1e39159"
+      },
+      {
+        "filename": "Milo_Southeast_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "151088fdb0de81cb1400b108b05c36ee2738c1bbe5ecec5d81a2da8eff1d3ef0"
+      }
+    ],
+    "PD-REST-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "67c2190119452eb3fd47125a42ebc527933b76bf753d387d906bdf11183c90c1"
+      },
+      {
+        "filename": "Milo_Midwest_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "f8ca48f802df26a4c89b4a62022bf5577923383df74b190257f050365bfbe1a1"
+      }
+    ],
+    "PD-REST-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "129a036b9aafba1600887bfe8e3418844ddd15651098906dd92df2c94c336e52"
+      },
+      {
+        "filename": "Milo_Southwest_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "f8dda6326a4b03f9171b9916454f2c1e104044614668b5a65c9e7697255ec220"
+      }
+    ],
+    "PD-REST-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "bae90d5992208a8e156655d732e4833016e46fea8c808c4a83923a3891fec148"
+      },
+      {
+        "filename": "Milo_Mountain_West_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "b87189dee5e49337c2af243f0a5870039a246d70669e604f24ff0eb8f721a23f"
+      }
+    ],
+    "PD-REST-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Restaurants_Installation_Prompt_v2.4.txt",
+        "sha256": "dba3f482c1b8118b1f006462cd6771209b5abebddecb520df346ac6a351ce7c5"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a691a5aab4424f2485901e391893b12a3f535870805f0a1b0a6af75b12ebda78"
+      }
+    ],
+    "PD-HEALTH-FL": [
+      {
+        "filename": "Milo_FL_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "38d48e3b9518dbec68c5740802c256cf52dcaba684825ceb2a91006cdb59f46e"
+      },
+      {
+        "filename": "Milo_FL_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "921e50405285aa3cdfaed2839019ffbd49dcaed2c1cb9da70559d9664a98ea1b"
+      }
+    ],
+    "PD-HEALTH-TX": [
+      {
+        "filename": "Milo_TX_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "ec71a91679b8c005965d4fcfe852731b9dd45cfe265ad4b0b3d798edff788838"
+      },
+      {
+        "filename": "Milo_TX_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "7d1c0a9ec3979076eb86820977ca1f610b67856efb5bc27dd03c7e33ded6244f"
+      }
+    ],
+    "PD-HEALTH-CA": [
+      {
+        "filename": "Milo_CA_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "deacbfa69648b09539551c36983fda36fc8d7685ec4fff74a408f49080d2669c"
+      },
+      {
+        "filename": "Milo_CA_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "b490347ef3a7471096c9ed87338f7df2d7d0216573ae80bc2bb00e8702b94bf4"
+      }
+    ],
+    "PD-HEALTH-NORTHEAST": [
+      {
+        "filename": "Milo_Northeast_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "4e9720923a22c1c16763e271999d5b92b379b8f6952cf109974cecc674b57230"
+      },
+      {
+        "filename": "Milo_Northeast_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "0d8b3b17b7598b84d978a8a39fda083b65f78e02bc8a481c90125b1dfce5efbd"
+      }
+    ],
+    "PD-HEALTH-SOUTHEAST": [
+      {
+        "filename": "Milo_Southeast_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "5a34206002d6c81ca27fe9dedf87a97a8ca0cbd675c4c3cb7f3e0466b5679b1c"
+      },
+      {
+        "filename": "Milo_Southeast_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "8a55e1b214ae1afea69ed3b6ec0e8b08b15e5620ed158f5641199ee3f7dbab5d"
+      }
+    ],
+    "PD-HEALTH-MIDWEST": [
+      {
+        "filename": "Milo_Midwest_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "ef151014e973ece54b9e02cb48ce1da5c191ff9adef00d925e27446551af52a8"
+      },
+      {
+        "filename": "Milo_Midwest_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "a3e096649a9c5ed95fcebdac1631f5329a9de44e0b31838f0311e13a05002a29"
+      }
+    ],
+    "PD-HEALTH-SOUTHWEST": [
+      {
+        "filename": "Milo_Southwest_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "3cb05df91f9e50d982dee7703befa4694129ab2a0bb6d639a0ef361d9054c2aa"
+      },
+      {
+        "filename": "Milo_Southwest_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "9a8ef0f5af29b23c47969fc04e0185521ae7f817479b594a6055baf7ca1f0364"
+      }
+    ],
+    "PD-HEALTH-MOUNTAIN-WEST": [
+      {
+        "filename": "Milo_Mountain_West_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "bc72b34ea498bd91685d5dfb4ea7893c056a08ef285fc3f7947238c811fca7b2"
+      },
+      {
+        "filename": "Milo_Mountain_West_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "17bdd017fc64c4b0c5595e9bf7bfbc4a987f5039b8bcb45b53437cd6dca76560"
+      }
+    ],
+    "PD-HEALTH-PACIFIC-NORTHWEST": [
+      {
+        "filename": "Milo_Pacific_Northwest_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+        "sha256": "00e215ee87636ff9653fce9f3f8edd387ec88c086df7f10c98b2afbdc4f5128e"
+      },
+      {
+        "filename": "Milo_Pacific_Northwest_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+        "sha256": "d360c9e359ced1cd2abf7bebdda33826a521df57a84cb527ca18d11aa4768981"
+      }
+    ]
+  },
+  "emails": {
+    "PD-ROOF-FL": "fa1ad46ece3ddce9e9ec761fc7c341b720c474bba686bea61a83653d285af324",
+    "PD-ROOF-TX": "aa4c5ee197c85ba4fd6abecc167f3af5731861c13ee6a4b8050682f0b9301a31",
+    "PD-ROOF-CA": "6edeceba69dba2f1d2f2afd836e3eeb1cb09adad2d54887648084fe493250603",
+    "PD-ROOF-NORTHEAST": "0173381b387d124248db7bc93f8de2aa8f9200177a9d27f5a544aea869bb6d93",
+    "PD-ROOF-SOUTHEAST": "8ab740132640eed0d2a22818f7b7ed0477c1185bd60bb2d08ef469c6134fae97",
+    "PD-ROOF-MIDWEST": "f3b32dfd2c33e07bf31dc9ca92a78726e3a04c9b7e436ebebb9c93068e88531c",
+    "PD-ROOF-SOUTHWEST": "fab9892fb3555d939d60f69f622afec8a755b4a6e1ced3563bb716fdbc2df5ee",
+    "PD-ROOF-MOUNTAIN-WEST": "2e8a2530910f5be1d0925f487e9734db6f60c083b12dc55eea4a7c74ad02dbe1",
+    "PD-ROOF-PACIFIC-NORTHWEST": "18e736f358c39a9cdd7d271e2e62673a7821351e834f1eda65a043c2645e4dd1",
+    "PD-HVAC-FL": "b1d4f2ded16c249f72d0d56c19fd05ff7701cd0ceaa0fe942073c93f66f913bc",
+    "PD-HVAC-TX": "406a0c6d26185055ec8d1df52459fe43369e10548800a1f5e95aa0ae151080b0",
+    "PD-HVAC-CA": "58390708f5dc93efb1a52c9500332810e451931edf69fdf7fdfec7f30f0502e8",
+    "PD-HVAC-NORTHEAST": "d0b86e7ed5f3a0bc8707559acebdc132f9f0c3bc6e5f3c545dab00aef1152653",
+    "PD-HVAC-SOUTHEAST": "bb0cac58ac2dc98f3f7fbc5cf52fdd33008a04961cdabedc17c0f7ba223afc9f",
+    "PD-HVAC-MIDWEST": "46906c1728d413e0602f870613e025bd940371e865f8ba3886df5703c2342bf0",
+    "PD-HVAC-SOUTHWEST": "ea3720e74583e8c5f31be838489705ec8ad03cef856e95f167f896ca83d2eb2c",
+    "PD-HVAC-MOUNTAIN-WEST": "5c49c44a63d67a58e9518db4ddb877bf33751884efa6a3f6b91edd3c446485be",
+    "PD-HVAC-PACIFIC-NORTHWEST": "92ea2c5dd4af9722a129e46c0b5ef52a2ce452228807b10626b42a6866791461",
+    "PD-PLUMB-FL": "f8cc2c7a89639f7cb3a9defbfa139548b0e2c94eeac5764d126c6df407d57f8a",
+    "PD-PLUMB-TX": "c75c764c832c92537e7c0293f73b4fbe72249333b9343c0d2142dfb0b18aa9cb",
+    "PD-PLUMB-CA": "b111d69679d95d60d52da8b901e835ec2e83fda8ae4e22883d4459e0611ba315",
+    "PD-PLUMB-NORTHEAST": "6e75c5befb53e991dfcf4eaaaafc4144e7229d380cacf24a97ee89172b27fd41",
+    "PD-PLUMB-SOUTHEAST": "af85124f64874dbdfa5a74ded2b4d5025a3a350b06c21af246ee0ed856c56ac9",
+    "PD-PLUMB-MIDWEST": "d8d5728e89cca0cd27ae09e4b1a8d0b9a66ac5ecd708593f25ad45d48368ed68",
+    "PD-PLUMB-SOUTHWEST": "15c352d58e70825cd12fa1efa7948c204c35440f341df0082c13bfb358006c1a",
+    "PD-PLUMB-MOUNTAIN-WEST": "a1a39ebb09170f44a703762a212cddd3ae876cdaaac4bf13efcfc8cd3462c130",
+    "PD-PLUMB-PACIFIC-NORTHWEST": "5bc00cdb96eae99acb2cab24af73fd8ee1834d4f63bf666c5fd10def38f9d8c8",
+    "PD-ELEC-FL": "5ff86f769043430674548a8d4d35ecac13df46cff145882009d0a42ba93cb236",
+    "PD-ELEC-TX": "9e8e117a9b2901df978119f702367679401876d7b88e775477ec47dd019942e6",
+    "PD-ELEC-CA": "43501c37185374e08f410449211adf4156262a6c93ae78dd8f57040be3fdf252",
+    "PD-ELEC-NORTHEAST": "579b563cf7a3255164626ef7d2c2167a9ffe9902024b5f1fe1f454935c34e121",
+    "PD-ELEC-SOUTHEAST": "f82d65e34f186f09866440b9733eb2260b3c7ed071c267370a5e7c1481c4ef54",
+    "PD-ELEC-MIDWEST": "a2a3342e9e2d85470c4b6ca92d3fe9bec5107c43c4d3c482d0c63d288a1c873b",
+    "PD-ELEC-SOUTHWEST": "3f7e74ad79056e8a458dbc01b3586e1be5355270019bc333fb7021a65933b227",
+    "PD-ELEC-MOUNTAIN-WEST": "7b2da632435b134ea160479997f21eaaacd4a3bd2593a3799cafc385c6fdca56",
+    "PD-ELEC-PACIFIC-NORTHWEST": "f562b2e83068190a59676fd012e4d9fe5cde1df69f2e96d0b8b5b3d9c6ff7e96",
+    "PD-GC-FL": "615d97f62c631e39a188ee7acf0de05157f6de626b656f1c740cfcad26a989be",
+    "PD-GC-TX": "0b1eb783baf50192476e4caaa49209808894e136ab82a6b99065d02f041c8a28",
+    "PD-GC-CA": "bdbcc2328b776e7ca01f3bb67773f16d5f7f607779bd1b458ffc30edae4ea9ba",
+    "PD-GC-NORTHEAST": "93a9cd62e02fff5b12c14eb50b8a1c999683e5740c1458c0a8120ec46b48ebea",
+    "PD-GC-SOUTHEAST": "330a9186262dd87b74aa09578098d7db4adc810ae2006c6b058416cf5581d29a",
+    "PD-GC-MIDWEST": "884e5dc55c327943b5d5a6d902c4af86f21f3ca8806a6fcb8bac2831c3a4f283",
+    "PD-GC-SOUTHWEST": "4ee65cf44819b750b8299ca043a0ad1a7ca8fa697b0c7f67671d3c76e95a015e",
+    "PD-GC-MOUNTAIN-WEST": "1655169d97a5f54b06b50c4280f174e852e4ad8eb92ea9b743fad8bf0556a195",
+    "PD-GC-PACIFIC-NORTHWEST": "64cd2cda70fbe15cadbb20eaf71824e2c1138f12f9b1693b1997a5dc7e1b281b",
+    "PD-ARCH-FL": "48872d1197899d3930eb3ad24ae8aea8f5b2450b07401e83d4a1e9c3ac8f86ad",
+    "PD-ARCH-TX": "89417d60332621cb01afbfde3da346e376fb7e3420b1fb81fae9ddc0e422a6aa",
+    "PD-ARCH-CA": "ad39aad05cd0ceb8b2c08098a89ebefd7845f821a246c63f30cc4eaa4ad8d9fa",
+    "PD-ARCH-NORTHEAST": "081fb435e1c963770d47b3fd4f1f1fd2ff80070dbeff544d5d6249b6d3887e47",
+    "PD-ARCH-SOUTHEAST": "03c1ced0f2160961780e3261d45d51c0a70836611ff1ab51ab32f37c98e5795d",
+    "PD-ARCH-MIDWEST": "7d08c9a64c1913091b73e38ea4f5bab5ed211065064337e783dd89f9b4d47bf4",
+    "PD-ARCH-SOUTHWEST": "ca4968c8c52c6d2e2d65e05039bea18f3b033ed47228b43369e61e9d1ccaf745",
+    "PD-ARCH-MOUNTAIN-WEST": "95798f26c8a4a61d204a3cd71a6061c1cc489f99a00bdd9457900bb344c8b1b3",
+    "PD-ARCH-PACIFIC-NORTHWEST": "6964bf3564e7d31421fe9624cdb0bccfcae210c58eea86743c6d503bdfed3522",
+    "PD-BUILD-US": "cb53cae58eed69f4a5c349042efd147e3f738173d7f54987d710c9631f53f924",
+    "PD-BMM-US": "69b3b5599cbba3e5bb98d0238a9db9df30e5e888caed5de4a6d352e2cca37c77",
+    "PD-LAND-FL": "06bff86daa6fd3736c1e35af38627867dc90b23ddfd6fd19400989fac22a5587",
+    "PD-LAND-TX": "5ccb80be6a4b82d9618647110622b85c766cd3c7aff86434ee9f4f8fd5964909",
+    "PD-LAND-CA": "45e6b0e12d8fc8e28b6a08fbe104cb7f7fedfc5c32a6c0e6df9f0487c76ad48b",
+    "PD-LAND-NORTHEAST": "4e68a3f914c294fe84fab44d8176814a3e9e962bb767e6de511932cfcc39c704",
+    "PD-LAND-SOUTHEAST": "3ef13ffca86f2614e7ec97a7d93000c21539bcd8585801a2a26b1712874b60ab",
+    "PD-LAND-MIDWEST": "1de53c6bef88fdef94b4a576f90c757a549b1ba29ea516aea36018cacd21a740",
+    "PD-LAND-SOUTHWEST": "e5d4bb027deb0090ed20f3512202a6da3c19b8ff298b25771c436cdb3f2286cc",
+    "PD-LAND-MOUNTAIN-WEST": "2125b20fdffd8b2f653804f1476e5edb47fe5352178069ea2a2e555bf696a2fd",
+    "PD-LAND-PACIFIC-NORTHWEST": "8c53b89a4c9f9b870c7af5621e2876cd98ed4e5c4fe325d8d4d89613edd59ca9",
+    "PD-PM-FL": "1941e7b74c410335958d1d341411c7efa3dc1444ef6035dc3143b07cbbee6b1e",
+    "PD-PM-TX": "57697a4ba24abef4cf209f2cddd83a7452df7395fa5235bb0dd12d9141eb6196",
+    "PD-PM-CA": "4972671b21e1ef30c4c912bee99c7c786c93983e10347e68563f22aba60f32dd",
+    "PD-PM-NORTHEAST": "448deb385bc3301ae7fe8f171e3cd1bb93f0a427d83a62ca0632a7bc80b05a78",
+    "PD-PM-SOUTHEAST": "79c967ca547b9e089263fea25a64209201e133eab6e3b64d1f0fe4e319ea2881",
+    "PD-PM-MIDWEST": "b1f1d1d123fa7dedb54924d985a3fb5fd6de9ce5ee3a135016989b1340f959d2",
+    "PD-PM-SOUTHWEST": "4302b34e9191236d1553bca6e7cf09492380170442f632670a1f0bbabed2bcb8",
+    "PD-PM-MOUNTAIN-WEST": "fdc2decce1d03366b427e47b1e11d22c2583ccae7af4071e878f7b222458c97a",
+    "PD-PM-PACIFIC-NORTHWEST": "1785677b1147644dcfa6667d2b64f10884611113d614da27cffa4f1fd16b844f",
+    "PD-HOA-FL": "d066776e2e7f705ccadf635e2c2d7d9ac9a7e5353b822c5e946c1e8a3b047faa",
+    "PD-HOA-TX": "b709b26c3cac46c07ea8b2378c2cc85156e0fd57545afdf58e5134a2a403843c",
+    "PD-HOA-CA": "82ea6b1b29ee9df66e130a28c79fec95a82197556ca526dae42c774a5a41380d",
+    "PD-HOA-NORTHEAST": "dfa4f1cc2d0d8d14bfa44d206eb042546d02b0c1b26255bcd5973a6753d3df94",
+    "PD-HOA-SOUTHEAST": "bcce5a06cb85eddf037c5078d4a486811e9f29e71852e539433c7db0e3187271",
+    "PD-HOA-MIDWEST": "e15cf02f3bd461d2c726e1028910a6a10e76becc1ad981a1fbffa2605b9e4f74",
+    "PD-HOA-SOUTHWEST": "d99670e3530318178e4d23a4223cf893b4aa14654b2482417e818f84012a03ab",
+    "PD-HOA-MOUNTAIN-WEST": "315b244a57deb3690415fe4aecbc58a47e5eca4047c08f858399d8a721fe4863",
+    "PD-HOA-PACIFIC-NORTHWEST": "1c398761e9ec74275a5f6854d92fe54cfa7579141666b2542d674accaabe2f80",
+    "PD-DIST-FL": "c7532ae7f9fcfe53d06f07cb78d9c50579e56be6f8017cced4c4acfd50c8267a",
+    "PD-DIST-TX": "32a0a86c466c3b38595a7ad7be7f2a5339ad6219150f42ffce5f460afa096b8e",
+    "PD-DIST-CA": "9693f45a478f760a37b2da9bd1fe0278da0b2697c6861c58b345545d38b635e1",
+    "PD-DIST-NORTHEAST": "ef4907ef786da0666fda533d455b4cb86b4dcfc4157589b4b74bde6c91ec3be9",
+    "PD-DIST-SOUTHEAST": "8a19f11a35ca710dc2fbe8833649a054ec656e7fea0a2cdebdf2df4f6fddd6af",
+    "PD-DIST-MIDWEST": "4bf8db4cfab01d399dbd3049206d3ab9310731abf89d5fed44f13a8b321f0a27",
+    "PD-DIST-SOUTHWEST": "12d5eb56c25ec34b698c327b5c5484841b045bfeabb1c42ea4ba69d9842e91e0",
+    "PD-DIST-MOUNTAIN-WEST": "70658ccb23dc9e134090460d90e835c209ea6eef7833303c0d438ff8efff7b3f",
+    "PD-DIST-PACIFIC-NORTHWEST": "a9fa82e5da72992d4a4d872b27dc1b459872c863a60258a27d75a1186ad23392",
+    "PD-HOTEL-FL": "c29892ea9a93a36b8dd069cdda8b32024e13f21030c319eac728855416534f5f",
+    "PD-HOTEL-TX": "242caf24e125e448c12fdb811998e4397720984859b19eb16e9bee9972d975a3",
+    "PD-HOTEL-CA": "006c559b44f7fc1302d4a74354f40db09adfba1f9e3ffd32430893d26a3b658f",
+    "PD-HOTEL-NORTHEAST": "47c3ed197a602d6875adabcddb66d0eacf801f48b5d1c9ed2a2229cfb5bdec7b",
+    "PD-HOTEL-SOUTHEAST": "f79a6ba79201389f0d646445a151b20418ca6926d6c519e4c77c2bbaca651aeb",
+    "PD-HOTEL-MIDWEST": "d1cac730de69facc35b9ef40962c1d0aee70fa5c0e3e87d02b4ef19d70b13aa6",
+    "PD-HOTEL-SOUTHWEST": "edf25591d1d3445565c3938e878ba830b3a4f376d50d946674bbf4c3db8fce01",
+    "PD-HOTEL-MOUNTAIN-WEST": "a702b0d80dfd73a93d896bf0805c631c1f6c86609519ad47717d6a1c7121d0cc",
+    "PD-HOTEL-PACIFIC-NORTHWEST": "25addc575082eb38d11d23ef183c9f5b3ea70ef9011aad65c5613e5f61d2dc71",
+    "PD-REST-FL": "916e31a8cc793e4f7f6c37ebe3bd7102542eb1e6f1d952db21f82fdd040836fe",
+    "PD-REST-TX": "4b3db2199c092f03c44e87fe46a8377afb25ce47939386bb8112a382245b4626",
+    "PD-REST-CA": "98c05524892c57b65677adc268e1dc006e8c09a49a7c68f444dd3fdae864a1e9",
+    "PD-REST-NORTHEAST": "e5b2fe4a5a65c8af20a66b7360e4a19f4fa830e851a1ce989bec6757f1b294c8",
+    "PD-REST-SOUTHEAST": "1eff948583d8eda542a5d7e737dc4fd7cd6a10a0226a6bc4c746be81780d3795",
+    "PD-REST-MIDWEST": "570b883396dd374e79ce7b1e236ad8045cc1c59006cb944983d99a9c9df764e0",
+    "PD-REST-SOUTHWEST": "fb89c2bc5e704447447f29c5931380ebdb635a235efe0a71cde5f6d7de5c461e",
+    "PD-REST-MOUNTAIN-WEST": "23d254501737e897691881c3cadf6f66b1b7a418e8fb0933e37f16001dadb402",
+    "PD-REST-PACIFIC-NORTHWEST": "e91a0ad1e23d5a5832d14e587cbe600f32ccd7a4640abfb7c5ac5d2b982c2537",
+    "PD-HEALTH-FL": "dfbbdc4431c060471e9279971fc59632a506795d0bf2b37363ed2bc21617a1a6",
+    "PD-HEALTH-TX": "f2e359c3767f6d17a228783efd3602cf49b29f5c743bd06ea7ac9f0a92496cc3",
+    "PD-HEALTH-CA": "4c025e1c780a8b096d30096dc1fa46cd199f1e218f6d4afa3ac5b2b95d909aef",
+    "PD-HEALTH-NORTHEAST": "cbd611ac1e2a54c8438359d953a20ebc3412548c9811203d8f15f329c750cf80",
+    "PD-HEALTH-SOUTHEAST": "4956633afb088dde9998744d7bf5e96dc99f99702488c149a57630111586a858",
+    "PD-HEALTH-MIDWEST": "78d86718aaa6a766d1dd1c3ae29be2030b5315565902d33908378d3e94e4e0ee",
+    "PD-HEALTH-SOUTHWEST": "12d7e1d086e22ad316367bc7c9b4ca73124eb0bafeb2a456cb02247a19565b21",
+    "PD-HEALTH-MOUNTAIN-WEST": "bf48bc9dacbacace243d0fd9e8081abb4b49e9df3f8eaa541cc58e1e85a0de19",
+    "PD-HEALTH-PACIFIC-NORTHWEST": "a087a271746cda0917613f3566194d22add06e0cf2492f6b97a47865b4058db4"
+  }
+}

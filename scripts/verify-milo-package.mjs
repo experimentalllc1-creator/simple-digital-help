@@ -116,7 +116,8 @@ if (process.argv.includes("--assets-only")) {
   assert.ok(regionsSuccessHtml.includes("every purchased assignment") && regionsSuccessHtml.includes("52 weeks"));
   assert.ok(!/video/i.test(regionsSuccessHtml));
   const manufacturerSuccessHtml = await readFile(path.join(root, ".next/server/app/checkout/success/manufacturers.html"), "utf8");
-  assert.ok(manufacturerSuccessHtml.includes("/products/milo-us-building-materials-manufacturers") && manufacturerSuccessHtml.includes("Monday at 9:00 AM") && manufacturerSuccessHtml.includes("Milo v2.4"));
+  assert.ok(manufacturerSuccessHtml.includes("/products/milo-us-building-materials-manufacturers") && manufacturerSuccessHtml.includes("per run on Monday") && manufacturerSuccessHtml.includes("Every week, in the morning, in your local time zone.") && manufacturerSuccessHtml.includes("Milo v2.4"));
+  assert.doesNotMatch(manufacturerSuccessHtml, /9(?::00)?\s*AM/i);
   assert.ok(!/video/i.test(manufacturerSuccessHtml));
   for (const file of ["src/components/storefront.tsx", "src/components/mobile-nav.tsx", "src/lib/sales-catalog.ts"]) {
     assert.ok(!(await readFile(path.join(root, file), "utf8")).includes("/support/milo-installation-v2-2"));

@@ -1,0 +1,216 @@
+{
+  "approvedBy": "User instruction: fixed 9:00 AM scheduling was intentionally replaced with flexible morning scheduling; preserve all current delivery packages.",
+  "date": "2026-10-11",
+  "packages": {
+    "Milo_CA_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-CA",
+      "previous": "f3fc006ebda0a96bba646284fcc16e6201ae8ac96ce3885362dc63676cd6d9ed",
+      "approved": "68d2b77a619244e47bf99ad61b0f23d4b5e3b15073812de832ab308d3bbc2d9f"
+    },
+    "Milo_CA_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-CA",
+      "previous": "b068a497de5511241bb85db4ae69a4a245b013b17c0c7c65ca1446a33b6c818e",
+      "approved": "15dfcf52e96597f205a45ab350ad4cae21ac2f2d46c6bc197aa7a6a942928599"
+    },
+    "Milo_FL_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-FL",
+      "previous": "bf5d746bd64c060e76ebc127455847a9edf6bdded76131cbafa61f8f7bd012a7",
+      "approved": "16b930778e025d2f5d8ab84e261f0805de219c8631ba6070911547128b52c246"
+    },
+    "Milo_FL_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-FL",
+      "previous": "a28d0fc8b42f5da38133400ed32bb2060c830e3e85041f64d42e0a57c942d976",
+      "approved": "098bc521fbddec4b38cac1f6cabcb5b7491975f528e9f04300010ab0a95f8807"
+    },
+    "Milo_Midwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-MIDWEST",
+      "previous": "9915f2abfadc2b26c339716d6c3b8f5326db2c9657a770dba840ac4b1e002584",
+      "approved": "eb3ec922cc0f7f5ec8fec543a56531aa638d39656292bf5e4e0cd7cf8c23c776"
+    },
+    "Milo_Midwest_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-MIDWEST",
+      "previous": "f66aba899018918fa2ed003909e7b235f0a2af2b7dda1d64e2debae0b4e526f2",
+      "approved": "10f14142bc8f0cc92259daf1996350c86edee3b60508a76f1f3cb7b7711972f7"
+    },
+    "Milo_Mountain_West_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-MOUNTAIN-WEST",
+      "previous": "fb4b910795b5d6c2c15f10e8629a32be66e43596532388e969338d15e74d2465",
+      "approved": "c50697652bd06242920910d07a9325f964c0a20855f1f242d918371ae18bece0"
+    },
+    "Milo_Mountain_West_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-MOUNTAIN-WEST",
+      "previous": "597f68c903cf6ce9967dca535f603e2a8d54dad05783740f99fae809303d4bb8",
+      "approved": "b8f7567da48d5ba48702b7a0b96bb2cfeb51c65a4785db7bebc4fdd259a8392d"
+    },
+    "Milo_Northeast_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-NORTHEAST",
+      "previous": "46b7404464b8ed64ce647cbcbf13bd0ad864e206f884958e48409e88f38fc91f",
+      "approved": "5e81a635f4c93d5e3e1f9a86ac2e84a5d9a523ae520be339ab8232f82f5f51bf"
+    },
+    "Milo_Northeast_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-NORTHEAST",
+      "previous": "94a39d81a3fd916fd754882201377075d1c605e6843ccc5650b68cf0275cf9e2",
+      "approved": "2757690fca28ba1fa11f918e52fb6df11b01cea564b8f56a0f52747c1fe95fb8"
+    },
+    "Milo_Pacific_Northwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-PACIFIC-NORTHWEST",
+      "previous": "74b9cf0268cec39a9d8e833090d777e4808285a6328e29122ee70ff3ed5722e5",
+      "approved": "1b5403b3c880ee42cbbc6bac1a31f1cc18decffb950347dbd7fad37948117315"
+    },
+    "Milo_Pacific_Northwest_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-PACIFIC-NORTHWEST",
+      "previous": "c117d7bde2f39011d1dd0364098457c8f0eed78984518f45e25db17ac4cfccc3",
+      "approved": "3a04b8363325e08cb6a83c37606c89dfec525ecab5f3280b5c09f419a8e69221"
+    },
+    "Milo_Southeast_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-SOUTHEAST",
+      "previous": "930d687632a5072d91fba4756e60aec58708db3fd7b103c0296958af273e3177",
+      "approved": "0f841585e990ae5dd61e69a9070b2ae6187fc81309d7047da6ce1771180fe82f"
+    },
+    "Milo_Southeast_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-SOUTHEAST",
+      "previous": "e3fdfd95f3d5002fa2248455e6ed008ede6279c99760f607e3125e0eb2c4343f",
+      "approved": "dc41cfe596f32f73597acea2a7a298af58396703c1ed3729d8ca5587929ac105"
+    },
+    "Milo_Southwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-SOUTHWEST",
+      "previous": "ddf6b0cef36648d8fff1e2f9f24dda5ebfa3aed3a2c235ec6a8ab463d4a5b5bd",
+      "approved": "915d97aaf69bc5e7abae96b65e52607eddd027755ecb94fdf9ce7c981d66e994"
+    },
+    "Milo_Southwest_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-SOUTHWEST",
+      "previous": "748f52f8a775976d3e219caf3aff58a19785c28e8f88a82a0c9acf1302724ef4",
+      "approved": "36a524096b39a4be5dac77ea86435e0e501697b975999e4f98677ec5905501c4"
+    },
+    "Milo_TX_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-PM-TX",
+      "previous": "5999fc5b114ee27717c769e4295786b7609528beb9e7cff911298c31334105f1",
+      "approved": "9acdbbb6c402bbee5454335aaa27849b636b2e81e1173aa0861558c82ecde281"
+    },
+    "Milo_TX_Property_Management_Companies_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-PM-TX",
+      "previous": "4110d263c16e02cdf5bb4397949586b29d6500b5a455a11a78643e5fe55d10d2",
+      "approved": "526d5bb02b3d86bfa58244111730ac71924675b62ee53c9504a7c83534e9a406"
+    },
+    "Milo_US_Building_Materials_Manufacturers_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-BMM-US",
+      "previous": "3f0bf1e6233bc6fdc61cab745630a849c4828969ab3fedf0a139102f02ed2511",
+      "approved": "deaab98603b1b1462a60af99d2da7abe683ed1a038fea6fbd58c512b8be58c30"
+    },
+    "Milo_US_Building_Materials_Manufacturers_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-BMM-US",
+      "previous": "7af9343d617b501d18f7978ad35b3add5f5713234a92817499c192aaa4e82030",
+      "approved": "ccd27c732f0b6a04894bc4ea32c2ea7acf0778c0600346b28be29216460e2ca5"
+    },
+    "Milo_US_Production_Homebuilders_Developers_Illustrated_Installation_Guide_v2.4.pdf": {
+      "productCode": "PD-BUILD-US",
+      "previous": "8774aaaa5e2fce9d2a426e4faaccff3078dd2668fe5888c9ec65f78c2a19f02d",
+      "approved": "a1a500305d2bbdd0702a6c6a429f973b0cbd0aeac9e0e1324ef7a2e2658fa1ce"
+    },
+    "Milo_US_Production_Homebuilders_Developers_Installation_Prompt_v2.4.txt": {
+      "productCode": "PD-BUILD-US",
+      "previous": "f3e781cf8a509caaba9a693f72792602276c6207351354cd74ef1395c952101f",
+      "approved": "47f93aa1fae0292f74c59a00a85f32bde173b1d0a1dc171885a8c5c2e797fd91"
+    }
+  },
+  "sourceSnapshots": {
+    "src/app/checkout/success/manufacturers/page.tsx": {
+      "previous": "6bc7c32aec29e6a8a44fe452ac97d0c3cd4ca5428b31718624745ad75b3752d1",
+      "approved": "1ab3d8d0ca5fc80f8eab1cb0ac82a678816242c35c32b4c622a727dc3de25773"
+    },
+    "src/lib/milo-v24-packages.server.json": {
+      "previous": "84879fc37346705d2420cfdd3f310f058b620df55a68ad3bb61a3ae2ce2dd2a2",
+      "approved": "c3211a9f741dbb692af6410db705e0dc775b4ce91a55f85a208210b95a6ed935"
+    },
+    "tests/milo-manufacturers.test.mjs": {
+      "previous": "807dd003428f7d2d7fc4a98575ee490405b9b38158b5ed48010c16e017cd8e79",
+      "approved": "1957b363843c29516e1e1f22d34a43f48159518bc511f0b22af8f07e1617a8ca"
+    },
+    "tests/milo-property-management.test.mjs": {
+      "previous": "dc6f78b2b3e7497877de2089d2bdebea5012180940e51d6a34e310106117fb35",
+      "approved": "a6e3fbd3310279eadd639c2eb7dd72c0ed978ad42ce1038a7a3f00102343268c"
+    },
+    "tests/fixtures/milo-architects-source-baseline.json": {
+      "previous": "038af6fa0d2d359c7ff0ef9dd06912f4dbd2ba5a398ac00f299116363c51f9b5",
+      "approved": "e27bbd630d48b51a2a391c1bf27cd2b95f6f55b6bf789accb2e9e956b1760c81"
+    },
+    "tests/fixtures/milo-existing-architects-baseline.json": {
+      "previous": "789cbe3dedd48de385ecb1b9ac1a0de1a0160c2383c4230e9b953f1165a0c6fc",
+      "approved": "7ba2cbd33547ffe05ec19b8a94112a31c8fe152f8acecad58652fc60bb36c380"
+    },
+    "tests/fixtures/milo-existing-distributors-baseline.json": {
+      "previous": "4aa69f77ded756bf16efeb55da6f01645332f7441d184e8d3a95eb747f005f92",
+      "approved": "43e112fc236b642096e0b53988ddfaf361820af2c0940ad01f67d987321ec971"
+    },
+    "tests/fixtures/milo-existing-healthcare-baseline.json": {
+      "previous": "8b382aa96e5305fe6a09e30d23e5ab76df5f4a28e65e7015105df25345b70017",
+      "approved": "7583fb114cae66033e6ccf282253503c51f375a382c3d0d1e8d43fe5b178f043"
+    },
+    "tests/fixtures/milo-existing-hoas-baseline.json": {
+      "previous": "cdfccbffac15f7baadc1bd9d2b7492000b7242d9a16ea74b49a5ef7e3df49cb0",
+      "approved": "5e438933c7ec4d72a086d731e61cd78f34cd534cc0068d01b615fce3be788334"
+    },
+    "tests/fixtures/milo-existing-hotels-baseline.json": {
+      "previous": "93cb9023e78f5b23c716ca5e7d0edea0cddd6ee4403828d32e113a8420fd3cb8",
+      "approved": "cd010002e982dbcd3d8e2147dca7d46d3845203af693a9c5307ff065926d3791"
+    },
+    "tests/fixtures/milo-existing-landscaping-baseline.json": {
+      "previous": "887628a10281bce2859fecd1655f006907229bc58a3f1ad86df912ab145691cb",
+      "approved": "2e74ab5e44e84822769cfe1693a005d8cadb22cd18467848c73fe4a32b331283"
+    },
+    "tests/fixtures/milo-existing-property-management-baseline.json": {
+      "previous": "48b1926f251b230ecde0867070357e1ec976c10e8e2f8ecdbe01c7213616c009",
+      "approved": "3ee9f2f783e0a056b962071d28c7ea35027c6784b8ae1c5f5babda44f818823e"
+    },
+    "tests/fixtures/milo-existing-restaurants-baseline.json": {
+      "previous": "43792ddd1f87103d6852bee5ca89902ae8df356e9f47ceab37c4af77e3ca84a1",
+      "approved": "d3fa25e5d35e24e75dde2965419739bf821fa3bc0a043261dbff2677dc0de0fb"
+    }
+  },
+  "emailSnapshots": {
+    "PD-BUILD-US": {
+      "previous": "9b4f234087c205be94cf5554f5d6aa2d9f3398de53de72eb7e479307b0336ee5",
+      "approved": "cb53cae58eed69f4a5c349042efd147e3f738173d7f54987d710c9631f53f924"
+    },
+    "PD-BMM-US": {
+      "previous": "0a2193ce26442887959b3b18f08b272c9e53c2cb6b117640e2067b6783e48cd5",
+      "approved": "69b3b5599cbba3e5bb98d0238a9db9df30e5e888caed5de4a6d352e2cca37c77"
+    },
+    "PD-PM-FL": {
+      "previous": "029536540a2fa958c43a13234adb510fc9b89fb28edc9d149cf92effe0cbd021",
+      "approved": "1941e7b74c410335958d1d341411c7efa3dc1444ef6035dc3143b07cbbee6b1e"
+    },
+    "PD-PM-TX": {
+      "previous": "7542764c9073a4c450e9dd85977907a9127584a828dff9d631ca29aa8f690325",
+      "approved": "57697a4ba24abef4cf209f2cddd83a7452df7395fa5235bb0dd12d9141eb6196"
+    },
+    "PD-PM-CA": {
+      "previous": "fece9ebf7af26bbe68ae295ea6f105b56f2c05fef79afb9234c9cd9e6e7acb4e",
+      "approved": "4972671b21e1ef30c4c912bee99c7c786c93983e10347e68563f22aba60f32dd"
+    },
+    "PD-PM-NORTHEAST": {
+      "previous": "06aa4a70336fac0bb0b0d6284fcc5a12f7a55bed01f4b730a0e4758530bc1d61",
+      "approved": "448deb385bc3301ae7fe8f171e3cd1bb93f0a427d83a62ca0632a7bc80b05a78"
+    },
+    "PD-PM-SOUTHEAST": {
+      "previous": "6283280f9c7fa6b5dd961f9edd0c002d7d59bea8a2ddcff75876c1a7695ee1d2",
+      "approved": "79c967ca547b9e089263fea25a64209201e133eab6e3b64d1f0fe4e319ea2881"
+    },
+    "PD-PM-MIDWEST": {
+      "previous": "7d1ef3640cd68e2a04fb93fe971dd07a57b6f90ea299e6265878b1ca249a06f0",
+      "approved": "b1f1d1d123fa7dedb54924d985a3fb5fd6de9ce5ee3a135016989b1340f959d2"
+    },
+    "PD-PM-SOUTHWEST": {
+      "previous": "c21073bfbecb5b0b6d1b95a2158c63b3f1aeaf99876cdcc3ac6227355f5fdad6",
+      "approved": "4302b34e9191236d1553bca6e7cf09492380170442f632670a1f0bbabed2bcb8"
+    },
+    "PD-PM-MOUNTAIN-WEST": {
+      "previous": "e709d064be25c894b377f24ad5d4b7bea10dad1e4bdaf3df457176d4e949cb9e",
+      "approved": "fdc2decce1d03366b427e47b1e11d22c2583ccae7af4071e878f7b222458c97a"
+    },
+    "PD-PM-PACIFIC-NORTHWEST": {
+      "previous": "76cc4a42942121f26a25660c2b30e50a8e24442d8321f03666fd939637e66572",
+      "approved": "1785677b1147644dcfa6667d2b64f10884611113d614da27cffa4f1fd16b844f"
+    }
+  }
+}
