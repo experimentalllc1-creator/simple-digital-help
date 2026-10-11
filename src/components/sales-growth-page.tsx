@@ -1,6 +1,7 @@
 "use client";
 import { Fragment, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AgentFitAuditCallout } from "./agent-fit-audit";
 import { salesWorkers, salesCheckoutState, SALES_ASSIGNMENT_CENTS } from "@/lib/sales-order";
 import RegionalAssignmentSelector from "./regional-assignment-selector";
@@ -24,7 +25,11 @@ export default function SalesGrowthPage({ miloCheckoutEnabled }: { miloCheckoutE
         <div className={styles.grid}>{salesWorkers.map((worker, index) => <Fragment key={worker.id}>
           {(index === 0 || index === 9) && <div className={styles.auditRow}><AgentFitAuditCallout /></div>}
           <article className={styles.card}>
-          {worker.id === "roofing" ? <IllustrationVideo src="/videos/Milo-Roofing-Intro.mp4" title="Milo Roofing introduction"><div className={styles.art}><span>PROSPECT DISCOVERY</span><strong>{worker.id === "roofing" ? "Milo Roofing" : worker.name ?? worker.customerType}</strong><small>Agent artwork coming soon</small></div></IllustrationVideo> : <div className={styles.art}><span>PROSPECT DISCOVERY</span><strong>{worker.id === "roofing" ? "Milo Roofing" : worker.name ?? worker.customerType}</strong><small>Agent artwork coming soon</small></div>}
+          {worker.id === "roofing" ? <IllustrationVideo src="/videos/Milo-Roofing-Intro.mp4" title="Milo Roofing introduction">
+            <div className={`${styles.art} ${styles.roofingArt}`}>
+              <Image src="/images/agents/Cheerful Robot Roofer at Work.png" alt="Milo Roofing robot working on a roof" fill sizes="(max-width: 600px) 100vw, (max-width: 1000px) 33vw, 25vw" className={styles.roofingImage} />
+            </div>
+          </IllustrationVideo> : <div className={styles.art}><span>PROSPECT DISCOVERY</span><strong>{worker.id === "roofing" ? "Milo Roofing" : worker.name ?? worker.customerType}</strong><small>Agent artwork coming soon</small></div>}
           <div className={styles.cardBody}>
             <span className={worker.activeRegions.length ? styles.available : styles.soon}>{!worker.regionBased ? "Available nationwide · United States" : worker.activeRegions.length ? "Available in Florida, Texas, California, Northeast, Southeast, Midwest, Southwest, Mountain West and Pacific Northwest" : "Coming soon"}</span>
             <h3>{worker.name ? `${worker.name} · ${worker.customerType}` : worker.customerType}</h3><p>{worker.description}</p>

@@ -14,6 +14,8 @@
 .art span { font-size: 10px; letter-spacing: 1.6px; }
 .art strong { font-size: 21px; line-height: 1.3; }
 .art small { font-size: 11px; }
+.roofingArt { position: relative; padding: 0; }
+.roofingImage { object-fit: cover; }
 .cardBody { padding: 22px; display: flex; flex-direction: column; flex: 1; }
 .cardBody h3 { font-size: 19px; line-height: 1.35; margin: 14px 0 10px; }
 .cardBody p { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0 0 20px; }
