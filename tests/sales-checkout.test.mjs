@@ -11,8 +11,8 @@ test("Roofing Contractors + Florida retains its purchasable Sales selection", ()
 });
 test("empty, Coming Soon and mixed selections fail closed", () => {
   for (const [assignments, universals] of [
-    [[], []], [["landscaping:florida"], []], [["landscaping:pacific-northwest"], []], [[], ["first-contact"]],
-    [["roofing:florida", "landscaping:florida"], []], [["roofing:florida"], ["first-contact"]],
+    [[], []], [["municipalities:florida"], []], [["municipalities:pacific-northwest"], []], [[], ["first-contact"]],
+    [["roofing:florida", "municipalities:florida"], []], [["roofing:florida"], ["first-contact"]],
     [["unknown:florida"], []],
   ]) {
     const state = salesCheckoutState(assignments, universals, true);

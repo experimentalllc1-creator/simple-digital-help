@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { connection } from "next/server";
 import { checkoutEnabled } from "@/lib/milo-config.server";
+import { storefrontPricingEnabled } from "@/lib/milo-storefront-http.server";
 import { categories, products } from "@/lib/catalog";
 import { ProductArt } from "@/components/storefront";
 import CatalogBrowser from "@/components/catalog-browser";
@@ -29,7 +30,7 @@ export default async function CategoryPage({
   if (!category) notFound();
   if (slug === "sales") {
     await connection(); // Keep the existing purchase flags at request time.
-    return <SalesGrowthPage miloCheckoutEnabled={checkoutEnabled()} />;
+    return <SalesGrowthPage miloCheckoutEnabled={checkoutEnabled()} volumePricingEnabled={storefrontPricingEnabled()} />;
   }
   if (slug === "marketing") return <MarketingWorkersPage />;
   return (

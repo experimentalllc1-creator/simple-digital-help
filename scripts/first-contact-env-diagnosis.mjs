@@ -5,10 +5,10 @@ import { parseEnv } from 'node:util';
 const source = readFileSync('.env.first-contact.staging.local', 'utf8');
 const parsed = parseEnv(source);
 const expected = {
-  FIRST_CONTACT_SMTP_HOST: 'gtxm1357.siteground.biz', FIRST_CONTACT_SMTP_PORT: '465',
-  FIRST_CONTACT_SMTP_USER: 'outreach@experimental-llc.com',
-  FIRST_CONTACT_IMAP_HOST: 'gtxm1357.siteground.biz', FIRST_CONTACT_IMAP_PORT: '993',
-  FIRST_CONTACT_IMAP_USER: 'outreach@experimental-llc.com',
+  FIRST_CONTACT_SMTP_HOST: 'mail.example.com', FIRST_CONTACT_SMTP_PORT: '465',
+  FIRST_CONTACT_SMTP_USER: 'staging-user@example.com',
+  FIRST_CONTACT_IMAP_HOST: 'mail.example.com', FIRST_CONTACT_IMAP_PORT: '993',
+  FIRST_CONTACT_IMAP_USER: 'staging-user@example.com',
 };
 const settings = Object.fromEntries(Object.entries(expected).map(([key, value]) => [key, {
   loaded: process.env[key] === value ? value : 'MISMATCH (value withheld)',

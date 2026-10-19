@@ -5,6 +5,7 @@ import path from "node:path";
 import type { EmailMessage } from "./email.server";
 import { MILO_PRODUCT_CODE, MILO_VERSION } from "./milo-config.server";
 import v24Packages from "./milo-v24-packages.server.json";
+import projectsPackages from "./milo-projects-packages.server.json";
 import { miloAssignments } from "./milo-assignments";
 
 export const MILO_V23_FILES = [
@@ -481,7 +482,7 @@ export const MILO_V23_PACKAGE_FILES: Record<string, readonly { filename: string;
   "PD-ROOF-PACIFIC-NORTHWEST": MILO_V23_PACIFIC_NORTHWEST_FILES,
 };
 
-export const MILO_PACKAGE_FILES: Record<string, readonly { filename: string; sha256: string }[]> = v24Packages;
+export const MILO_PACKAGE_FILES: Record<string, readonly { filename: string; sha256: string }[]> = { ...v24Packages, ...projectsPackages };
 export const MILO_HVAC_PACKAGE_FILES = Object.fromEntries(Object.entries(MILO_PACKAGE_FILES).filter(([code]) => code.startsWith("PD-HVAC-")));
 export const MILO_PLUMBING_PACKAGE_FILES = Object.fromEntries(Object.entries(MILO_PACKAGE_FILES).filter(([code]) => code.startsWith("PD-PLUMB-")));
 export const MILO_ELECTRICAL_PACKAGE_FILES = Object.fromEntries(Object.entries(MILO_PACKAGE_FILES).filter(([code]) => code.startsWith("PD-ELEC-")));
@@ -554,15 +555,48 @@ export async function miloEmail(to: string, sessionId: string, productCode: stri
   }
   const assignment = miloAssignments.find(item => item.productCode === productCode);
   if (!assignment) throw new Error("Unavailable Milo package");
+  if (assignment.agentId === "projects-developments") {
+    return {
+      to, subject: `Your Milo \u2013 Projects & Developments - ${assignment.region}`,
+      idempotencyKey: `milo-v${releaseVersion}/${sessionId}`,
+      text: [
+        `Thank you for purchasing Milo \u2013 Projects & Developments - ${assignment.region}.`,
+        "$99 one-time per state, covering 52 weeks from successful activation. Weekly, flexible morning in your local time zone.",
+        "Milo discovers projects entering site plan or subdivision review and provides factual summaries and public sources. Coverage is selective; no minimum number or immediate identification is promised. Customers handle their own due diligence.",
+        "Texas, Florida and New York project assignments share Simple Digital Help - Projects & Developments, separate from your Sales prospect spreadsheet. Existing records are preserved. No project monitoring, feasibility advice, outreach or CRM records are included.",
+        `Start with the attached Milo v${releaseVersion} Illustrated Installation Guide. Save and upload the attached state-specific TXT in a new ChatGPT conversation, then type: Install Milo using the attached file. Follow the guide for Google permissions, scheduling and initial discovery.`,
+        "Need help? Reply to support@simpledigitalhelp.com.",
+      ].join("\n\n"),
+      attachments: await miloAttachments(productCode, releaseVersion),
+    };
+  }
+  const healthcare = assignment.agentId === "healthcare";
+  const restaurant = assignment.agentId === "restaurants";
+  const hotel = assignment.agentId === "hotels";
+  const distributor = assignment.agentId === "distributors";
+  const hoa = assignment.agentId === "hoas";
+  const propertyManager = assignment.agentId === "property-managers";
+  const landscaping = assignment.agentId === "landscaping";
+  const architect = assignment.agentId === "architects";
+  const builder = assignment.agentId === "builders";
   const manufacturer = assignment.agentId === "building-materials-manufacturers";
-  const family = manufacturer ? "Building Materials Manufacturers" : assignment.agentId === "general-contractors" ? "General Contractors" : assignment.agentId === "electrical" ? "Electrical" : assignment.agentId === "plumbing" ? "Plumbing" : assignment.agentId === "hvac" ? "HVAC" : "Roofing";
+  const family = healthcare ? "Healthcare Practices" : restaurant ? "Restaurants" : hotel ? "Hotels & Resorts" : distributor ? "Distributors" : hoa ? "Homeowners Associations (HOAs)" : propertyManager ? "Property Management Companies" : landscaping ? "Landscaping Companies" : architect ? "Architects" : builder ? "Production Homebuilders & Developers" : manufacturer ? "Building Materials Manufacturers" : assignment.agentId === "general-contractors" ? "General Contractors" : assignment.agentId === "electrical" ? "Electrical" : assignment.agentId === "plumbing" ? "Plumbing" : assignment.agentId === "hvac" ? "HVAC" : "Roofing";
   return {
-    to, subject: manufacturer ? "Your Milo \u2014 U.S. Building Materials Manufacturers" : assignment.agentId === "general-contractors" ? `Your Milo General Contractors - ${assignment.region}` : assignment.agentId === "electrical" ? `Your Milo Electrical - ${assignment.region}` : assignment.agentId === "plumbing" ? `Your Milo Plumbing - ${assignment.region}` : assignment.agentId === "hvac" ? `Your Milo HVAC - ${assignment.region}` : `Your Milo - ${assignment.region} Roofing Prospect Discovery`,
+    to, subject: healthcare ? `Your Milo \u2013 Healthcare Practices - ${assignment.region}` : restaurant ? `Your Milo \u2013 Restaurants - ${assignment.region}` : hotel ? `Your Milo \u2013 Hotels & Resorts - ${assignment.region}` : distributor ? `Your Milo \u2013 Distributors - ${assignment.region}` : hoa ? `Your Milo \u2013 Homeowners Associations (HOAs) - ${assignment.region}` : propertyManager ? `Your Milo \u2013 Property Management Companies - ${assignment.region}` : landscaping ? `Your Milo \u2013 Landscaping Companies - ${assignment.region}` : architect ? `Your Milo \u2013 Architects - ${assignment.region}` : builder ? "Your Milo \u2013 U.S. Production Homebuilders & Developers" : manufacturer ? "Your Milo \u2014 U.S. Building Materials Manufacturers" : assignment.agentId === "general-contractors" ? `Your Milo General Contractors - ${assignment.region}` : assignment.agentId === "electrical" ? `Your Milo Electrical - ${assignment.region}` : assignment.agentId === "plumbing" ? `Your Milo Plumbing - ${assignment.region}` : assignment.agentId === "hvac" ? `Your Milo HVAC - ${assignment.region}` : `Your Milo - ${assignment.region} Roofing Prospect Discovery`,
     idempotencyKey: `milo-v${releaseVersion}/${sessionId}`,
     text: [
       `Thank you for purchasing ${assignment.agentId === "general-contractors" ? "Milo General Contractors" : assignment.agentId === "electrical" ? "Milo Electrical" : assignment.agentId === "plumbing" ? "Milo Plumbing" : assignment.agentId === "hvac" ? "Milo HVAC" : "Milo"} \u2014 ${assignment.region} ${family} Prospect Discovery.`,
       "Your purchase includes 52 weeks of service from successful activation.",
-      ...(manufacturer ? ["One nationwide United States assignment. Up to 2 new qualified manufacturers per run, once per week, Monday at 9:00 AM customer local time."] : []),
+      ...(healthcare ? [`Healthcare Practices assignment: ${assignment.region}. Up to 5 qualified active outpatient medical or dental practice offices per scheduled weekday, when available. Monday-Friday, flexible AM/morning in your local time zone; no fixed execution hour or fixed-hour fallback. 52 weeks from successful activation; maximum 1,300 prospects. Reuse your existing shared Sales spreadsheet.`] : []),
+      ...(restaurant ? [`Restaurants assignment: ${assignment.region}. Up to 5 qualified active restaurant locations per scheduled weekday, when available. Monday-Friday, flexible AM/morning in your local time zone; no fixed execution hour or fixed-hour fallback. 52 weeks from successful activation; maximum 1,300 prospects. Reuse your existing shared Sales spreadsheet.`] : []),
+      ...(hotel ? [`Hotels & Resorts assignment: ${assignment.region}. Up to 5 qualified operating lodging properties per scheduled weekday, when available. Monday-Friday, flexible AM/morning in your local time zone; no fixed execution hour or fixed-hour fallback. 52 weeks from successful activation; maximum 1,300 prospects. Reuse your existing shared Sales spreadsheet.`] : []),
+      ...(distributor ? [`Distributors assignment: ${assignment.region}. Up to 5 qualified B2B distributor businesses per scheduled weekday, when available. Monday-Friday, flexible AM/morning in your local time zone; no fixed execution hour or fixed-hour fallback. 52 weeks from successful activation; maximum 1,300 prospects. Reuse your existing shared Sales spreadsheet.`] : []),
+      ...(hoa ? [`Homeowners Associations (HOAs) assignment: ${assignment.region}. Up to 5 qualified associations per scheduled weekday, when available. Monday-Friday, flexible AM/morning in your local time zone; no fixed-hour schedule or exact execution-time promise. 52 weeks from successful activation; maximum 1,300 prospects. Reuse your existing shared Sales spreadsheet.`] : []),
+      ...(propertyManager ? [`Property Management Companies assignment: ${assignment.region}. Up to 5 new qualified prospects per weekday, when available. Every weekday morning, in your local time zone. 52 weeks from successful activation; maximum 1,300 prospects. Reuse your existing shared Sales spreadsheet.`] : []),
+      ...(landscaping ? [`Landscaping Companies assignment: ${assignment.region}. Up to 5 qualified companies per weekday, Monday-Friday mornings, customer local time. Maximum 1,300 prospects per installation; companies count once, not once per office, crew, or project.`] : []),
+      ...(architect ? [`Architects assignment: ${assignment.region}. 5 qualified firms per weekday, Monday-Friday mornings, customer local time. Maximum 1,300 prospects per installation; firms count once, not once per office or project.`] : []),
+      ...(builder ? ["One nationwide United States assignment. 1 qualified company per weekday (Monday-Friday), in the morning, customer local time. 52 weeks; maximum 260 prospects. Companies are tracked nationally, not individual communities."] : []),
+      ...(manufacturer ? ["One nationwide United States assignment. Up to 2 new qualified manufacturers per run on Monday. Every week, in the morning, in your local time zone."] : []),
       `Start with the attached Milo v${releaseVersion} Illustrated Installation Guide. The attached installation TXT file is the file you will upload to ChatGPT.`,
       "1. Save the attached Milo installation TXT file somewhere easy to find.\n2. Open a new ChatGPT conversation.\n3. Upload the TXT file.\n4. Type: Install Milo using the attached file.\n5. Follow the illustrated guide for Google connection, permissions, scheduling, and the first run.",
       "Need help? Reply to support@simpledigitalhelp.com.",

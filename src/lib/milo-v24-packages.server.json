@@ -452,11 +452,741 @@
   "PD-BMM-US": [
     {
       "filename": "Milo_US_Building_Materials_Manufacturers_Installation_Prompt_v2.4.txt",
-      "sha256": "7af9343d617b501d18f7978ad35b3add5f5713234a92817499c192aaa4e82030"
+      "sha256": "ccd27c732f0b6a04894bc4ea32c2ea7acf0778c0600346b28be29216460e2ca5"
     },
     {
       "filename": "Milo_US_Building_Materials_Manufacturers_Illustrated_Installation_Guide_v2.4.pdf",
-      "sha256": "3f0bf1e6233bc6fdc61cab745630a849c4828969ab3fedf0a139102f02ed2511"
+      "sha256": "deaab98603b1b1462a60af99d2da7abe683ed1a038fea6fbd58c512b8be58c30"
+    }
+  ],
+  "PD-BUILD-US": [
+    {
+      "filename": "Milo_US_Production_Homebuilders_Developers_Installation_Prompt_v2.4.txt",
+      "sha256": "47f93aa1fae0292f74c59a00a85f32bde173b1d0a1dc171885a8c5c2e797fd91"
+    },
+    {
+      "filename": "Milo_US_Production_Homebuilders_Developers_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a1a500305d2bbdd0702a6c6a429f973b0cbd0aeac9e0e1324ef7a2e2658fa1ce"
+    }
+  ],
+  "PD-ARCH-FL": [
+    {
+      "filename": "Milo_FL_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "c8ffd74f1d90e4af3a7b4486e16cfbc96b977b4395365de9f803ed9a82496b29"
+    },
+    {
+      "filename": "Milo_FL_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "fc98b3cd700011502aa2f144f806031c04c789a722e1ef94a0d07b37f62de35f"
+    }
+  ],
+  "PD-ARCH-TX": [
+    {
+      "filename": "Milo_TX_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "4819fd1c43d4a6cc739f916f34a3262a94120f25363a9918b01b8862cf2f31a5"
+    },
+    {
+      "filename": "Milo_TX_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "41c0d3048dfc86e17e7f4142aa766a9fd0ef551ca6ea97ef02cbb386a891c8f7"
+    }
+  ],
+  "PD-ARCH-CA": [
+    {
+      "filename": "Milo_CA_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "1cd0516f9d29e552b37e067b81599d6e702dcd4ec1ca293bc4f2608904803f46"
+    },
+    {
+      "filename": "Milo_CA_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "268e92fff8e2baaf65ffb93a66a02cbc70677a00867c1a7d7eb660dc20b2b848"
+    }
+  ],
+  "PD-ARCH-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "f36d90ee8f75736f3815573ea71f54297973c927d8c29a53930377e91d71baac"
+    },
+    {
+      "filename": "Milo_Northeast_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "6deeb90f6b20027e1e5c061a9f9acf0ba8f41be3aad97411e86abaa144b33cec"
+    }
+  ],
+  "PD-ARCH-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "514f908e0ab7b94d0dd1c02e72ed76c2f7fa25fc114486c1d657dcfc88ce3206"
+    },
+    {
+      "filename": "Milo_Southeast_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "201a2a2f80bdd412b7f682ca29b74c6e3ea82838d0a3d802a102b829283fc2dd"
+    }
+  ],
+  "PD-ARCH-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "9e31886d1ccfec21517b98cbd757a7dde37afc0a37fd63b66075133334b42bf3"
+    },
+    {
+      "filename": "Milo_Midwest_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "0c7eac7172ce400016fb424d9b7200f832f41e98ca48e91adeea9d21dc15e82c"
+    }
+  ],
+  "PD-ARCH-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "f29ac905a9e1e9c99af44d3cf72605c601ac492c9378c5b1f37c6b9ab674aafe"
+    },
+    {
+      "filename": "Milo_Southwest_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "5343b44fc558e58db6388372da05c94ab64038fd6f7df0d62e9711aa8fd0a8fb"
+    }
+  ],
+  "PD-ARCH-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "6b440bb393eb68a5f781bc513c14124899bf59374af59a33508a134f4a5c72d1"
+    },
+    {
+      "filename": "Milo_Mountain_West_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "6102e1cdadef8e6420eef6be89ea6471be08be0972eb0dd0068c3353cf3f26c3"
+    }
+  ],
+  "PD-ARCH-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Architects_Installation_Prompt_v2.4.txt",
+      "sha256": "2b35eaa0e5c5f263e2c4bd9b245f1258c7f760fa2e284ca640e7e128a36d1374"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Architects_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "1c05677338cef607714c6293594829d635a5e3a1ec7432dc26ad3fadf2fed8b8"
+    }
+  ],
+  "PD-LAND-FL": [
+    {
+      "filename": "Milo_FL_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "ec6053b9bcfdc95b7e29ba1b23c35946fbb1bacab6aaa4312374a5f1e83c009a"
+    },
+    {
+      "filename": "Milo_FL_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "1027953734392aaf59771de261339bad9e9bba972f5adb06682b000ffac60ab8"
+    }
+  ],
+  "PD-LAND-TX": [
+    {
+      "filename": "Milo_TX_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "217661a5f152559f9f10197a211e5cfea419b344e4a6b07b854bfd27f971c4aa"
+    },
+    {
+      "filename": "Milo_TX_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "2208bf298bafb55c442a7a56b9d8c699707140711432982a6de0e64938056db6"
+    }
+  ],
+  "PD-LAND-CA": [
+    {
+      "filename": "Milo_CA_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "f4433579c3629cabb6e780b03607d48762fb675b4fdbf93b7a58eb9e90968d8f"
+    },
+    {
+      "filename": "Milo_CA_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "7d27b3fd480ed218247b0112a7f11f85af9f0b04ae0278b7f5380e86b4ebc3df"
+    }
+  ],
+  "PD-LAND-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "4e6de5d676c3a94a47452b4793cdc60114b14cdfc0cd3ee543982707e4c2b4e2"
+    },
+    {
+      "filename": "Milo_Northeast_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "c38ea9eeb0d06e732bf650d76076a5e516c59facdd028b20b5107f3d32077f3f"
+    }
+  ],
+  "PD-LAND-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "0e1fb616dc46f1efd221a35a2a01ea8091f1f33f7dc0414327dfd139725309b3"
+    },
+    {
+      "filename": "Milo_Southeast_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "7642095e8aa4afff628efaa5249eb49459e07fc8950f7ffeeaeb8e35bae8fa4e"
+    }
+  ],
+  "PD-LAND-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "665758918f91e28c8efa53715eaad24013d6752d8bca701b87ff448df3c13df4"
+    },
+    {
+      "filename": "Milo_Midwest_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "ddc8dd37966c5f2f10d6e35fd75d58b68cff3b9bdecba41dffddd25f33a01ff6"
+    }
+  ],
+  "PD-LAND-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "b3ffed0125ca5802e271ee22b295c0e285bddb397a994b59ef5a6751e6bbd200"
+    },
+    {
+      "filename": "Milo_Southwest_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "6a066dd0ce670f4ddee2b97c1e8864c97ac84e98c7ac211203e7d9a0f65266c1"
+    }
+  ],
+  "PD-LAND-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "be9ef14f9804089609de4fc24ccea58387cd9a97d75fc772c7d5c54a7519efde"
+    },
+    {
+      "filename": "Milo_Mountain_West_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "fee0fc5cb2e504e3ac5d1dac4ec4a5d71ace55c37edc725cd6aed66399d05724"
+    }
+  ],
+  "PD-LAND-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Landscaping_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "9e97d3eb3a6846855aadc2f6664dd2626e3161d03da0b6a7f18015a04abc3ae9"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Landscaping_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "2296e573ee3b944a86f832ea3a11b668af1de0b12f8657f889440ecd5c319fe3"
+    }
+  ],
+  "PD-PM-FL": [
+    {
+      "filename": "Milo_FL_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "098bc521fbddec4b38cac1f6cabcb5b7491975f528e9f04300010ab0a95f8807"
+    },
+    {
+      "filename": "Milo_FL_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "16b930778e025d2f5d8ab84e261f0805de219c8631ba6070911547128b52c246"
+    }
+  ],
+  "PD-PM-TX": [
+    {
+      "filename": "Milo_TX_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "526d5bb02b3d86bfa58244111730ac71924675b62ee53c9504a7c83534e9a406"
+    },
+    {
+      "filename": "Milo_TX_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "9acdbbb6c402bbee5454335aaa27849b636b2e81e1173aa0861558c82ecde281"
+    }
+  ],
+  "PD-PM-CA": [
+    {
+      "filename": "Milo_CA_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "15dfcf52e96597f205a45ab350ad4cae21ac2f2d46c6bc197aa7a6a942928599"
+    },
+    {
+      "filename": "Milo_CA_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "68d2b77a619244e47bf99ad61b0f23d4b5e3b15073812de832ab308d3bbc2d9f"
+    }
+  ],
+  "PD-PM-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "2757690fca28ba1fa11f918e52fb6df11b01cea564b8f56a0f52747c1fe95fb8"
+    },
+    {
+      "filename": "Milo_Northeast_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "5e81a635f4c93d5e3e1f9a86ac2e84a5d9a523ae520be339ab8232f82f5f51bf"
+    }
+  ],
+  "PD-PM-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "dc41cfe596f32f73597acea2a7a298af58396703c1ed3729d8ca5587929ac105"
+    },
+    {
+      "filename": "Milo_Southeast_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "0f841585e990ae5dd61e69a9070b2ae6187fc81309d7047da6ce1771180fe82f"
+    }
+  ],
+  "PD-PM-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "10f14142bc8f0cc92259daf1996350c86edee3b60508a76f1f3cb7b7711972f7"
+    },
+    {
+      "filename": "Milo_Midwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "eb3ec922cc0f7f5ec8fec543a56531aa638d39656292bf5e4e0cd7cf8c23c776"
+    }
+  ],
+  "PD-PM-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "36a524096b39a4be5dac77ea86435e0e501697b975999e4f98677ec5905501c4"
+    },
+    {
+      "filename": "Milo_Southwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "915d97aaf69bc5e7abae96b65e52607eddd027755ecb94fdf9ce7c981d66e994"
+    }
+  ],
+  "PD-PM-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "b8f7567da48d5ba48702b7a0b96bb2cfeb51c65a4785db7bebc4fdd259a8392d"
+    },
+    {
+      "filename": "Milo_Mountain_West_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "c50697652bd06242920910d07a9325f964c0a20855f1f242d918371ae18bece0"
+    }
+  ],
+  "PD-PM-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Property_Management_Companies_Installation_Prompt_v2.4.txt",
+      "sha256": "3a04b8363325e08cb6a83c37606c89dfec525ecab5f3280b5c09f419a8e69221"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Property_Management_Companies_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "1b5403b3c880ee42cbbc6bac1a31f1cc18decffb950347dbd7fad37948117315"
+    }
+  ],
+  "PD-HOA-FL": [
+    {
+      "filename": "Milo_FL_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "582b4fbe48ad9dc4fc76d80508facf70deb7ba71bd95db72a21eeeab35f7dba9"
+    },
+    {
+      "filename": "Milo_FL_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a5c5b7a9f7337ad8ad319e5762e2ca32beaf6eaccc64abe9665b25416af424ce"
+    }
+  ],
+  "PD-HOA-TX": [
+    {
+      "filename": "Milo_TX_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "e9f8e1a717c7846ca0e90d9dbb3ba6b37bf10e236d4c6a9dd5593a223559f6a3"
+    },
+    {
+      "filename": "Milo_TX_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "4c04b88fa49c068c22786ae427ed4fad147e2bfa6f34dba2c4de249372e62d70"
+    }
+  ],
+  "PD-HOA-CA": [
+    {
+      "filename": "Milo_CA_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "54ecee97e1ca043a8e1f78992ce1248006afcfe159f13bae9dbee92f3fd745fe"
+    },
+    {
+      "filename": "Milo_CA_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "f856d0404a5e952bfb8b419a5aaa47f5808343daf335f3bf1907134f813a8540"
+    }
+  ],
+  "PD-HOA-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "1b76ca236b251e70145b07427dd1e16441e5b42e4d2d8517845aa6bc9994aa12"
+    },
+    {
+      "filename": "Milo_Northeast_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "6a800e157ef52d326a26d0108d9f54a1dfe0eed94eedf262c5516c6d770f50df"
+    }
+  ],
+  "PD-HOA-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "4d17a092b25e878aedd17ac8d971dfdbea164cfab8eb4537938f44e59ee0f3b3"
+    },
+    {
+      "filename": "Milo_Southeast_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "292a0e1707dddf30624b8624255eab8cf7154ae7a9b255a71f2ac2331396bb4c"
+    }
+  ],
+  "PD-HOA-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "228d986c1d742fcd50bac0b6f3acf43294e56275ebfd4c43e9c2d453bfd4ccc7"
+    },
+    {
+      "filename": "Milo_Midwest_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "3c4f1743436656ff7db475cc36a3d2eebe027a552339f217156144415529054e"
+    }
+  ],
+  "PD-HOA-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "ff50bddd1efd8c1674793bf8b08d1800fffe44e1c5701a5a1f062724987c61ed"
+    },
+    {
+      "filename": "Milo_Southwest_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "42c4045e9338e7d240f496967652fb781dc3e8c00c82d30d8c42f2e155085943"
+    }
+  ],
+  "PD-HOA-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "a765056cc53cb90593eb4e55bbae3f9086ef5e2b5a4b2ccda6e1f98e208ad520"
+    },
+    {
+      "filename": "Milo_Mountain_West_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "aa77d9279edb339e936d2fa34f6f0b260c2fde811e962527e837544ba62abe73"
+    }
+  ],
+  "PD-HOA-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_HOAs_Installation_Prompt_v2.4.txt",
+      "sha256": "eb490a32a3ae3668a4b93b14c57b2ec17a4fed0f691b39cb38eeb63578a936a8"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_HOAs_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "c175743a2ff5a40beb2ccbb59c7d288ac2b6721bfb8249e2b2428128d818d044"
+    }
+  ],
+  "PD-DIST-FL": [
+    {
+      "filename": "Milo_FL_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "1074eba51c7158b5a8657e63a9f974de5cf279717521d5655e2ede5a84c84fc3"
+    },
+    {
+      "filename": "Milo_FL_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "ed3fb4d7b5a7303ced83119dda1ca5124a99e71ac9e4c2915a1af958d12c7af3"
+    }
+  ],
+  "PD-DIST-TX": [
+    {
+      "filename": "Milo_TX_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "2073a36cc5474b3aebe8f25371d888ed07671d175e909fedfe2f3303fa737e21"
+    },
+    {
+      "filename": "Milo_TX_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a1d27d0de51a1d06ecf3997fb00acd053cc56f522ed41b1dfac82acdea2cd74e"
+    }
+  ],
+  "PD-DIST-CA": [
+    {
+      "filename": "Milo_CA_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "81e181483f2080629128512766b365b5b0c9045cf6273f132450e6d6ceaa9d77"
+    },
+    {
+      "filename": "Milo_CA_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "ea2cad4f525cdb9fe216b47b19904b63d6bdacb04c9ebf4b5fb76c294f9718c4"
+    }
+  ],
+  "PD-DIST-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "aa14c40265841eef05eefbda6f8e5c960510e34b8ebb533c6a35617131469108"
+    },
+    {
+      "filename": "Milo_Northeast_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "23a493d4543b2c8f785951e0a5cee8b6b04ea3f67fea380a75a0077d16d70592"
+    }
+  ],
+  "PD-DIST-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "284d01869c74932f3646b7d749c6adb85bb7e8ee1d877ab51eff25f7e9d8766b"
+    },
+    {
+      "filename": "Milo_Southeast_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "3c12713da6173409a981f8dbd035eff1c79e0586905a35692c18b459223c21a7"
+    }
+  ],
+  "PD-DIST-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "03a59e49a38cfee7420391699471bd1dce58b560275c438b021bfa63bd99116d"
+    },
+    {
+      "filename": "Milo_Midwest_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "9866358bdc82238490cbbf463eeea54b840812df252382fa6e7e51e4cda2069a"
+    }
+  ],
+  "PD-DIST-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "2d0afd215d85df932c6869a6b36e1a5868a14853d91c1a4aef474a845f25c3de"
+    },
+    {
+      "filename": "Milo_Southwest_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "93a50d63217d2ec6891718e3a7fbb3e93c752dbdbb96e668d4df4099d2becdea"
+    }
+  ],
+  "PD-DIST-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "2bfd907db3f1d8951d248a2f10bac46e829b5cad405d6f2292575bf9ef4d2c23"
+    },
+    {
+      "filename": "Milo_Mountain_West_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "ba39de1f893b3c76a8046b18ca74f84b56b8f20ce62e70ef61d92631aa52dbd2"
+    }
+  ],
+  "PD-DIST-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Distributors_Installation_Prompt_v2.4.txt",
+      "sha256": "ded24d616f5c6f12f05cafbc69d9a30f3c00051d1cd2167b287fe811824b2568"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Distributors_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "94a0d5559491213759e70b925eca4bce9b3b2a2947fa122729294dc61c9661d8"
+    }
+  ],
+  "PD-HOTEL-FL": [
+    {
+      "filename": "Milo_FL_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "6593f42747b92109a0acd6e86d5c1f149f94c5f3d598e9ec8525d762d17586a9"
+    },
+    {
+      "filename": "Milo_FL_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "d5e3818b90feb8a980c34fe89c6dbe827c22af03412d6152121f5b35e0fc5eb3"
+    }
+  ],
+  "PD-HOTEL-TX": [
+    {
+      "filename": "Milo_TX_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "91c8a2382a6a007e32ce1a8bb3a5a2f0dac002bdd27d50aba572844e40dcad02"
+    },
+    {
+      "filename": "Milo_TX_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "c7a77db71286f9afc4bdff91054a630fb53357aee37609105efa7135474aef0f"
+    }
+  ],
+  "PD-HOTEL-CA": [
+    {
+      "filename": "Milo_CA_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "1bdc477e2a4e1aa78373b0633cd3e4655eb47c1f7eff47a08116c28427ebdd1d"
+    },
+    {
+      "filename": "Milo_CA_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "caa58297c27e8519230530569b65794536c7223fcdcd277392756f7cf452b4f1"
+    }
+  ],
+  "PD-HOTEL-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "538861b3e2f8c1df051d1198e5dce0112d40c7c15b72b1f1283b03160a51b1c4"
+    },
+    {
+      "filename": "Milo_Northeast_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "6aeb419cc67f71364ce130d3eb800711f34882126e61d9f4ee9ce7a57a039676"
+    }
+  ],
+  "PD-HOTEL-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "ce52384cae67bb376745aec307d0862bac4bcfebfd2fec8a5f4de6b9def464f8"
+    },
+    {
+      "filename": "Milo_Southeast_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "8d3f6cc1b528c3daaef7d79dc8b91d902e76aeb61c9333552c6d5d3fff4b625e"
+    }
+  ],
+  "PD-HOTEL-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "32c487fcb4ac11ba8e78d45ac7bcc9bb045286bd4f65c6a628d0814734dab428"
+    },
+    {
+      "filename": "Milo_Midwest_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a1b6171609acc4cc315ec8affbc05195aa7bc8ba73000c282b8316398c19428f"
+    }
+  ],
+  "PD-HOTEL-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "0b80e850f7af6fbacb98c20fa1dce367b3d67b29777cdd1113c9e6e00a03bc74"
+    },
+    {
+      "filename": "Milo_Southwest_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "676fca7d1cc0e5363395fb2151f47ceb3cd349aa9435427666ed5a232f0d298b"
+    }
+  ],
+  "PD-HOTEL-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "291b8559172eb4bc5625c7b66e9af82a960a2f8cb45817ab0ca73ed6b7afc9ae"
+    },
+    {
+      "filename": "Milo_Mountain_West_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "2b58f501eda0ef8b949dd89a0b57ba7c449042ceed98196b70b221f54b02a4a0"
+    }
+  ],
+  "PD-HOTEL-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Hotels_Resorts_Installation_Prompt_v2.4.txt",
+      "sha256": "5cdf57c213f9139f095287988cd81ffc35b815efd44f0e4f354bcf58fe427325"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Hotels_Resorts_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "89f8a31fc704a4e15ed70113e8035357d1497d6d93f6eb993b21a2cc3fcac269"
+    }
+  ],
+  "PD-REST-FL": [
+    {
+      "filename": "Milo_FL_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "6ed4eef572d2ec7258902972cf095ae072561c165c2b75c681802a604bec519f"
+    },
+    {
+      "filename": "Milo_FL_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "618d00d6cf420d39670aa326a70c57d275f294cc419503598df7d54dbacd0fa6"
+    }
+  ],
+  "PD-REST-TX": [
+    {
+      "filename": "Milo_TX_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "58c695e20ea9b11429bed76125a5abaf9e40b448df9cc54842f50de14fc798ac"
+    },
+    {
+      "filename": "Milo_TX_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "1ba52de1f8b9e76eba6b35bb715837742ae8d14a800bf0b7bb785421807e05ca"
+    }
+  ],
+  "PD-REST-CA": [
+    {
+      "filename": "Milo_CA_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "b56dda2e945e2ba63ac7809aa077993e510773998ce27f06d6b9f3ff6c34de48"
+    },
+    {
+      "filename": "Milo_CA_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "f718be9cf58dad463126bd180492b13ce63194cb43314ad391d8d4ed86b98d08"
+    }
+  ],
+  "PD-REST-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "c16222308335f512032c972a4f209d377c8bbf6b049ae06849ac2d2f8d18278d"
+    },
+    {
+      "filename": "Milo_Northeast_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "f9024ec5aacc2e2d0344998f9eeb86a763464c044313f721b9d20dcf9e74189d"
+    }
+  ],
+  "PD-REST-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "0857ce12ba4ac9ae539e4df1012d7ba539acd17e0d48b262d9749a06c1e39159"
+    },
+    {
+      "filename": "Milo_Southeast_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "151088fdb0de81cb1400b108b05c36ee2738c1bbe5ecec5d81a2da8eff1d3ef0"
+    }
+  ],
+  "PD-REST-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "67c2190119452eb3fd47125a42ebc527933b76bf753d387d906bdf11183c90c1"
+    },
+    {
+      "filename": "Milo_Midwest_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "f8ca48f802df26a4c89b4a62022bf5577923383df74b190257f050365bfbe1a1"
+    }
+  ],
+  "PD-REST-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "129a036b9aafba1600887bfe8e3418844ddd15651098906dd92df2c94c336e52"
+    },
+    {
+      "filename": "Milo_Southwest_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "f8dda6326a4b03f9171b9916454f2c1e104044614668b5a65c9e7697255ec220"
+    }
+  ],
+  "PD-REST-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "bae90d5992208a8e156655d732e4833016e46fea8c808c4a83923a3891fec148"
+    },
+    {
+      "filename": "Milo_Mountain_West_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "b87189dee5e49337c2af243f0a5870039a246d70669e604f24ff0eb8f721a23f"
+    }
+  ],
+  "PD-REST-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Restaurants_Installation_Prompt_v2.4.txt",
+      "sha256": "dba3f482c1b8118b1f006462cd6771209b5abebddecb520df346ac6a351ce7c5"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Restaurants_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a691a5aab4424f2485901e391893b12a3f535870805f0a1b0a6af75b12ebda78"
+    }
+  ],
+  "PD-HEALTH-FL": [
+    {
+      "filename": "Milo_FL_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "38d48e3b9518dbec68c5740802c256cf52dcaba684825ceb2a91006cdb59f46e"
+    },
+    {
+      "filename": "Milo_FL_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "921e50405285aa3cdfaed2839019ffbd49dcaed2c1cb9da70559d9664a98ea1b"
+    }
+  ],
+  "PD-HEALTH-TX": [
+    {
+      "filename": "Milo_TX_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "ec71a91679b8c005965d4fcfe852731b9dd45cfe265ad4b0b3d798edff788838"
+    },
+    {
+      "filename": "Milo_TX_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "7d1c0a9ec3979076eb86820977ca1f610b67856efb5bc27dd03c7e33ded6244f"
+    }
+  ],
+  "PD-HEALTH-CA": [
+    {
+      "filename": "Milo_CA_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "deacbfa69648b09539551c36983fda36fc8d7685ec4fff74a408f49080d2669c"
+    },
+    {
+      "filename": "Milo_CA_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "b490347ef3a7471096c9ed87338f7df2d7d0216573ae80bc2bb00e8702b94bf4"
+    }
+  ],
+  "PD-HEALTH-NORTHEAST": [
+    {
+      "filename": "Milo_Northeast_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "4e9720923a22c1c16763e271999d5b92b379b8f6952cf109974cecc674b57230"
+    },
+    {
+      "filename": "Milo_Northeast_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "0d8b3b17b7598b84d978a8a39fda083b65f78e02bc8a481c90125b1dfce5efbd"
+    }
+  ],
+  "PD-HEALTH-SOUTHEAST": [
+    {
+      "filename": "Milo_Southeast_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "5a34206002d6c81ca27fe9dedf87a97a8ca0cbd675c4c3cb7f3e0466b5679b1c"
+    },
+    {
+      "filename": "Milo_Southeast_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "8a55e1b214ae1afea69ed3b6ec0e8b08b15e5620ed158f5641199ee3f7dbab5d"
+    }
+  ],
+  "PD-HEALTH-MIDWEST": [
+    {
+      "filename": "Milo_Midwest_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "ef151014e973ece54b9e02cb48ce1da5c191ff9adef00d925e27446551af52a8"
+    },
+    {
+      "filename": "Milo_Midwest_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "a3e096649a9c5ed95fcebdac1631f5329a9de44e0b31838f0311e13a05002a29"
+    }
+  ],
+  "PD-HEALTH-SOUTHWEST": [
+    {
+      "filename": "Milo_Southwest_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "3cb05df91f9e50d982dee7703befa4694129ab2a0bb6d639a0ef361d9054c2aa"
+    },
+    {
+      "filename": "Milo_Southwest_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "9a8ef0f5af29b23c47969fc04e0185521ae7f817479b594a6055baf7ca1f0364"
+    }
+  ],
+  "PD-HEALTH-MOUNTAIN-WEST": [
+    {
+      "filename": "Milo_Mountain_West_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "bc72b34ea498bd91685d5dfb4ea7893c056a08ef285fc3f7947238c811fca7b2"
+    },
+    {
+      "filename": "Milo_Mountain_West_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "17bdd017fc64c4b0c5595e9bf7bfbc4a987f5039b8bcb45b53437cd6dca76560"
+    }
+  ],
+  "PD-HEALTH-PACIFIC-NORTHWEST": [
+    {
+      "filename": "Milo_Pacific_Northwest_Healthcare_Practices_Installation_Prompt_v2.4.txt",
+      "sha256": "00e215ee87636ff9653fce9f3f8edd387ec88c086df7f10c98b2afbdc4f5128e"
+    },
+    {
+      "filename": "Milo_Pacific_Northwest_Healthcare_Practices_Illustrated_Installation_Guide_v2.4.pdf",
+      "sha256": "d360c9e359ced1cd2abf7bebdda33826a521df57a84cb527ca18d11aa4768981"
     }
   ]
 }

@@ -30,9 +30,14 @@ export const geographicRegions = [
     { name: "Washington", code: "WA" }, { name: "Oregon", code: "OR" }, { name: "Idaho", code: "ID" },
   ] },
 ] as const;
-export type GeographicRegion = (typeof geographicRegions)[number];
+export const projectRegions = [
+  geographicRegions[1], // Texas
+  geographicRegions[0], // Florida
+  { id: "new-york", name: "New York", states: [{ name: "New York", code: "NY" }] },
+] as const;
+export type GeographicRegion = (typeof geographicRegions)[number] | (typeof projectRegions)[number];
 export type RegionId = GeographicRegion["id"];
-export function regionsForProduct(product: { regionBased: boolean }) {
-  return product.regionBased ? geographicRegions : [];
+export function regionsForProduct(product: { id?: string; regionBased: boolean }) {
+  return product.regionBased ? product.id === "projects-developments" ? projectRegions : geographicRegions : [];
 }
 export const regionBoundaryExplanation = "Each region has fixed boundaries. Select ? to see the states included.";

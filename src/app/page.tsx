@@ -35,14 +35,14 @@ export default function Home() {
       <section className="section page-width categories-section" id="categories" aria-label="Explore agents by category">
         <Image
           className={styles.categoryVisual}
-          src="/images/agent-team-office.png"
+          src="/images/Milo Robots in a Modern Office.png"
           width={1448}
           height={1086}
           unoptimized
           alt="AI agents working together in an office."
         />
         <Link href="/agent-fit-audit" className={`button button-dark ${styles.auditButton}`}>
-          Not sure where to start? Get an Agent Fit Audit — $199
+          Get an Agent Fit Audit
         </Link>
         <div className={styles.categoryLinks}>
           <Link href="/categories/sales" className={`button ${styles.categoryButton} ${styles.salesButton}`} id="sales-growth">

@@ -18,7 +18,8 @@ export function sessionAssignments(metadata: Stripe.Metadata | null) {
     throw new Error("Invalid Discovery selection");
   }
   const assignments = slugs.map(slug => miloAssignment(slug));
-  if (assignments.some(item => item.productCode === "PD-BMM-US") && metadata?.version !== MILO_VERSION) throw new Error("Manufacturer package metadata requires v2.4");
+  if (assignments.some(item => item.agentId === "projects-developments") && metadata.version !== MILO_VERSION) throw new Error("Projects package metadata requires v2.4");
+  if (assignments.some(item => item.productCode === "PD-BMM-US" || item.productCode === "PD-BUILD-US" || item.agentId === "architects" || item.agentId === "landscaping" || item.agentId === "property-managers" || item.agentId === "hoas" || item.agentId === "distributors" || item.agentId === "hotels" || item.agentId === "restaurants" || item.agentId === "healthcare") && metadata?.version !== MILO_VERSION) throw new Error("Manufacturer package metadata requires v2.4");
   if (!approvedRelease(metadata) ||
       metadata.product_codes !== JSON.stringify(assignments.map(item => item.productCode))) {
     throw new Error("Checkout metadata does not match the Milo release");
@@ -29,9 +30,10 @@ export function sessionAssignments(metadata: Stripe.Metadata | null) {
 export function verifiedOrder(session: Stripe.Checkout.Session, config: ReturnType<typeof paymentConfig> | ReturnType<typeof paymentConfig>[]): PaidOrder | null {
   const metadata = session.metadata;
   const assignments = sessionAssignments(metadata);
+  if (assignments.some(item => item.agentId === "projects-developments") && metadata?.version !== MILO_VERSION) throw new Error("Projects package metadata requires v2.4");
   const configs = Array.isArray(config) ? config : [config];
   const assignment = assignments[0];
-  if (assignment.productCode === "PD-BMM-US" && metadata?.version !== MILO_VERSION) throw new Error("Manufacturer package metadata requires v2.4");
+  if ((assignment.productCode === "PD-BMM-US" || assignment.productCode === "PD-BUILD-US" || assignment.agentId === "architects" || assignment.agentId === "landscaping" || assignment.agentId === "property-managers" || assignment.agentId === "hoas" || assignment.agentId === "distributors" || assignment.agentId === "hotels" || assignment.agentId === "restaurants" || assignment.agentId === "healthcare") && metadata?.version !== MILO_VERSION) throw new Error("Manufacturer package metadata requires v2.4");
   const legacy = assignments.length === 1 && assignment.slug === MILO_SLUG && metadata?.version === "1.2" && !metadata.release_version && !metadata.product_code;
   if (configs.length !== assignments.length || new Set(configs.map(item => item.priceId)).size !== configs.length ||
       (!legacy && assignments.length === 1 &&
