@@ -9,6 +9,9 @@ import { deliveryStore } from "./milo-store.server";
 import { miloAttachments, miloEmail } from "./milo-assets.server";
 import { sendEmail } from "./email.server";
 import { fulfillOrder, verifiedOrder, sessionAssignments } from "./milo-fulfillment.server";
+import { storefrontPricingEnabled } from "./milo-storefront-http.server";
+import { processAuditSession, recordMiloRefund } from "./sales-audit-http.server";
+import { auditPool } from "./sales-audit-store.server";
 
 const defaults = { stripe: stripeClient, store: deliveryStore, attachments: miloAttachments, makeEmail: miloEmail, send: sendEmail };
 type Dependencies = typeof defaults;
@@ -36,6 +39,12 @@ export async function handleCheckout(request: Request, overrides: Partial<Depend
     if (slugs.length > 100 || new Set(slugs).size !== slugs.length || slugs.some(slug =>
       !miloAssignments.some(item => item.slug === slug && item.available))) {
       return response({ error: "Unavailable or duplicate Discovery assignment." }, 400);
+    }
+    if (storefrontPricingEnabled()) {
+      const destination = new URL("/checkout/milos", origin);
+      slugs.forEach(slug => destination.searchParams.append("product", slug));
+      if (request.headers.get("accept")?.includes("application/json")) return response({ url: destination.href });
+      return new Response(null, { status: 303, headers: { Location: destination.href, "Cache-Control": "no-store" } });
     }
     const assignments = slugs.map(slug => miloAssignment(slug));
     const configs = slugs.map(slug => paymentConfig(slug));
@@ -72,12 +81,13 @@ export async function handleCheckout(request: Request, overrides: Partial<Depend
       automatic_tax: { enabled: false },
       metadata,
       payment_intent_data: { metadata: intentMetadata },
-      success_url: `${origin}/checkout/success${single && assignments[0].agentId === "building-materials-manufacturers" ? "/manufacturers" : single && assignments[0].agentId === "roofing" ? (slugs[0] === MILO_TX_SLUG ? "/texas" : slugs[0] === MILO_CA_SLUG ? "/california" : slugs[0] === MILO_NORTHEAST_SLUG ? "/northeast" : slugs[0] === MILO_SOUTHEAST_SLUG ? "/southeast" : slugs[0] === MILO_MIDWEST_SLUG ? "/midwest" : slugs[0] === MILO_SOUTHWEST_SLUG ? "/southwest" : slugs[0] === MILO_MOUNTAIN_WEST_SLUG ? "/mountain-west" : slugs[0] === MILO_PACIFIC_NORTHWEST_SLUG ? "/pacific-northwest" : "") : "/regions"}`,
+      success_url: `${origin}/checkout/success${single && assignments[0].agentId === "builders" ? "/builders" : single && assignments[0].agentId === "building-materials-manufacturers" ? "/manufacturers" : single && assignments[0].agentId === "roofing" ? (slugs[0] === MILO_TX_SLUG ? "/texas" : slugs[0] === MILO_CA_SLUG ? "/california" : slugs[0] === MILO_NORTHEAST_SLUG ? "/northeast" : slugs[0] === MILO_SOUTHEAST_SLUG ? "/southeast" : slugs[0] === MILO_MIDWEST_SLUG ? "/midwest" : slugs[0] === MILO_SOUTHWEST_SLUG ? "/southwest" : slugs[0] === MILO_MOUNTAIN_WEST_SLUG ? "/mountain-west" : slugs[0] === MILO_PACIFIC_NORTHWEST_SLUG ? "/pacific-northwest" : "") : "/regions"}`,
       cancel_url: `${origin}${single ? assignments[0].path : "/categories/sales"}`,
     }, { idempotencyKey: `milo-checkout/${randomUUID()}` });
     if (!session.url || new URL(session.url).origin !== "https://checkout.stripe.com") {
       throw new Error("Invalid Stripe checkout redirect");
     }
+    if (request.headers.get("accept")?.includes("application/json")) return response({ url: session.url });
     return new Response(null, { status: 303, headers: { Location: session.url, "Cache-Control": "no-store" } });
   } catch {
     return response({ error: "Checkout is temporarily unavailable. Please try again later." }, 503);
@@ -119,10 +129,30 @@ export async function handleWebhook(request: Request, overrides: Partial<Depende
     event = stripe.webhooks.constructEvent(await boundedBody(request), signature, secret);
   } catch { return response({ error: "Invalid webhook signature or body." }, 400); }
   if (event.livemode !== config.livemode) return response({ error: "Stripe mode mismatch." }, 400);
-  if (event.type !== "checkout.session.completed" && event.type !== "checkout.session.async_payment_succeeded") {
+  if (event.type === "charge.refunded" && (storefrontPricingEnabled() || process.env.AUDIT_HISTORY_RECONCILED === "true")) {
+    try { await recordMiloRefund(event.data.object); return response({ received: true }); }
+    catch { return response({ error: "Refund reconciliation incomplete; retry required." }, 503); }
+  }
+  if (event.type !== "checkout.session.completed" && event.type !== "checkout.session.async_payment_succeeded" && event.type !== "checkout.session.expired") {
     return response({ received: true });
   }
   const incoming = event.data.object as Stripe.Checkout.Session;
+  if (incoming.metadata?.product === "milo-volume-cart") {
+    try {
+      if (event.type !== "checkout.session.expired" && !deliveryEnabled()) throw new Error("Delivery is disabled");
+      const session = await stripe.checkout.sessions.retrieve(incoming.id, { expand: ["line_items.data.price.product", "payment_intent"] });
+      if (session.id !== incoming.id || session.metadata?.product !== incoming.metadata.product) throw new Error("Checkout mismatch");
+      if (event.type === "checkout.session.expired" && session.status === "expired") {
+        await auditPool().query("UPDATE sales_audit_orders SET status='expired' WHERE checkout_id=$1 AND status='pending'", [session.id]);
+        return response({ received: true });
+      }
+      if (session.payment_status === "unpaid") return response({ received: true });
+      if (session.line_items?.has_more) session.line_items = await stripe.checkout.sessions.listLineItems(session.id, { limit: 100, expand: ["data.price.product"] });
+      await processAuditSession(session, { stripe: deps.stripe, delivery: deps.store, fulfill: (order, store, makeEmail) => fulfillOrder(order, store, makeEmail, deps.send) });
+      return response({ received: true });
+    } catch { console.error("Milo basket webhook requires retry or reconciliation."); return response({ error: "Fulfillment incomplete. Retry required." }, 503); }
+  }
+  if (event.type === "checkout.session.expired") return response({ received: true });
   if (incoming.metadata?.product !== MILO_BASKET &&
       !miloAssignments.some(item => item.slug === incoming.metadata?.product)) return response({ received: true });
   // Disabled fulfillment must not acknowledge a paid order and lose its retry.

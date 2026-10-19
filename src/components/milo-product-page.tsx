@@ -1,3 +1,4 @@
+import { CheckoutForm } from "./checkout-in-new-tab";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import { salesPaths, type DiscoveryProduct } from "@/lib/sales-catalog";
@@ -5,22 +6,26 @@ import type { MiloPresentation } from "@/lib/milo-presentations";
 import MiloDemo from "./milo-demo";
 import styles from "./milo-product.module.css";
 import { checkoutEnabled } from "@/lib/milo-config.server";
+import { miloAssignments } from "@/lib/milo-assignments";
+import { storefrontPricingEnabled } from "@/lib/milo-storefront-http.server";
 
 export default function MiloProductPage({ product, presentation }: {
   product: DiscoveryProduct;
   presentation: MiloPresentation;
 }) {
-  const canBuy = checkoutEnabled();
+  const canBuy = checkoutEnabled() && miloAssignments.some(assignment => assignment.slug === product.slug && assignment.available);
+  const isProjects = product.industry === "Projects & Developments";
+  const volumePricing = storefrontPricingEnabled();
   return (
     <div className={`page-width ${styles.page}`}>
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <Link href={salesPaths.category}>Sales &amp; Growth</Link><span>/</span>
-        <Link href={salesPaths.discovery}>Find New Customers</Link><span>/</span>
+        <Link href={isProjects ? salesPaths.opportunities : salesPaths.discovery}>{isProjects ? "Find New Opportunities" : "Find New Customers"}</Link><span>/</span>
         <span aria-current="page">{product.name}</span>
       </nav>
       <div className={styles.content}>
         <header className={styles.identity}>
-          <p className="eyebrow">FIND NEW CUSTOMERS</p>
+          <p className="eyebrow">{isProjects ? "FIND NEW OPPORTUNITIES" : "FIND NEW CUSTOMERS"}</p>
           <h1>{product.name}</h1>
           <p className={styles.subtitle}>{product.subtitle}</p>
         </header>
@@ -44,10 +49,10 @@ export default function MiloProductPage({ product, presentation }: {
             <p>{canBuy ? "Milo v2.4 installation prompt and illustrated guide delivered by email after payment." : "Purchase availability coming next."}</p>
           </div>
           <div className={styles.purchaseAction}>
-            <form action="/api/checkout/milo" method="post">
+            <CheckoutForm action="/api/checkout/milo" method="post">
               <input type="hidden" name="product" value={product.slug} />
               <button className="button" disabled={!canBuy} aria-describedby="checkout-status">Buy Now</button>
-            </form>
+            </CheckoutForm>
             <small id="checkout-status">{canBuy ? "Secure one-time payment through Stripe." : "Unavailable until checkout is ready."}</small>
           </div>
         </section>

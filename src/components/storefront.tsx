@@ -13,6 +13,10 @@ import {
   Plus,
   Check,
   CornerDownRight,
+  Facebook,
+  Instagram,
+  Youtube,
+  Linkedin,
 } from "lucide-react";
 import {
   categoryFor,
@@ -60,8 +64,8 @@ export function Header() {
           <Brand />
           <nav className="desktop-nav" aria-label="Main navigation">
             <Link href="/">Home</Link>
-            <Link href="/#sales-growth">Sales</Link>
-            <Link href="/#marketing-content">Marketing &amp; Content</Link>
+            <Link href="/categories/sales">Sales</Link>
+            <Link href="/categories/marketing">Marketing &amp; Content</Link>
           </nav>
           <MobileNav />
         </div>
@@ -76,6 +80,18 @@ export function Footer() {
         <div>
           <Brand />
           <p>Small helpers. Big possibilities.</p>
+          <nav className="footer-social-links" aria-label="Social media">
+            {[
+              { name: "Facebook", href: "https://www.facebook.com/simpledigitalhelp", Icon: Facebook },
+              { name: "Instagram", href: "https://www.instagram.com/simpledigitalhelp", Icon: Instagram },
+              { name: "YouTube", href: "https://www.youtube.com/@SimpleDigitalHelp", Icon: Youtube },
+              { name: "LinkedIn", href: "https://www.linkedin.com/company/simple-digital-help", Icon: Linkedin },
+            ].map(({ name, href, Icon }) => (
+              <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={name + " (opens in a new tab)"}>
+                <Icon size={20} strokeWidth={1.5} aria-hidden="true" />
+              </a>
+            ))}
+          </nav>
         </div>
         <div className="footer-links" style={{ gridTemplateColumns: "1fr" }}>
           <div>

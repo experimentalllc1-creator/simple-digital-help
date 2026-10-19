@@ -7,8 +7,8 @@ import { FROM, SUBJECT, BODY, REPLY_TEST, runControlledTest, readLedger } from '
 import { persistReplySuppression } from '../scripts/lib/first-contact-controlled-suppression.mjs';
 
 const env = { FIRST_CONTACT_TEST_RECIPIENT: FROM, FIRST_CONTACT_SMTP_USER: FROM,
-  FIRST_CONTACT_IMAP_USER: FROM, FIRST_CONTACT_SMTP_HOST: 'gtxm1357.siteground.biz',
-  FIRST_CONTACT_IMAP_HOST: 'gtxm1357.siteground.biz', FIRST_CONTACT_SMTP_PORT: '465',
+  FIRST_CONTACT_IMAP_USER: FROM, FIRST_CONTACT_SMTP_HOST: 'mail.example.com',
+  FIRST_CONTACT_IMAP_HOST: 'mail.example.com', FIRST_CONTACT_SMTP_PORT: '465',
   FIRST_CONTACT_IMAP_PORT: '993', FIRST_CONTACT_SMTP_PASSWORD: 'fixture-only', FIRST_CONTACT_IMAP_PASSWORD: 'fixture-only' };
 async function fixture(fn) {
   const directory = mkdtempSync(join(tmpdir(), 'fc-controlled-'));
@@ -52,7 +52,7 @@ test('reply variant pins the exact message and recipient, skips reconciliation, 
     send: async message => {
       calls++;
       assert.equal(message.from, FROM);
-      assert.deepEqual(message.envelope.to, ['henry@henrypaz.com']);
+      assert.deepEqual(message.envelope.to, ['reply-recipient@example.net']);
       assert.equal(message.subject, 'Simple Digital Help Reply Test');
       assert.equal(message.text, 'This is a controlled First Contact reply and opt-out test. Please reply with: Please remove me from your list.');
       assert.equal(readLedger(ledgerPath).reservation.testKey, REPLY_TEST.key);

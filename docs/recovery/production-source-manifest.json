@@ -1,0 +1,1117 @@
+{
+  "deployment": "dpl_ssydftVoGc3o6V3ZJ7EsHayUxt5K",
+  "sourceFiles": 621,
+  "publicRecoveryFiles": 277,
+  "excludedPrivateFulfillmentFiles": 343,
+  "excludedGeneratedInstallationVideo": 1,
+  "files": [
+    {
+      "path": ".vercelignore",
+      "sha256": "cfa49c8e704cd7968c0bb8635a2791d8685d9373b4b010fc6a64f817a28e8d00"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/1015 (Milo HOAs Intro Video).mp4",
+      "sha256": "0d162905856530dee99d02afc3edbc2aa3c4d4fcb4503ed93acc887fc8da18af"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Intro explainer Sales agents .mp4",
+      "sha256": "6b3fc5d0e6f49a53c6062b693e034781cc792934a155a027eab55bb3600e6b31"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Architects intro video.mp4",
+      "sha256": "764276776f4ca1ac6b9bf5db38ba9036d8dc6a9a3fd0a142da8c4e1c3dea54a3"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Distributor Intro Video.mp4",
+      "sha256": "1c0165a004fa55f58929b13f215e2bbf21a3aaff55b2abd588f9385641373a5f"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Electrical Intro Video.mp4",
+      "sha256": "31ea4282fa7e71779b0f33488b5cc636d4fdc85d1753422a789c0c14f8eb6b26"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo GC Intro Video.mp4",
+      "sha256": "b73b73860cdda0181980b26bfdabac64ca6fcf1193cfdb1079b333304dd87789"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo HVAC Intro Video.mp4",
+      "sha256": "36e71b65da6dacc087268a76f181cb5814115bd0d71031c62c3c442035a42991"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Healthcare Intro Video.mp4",
+      "sha256": "280ce75f2c4dbc3fda1191b37129f78acd36906bb474ec98538aef48dd7e01f0"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Home Builders Intro video.mp4",
+      "sha256": "b7b33d6feebdccbc1c71713b92a5580d9326cc94561e09d4e007e7a58d462ac5"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Hotels Intro Video.mp4",
+      "sha256": "fb0eb945ba2f0fc8535264ef6e07246189e909697210b85c51492c4c677acfbd"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Landscaping Video Intro.mp4",
+      "sha256": "3249a8f53cfa0826c549ff06994ee991f2b784f61e64bd3e4f3439b3643c6c32"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Manufacturers Intro Video.mp4",
+      "sha256": "6d3ed0a6f0006aba0736f0cd327ccfd2dbfd42fc75574113f41816c3756d6883"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Plumbing Intro Video .mp4",
+      "sha256": "adc7da554818607858cfe43777946e2ea0eebcb25a4cca52c23babf0801d41b4"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Projects Intro Video.mp4",
+      "sha256": "ab8f2f9bd51016f85a9a217235ddf78cf964ffcb2aa7596117787ae19cb3c26b"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Property Manager Intro Video.mp4",
+      "sha256": "b51797c571d3fce7221a409fdea9ea664c76cd42213b865900700e5cefb3f15a"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Restaurants Intro Video.mp4",
+      "sha256": "c0c0394f79582475e5d4f16299fdc456d39888e203514a27db2b995850e97041"
+    },
+    {
+      "path": "public/videos/Milo Intros Sales Page/Milo Roofing Contractors Intro Video.mp4",
+      "sha256": "d1eb3ea7748044f2abd803ddb5423452a8bd958b7efb491d36fd7fd31ec91b78"
+    },
+    {
+      "path": "public/videos/sales-category-optimized.mp4",
+      "sha256": "e5124c6c962554c1fd853ee2d255f47ea66e461ce3a63e9b7b9afeb48c96c001"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "8125598ae3667be567941b0d0885e880e96207fa7d9d08654ac57a494b663d53"
+    },
+    {
+      "path": "public/images/Milo Robots in a Modern Office.png",
+      "sha256": "f67e7873405786082776d9f774b7fcfbe89d73020c2eb1afb6d85224c8e79c00"
+    },
+    {
+      "path": "public/images/agent-team-office.png",
+      "sha256": "756f7bcb6f11dfd2e51d7cdf94757496d2d9d862cf5d4111d5693563286d3d79"
+    },
+    {
+      "path": "public/images/agents/Cheerful Robot Property Inspector at Modern Apartments.png",
+      "sha256": "0382de23df2d2cb5600753204c035d099d0fb21dffefa9baaed9f1f0a8af0049"
+    },
+    {
+      "path": "public/images/agents/Cheerful Robot Roofer at Work.png",
+      "sha256": "7ccb8b171d30f63cc8b8bb678dfff2c913ce89209d879eca1dc1699fc507c878"
+    },
+    {
+      "path": "public/images/agents/County PUD Approval Announcement.png",
+      "sha256": "e6fdbd5979202ee73b7acde3151af9643747813647f1e70dc0f4b2a44ae431af"
+    },
+    {
+      "path": "public/images/agents/Friendly HOA Robot at the Community Board.png",
+      "sha256": "113f5ffcdcd87c69c19706e77570bfa1d5d4da8a9487f1269a5324e3f0191698"
+    },
+    {
+      "path": "public/images/agents/Friendly Robot Concierge at a Tropical Resort.png",
+      "sha256": "e23244b248c043776c39179b1d9cb000a8deb72600873ec143a1fbe8d94a50f8"
+    },
+    {
+      "path": "public/images/agents/Friendly Robot Electrician at Work.png",
+      "sha256": "7544406d3b8b827d7a110d827ba6da64fdde2008ecde3162ad48934dc50547c0"
+    },
+    {
+      "path": "public/images/agents/Friendly Robot Factory Inspector.png",
+      "sha256": "eb59a7069d9b899dac30eaa6408014bec2bb0f28c73a58bff524cdf3fa39759a"
+    },
+    {
+      "path": "public/images/agents/Friendly Robot HVAC Technician at Work.png",
+      "sha256": "76ccaa406f3ec2230189366af6235a66d86073750805001337e88ac4eee3fdcd"
+    },
+    {
+      "path": "public/images/agents/Friendly Robot Warehouse Inspector.png",
+      "sha256": "1221da30c4662e5ffabcf155c923a1f7087a41605d0a927f9963c6458c008701"
+    },
+    {
+      "path": "public/images/agents/Friendly Robot Welcomes Healthcare Visitors.png",
+      "sha256": "4025f853c93470667a172845be920787fc490b34dc55bf3f271ae700ade8b010"
+    },
+    {
+      "path": "public/images/agents/Milo Trims the Sunny Garden.png",
+      "sha256": "20893f16a98c2b0366045f5bdd229d0101f1d5ec8e5289f035b13fc2015fc72d"
+    },
+    {
+      "path": "public/images/agents/Milo Welcomes Guests to the Bistro.png",
+      "sha256": "615c988c282227767d8bdbb39cffdfc2c875f89e4ea09edb45b37bed744f52ab"
+    },
+    {
+      "path": "public/images/agents/Robot Architect at Blueprint Desk.png",
+      "sha256": "9f84c2257a9fe65a377a4b62cf3a80276fe2c9962a729c249e6433668f3e5458"
+    },
+    {
+      "path": "public/images/agents/Robot Reviews New Home Blueprints.png",
+      "sha256": "f83f19d16a9c69b0eafb2a513dbc531f025ab0b175b136d8b2c4574b138c3b25"
+    },
+    {
+      "path": "public/images/agents/Robot Supervises a Sunny Construction Site.png",
+      "sha256": "4a0a74231cf31970019f05ecf1770f21c755d2fa8599cd1fdcdafa08b434d68b"
+    },
+    {
+      "path": "public/images/agents/Robot Technician Servicing a Water Heater.png",
+      "sha256": "5e14821c8335b39148c5843fc86719b4151e9007a23e94e3156242aa468fd38d"
+    },
+    {
+      "path": "public/images/how-to-hire-a-milo.png",
+      "sha256": "6a7c0b47bf23b65b1197e32d04b8590bd457b23a13a873d7023e6745bba743ff"
+    },
+    {
+      "path": "public/images/sales-category-poster.webp",
+      "sha256": "c7093cd6cfd41c5404917d9f835e652108e7c903607e235db99a40fd6cfe985e"
+    },
+    {
+      "path": "public/images/sales-explainer-poster.png",
+      "sha256": "0a8ac3ff6ed97ee52b704e186989535b2540baa99d27d8432431f8e0127097a6"
+    },
+    {
+      "path": "public/milo-spreadsheet-loop.mp4",
+      "sha256": "edb8a9247bd14d9fdc507f99fb0e5d5eb187f7f8dceebd2054fcfad8765e96b0"
+    },
+    {
+      "path": "public/milo-spreadsheet-poster.jpg",
+      "sha256": "d72c82b7c85febd236ce3fc236a8a8f2ccb926f366d7d2860177b56de7eeabaa"
+    },
+    {
+      "path": "public/milo-spreadsheet-v2-4.mp4",
+      "sha256": "20abe11958e1957e9dba3b61724bad5cf67399f0cc630c67e398c6b1e683e8aa"
+    },
+    {
+      "path": "public/milo-spreadsheet-v2-4.png",
+      "sha256": "0cddd91d14f29dc2ed83c190aed25403fb45a909ca75fbc024151aef1a5ab396"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "97d10d6494d16202228602b5c8224c5a0d10043fa3647b92a9b1b0e65a0310f1"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "e8d39e6796349ee3c45dfac162dbecad2941a64561ac9b8000f171a7b7587099"
+    },
+    {
+      "path": "package.json",
+      "sha256": "4018db8bc8ab3937c6252d0ccfbcffd9995bd7a67c462d5977d2f457aa1c48fd"
+    },
+    {
+      "path": "scripts/verify-milo-package.mjs",
+      "sha256": "75e8d45016b5c9b19fcee4004bb1a2567be5425535ee0d64de8b0872c6b2febd"
+    },
+    {
+      "path": "src/app/agent-fit-audit/page.tsx",
+      "sha256": "b4657896f6c1c283de7ce409a14c06d80a5a1a7546e268e7c2110b4e50aa5f15"
+    },
+    {
+      "path": "src/app/agent-fit-audit/report/page.tsx",
+      "sha256": "b8bc5cc946e18dd3b6d3007d48f339b3dd3efd14d8dee3cadd44153374f67672"
+    },
+    {
+      "path": "src/app/api/checkout/milo-cart/route.ts",
+      "sha256": "c822c848a380e2b2d97ac926b226c03192d2e0aacc80a1c56acf1e8349d4306a"
+    },
+    {
+      "path": "src/app/api/checkout/milo/route.ts",
+      "sha256": "794edb036582ce75ffc8b6b567cd15af45c2eebd6de7e98d0e7fddffd4cd1f74"
+    },
+    {
+      "path": "src/app/api/sales-audit/route.ts",
+      "sha256": "9c242dc972ed28061b9811c9f259943ca865cded0ac08af7645d57c767203581"
+    },
+    {
+      "path": "src/app/api/webhooks/sales-audit/route.ts",
+      "sha256": "b27dbef3822132bfd2f58b08009394639cf8cf6ae7789485bf4e85cb59bb40fb"
+    },
+    {
+      "path": "src/app/api/webhooks/stripe/route.ts",
+      "sha256": "b4470b839f5845baa2cb62a7078641a18eadb62c21376cecdb77b2680180b6ea"
+    },
+    {
+      "path": "src/app/categories/[slug]/page.tsx",
+      "sha256": "738305bacd42b38c2d128e3a5593aaf759d28d291df83ada8a173b11bc5d3f75"
+    },
+    {
+      "path": "src/app/categories/marketing/analyze-improve/page.tsx",
+      "sha256": "0d4d7cdac2fc97d413d989e2785ed7b3c699a14bb01c3e82bee6c907694459c7"
+    },
+    {
+      "path": "src/app/categories/marketing/create-publish/page.tsx",
+      "sha256": "99f83cfdbe6bdc7c09df05119a7659591d88761636ac827193d414d29dc09c6f"
+    },
+    {
+      "path": "src/app/categories/sales/find-new-customers/page.tsx",
+      "sha256": "fb7d2c6b79855ab6aedbc0d09a203487972d9420fcc540d6ab96d46e3a81afcb"
+    },
+    {
+      "path": "src/app/categories/sales/find-new-opportunities/page.tsx",
+      "sha256": "1b0c5990295e35866038005fd3e4f6ff9cafeaf0abae5b38be905b696c240eaa"
+    },
+    {
+      "path": "src/app/checkout/milos/page.tsx",
+      "sha256": "fa848978f4746d6fc84babbf24ea3cf290b7c3092b986d062d9c9b723ecbf2f8"
+    },
+    {
+      "path": "src/app/checkout/success/builders/page.tsx",
+      "sha256": "bbd54cb9ded8793132b479e4906063dd67a69e9a629f82618f96e9321cbc077a"
+    },
+    {
+      "path": "src/app/checkout/success/california/page.tsx",
+      "sha256": "93a3b95b8f600012f0ec9f1e96cba5ea57a3f673be3ceae64c59f079140898fc"
+    },
+    {
+      "path": "src/app/checkout/success/manufacturers/page.tsx",
+      "sha256": "1ab3d8d0ca5fc80f8eab1cb0ac82a678816242c35c32b4c622a727dc3de25773"
+    },
+    {
+      "path": "src/app/checkout/success/midwest/page.tsx",
+      "sha256": "5b779754f18c51bdda168e7a4c82ce42cca8938c8ce481ccc6835cd07f176cac"
+    },
+    {
+      "path": "src/app/checkout/success/mountain-west/page.tsx",
+      "sha256": "9d91b19bd57b975be896999f336a56888a54b2791ec98816b90aea8027ac1093"
+    },
+    {
+      "path": "src/app/checkout/success/northeast/page.tsx",
+      "sha256": "7a2247eacddd638df42bb2258d5d6bef86529f3306610471dde833cf80c55150"
+    },
+    {
+      "path": "src/app/checkout/success/pacific-northwest/page.tsx",
+      "sha256": "6750b5989eddf647be3c826f6ccf2b16751eef27f15fac23ca3037912f7ed832"
+    },
+    {
+      "path": "src/app/checkout/success/page.tsx",
+      "sha256": "72a4e7fdff5f0061ded9aa59b190f80d4b6948af7c7adfea7bfe59446f3e20e2"
+    },
+    {
+      "path": "src/app/checkout/success/regions/page.tsx",
+      "sha256": "5e405c6a6e148734fbfecefce9769cbdb89de67bd5de248c6345b41d92823033"
+    },
+    {
+      "path": "src/app/checkout/success/southeast/page.tsx",
+      "sha256": "f7fecefe9964e604099440b4f3d5af87667983b4b6a91b35bf0511d5869f4340"
+    },
+    {
+      "path": "src/app/checkout/success/southwest/page.tsx",
+      "sha256": "d49257ce3e9ed9e3fa93a65fe0b45e03d1f11cb1a35e69f14e0b2277659edf0a"
+    },
+    {
+      "path": "src/app/checkout/success/texas/page.tsx",
+      "sha256": "6e8be838bd8f2fcb74eb08f0588d6146c2b829caa34d92fa65daf0e031689aad"
+    },
+    {
+      "path": "src/app/collections/[slug]/page.tsx",
+      "sha256": "88222f8b452afe2e0f9eacd27a4f461a2ccf36cd83de4c775fd46a0d7e925e1c"
+    },
+    {
+      "path": "src/app/globals.css",
+      "sha256": "fc9efdb3605775fe4101d36c2fefa94b4909feae211a875470eb10b3c71dd6e1"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "54d2c3d0fed6430df56f5ea5bc29b058b6da59a501644aa76a0461aeb660331c"
+    },
+    {
+      "path": "src/app/legal/[document]/page.tsx",
+      "sha256": "253289cfef3f9a4317b29609c08609da5446e49f17b95e32b13153a4ceb73b31"
+    },
+    {
+      "path": "src/app/legal/content/disclaimers.md",
+      "sha256": "7a6a9fff5de0e08a46429507d273ebf4b2a17948010ff92a08650a114df71e73"
+    },
+    {
+      "path": "src/app/legal/content/privacy.md",
+      "sha256": "d7b6a0de319d435bd0d7bd663f725c85e57647fd384fbecdfeeadd57103e138e"
+    },
+    {
+      "path": "src/app/legal/content/terms.md",
+      "sha256": "7cbf11ab8c42a669317b6e2a15996cfc44ec79a9305ba38b3fa49672817e4c80"
+    },
+    {
+      "path": "src/app/legal/document.tsx",
+      "sha256": "bb6e998a22352c9f8ee03fbddf27d476af6cc8e9a04b410a29c2e9514e64e9e7"
+    },
+    {
+      "path": "src/app/legal/legal.module.css",
+      "sha256": "6b0a556e2ce30650e1c8fbc8c80f29cf3e83b999110454291ff4b58a89f40212"
+    },
+    {
+      "path": "src/app/legal/page.tsx",
+      "sha256": "213d37a982ecf9196a4ba62a574c08315c3e2ef5016ccb60b92c0fef18b2d5aa"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "sha256": "534626d5718dce7c8817a46c160a21050afa030aca015c870ae43e4bc5ff9e7e"
+    },
+    {
+      "path": "src/app/page.module.css",
+      "sha256": "fa251ef20f4dedd38b9d08ea0540fa4fc0d725badbc7d30fd4820c92d2dead78"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "sha256": "7174eca379e12798e91811fd8d4073d0e6211c43602f416da5092684917f54fa"
+    },
+    {
+      "path": "src/app/products/[slug]/page.tsx",
+      "sha256": "e3c6548e9d8200c29af17ec6177551914f627225d9622bc6597575ec5a37e246"
+    },
+    {
+      "path": "src/app/products/milo-california-architects/page.tsx",
+      "sha256": "b95873bdf5594c5d9aa5316ad9088199e276883868cea5f17d6c1304491bb161"
+    },
+    {
+      "path": "src/app/products/milo-california-distributors/page.tsx",
+      "sha256": "f96b379571532e6574490808c3bdc2b931ca2e664ba5a1d1e39aa2c2c85747d0"
+    },
+    {
+      "path": "src/app/products/milo-california-electrical-contractors/page.tsx",
+      "sha256": "6023fc787038dc230a2c230fed8fcaf2f5da999911ed33d92946aca655657f0c"
+    },
+    {
+      "path": "src/app/products/milo-california-general-contractors/page.tsx",
+      "sha256": "ea5029b3254a71e829c4b6730c34fa2b8dc717a0add6a74fde8969d0b70a168d"
+    },
+    {
+      "path": "src/app/products/milo-california-healthcare-practices/page.tsx",
+      "sha256": "593f496406b38fffc542d87e2b3e1b3088c79dedd803cd20b5ea07405fdb2fda"
+    },
+    {
+      "path": "src/app/products/milo-california-hoas/page.tsx",
+      "sha256": "b1520eea4e6d617068fc9346b9390cce2b68b1fe909ddcf24d1c5a9711684378"
+    },
+    {
+      "path": "src/app/products/milo-california-hotels-resorts/page.tsx",
+      "sha256": "3168a199f5bf17d41056af90c578faac9fddb18c12419c1965bd5295da13088b"
+    },
+    {
+      "path": "src/app/products/milo-california-hvac-contractors/page.tsx",
+      "sha256": "4effc19e6637a6314399bf1fc33c1b267343ece91e14661f9b9e45b6f7e3b32f"
+    },
+    {
+      "path": "src/app/products/milo-california-landscaping-companies/page.tsx",
+      "sha256": "2da3bab351a7db0aab53eadf8f2489c1550c184b25ca5d563227fb4d0370dbea"
+    },
+    {
+      "path": "src/app/products/milo-california-plumbing-contractors/page.tsx",
+      "sha256": "6a3d1c7c19c527a6e7eecf0209e2e013a543b11b261f95ef2ac1cfc63a663c3c"
+    },
+    {
+      "path": "src/app/products/milo-california-property-management-companies/page.tsx",
+      "sha256": "c1c74444612e5095e28842e6dcd1b6003c63b7b406fc83b4a074e145b3fa56d9"
+    },
+    {
+      "path": "src/app/products/milo-california-restaurants/page.tsx",
+      "sha256": "7cdf7335334a593612db2160bea75d146073f331a92aa4bbf7071350b02625fd"
+    },
+    {
+      "path": "src/app/products/milo-california-roofing-contractors/page.tsx",
+      "sha256": "9e1b8f2f7d8632bd1a8b55221255cc8e19102d70deb308266238dd487087cd9a"
+    },
+    {
+      "path": "src/app/products/milo-florida-architects/page.tsx",
+      "sha256": "a9bb4d6d0a725bb9ac2bc0da3542ddd2d9bb39dccca3d7fdb3c9251d32edbfb7"
+    },
+    {
+      "path": "src/app/products/milo-florida-distributors/page.tsx",
+      "sha256": "b07ef24fbbe7720dc1cbd5698dfbd946ef35297e6c6756943809fb5ee973b641"
+    },
+    {
+      "path": "src/app/products/milo-florida-electrical-contractors/page.tsx",
+      "sha256": "f4b9413119a638821298f00c896e5107b743bf5d1fe87af3ce0e19d9ff9a677d"
+    },
+    {
+      "path": "src/app/products/milo-florida-general-contractors/page.tsx",
+      "sha256": "2e1c923fe0d0c9da6aaddfe47e04803e1b5491bb87995472e92ae374f31e6e28"
+    },
+    {
+      "path": "src/app/products/milo-florida-healthcare-practices/page.tsx",
+      "sha256": "2b4e2caa9483dad5df73e7aa6f24fdd9df06fb4d5430aae71c125887ff7d1f1c"
+    },
+    {
+      "path": "src/app/products/milo-florida-hoas/page.tsx",
+      "sha256": "02b25d99832db0ce3a7129d7a3635028e96983c8b8882b3804854a886f6c3572"
+    },
+    {
+      "path": "src/app/products/milo-florida-hotels-resorts/page.tsx",
+      "sha256": "53e499c8e95aaf58dcb01eeb2fac493b332f56de192c2a3c78cf080186a69a8e"
+    },
+    {
+      "path": "src/app/products/milo-florida-hvac-contractors/page.tsx",
+      "sha256": "714a3165fcb2053b4e0395c6f029a8614f81f63503d4ade8c683d3190b8f4cc5"
+    },
+    {
+      "path": "src/app/products/milo-florida-landscaping-companies/page.tsx",
+      "sha256": "828a6d953163b9e8618f2b83280a72f7b4320599810544ae9f29ee07c22b65af"
+    },
+    {
+      "path": "src/app/products/milo-florida-plumbing-contractors/page.tsx",
+      "sha256": "2fd8b18affced636a08569b1d58e78d7f4729509cdfd63efa92a77e3479071aa"
+    },
+    {
+      "path": "src/app/products/milo-florida-projects-developments/page.tsx",
+      "sha256": "d1bdefb373017d1a9b6dbfa0213e37035d2f1239feb3942d2ab247e5ee2800e8"
+    },
+    {
+      "path": "src/app/products/milo-florida-property-management-companies/page.tsx",
+      "sha256": "063c5c23d167c23702b86e450bbe64095d4f8b736293facb84a6c63984eb7a9a"
+    },
+    {
+      "path": "src/app/products/milo-florida-restaurants/page.tsx",
+      "sha256": "e53416fda42bbca4cfde426df6cf5a92e9c2febc311bc7d4cb048277d9ca4b04"
+    },
+    {
+      "path": "src/app/products/milo-florida-roofing-contractors/page.tsx",
+      "sha256": "ec9533f46acfa398c735b310abed34f9440ee1abfc687c78a718e2d046b28e8a"
+    },
+    {
+      "path": "src/app/products/milo-midwest-architects/page.tsx",
+      "sha256": "557c64dea9344e02909dbd1fecd5dbe8f540ee267bee532e1a2a15458229f0cf"
+    },
+    {
+      "path": "src/app/products/milo-midwest-distributors/page.tsx",
+      "sha256": "8abc8ce081e38fe9964b849cfed2c3c5358a6098c56d386c3a3f3b6b59fa4ffa"
+    },
+    {
+      "path": "src/app/products/milo-midwest-electrical-contractors/page.tsx",
+      "sha256": "12675db04901650bacf7db53ee7dbd5f41250564c50181f8a94fbcd277251c23"
+    },
+    {
+      "path": "src/app/products/milo-midwest-general-contractors/page.tsx",
+      "sha256": "f499c9503828950e9e2cea070e35bc4ca8ca5f0c526ce1082959f8047ea8ef15"
+    },
+    {
+      "path": "src/app/products/milo-midwest-healthcare-practices/page.tsx",
+      "sha256": "a8dd42a101105f27ab1134efa313d57fa35ecfffa83c2ba4d926727e14ff1eab"
+    },
+    {
+      "path": "src/app/products/milo-midwest-hoas/page.tsx",
+      "sha256": "92b0005ac15524cd9338690353eb51f8a23097aaf793b5ec7ab6230c793bb396"
+    },
+    {
+      "path": "src/app/products/milo-midwest-hotels-resorts/page.tsx",
+      "sha256": "cc68478c5f12dd72ea2c01c6d2f9ed73aaa544af60eacce0547ecdf42dd87fc7"
+    },
+    {
+      "path": "src/app/products/milo-midwest-hvac-contractors/page.tsx",
+      "sha256": "ad10f6877ba85a16fc5c6dcdaaa33411f7c63fd7fd303df2eda8ebf8f571c9e9"
+    },
+    {
+      "path": "src/app/products/milo-midwest-landscaping-companies/page.tsx",
+      "sha256": "d3e335d8ea0bd6014f21e359516e259691ad74e85a384c03f9eb4b2d82a2ee71"
+    },
+    {
+      "path": "src/app/products/milo-midwest-plumbing-contractors/page.tsx",
+      "sha256": "f9b01b307fb92af35f64ff5d07c38d5ffb1820e90d1d2371353fd31e4579d29d"
+    },
+    {
+      "path": "src/app/products/milo-midwest-property-management-companies/page.tsx",
+      "sha256": "a389c6924db127e57950348703583e7153836cc457eb8000de9c685b2adb5bf9"
+    },
+    {
+      "path": "src/app/products/milo-midwest-restaurants/page.tsx",
+      "sha256": "ad17e5c15ca5659c1a40e395e4874d3d0b7786b2d4029fc406de80ba11ced4ad"
+    },
+    {
+      "path": "src/app/products/milo-midwest-roofing-contractors/page.tsx",
+      "sha256": "e251ab663cc6951a847c3c584f29f1876638cfe321112aee85ad3c2f444e4167"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-architects/page.tsx",
+      "sha256": "b2c3273ff61ec8df96fe14b12277a388be998e867ca6520a62e005b4bb88ddbc"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-distributors/page.tsx",
+      "sha256": "3e505dcb7121c2d8ddec5bf43aa8426d306119bb8b4cc5932e87e0a7375ab59d"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-electrical-contractors/page.tsx",
+      "sha256": "37c415ca61da376fc17dacc5b8da8dbc8a191f1499bb0cab3b6fb589f9c79779"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-general-contractors/page.tsx",
+      "sha256": "53b97500a3f3236adc7d1075ef0b63f9e3e48c71b6596d59e4a4bd1f6d9c0f5e"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-healthcare-practices/page.tsx",
+      "sha256": "4ed627798e5c4693f0f07d759ee3d69237afe9f73c15ecf60eea4e0af353b891"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-hoas/page.tsx",
+      "sha256": "36ce6390c143387bbc3d3e64cfa95d9140e9675a97b6a9601eb2d6704ac168fb"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-hotels-resorts/page.tsx",
+      "sha256": "84d37cea8fb4fd2b925fe6b2ac86380ccd2ca5c3ea02271a60b9a2db82a2ffe5"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-hvac-contractors/page.tsx",
+      "sha256": "5b99af742c6b9fb2dd6a2f79cd02238beba201a31e55178475e37c5432dd9e61"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-landscaping-companies/page.tsx",
+      "sha256": "204b834f7eeb1f688f6a1dd8b53f51d3cc4f91bd094d2c9cc47b9b32d0239f1b"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-plumbing-contractors/page.tsx",
+      "sha256": "8fdea09a0f33c773da1e53d5179587a717d26062102942875747afc040f127d6"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-property-management-companies/page.tsx",
+      "sha256": "687e03b50ba690908cdb78f5576dea85c1367fd412ec40e8e0e07291047e268e"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-restaurants/page.tsx",
+      "sha256": "8cf5684e08ecb962f472caeff058f5fe41df226a0492b7c7edb630d35063ed13"
+    },
+    {
+      "path": "src/app/products/milo-mountain-west-roofing-contractors/page.tsx",
+      "sha256": "0557e38880d62a44f5cfb975f01e7a5afff7e90589425c891e54f002fe1ee431"
+    },
+    {
+      "path": "src/app/products/milo-new-york-projects-developments/page.tsx",
+      "sha256": "915b34f5a728dd50fa714c73cb1d5054a0e8deda7bfa26ef9cc0350e1b98c6fc"
+    },
+    {
+      "path": "src/app/products/milo-northeast-architects/page.tsx",
+      "sha256": "e727f2d357e1572e4859fa79cad2ec758191bc764a09d88d9cd95d9c9fdf90a0"
+    },
+    {
+      "path": "src/app/products/milo-northeast-distributors/page.tsx",
+      "sha256": "f10bba252ad3c52ab39a63264452c04d3fd69f14237bc396d90a882736511c6e"
+    },
+    {
+      "path": "src/app/products/milo-northeast-electrical-contractors/page.tsx",
+      "sha256": "d1dd1f37f267f886098f30fc78a36b16397c83c5610d8085a9b670904612b96b"
+    },
+    {
+      "path": "src/app/products/milo-northeast-general-contractors/page.tsx",
+      "sha256": "73cc8a21fca5678878ca9b3d81d2997fc7c76d269257d21137d81d9dfc30d7e4"
+    },
+    {
+      "path": "src/app/products/milo-northeast-healthcare-practices/page.tsx",
+      "sha256": "ed8e6d5d0e71fa0b892edfecad228fcfbb9343155e853dcf785c3df22899a0fa"
+    },
+    {
+      "path": "src/app/products/milo-northeast-hoas/page.tsx",
+      "sha256": "2fab59fe63e205186f4aadafb156a3fed733b16b723396d11da48fe7caab48ec"
+    },
+    {
+      "path": "src/app/products/milo-northeast-hotels-resorts/page.tsx",
+      "sha256": "faeb1ad709afd5382c2d2cfcebdabcdad02c282de5e9478b1681f3dffa9df729"
+    },
+    {
+      "path": "src/app/products/milo-northeast-hvac-contractors/page.tsx",
+      "sha256": "ee3fcf7550488dc2a32b1c0c8433c732aeca7cb91b854df1a8e386543264558f"
+    },
+    {
+      "path": "src/app/products/milo-northeast-landscaping-companies/page.tsx",
+      "sha256": "22e8e6c6c76bef985824fe68f5a26406eb5c7a256f988899593ace0907d77733"
+    },
+    {
+      "path": "src/app/products/milo-northeast-plumbing-contractors/page.tsx",
+      "sha256": "92f04fa101eeb9d0a15aa490d098520be59df3ddbfa722d8fd5226c415595c3a"
+    },
+    {
+      "path": "src/app/products/milo-northeast-property-management-companies/page.tsx",
+      "sha256": "fc9a8be1508d4d6c5a77bde07b72bc1baaa87b1cd259496944c015aac55001f7"
+    },
+    {
+      "path": "src/app/products/milo-northeast-restaurants/page.tsx",
+      "sha256": "9979697248a4db75772ce8fe0d5e086a1a5768a688d7393d993b9d26c39a5da2"
+    },
+    {
+      "path": "src/app/products/milo-northeast-roofing-contractors/page.tsx",
+      "sha256": "94f3bf8b0d81dbeab9b4bf00445f0766a8b6a9e686ec8a9ef966f6a64339e4ed"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-architects/page.tsx",
+      "sha256": "f16ccefdab4db6cbfc160bbdc6afab96517a8caace3f72c1ed830b8016e3ac6c"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-distributors/page.tsx",
+      "sha256": "9680a9b67f502b49cbdc95db4a85f4443be855e332c9a6dae30453d20ac3efac"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-electrical-contractors/page.tsx",
+      "sha256": "a9ebdd4d44000046c7d53513d4164ccd0aff12dcc5925c6e434b692d92ed1d61"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-general-contractors/page.tsx",
+      "sha256": "fbb965b2c6d5dca28e33379a63686c6a409a91a20d10883e5131a27468ff3c3a"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-healthcare-practices/page.tsx",
+      "sha256": "3f63c68288f885bb73cbc9b7d175e9a52b5fbd863d0b134ab5377d23b051a6c9"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-hoas/page.tsx",
+      "sha256": "93eab64eadd15f85703a9e11f1307896bcee2d179ea32d076c645e355fd886cc"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-hotels-resorts/page.tsx",
+      "sha256": "293a7188d25cc0c6dacb1386c35578a4f4be6cb8759d6967b7bf03ab39a46924"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-hvac-contractors/page.tsx",
+      "sha256": "b628ac759dbb8cd661d542e4b080cbca09f124179d5b14e6312fbb47a44a0ee5"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-landscaping-companies/page.tsx",
+      "sha256": "0342215d851b4afca8449fdd25cdea14f83c477632b35dbdbec4e5ce76781d45"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-plumbing-contractors/page.tsx",
+      "sha256": "2058feb58c6dd11dee5e3df61588175be350601593c2f65042c8570de65d853d"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-property-management-companies/page.tsx",
+      "sha256": "6389fe441e21fb3f7631d0353b06b65b47e4ec4f1528679a1ba9113caf8c38f6"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-restaurants/page.tsx",
+      "sha256": "f67d9159274bca40ee100f2fc0b3abcc9392f2b7cf17dbc1cb6ee61af640dd7d"
+    },
+    {
+      "path": "src/app/products/milo-pacific-northwest-roofing-contractors/page.tsx",
+      "sha256": "2deb9f6ebebc4a1063717f91a902088d8fdfe65d13fd45ac4eebb9a5cfc5679c"
+    },
+    {
+      "path": "src/app/products/milo-southeast-architects/page.tsx",
+      "sha256": "c201d6f6c3f86164876fbd5f6d401704eee25e51a3410162013767d6877fc09d"
+    },
+    {
+      "path": "src/app/products/milo-southeast-distributors/page.tsx",
+      "sha256": "c9f32d22b18baa2ee5697092e2ce07703f85af668f154c5e35aac159b7da7787"
+    },
+    {
+      "path": "src/app/products/milo-southeast-electrical-contractors/page.tsx",
+      "sha256": "9aad5b2b175709a59f259f6d4b188f421576bea35bebfe4765208fd1fc4490bc"
+    },
+    {
+      "path": "src/app/products/milo-southeast-general-contractors/page.tsx",
+      "sha256": "f82f9044cc0427855f7f1cc76d3bef15f0248cae18cc437d4fee4566db7ecb60"
+    },
+    {
+      "path": "src/app/products/milo-southeast-healthcare-practices/page.tsx",
+      "sha256": "907c5a88f4d21d2b87a6593fc72963d3a970dc5b2aba32c4079dab81ad708b0c"
+    },
+    {
+      "path": "src/app/products/milo-southeast-hoas/page.tsx",
+      "sha256": "cf2d599173a0284ae30023ea0e025ac39d2c3bc4f61a6b4709a744e6783cf47a"
+    },
+    {
+      "path": "src/app/products/milo-southeast-hotels-resorts/page.tsx",
+      "sha256": "2d06f32aa3a0b617f244d0158bc5199c934963f1c1f58785379197ebefa01934"
+    },
+    {
+      "path": "src/app/products/milo-southeast-hvac-contractors/page.tsx",
+      "sha256": "fdef919ae8adaffce3ab9d7c7af5a842533e73f04ff7dd485d8a199da81369df"
+    },
+    {
+      "path": "src/app/products/milo-southeast-landscaping-companies/page.tsx",
+      "sha256": "ab84859c20858bc49c54f2217e157154e066a6f015f2ee36e3fdf1dc5a3c3139"
+    },
+    {
+      "path": "src/app/products/milo-southeast-plumbing-contractors/page.tsx",
+      "sha256": "a592610a3760cd414f56d587bd016f176e7a2d4eb3c46c6c183b8da9834b405c"
+    },
+    {
+      "path": "src/app/products/milo-southeast-property-management-companies/page.tsx",
+      "sha256": "bb9062ea4674410313ff3ac6cd9a4941b9bd95a2f17a333a6cfd2da01cdad533"
+    },
+    {
+      "path": "src/app/products/milo-southeast-restaurants/page.tsx",
+      "sha256": "e176ff14c4a867d5938ed7a81f43d463d8b050fde38968efa8eb3e167806d5cb"
+    },
+    {
+      "path": "src/app/products/milo-southeast-roofing-contractors/page.tsx",
+      "sha256": "5d87a244628341d103db11887e87f4cc805fb16530744367b4d0a3d2a4855fcf"
+    },
+    {
+      "path": "src/app/products/milo-southwest-architects/page.tsx",
+      "sha256": "006ffbd404ae93ac54deda121b51110ae56ffd470f6d2e0a66aa0302fd3a6f58"
+    },
+    {
+      "path": "src/app/products/milo-southwest-distributors/page.tsx",
+      "sha256": "a9d506c70070a4849d094ca02e7a6242ac77cbb305ad83be2bdb5476f2c14717"
+    },
+    {
+      "path": "src/app/products/milo-southwest-electrical-contractors/page.tsx",
+      "sha256": "e27297311f5eeffd42b1d71a60b94038041618043d00e3459d54507c84d190eb"
+    },
+    {
+      "path": "src/app/products/milo-southwest-general-contractors/page.tsx",
+      "sha256": "f7f2a715ee4be29fe39f030cbb4be8a05c7a7e7d7206743a9e96a33bc1912f1d"
+    },
+    {
+      "path": "src/app/products/milo-southwest-healthcare-practices/page.tsx",
+      "sha256": "4e55d02adb863e0ba5996f8913a789cde437407760642551b54a48f93b6058b8"
+    },
+    {
+      "path": "src/app/products/milo-southwest-hoas/page.tsx",
+      "sha256": "be45ba2211bfc781a98610f3c6bb0e2658b4c674ce7780d0ae2c3ea5551237e3"
+    },
+    {
+      "path": "src/app/products/milo-southwest-hotels-resorts/page.tsx",
+      "sha256": "04bc18c246bce5b71a6631454d15a71cf35f653769d2c70e5424732d6514ffce"
+    },
+    {
+      "path": "src/app/products/milo-southwest-hvac-contractors/page.tsx",
+      "sha256": "e92eecbf2d14da18b8b1baa45e4841d37a967d6f29e8f3f53a737dcfec829ac4"
+    },
+    {
+      "path": "src/app/products/milo-southwest-landscaping-companies/page.tsx",
+      "sha256": "2c42466904eb2d960517614270d8c96ff8338cd00278393280c6a52ba7f7e9b3"
+    },
+    {
+      "path": "src/app/products/milo-southwest-plumbing-contractors/page.tsx",
+      "sha256": "5673ffc77f3620073bb50e763d9aba3176160f5aae9b088d874e0b4ba2d2060c"
+    },
+    {
+      "path": "src/app/products/milo-southwest-property-management-companies/page.tsx",
+      "sha256": "0f3ba145cd000dac2c5cc6458f02a5810bb330229843b0903f8c87604aacaf6c"
+    },
+    {
+      "path": "src/app/products/milo-southwest-restaurants/page.tsx",
+      "sha256": "455577ce8f2a0a512fe173b378ac717491901bf55956fffe850b1631052a319e"
+    },
+    {
+      "path": "src/app/products/milo-southwest-roofing-contractors/page.tsx",
+      "sha256": "462612ab873c9df12babbe7d7330353f08eb29ac0f36c63b2da84b10d083171e"
+    },
+    {
+      "path": "src/app/products/milo-texas-architects/page.tsx",
+      "sha256": "3dd14f5e88626f7dde65adf8906cc01b478658c82c9f45176ce38db65829236e"
+    },
+    {
+      "path": "src/app/products/milo-texas-distributors/page.tsx",
+      "sha256": "b0703269aaef6b682bbe5ac33936b3f5106a302dc2bd550990f055012d9a82d0"
+    },
+    {
+      "path": "src/app/products/milo-texas-electrical-contractors/page.tsx",
+      "sha256": "fc910cb394f4084a328373fa369ed17980920885c6990e09663113c0e1d5c597"
+    },
+    {
+      "path": "src/app/products/milo-texas-general-contractors/page.tsx",
+      "sha256": "c2796959f045f28944bbbded2be8edbf969d963b1b503049abe9efa4a558eb29"
+    },
+    {
+      "path": "src/app/products/milo-texas-healthcare-practices/page.tsx",
+      "sha256": "01d53ba30c36131dd51b0d9fb0619ff7ecbe6499076de2057790ee02d4c0c1f1"
+    },
+    {
+      "path": "src/app/products/milo-texas-hoas/page.tsx",
+      "sha256": "59579e062f8a900d7247cdb0afaa4fd0cc7332bbf1768ce8a98976d6c3b08bc2"
+    },
+    {
+      "path": "src/app/products/milo-texas-hotels-resorts/page.tsx",
+      "sha256": "760b04a7773ed8a60f61591d77a24daf95bff6842317e06c63812a61b44db637"
+    },
+    {
+      "path": "src/app/products/milo-texas-hvac-contractors/page.tsx",
+      "sha256": "76b26e9c848dd1dc96bc7a2383eb9d9707efbe3139df871604fbd78d207d471a"
+    },
+    {
+      "path": "src/app/products/milo-texas-landscaping-companies/page.tsx",
+      "sha256": "079f2eb4ae0720d2b512cb36c90038c6e7ff5d99be7949d695d02b2e450a5398"
+    },
+    {
+      "path": "src/app/products/milo-texas-plumbing-contractors/page.tsx",
+      "sha256": "0cebffaf917e33d77e3ae590528b4e3069dbb41c14c22b90365f2e55088e188b"
+    },
+    {
+      "path": "src/app/products/milo-texas-projects-developments/page.tsx",
+      "sha256": "f0d57d195cd8e39b12b68aab8872bc6aa2c6b6850301cabcc69397dfcfc7f7b8"
+    },
+    {
+      "path": "src/app/products/milo-texas-property-management-companies/page.tsx",
+      "sha256": "79a8ae594f9628f7ead19ee34bdd281142e7129c72e8e843f614c246b4288999"
+    },
+    {
+      "path": "src/app/products/milo-texas-restaurants/page.tsx",
+      "sha256": "5efba5978d312a79f697c5d57932597c912d76597c308de25bfb985c3c2106f6"
+    },
+    {
+      "path": "src/app/products/milo-texas-roofing-contractors/page.tsx",
+      "sha256": "663d0d256e3556e7be68289f27b29132a74fb5e704c061064f6b42c3ea13b529"
+    },
+    {
+      "path": "src/app/products/milo-us-building-materials-manufacturers/page.tsx",
+      "sha256": "16012872a9fdc99970416bcf8617696771560cf780c51c012343a7e3283b538b"
+    },
+    {
+      "path": "src/app/products/milo-us-production-homebuilders-developers/page.tsx",
+      "sha256": "3e8684196e8e4e0c560bf8abac3c63c5c19acda257e732744ff7daf1024f6d1c"
+    },
+    {
+      "path": "src/app/store/page.tsx",
+      "sha256": "b3a23c4f2911f5b7064f8db6e0a0b087aa2dfa22af7b637f4c483647b5c96aae"
+    },
+    {
+      "path": "src/app/support/milo-installation-v2-2/page.tsx",
+      "sha256": "745f1a9ee6130de7b74af2721ece80a125c9437c9f2e7ca327c6b480b8a96b00"
+    },
+    {
+      "path": "src/components/agent-fit-audit.module.css",
+      "sha256": "61e6d0ac4e03b47fa1985f67412a72401a2688070f75a64037289e52dce49ff2"
+    },
+    {
+      "path": "src/components/agent-fit-audit.tsx",
+      "sha256": "e2d7255b0300020d6592ec8636964a53df5e9dcb5064812efba4e7d4f859f877"
+    },
+    {
+      "path": "src/components/catalog-browser.tsx",
+      "sha256": "156021bec6d676327aaedf587bf89fd10948342039d982a45de72d4566c565fc"
+    },
+    {
+      "path": "src/components/checkout-in-new-tab.tsx",
+      "sha256": "a66d30266da216f5baf4fbae08de4bc5428b6d6f58bdbd7a51ed0cf170ee839e"
+    },
+    {
+      "path": "src/components/find-new-customers.tsx",
+      "sha256": "c5a79c484006b918464bf0901ae7c621d4981cb7f6e35856ba932b73f6d8c144"
+    },
+    {
+      "path": "src/components/find-new-opportunities.tsx",
+      "sha256": "9f9bd845b9b3a98a3f6207dbb282b06fbf2ce4ecf7bb1abddda17b4a44eb797a"
+    },
+    {
+      "path": "src/components/illustration-video.module.css",
+      "sha256": "e0bfabedc3406e7c8e70f2f3d75fcd40e3513eebb99ee33925b449af847c45a1"
+    },
+    {
+      "path": "src/components/illustration-video.tsx",
+      "sha256": "ba6463b82be0d30310c00735f1326c76bea50b423f8243c9965cec86f87264ac"
+    },
+    {
+      "path": "src/components/marketing-pages.tsx",
+      "sha256": "856c433ae48a669b325f9d77edd1d5d6f5f91c2c971016614a2c39105208efc4"
+    },
+    {
+      "path": "src/components/marketing-workers-page.tsx",
+      "sha256": "f43fefcd5d83022579fc121608009644f3d28eae2325b0583185cc38fad205b4"
+    },
+    {
+      "path": "src/components/marketing-workers.module.css",
+      "sha256": "ddec7c944f5e29cc9559d7d5108ae4cc47a17b0aa9bcef54188790eff84670ad"
+    },
+    {
+      "path": "src/components/marketing.module.css",
+      "sha256": "feb7662e82bfee7ccd7ac19cca1151720c4806f731c96e62a87a84eaf4e4ba58"
+    },
+    {
+      "path": "src/components/milo-demo.tsx",
+      "sha256": "8688c2fe6bb07e476d6850eac7623d916b5838c91cd3809a21384e9ede8aa99f"
+    },
+    {
+      "path": "src/components/milo-product-page.tsx",
+      "sha256": "813cd77e79a2e3a55e9d416e7af8e789d013a614269aba4a5a623396f6b5640e"
+    },
+    {
+      "path": "src/components/milo-product.module.css",
+      "sha256": "833d6019b15894656c92753f6299582a62b3c9214ffe22caa8dfdf9f5296802a"
+    },
+    {
+      "path": "src/components/milo-storefront-checkout.tsx",
+      "sha256": "c344bb4fb2b907a534db393e8e3bb184803e909f50214cce9aea0cec7657299a"
+    },
+    {
+      "path": "src/components/mobile-nav.tsx",
+      "sha256": "6cad560c8cfc9c13c9d1406273dd2f1e0877bb5c741321de4d2c43405404554c"
+    },
+    {
+      "path": "src/components/preview-strip.tsx",
+      "sha256": "74457b083d960af94d934a219b72fc6d6444e68f6a3962266452ba81ba69afc5"
+    },
+    {
+      "path": "src/components/product-demo.tsx",
+      "sha256": "c520d18a00375c02bcb6575efb83a4e8c7cf99912925be5270786ad061a2e16b"
+    },
+    {
+      "path": "src/components/region-info.module.css",
+      "sha256": "2b2081f9d1dc14313f9bb39ef35cc0f667eb0930ed0c277fe23f42837f28038f"
+    },
+    {
+      "path": "src/components/region-info.tsx",
+      "sha256": "9cd45adf06b22894c68ad5d0d96855d98c0e7b90b336d0267a53b6db9e1d2b72"
+    },
+    {
+      "path": "src/components/regional-assignment-selector.module.css",
+      "sha256": "2115794f946e55677abed20f2cb53c5c529a463751bbf14dfff64280e0edf27c"
+    },
+    {
+      "path": "src/components/regional-assignment-selector.tsx",
+      "sha256": "a455606d04b92b97254ef297ad4fd09262eec959c836889efc7eed56ad7ac8c5"
+    },
+    {
+      "path": "src/components/sales-audit-journey.module.css",
+      "sha256": "f4f150e6c21bd5280177fd9124d41016aa9edbf2900374e2e2ef67ec0bbe307e"
+    },
+    {
+      "path": "src/components/sales-audit-journey.tsx",
+      "sha256": "2819862daab1683fb071c474e7d46ef40d9611d4010f7773fdcb9c0790e9307c"
+    },
+    {
+      "path": "src/components/sales-growth-page.tsx",
+      "sha256": "0ea5a837d9bf89f2414261b2558d5464b61ceae0b45257394acb95df3b727b21"
+    },
+    {
+      "path": "src/components/sales-growth.module.css",
+      "sha256": "ff7aa278c0519372354f1ba4098a99fe01c06036fdf7d997e4b490b9895c9ee8"
+    },
+    {
+      "path": "src/components/sales-workers.module.css",
+      "sha256": "faca36115094ebdd4ef737c1b81326f14682dc775cb2a5a564ace3152f368fd8"
+    },
+    {
+      "path": "src/components/storefront.tsx",
+      "sha256": "37d292070d97e49c64ac7ef0541fd76b1e1b03e039372100e771bd9601ee2b98"
+    },
+    {
+      "path": "src/lib/agent-fit-audit.ts",
+      "sha256": "19d2880700dd4bb554d5d3bed3667eb0c3bff8757b5da763e8de93f91c80bbc2"
+    },
+    {
+      "path": "src/lib/catalog.ts",
+      "sha256": "a87ac068772a0f9122942bd527495c65c31ce37ea873b53a0c612670bcf913c2"
+    },
+    {
+      "path": "src/lib/email.server.ts",
+      "sha256": "f53b176bffe3ad9b4ad00b22ef9ec02d20add6c0b5e7d19c4f20bb8d512f3625"
+    },
+    {
+      "path": "src/lib/first-contact/fixtures.server.ts",
+      "sha256": "6d17d961ec852d0f725c7ca2b273a88162e7150e2aaf54daa71722f10262b5f6"
+    },
+    {
+      "path": "src/lib/first-contact/mailforge.server.ts",
+      "sha256": "7709077149632a85554231c9305665ad7ac699257ccf34d627a711ed41a770aa"
+    },
+    {
+      "path": "src/lib/first-contact/store.server.ts",
+      "sha256": "32bdc18975874c3caa39cb9973d7a7e14bc085d0f09a991c218ff7ffdeeb1d18"
+    },
+    {
+      "path": "src/lib/first-contact/tls-mail.server.ts",
+      "sha256": "015e83f3ad7089d76ed22e2ba7dd2a252138a4fc6a49ce8b9f4ee0d6629da80f"
+    },
+    {
+      "path": "src/lib/first-contact/types.ts",
+      "sha256": "777dfa39b77d3122126a788e68336231d5e517bcc15289afe4912323e048fe63"
+    },
+    {
+      "path": "src/lib/first-contact/worker.server.ts",
+      "sha256": "88ebe4e749fc9402f0aa19d544a346f245ed6beaa6b02408e68c8e491578799e"
+    },
+    {
+      "path": "src/lib/geographic-regions.ts",
+      "sha256": "c1d26695eed56ea8489846b7ea404818854cd63642fa660502eb6fd318830d55"
+    },
+    {
+      "path": "src/lib/marketing-catalog.ts",
+      "sha256": "38cca8ac8eff742cdbf88bea4352276db7e05f74644c7a320c9b9f7dd8d271b9"
+    },
+    {
+      "path": "src/lib/marketing-workers.ts",
+      "sha256": "8a52df713a08cf05093817bd8782edaedccdd27894722f8bbd9bbf56bf20e0f4"
+    },
+    {
+      "path": "src/lib/milo-assets.server.ts",
+      "sha256": "0b34cd36f845265b01a6c0a9b5dd2aa6c0d74f7d90746229b3a99eaf694aba82"
+    },
+    {
+      "path": "src/lib/milo-assignments.ts",
+      "sha256": "8924f3f85009b1173f80d92eb2a1f04c5f6f5efca4ff9688c5d4c9a970095822"
+    },
+    {
+      "path": "src/lib/milo-basket-checkout.server.ts",
+      "sha256": "58f91e36ed1566d297b17bc5bf0671802746eec4dcea3142774d506756fa81fc"
+    },
+    {
+      "path": "src/lib/milo-config.server.ts",
+      "sha256": "fc03fc6ec1dd8c695e683d84df809b361d49a0af8a57e53460ed3f3413c7b32b"
+    },
+    {
+      "path": "src/lib/milo-customer.server.ts",
+      "sha256": "dfeebd1a404bc32f763b6c2f9850755f1179316baadb0f48c12f1d013885be7f"
+    },
+    {
+      "path": "src/lib/milo-fulfillment.server.ts",
+      "sha256": "088e846a3871db1eefd1b114f43f74cb092f65e6f3b9473125f70e351f42f7f5"
+    },
+    {
+      "path": "src/lib/milo-http.server.ts",
+      "sha256": "d2abea0f9dd162f65c21517b1d3e663479de3157308c1ceb26f34fb0208125ca"
+    },
+    {
+      "path": "src/lib/milo-presentations.ts",
+      "sha256": "70c495b57ae6cd47c885a03a927991f0c6df09e8ad1f2181ec564b390f570084"
+    },
+    {
+      "path": "src/lib/milo-pricing.ts",
+      "sha256": "80a15766a9fbd4f9e31f991d8654393176f4e2fb5e4feb7c59255f4bfac35e9b"
+    },
+    {
+      "path": "src/lib/milo-projects-packages.server.json",
+      "sha256": "00e743e0a95f92df5d1ce0718c3166d103b96e1e74ce22fe60db33e1a1b13c56"
+    },
+    {
+      "path": "src/lib/milo-projects.ts",
+      "sha256": "e318011edc09af0aa4051946862d671a8d949498273c439ad6e6612056915009"
+    },
+    {
+      "path": "src/lib/milo-store.server.ts",
+      "sha256": "2d6eec63a15280b977fd3ed3b08854fe5337d688dcdedc22ab06fba2aaf16c3f"
+    },
+    {
+      "path": "src/lib/milo-storefront-http.server.ts",
+      "sha256": "8232224169a7ae6d73fca0c4c8fe60516414ebbf42591b8ac399b7aff04917f4"
+    },
+    {
+      "path": "src/lib/milo-v24-packages.server.json",
+      "sha256": "c3211a9f741dbb692af6410db705e0dc775b4ce91a55f85a208210b95a6ed935"
+    },
+    {
+      "path": "src/lib/sales-audit-booking.ts",
+      "sha256": "7f5a10ae3ed00e2965e8d00690d1fc5b6711e9fee89cffea01b04f2e9a59a36a"
+    },
+    {
+      "path": "src/lib/sales-audit-email.server.ts",
+      "sha256": "a1062c83dc157b933a5eaddeba3f34eceeb68972308a78d8135fde0fe438fe1e"
+    },
+    {
+      "path": "src/lib/sales-audit-http.server.ts",
+      "sha256": "72fbe7b68ea0c46c98135983f230422fa219127e67d3aa8ce74e8a60bc04f6bd"
+    },
+    {
+      "path": "src/lib/sales-audit-store.server.ts",
+      "sha256": "dfc35cd8e167018d8f27568f100d99c32f95a2b2a39ab3d2577691b43c500c61"
+    },
+    {
+      "path": "src/lib/sales-audit.ts",
+      "sha256": "a9a51bd61a5acb73cb1cef9e9ca5c2ee0d91872ccabcb51c0dcd0253c4d0c546"
+    },
+    {
+      "path": "src/lib/sales-catalog.ts",
+      "sha256": "74ebc9b99846b9733ff6e25cf895ba5d52dd6f7d4f8a6b36e43bce807d8481d2"
+    },
+    {
+      "path": "src/lib/sales-order.ts",
+      "sha256": "a4194ddf8f8062d2c0e5b9911b984ae641a3de760759f2392b4adc999be1eaea"
+    },
+    {
+      "path": "src/lib/stripe.server.ts",
+      "sha256": "17bf66ee8580dfffe05c72566a8707a7cec4193de50a13f325d5e29113e3576e"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "d88b60c515bc31b4e69138f4548c378268cb4b1c61e28f632194edf950d22d59"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "6a32c592ba91815bbc936e7c6dded12942b8f55d416ab0a663486e4396498a79"
+    }
+  ]
+}

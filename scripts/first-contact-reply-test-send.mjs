@@ -14,7 +14,7 @@ try {
       process.env.VERCEL_ENV === 'production' || process.env.NODE_TLS_REJECT_UNAUTHORIZED === '0') throw new Error('Local staging required');
   const env = parseEnv(readFileSync(envPath, 'utf8'));
   validateControlledConfig(env, 'reply');
-  const prior = suppressionDecision(priorSuppressionPath, REPLY_TEST.recipient, 'henrypaz.com', REPLY_TEST.key);
+  const prior = suppressionDecision(priorSuppressionPath, REPLY_TEST.recipient, 'example.net', REPLY_TEST.key);
   if (prior.recipientBlocked || prior.businessBlocked || prior.prospectBlocked) throw new Error('Existing suppression blocks this test');
   const outcome = await runControlledTest({ ledgerPath, env, variant: 'reply', send: async message => {
     const transport = nodemailer.createTransport({ host: env.FIRST_CONTACT_SMTP_HOST,

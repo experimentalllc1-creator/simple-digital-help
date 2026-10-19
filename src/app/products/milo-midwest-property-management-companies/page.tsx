@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { connection } from "next/server";
+import { publishedDiscoveryProducts } from "@/lib/sales-catalog";
+import { miloPresentations } from "@/lib/milo-presentations";
+import MiloProductPage from "@/components/milo-product-page";
+
+export const metadata: Metadata = { title: "Milo – Property Management Companies | Automated Prospect Discovery - Midwest Property Management Companies" };
+
+export default async function MiloPage() {
+  await connection(); // Evaluate purchase switches at request time, never at build time.
+  const product = publishedDiscoveryProducts.find((item) => item.slug === "milo-midwest-property-management-companies");
+  const presentation = product && miloPresentations[product.slug];
+  if (!product || !presentation) notFound();
+  return <MiloProductPage product={product} presentation={presentation} />;
+}

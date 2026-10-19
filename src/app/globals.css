@@ -1199,6 +1199,29 @@ section[id] {
   letter-spacing: -0.8px;
   margin-top: 28px;
 }
+.footer-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.footer-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--muted);
+  border-radius: var(--radius);
+}
+.footer-social-links a:hover {
+  color: var(--green);
+  background: var(--sage);
+}
+.footer-social-links a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

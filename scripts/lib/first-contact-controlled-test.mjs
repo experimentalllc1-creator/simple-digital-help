@@ -3,12 +3,12 @@ import { openSync, writeSync, fsyncSync, closeSync, readFileSync, mkdirSync } fr
 import { dirname, join } from 'node:path';
 import { suppressionDecision } from './first-contact-controlled-suppression.mjs';
 
-export const FROM = 'outreach@experimental-llc.com';
+export const FROM = 'staging-user@example.com';
 export const SUBJECT = 'Simple Digital Help First Contact Test';
 export const BODY = 'This is a controlled test of the Universal First Contact Agent. No action is required.';
 export const TEST_KEY = 'first-contact-one-email-controlled-test-v1';
 export const REPLY_TEST = Object.freeze({ key: 'first-contact-one-email-reply-test-v1',
-  recipient: 'henry@henrypaz.com', subject: 'Simple Digital Help Reply Test',
+  recipient: 'reply-recipient@example.net', subject: 'Simple Digital Help Reply Test',
   body: 'This is a controlled First Contact reply and opt-out test. Please reply with: Please remove me from your list.' });
 
 function testSpec(variant) {
@@ -40,7 +40,7 @@ export function validateControlledConfig(env, variant = 'original') {
   }
   for (const protocol of ['SMTP', 'IMAP']) {
     const prefix = `FIRST_CONTACT_${protocol}_`;
-    if (env[`${prefix}HOST`] !== 'gtxm1357.siteground.biz' || env[`${prefix}PORT`] !== (protocol === 'SMTP' ? '465' : '993') || !env[`${prefix}PASSWORD`]) {
+    if (env[`${prefix}HOST`] !== 'mail.example.com' || env[`${prefix}PORT`] !== (protocol === 'SMTP' ? '465' : '993') || !env[`${prefix}PASSWORD`]) {
       throw new Error('Controlled test configuration failed validation');
     }
   }
@@ -63,7 +63,7 @@ export async function runControlledTest({ ledgerPath, env, send, reconcile, vari
     if (error.code === 'EEXIST') return { result: 'duplicate-blocked', emailsSubmitted: 0 };
     throw new Error('Could not reserve controlled test ledger');
   }
-  const messageId = `<first-contact-controlled-${randomUUID()}@experimental-llc.com>`;
+  const messageId = `<first-contact-controlled-${randomUUID()}@example.com>`;
   const message = { from: FROM, to: env.FIRST_CONTACT_TEST_RECIPIENT,
     envelope: { from: FROM, to: [env.FIRST_CONTACT_TEST_RECIPIENT] },
     subject: spec.subject, text: spec.body, messageId };
