@@ -1,0 +1,6 @@
+import { accountSameOrigin } from "@/lib/customer-request.server";
+import { appOrigin } from "@/lib/milo-config.server";
+import { accountIdentity } from "@/lib/customer-auth.server";
+import { CustomerAccounts } from "@/lib/customer-accounts.server";
+import { auditPool } from "@/lib/sales-audit-store.server";
+export async function POST(request:Request){try{if(!accountSameOrigin(request))return new Response("Invalid origin",{status:403});const c=await accountIdentity(request.headers);if(!c)return new Response("Sign in required",{status:401});const raw=await request.text();if(raw.length>4000)return new Response("Request too large",{status:413});const f=new URLSearchParams(raw),name=(f.get("name")??"").trim();if(name.length>80)return new Response("Name too long",{status:400});await new CustomerAccounts().consent(c.id,f.get("marketing")==="yes","account-preferences");await auditPool().query("UPDATE milo_customer_profiles SET name=$2,updated_at=now() WHERE id=$1",[c.id,name]);return new Response(null,{status:303,headers:{Location:`${appOrigin()}/account/preferences?saved=1`,"Cache-Control":"no-store"}});}catch{return new Response("Could not save preferences. Please try again.",{status:503});}}

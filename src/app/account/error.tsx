@@ -1,0 +1,2 @@
+"use client";
+export default function Error({reset}:{reset:()=>void}){return <div className="page-width" style={{paddingBlock:64}}><h1>We couldn’t open your account just now</h1><p>Please try again. Your purchase history and original delivery emails are preserved.</p><button className="button" onClick={reset}>Try again</button><p>Need help? <a href="mailto:support@simpledigitalhelp.com">Contact support</a>.</p></div>;}

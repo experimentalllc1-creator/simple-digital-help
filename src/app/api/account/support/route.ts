@@ -1,0 +1,13 @@
+import { accountSameOrigin } from "@/lib/customer-request.server";
+import { appOrigin } from "@/lib/milo-config.server";
+import { accountIdentity } from "@/lib/customer-auth.server";
+import { CustomerAccounts } from "@/lib/customer-accounts.server";
+import { auditPool } from "@/lib/sales-audit-store.server";
+import { sendEmail, SUPPORT_EMAIL } from "@/lib/email.server";
+export async function POST(request:Request){try{if(!accountSameOrigin(request))return new Response("Invalid origin",{status:403});const c=await accountIdentity(request.headers);if(!c)return new Response("Sign in required",{status:401});const raw=await request.text();if(raw.length>18000)return new Response("Request too large",{status:413});const f=new URLSearchParams(raw),id=f.get("request_id")??"",message=(f.get("message")??"").trim();if(!/^[0-9a-f-]{36}$/.test(id)||message.length<10||message.length>4000)return new Response("Please enter your support question (10–4,000 characters).",{status:400});const [session,code]=JSON.parse(f.get("selection")??"null"),p=await new CustomerAccounts().purchase(c.id,process.env.STRIPE_MODE==="live",session),item=p?.items.find(i=>i.productCode===code);if(!p||!item)return new Response("Purchased Milo not found",{status:404});
+ const result=await auditPool().query(`INSERT INTO milo_support_requests(id,customer_id,session_id,product_code,release_version,message)
+ SELECT $1,$2,$3,$4,$5,$6 WHERE (SELECT count(*) FROM milo_support_requests WHERE customer_id=$2 AND created_at>now()-interval '1 hour')<5 ON CONFLICT(id) DO NOTHING RETURNING id`,[id,c.id,session,code,item.releaseVersion,message]);
+ if(!result.rows.length)return new Response("This request was already submitted, or the request limit was reached. Contact support by email if you need further help.",{status:429});
+ try{await sendEmail({to:SUPPORT_EMAIL,subject:`Milo support request ${id}`,text:`Customer: ${c.email}\nAccount: ${c.id}\nOrder: ${session}\nMilo: ${code}\nRegion: ${item.region}\nPackage: v${item.releaseVersion}\nPayment status: ${p.status}\n\n${message}`,idempotencyKey:`account-support/${id}`});await auditPool().query("UPDATE milo_support_requests SET emailed_at=now() WHERE id=$1",[id]);}catch{return new Response(`Your request ${id} was saved, but our email notification could not be confirmed. Please contact ${SUPPORT_EMAIL} and include this reference.`,{status:503,headers:{"Cache-Control":"no-store"}});}
+ return new Response(null,{status:303,headers:{Location:`${appOrigin()}/account/support-sent`,"Cache-Control":"no-store"}});
+ }catch{return new Response("Unable to send your request. Please email support@simpledigitalhelp.com.",{status:503});}}

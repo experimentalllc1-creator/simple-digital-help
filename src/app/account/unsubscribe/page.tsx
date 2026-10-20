@@ -1,0 +1,5 @@
+import { unsubscribeIdentity } from "@/lib/customer-accounts.server";
+import styles from "../account.module.css";
+export const dynamic="force-dynamic";
+export const metadata={title:"Email preferences",robots:{index:false,follow:false}};
+export default async function Unsubscribe({searchParams}:{searchParams:Promise<{token?:string;done?:string}>}){const p=await searchParams;let valid=false;try{valid=!!p.token&&!!unsubscribeIdentity(p.token);}catch{}return <div className={styles.shell}><h1>{p.done?"You’re unsubscribed":"Choose what reaches your inbox"}</h1>{p.done?<p>Promotional emails are disabled. Essential purchase, account, and support messages will continue.</p>:valid?<form action="/api/account/unsubscribe" method="post"><input type="hidden" name="token" value={p.token}/><p>Stop occasional promotional updates from Simple Digital Help.</p><button className="button">Unsubscribe</button></form>:<p>This unsubscribe link is invalid. You can also sign in to <a href="/account/preferences">manage your email preferences</a>.</p>}</div>;}

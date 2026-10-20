@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/storefront";
+import { accountsEnabled } from "@/lib/customer-accounts.server";
 import "./globals.css";
 export const metadata: Metadata = {
   title: {
@@ -20,7 +21,7 @@ export default function RootLayout({
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <Header />
+        <Header accountsEnabled={accountsEnabled()} />
         <main id="main">{children}</main>
         <Footer />
       </body>

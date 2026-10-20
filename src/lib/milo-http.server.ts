@@ -12,6 +12,8 @@ import { fulfillOrder, verifiedOrder, sessionAssignments } from "./milo-fulfillm
 import { storefrontPricingEnabled } from "./milo-storefront-http.server";
 import { processAuditSession, recordMiloRefund } from "./sales-audit-http.server";
 import { auditPool } from "./sales-audit-store.server";
+import { accountsEnabled, CustomerAccounts } from "./customer-accounts.server";
+import { recommendationAttribution } from "./customer-attribution.server";
 
 const defaults = { stripe: stripeClient, store: deliveryStore, attachments: miloAttachments, makeEmail: miloEmail, send: sendEmail };
 type Dependencies = typeof defaults;
@@ -70,6 +72,8 @@ export async function handleCheckout(request: Request, overrides: Partial<Depend
       { product: MILO_BASKET, version: MILO_VERSION, products: JSON.stringify(slugs),
         product_codes: JSON.stringify(assignments.map(item => item.productCode)), release_version: MILO_VERSION };
     if (Object.values(metadata).some(value => value && value.length > 500)) throw new Error("Discovery selection exceeds Stripe metadata limits");
+    const recommendation = await recommendationAttribution(request,slugs);
+    if (recommendation) metadata.recommendation_click_id = recommendation;
     const { version: _version, ...intentMetadata } = metadata;
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -81,7 +85,7 @@ export async function handleCheckout(request: Request, overrides: Partial<Depend
       automatic_tax: { enabled: false },
       metadata,
       payment_intent_data: { metadata: intentMetadata },
-      success_url: `${origin}/checkout/success${single && assignments[0].agentId === "builders" ? "/builders" : single && assignments[0].agentId === "building-materials-manufacturers" ? "/manufacturers" : single && assignments[0].agentId === "roofing" ? (slugs[0] === MILO_TX_SLUG ? "/texas" : slugs[0] === MILO_CA_SLUG ? "/california" : slugs[0] === MILO_NORTHEAST_SLUG ? "/northeast" : slugs[0] === MILO_SOUTHEAST_SLUG ? "/southeast" : slugs[0] === MILO_MIDWEST_SLUG ? "/midwest" : slugs[0] === MILO_SOUTHWEST_SLUG ? "/southwest" : slugs[0] === MILO_MOUNTAIN_WEST_SLUG ? "/mountain-west" : slugs[0] === MILO_PACIFIC_NORTHWEST_SLUG ? "/pacific-northwest" : "") : "/regions"}`,
+      success_url: `${origin}/checkout/success${single && assignments[0].agentId === "builders" ? "/builders" : single && assignments[0].agentId === "building-materials-manufacturers" ? "/manufacturers" : single && assignments[0].agentId === "roofing" ? (slugs[0] === MILO_TX_SLUG ? "/texas" : slugs[0] === MILO_CA_SLUG ? "/california" : slugs[0] === MILO_NORTHEAST_SLUG ? "/northeast" : slugs[0] === MILO_SOUTHEAST_SLUG ? "/southeast" : slugs[0] === MILO_MIDWEST_SLUG ? "/midwest" : slugs[0] === MILO_SOUTHWEST_SLUG ? "/southwest" : slugs[0] === MILO_MOUNTAIN_WEST_SLUG ? "/mountain-west" : slugs[0] === MILO_PACIFIC_NORTHWEST_SLUG ? "/pacific-northwest" : "") : "/regions"}${accountsEnabled() ? "?session_id={CHECKOUT_SESSION_ID}" : ""}`,
       cancel_url: `${origin}${single ? assignments[0].path : "/categories/sales"}`,
     }, { idempotencyKey: `milo-checkout/${randomUUID()}` });
     if (!session.url || new URL(session.url).origin !== "https://checkout.stripe.com") {
@@ -129,6 +133,10 @@ export async function handleWebhook(request: Request, overrides: Partial<Depende
     event = stripe.webhooks.constructEvent(await boundedBody(request), signature, secret);
   } catch { return response({ error: "Invalid webhook signature or body." }, 400); }
   if (event.livemode !== config.livemode) return response({ error: "Stripe mode mismatch." }, 400);
+  if (event.type === "charge.refunded" && accountsEnabled()) {
+    try { await new CustomerAccounts().refund(event.data.object); }
+    catch { return response({ error: "Refund reconciliation incomplete; retry required." }, 503); }
+  }
   if (event.type === "charge.refunded" && (storefrontPricingEnabled() || process.env.AUDIT_HISTORY_RECONCILED === "true")) {
     try { await recordMiloRefund(event.data.object); return response({ received: true }); }
     catch { return response({ error: "Refund reconciliation incomplete; retry required." }, 503); }
@@ -171,7 +179,12 @@ export async function handleWebhook(request: Request, overrides: Partial<Depende
     }
     const configs = sessionAssignments(session.metadata).map(item => paymentConfig(item.slug));
     const order = verifiedOrder(session, configs);
-    if (order) await fulfillOrder(order, deps.store(), deps.makeEmail, deps.send);
+    if (order) {
+      let purchaseFailed = false;
+      if (accountsEnabled()) await new CustomerAccounts().recordPurchase(session, order).catch(() => { purchaseFailed = true; });
+      await fulfillOrder(order, deps.store(), deps.makeEmail, deps.send);
+      if (purchaseFailed) throw new Error("Purchase ledger requires retry");
+    }
     return response({ received: true });
   } catch {
     // No exception/customer data in HTTP responses. Non-2xx keeps Stripe retries active.

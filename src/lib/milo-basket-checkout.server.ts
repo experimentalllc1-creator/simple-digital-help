@@ -13,11 +13,11 @@ async function stripeCustomer(order: MiloBasketOrder, stripe: Stripe) {
     await client.query("BEGIN");
     await client.query("SELECT pg_advisory_xact_lock(hashtext($1))", [`milo-stripe-customer/${order.livemode}/${order.email}`]);
     const profile = (await client.query("SELECT stripe_customer_id FROM milo_customer_profiles WHERE email=$1 AND livemode=$2", [order.email, order.livemode])).rows[0];
-    const customer = profile ? await stripe.customers.retrieve(profile.stripe_customer_id) : await stripe.customers.create({ email: order.email }, {
+    const customer = profile?.stripe_customer_id ? await stripe.customers.retrieve(profile.stripe_customer_id) : await stripe.customers.create({ email: order.email }, {
       idempotencyKey: `milo-customer/${order.livemode}/${createHash('sha256').update(order.email).digest('hex')}`,
     });
     if (customer.deleted || customer.email?.trim().toLowerCase() !== order.email || customer.livemode !== order.livemode) throw new Error("Customer identity mismatch");
-    if (!profile) await client.query("INSERT INTO milo_customer_profiles(email,livemode,stripe_customer_id) VALUES($1,$2,$3)", [order.email, order.livemode, customer.id]);
+    await client.query("INSERT INTO milo_customer_profiles(email,livemode,stripe_customer_id) VALUES($1,$2,$3) ON CONFLICT(email,livemode) DO UPDATE SET stripe_customer_id=EXCLUDED.stripe_customer_id", [order.email, order.livemode, customer.id]);
     await client.query("COMMIT");
     return customer.id;
   } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }

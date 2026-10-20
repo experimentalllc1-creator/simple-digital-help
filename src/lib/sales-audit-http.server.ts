@@ -1,4 +1,5 @@
 import "server-only";
+import { accountsEnabled, CustomerAccounts } from "./customer-accounts.server";
 import { createHmac, randomUUID, timingSafeEqual } from "node:crypto";
 import Stripe from "stripe";
 import type { PoolClient } from "pg";
@@ -171,6 +172,7 @@ export async function handleAudit(request: Request, overrides: Partial<typeof de
 export function tiersEnabled() { return false; }
 
 export async function recordMiloRefund(charge: Stripe.Charge) {
+  if (accountsEnabled()) await new CustomerAccounts().refund(charge);
   const intent = typeof charge.payment_intent === "string" ? charge.payment_intent : charge.payment_intent?.id;
   if (!intent) return;
   await withPaymentLock(intent, async client => {
@@ -259,8 +261,11 @@ export async function processAuditSession(session: Stripe.Checkout.Session, over
   } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
   if (refunded) return;
   const codes = (order.products as string[]).map(slug => miloAssignments.find(a => a.slug === slug)!.productCode);
+  let purchaseFailed = false;
+  if (accountsEnabled()) await new CustomerAccounts().recordPurchase(session, {sessionId:session.id,paymentIntentId:intentId,email,livemode:session.livemode,productCode:codes[0],productCodes:codes,releaseVersion:MILO_VERSION}, `audit-order/${order.id}`, {subtotal:order.quote.subtotalCents+order.quote.savingsCents,discount:order.quote.savingsCents+order.quote.creditCents,discounts:[{source:"existing-approved-quote",creditCents:order.quote.creditCents,savingsCents:order.quote.savingsCents}]}).catch(() => {purchaseFailed=true;});
   await deps.fulfill({ sessionId: `audit-order/${order.id}`, paymentIntentId: intentId, email, livemode: session.livemode, productCode: codes[0], productCodes: codes, releaseVersion: MILO_VERSION }, deps.delivery(),
     (to, sessionId, code, version) => auditMiloEmail(to, sessionId, code as string, version ?? MILO_VERSION, order.quote, codes.length));
+  if (purchaseFailed) throw new Error("Purchase ledger requires retry");
 }
 
 export async function handleAuditWebhook(request: Request, overrides: Partial<typeof defaults> = {}) {

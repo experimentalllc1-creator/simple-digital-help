@@ -56,7 +56,7 @@ export function Brand() {
     </Link>
   );
 }
-export function Header() {
+export function Header({ accountsEnabled = false }: { accountsEnabled?: boolean }) {
   return (
     <>
       <header className="site-header">
@@ -66,8 +66,9 @@ export function Header() {
             <Link href="/">Home</Link>
             <Link href="/categories/sales">Sales</Link>
             <Link href="/categories/marketing">Marketing &amp; Content</Link>
+              {accountsEnabled && <Link href="/account">My Milos</Link>}
           </nav>
-          <MobileNav />
+            <MobileNav accountsEnabled={accountsEnabled} />
         </div>
       </header>
     </>

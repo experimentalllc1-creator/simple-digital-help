@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { useRef } from "react";
 
-export default function MobileNav() {
+export default function MobileNav({ accountsEnabled = false }: { accountsEnabled?: boolean }) {
   const menu = useRef<HTMLDetailsElement>(null);
   const close = () => { if (menu.current) menu.current.open = false; };
   return (
@@ -19,6 +19,7 @@ export default function MobileNav() {
         <Link href="/">Home</Link>
         <Link href="/categories/sales">Sales</Link>
         <Link href="/categories/marketing">Marketing &amp; Content</Link>
+        {accountsEnabled && <Link href="/account">My Milos</Link>}
       </nav>
     </details>
   );

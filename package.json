@@ -16,6 +16,7 @@
     "test:milo": "node scripts/test-milo.mjs"
   },
   "dependencies": {
+    "better-auth": "1.7.12",
     "imapflow": "^2.2.5",
     "lucide-react": "^0.468.0",
     "mailparser": "^3.9.36",

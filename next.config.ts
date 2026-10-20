@@ -22,4 +22,15 @@ const miloDeliveryFiles = config.outputFileTracingIncludes!["/api/webhooks/strip
 for (const route of ["/api/sales-audit", "/api/webhooks/sales-audit", "/api/checkout/milo-cart"]) {
   config.outputFileTracingIncludes![route] = [...miloDeliveryFiles];
 }
+// Account responses and checkout session identifiers must not be cached or leaked in referrers.
+const previousHeaders = config.headers;
+config.headers = async () => [
+  ...(previousHeaders ? await previousHeaders() : []),
+  ...["/account/:path*", "/api/account/:path*", "/api/auth/:path*", "/checkout/success/:path*"].map(source => ({source,headers:[
+    {key:"Cache-Control",value:"private, no-store"},
+    {key:"Referrer-Policy",value:"no-referrer"},
+    {key:"X-Robots-Tag",value:"noindex, nofollow"},
+    {key:"X-Content-Type-Options",value:"nosniff"},
+  ]})),
+];
 export default config;
