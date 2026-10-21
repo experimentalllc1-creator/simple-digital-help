@@ -1,169 +1,137 @@
 # Privacy Policy
 
-**Simple Digital Help**
+Simple Digital Help · Operated by Experimental LLC
 
-*Operated by Experimental LLC*
+Effective date: October 21, 2026 · Last updated: October 21, 2026
 
-**Effective Date:** May 2, 2026
+## Summary
 
-**Last Updated:** April 27, 2026
+- We collect only what we need to run our store, deliver your purchases and support you: your name, email, purchases, support messages and communication preferences.
+- Accounts are optional and use passwordless email sign-in. We don't ask you to create a password.
+- Your Milo runs in your own ChatGPT and Google accounts. We do not receive your ChatGPT conversations, your Google data, or the prospects your Milo finds.
+- Stripe handles your payment. We never receive your full card number.
+- We do not sell your personal information or use it for targeted advertising.
+- Marketing emails are optional, and you can unsubscribe at any time.
 
-## 1. In Plain Language (Summary)
+The full policy below controls.
 
-This Privacy Policy explains what information we collect about you when you use Simple Digital Help, how we use it, who we share it with, and what rights you have. Here's the short version:
+## 1. Who we are
 
-- We collect the information you give us (account details, business information you share with Morgan) and basic technical information about your use of the Service.
-- We use it to deliver the Service, process your payment, and improve what we offer.
-- We share it with the service providers we rely on to operate (listed in Section 5), and only to the extent they need it.
-- We do not sell your personal information.
-- You can contact us at support@simpledigitalhelp.com to see, change, or delete your information.
+This policy covers simpledigitalhelp.com and the products sold there (the “Service”). The Service is operated by Experimental LLC, a Florida limited liability company (“we,” “us,” or “our”). The Service is offered in the United States, and we store information in the United States. Our contact details are in Section 11.
 
-Full details follow below. The summary is for convenience only and does not replace the full Policy.
+## 2. Information we collect
 
-## 2. Who We Are
+We collect the information reasonably necessary to operate our online store, fulfill purchases, provide customer support and maintain optional customer accounts.
 
-"We," "us," and "our" refer to Experimental LLC, a Florida limited liability company operating the Simple Digital Help service. Our contact information is in Section 12.
+| What | Examples | Where it comes from |
+| --- | --- | --- |
+| Contact and account | Name, email address, and business name if you provide it | You |
+| Purchases | Products bought, price, order number, purchase date, refunds | You and Stripe |
+| Payment (limited) | Transaction and payment-status details that Stripe shares with us. Never the full card number | Stripe |
+| Support | Your messages, and any screenshots or files you choose to send | You |
+| Communication preferences | Whether you subscribed to marketing emails, and any unsubscribe request | You |
+| Technical | IP address, browser and device type, pages requested, date and time, error logs | Your browser, automatically |
 
-## 3. What Information We Collect
+Accounts are optional. We deliver installation materials by email. You may create an account to see your purchase history and available installation files. Accounts use passwordless authentication through secure email sign-in links, so we do not ask you to create a password.
 
-### 3.1 Information You Provide Directly
+Payments. Stripe processes payments. We do not receive or store complete payment card numbers.
 
-**Account information:** When you create an account, we collect your email address and a password (stored in hashed form, never in plain text).
+What we do not collect. We do not receive any of the following:
 
-**Business information:** During the diagnostic, you share information about your business with Morgan. This may include revenue figures, customer information, operational details, team structure, pricing, and other business data. We refer to this as "Diagnostic Content."
+- your ChatGPT or Google passwords;
+- your ChatGPT conversations;
+- the contents of your Google account; or
+- the spreadsheet and prospect information your Milo creates.
 
-**Payment information:** When you purchase the diagnostic, our payment processor (Stripe) collects your payment card details. We do not store your full card number. We receive a limited record of the transaction (amount, last four digits of the card, transaction ID).
+That information stays in your accounts, where OpenAI's and Google's terms and your own settings govern it. The only exception is anything you choose to send our support team.
 
-**Communications:** If you contact us for support, we keep a record of that communication.
+## 3. How we use your information
 
-### 3.2 Information Collected Automatically
+We use it to:
 
-**Technical information:** When you visit the Service, we automatically collect your IP address, browser type, device type, operating system, the pages you visit, and the time of your visit.
+- fulfill purchases and deliver installation materials and product updates;
+- maintain your optional account;
+- process payments, refunds and billing questions, and keep tax and accounting records;
+- send transactional and service messages, such as receipts, delivery emails and sign-in links;
+- answer support requests;
+- send marketing emails, but only if you subscribed;
+- keep the site secure, prevent fraud and fix problems; and
+- comply with the law and enforce our Terms of Service.
 
-**Analytics:** We use Google Analytics 4 ("GA4") to understand how users interact with the Service. GA4 collects information such as pages viewed, time spent, referral source, approximate geographic location (derived from IP address), and interaction events. IP addresses are anonymized before storage. GA4 is provided by Google LLC and is governed by Google's Privacy Policy.
+We do not use your information to train AI models.
 
-**Cookies:** See Section 8 for details about cookies and similar technologies.
+## 4. Who we share it with
 
-### 3.3 Information From Third Parties
+We share information only with the providers that help us run the business, and only what each one needs:
 
-**Referral codes:** If you arrive at the Service via an affiliate referral link, we receive and store the referral code associated with the link so we can credit the referring representative.
+| Provider | What they do for us |
+| --- | --- |
+| Stripe | Payment processing |
+| Neon | Database hosting for accounts and orders |
+| Vercel | Website hosting and server logs |
+| Resend | Sending account, service and marketing emails |
 
-## 4. How We Use Your Information
+We may also disclose information in three situations:
 
-We use the information described above to:
+- when the law or legal process requires it;
+- to protect rights, property or safety; or
+- as part of a merger, acquisition or sale of the business. In that case, this policy continues to apply unless we notify you otherwise.
 
-- Create and maintain your account and authenticate you when you log in.
-- Deliver the diagnostic conversation and generate your findings and action plan.
-- Process your payment and handle refunds.
-- Send you transactional emails (account verification, password reset, purchase confirmation).
-- Respond to your support requests.
-- Credit affiliate representatives for referrals that lead to purchases.
-- Monitor the health of the Service, detect abuse, and troubleshoot problems.
-- Improve the Service — but only in aggregated and de-identified form. We do not train AI models on your individual Diagnostic Content.
-- Comply with legal obligations and enforce our Terms.
+We do not sell your personal information. We do not share it for cross-context behavioral (targeted) advertising.
 
-## 5. Who We Share Your Information With
+## 5. Cookies
 
-We share your information with the following categories of third parties, only as needed to operate the Service:
+We use cookies that the site needs to work, such as those that keep you signed in and complete purchases. Stripe may set its own cookies during checkout to prevent fraud.
 
-### 5.1 Service Providers
+We do not use cookies for targeted advertising. If we add analytics or advertising tools, we will update this policy first and ask for your consent where the law requires.
 
-**Anthropic, PBC:** Diagnostic Content is sent to Anthropic's AI service (Claude) to generate Morgan's responses. Anthropic processes this data on our behalf and is contractually prohibited from training models on this data under its API terms.
+## 6. Marketing emails
 
-**Supabase, Inc.:** Hosts our database, user authentication, and file storage.
+You may choose to receive occasional emails about new Milo products, improvements, resources and special offers.
 
-**Stripe, Inc.:** Processes payments. Stripe is a PCI-DSS Level 1 certified payment processor and handles card data directly.
+This subscription is optional. You don't need it to buy products, create an account, receive installation materials or get support.
 
-**Resend, Inc.:** Sends transactional emails on our behalf.
+You can change your marketing preferences through your account, when available, or unsubscribe using the link in any marketing email. We honor unsubscribe requests within 10 business days. Unsubscribing does not stop essential transactional or service messages.
 
-**Vercel, Inc.:** Hosts the web application.
+We keep records of marketing preferences and unsubscribe requests so we can respect your choices.
 
-**Google LLC:** Provides GA4 analytics.
+## 7. How long we keep it
 
-### 5.2 Affiliate Representatives
+We keep personal information only as long as we need it for the purposes in this policy.
 
-If you purchase the Service after being referred by an affiliate representative, we share with that representative (a) the fact of your purchase and (b) the applicable commission. We do not share your identity or Diagnostic Content with the representative. The representative receives only what is required to calculate and pay their commission.
+- Account and purchase records: while your account is open or you hold an active Milo license. We keep them longer where needed to handle refunds, disputes or support.
+- Payment and tax records: as long as tax and accounting laws require.
+- Support messages: as long as needed to resolve your request and keep a reasonable support history.
+- Marketing preferences: we keep a record of each unsubscribe request so we can keep honoring it.
+- Server logs: our hosting provider keeps them for limited periods.
 
-### 5.3 Legal Compliance
+When we no longer need information, we delete or anonymize it. Where that isn't practical, we store it securely and limit its use.
 
-We may disclose your information if required by law, valid legal process, or to protect the rights, property, or safety of the Company, our users, or the public. We do not voluntarily disclose user information to government authorities without valid legal process.
+## 8. Your choices and rights
 
-### 5.4 Business Transfers
+To do any of the following, write to support@simpledigitalhelp.com:
 
-If we are acquired, merged, or our assets are sold, your information may be transferred as part of that transaction. We will notify you of any such transfer and of any meaningful change to how your information is handled.
+- access your personal information;
+- correct it;
+- delete it; or
+- stop marketing emails.
 
-### 5.5 What We Do Not Do
+We will verify your identity and respond within 30 days. We may keep records that the law requires us to keep, such as tax records.
 
-We do not sell your personal information. We do not share your Diagnostic Content with advertisers, data brokers, or any third party other than those listed in this Section.
+Some states give their residents additional privacy rights. Where those laws apply to us, we will honor them. We will not treat you differently for making a request.
 
-## 6. How Long We Keep Your Information
-
-**Account information:** For as long as your account is active, plus up to 12 months after you close your account, unless a longer retention is required by law.
-
-**Diagnostic Content and findings:** For as long as your account is active. You may request deletion at any time (see Section 7). After account closure, we retain your findings artifact indefinitely so you can recover it if you return; raw conversation transcripts are eligible for deletion 12 months after account closure.
-
-**Payment records:** We retain payment records for at least seven years to comply with tax and accounting obligations under U.S. federal and Florida state law.
-
-**Analytics data:** GA4 data is retained for 14 months, then automatically deleted, except where aggregated into longer-term reports.
-
-**Support communications:** For up to three years after the last interaction, then deleted or archived.
-
-## 7. Your Rights Over Your Information
-
-Depending on where you live, you may have some or all of the following rights:
-
-- Access — see what personal information we have about you.
-- Correction — ask us to fix information that is wrong.
-- Deletion — ask us to delete your information (some records may be retained to comply with legal obligations).
-- Portability — receive a copy of your information in a machine-readable format.
-- Opt out of analytics — see Section 8.
-- Non-discrimination — we will not treat you differently for exercising any of these rights.
-
-To exercise any of these rights, contact us at support@simpledigitalhelp.com. We will respond within 30 days (or as required by the law that applies to you).
-
-**California residents (CCPA/CPRA):** You have additional rights under California law, including the right to know the categories of personal information we collect, the sources of that information, the business purposes for which we use it, and the categories of third parties with whom we share it. This Policy describes each of those. You have the right to opt out of any "sale" or "sharing" of your information; we do not sell or share your information as those terms are defined under California law.
-
-**Residents of other jurisdictions:** If you are located in the European Union, European Economic Area, or United Kingdom, you may have rights under the General Data Protection Regulation (GDPR) or equivalent legislation, including the right to access, correct, erase, restrict, or object to the processing of your personal data, and the right to data portability. Our legal basis for processing your personal data is typically the performance of our contract with you (delivering the Service) or our legitimate interests in operating and improving the Service. To exercise your rights, contact us at support@simpledigitalhelp.com. If you are not satisfied with our response, you have the right to lodge a complaint with your local data protection authority.
-
-**Residents of Latin America:** The Service is offered in select Latin American countries. If you are located in Mexico, Guatemala, Honduras, Ecuador, or another Latin American country with applicable data protection legislation, you have the right to access, correct, cancel, and oppose the processing of your personal data (commonly referred to as ARCO rights). To exercise these rights, contact us at support@simpledigitalhelp.com. We will respond within 30 days. We do not transfer your personal data to third parties outside of the service providers listed in Section 5, and we do not sell your data.
-
-## 8. Cookies and Similar Technologies
-
-When you visit the Service, we and our service providers may place small data files ("cookies") on your device. We use cookies for the following purposes:
-
-**Strictly necessary cookies:** Required to operate the Service — for example, to keep you logged in. These cannot be disabled without breaking the Service.
-
-**Analytics cookies:** Set by Google Analytics to help us understand aggregate usage patterns. These are optional.
-
-**Attribution cookie:** If you arrive via an affiliate referral link, we store the referral code in a cookie so we can credit the referring representative if you purchase. This cookie persists for 30 days.
-
-On your first visit, you will see a cookie consent banner asking whether you want to accept analytics cookies. Strictly necessary cookies and the attribution cookie are always active; analytics cookies only activate with your consent. You can change your preferences at any time by clicking the "Cookie preferences" link in the footer of any page of the Service, by clearing your browser cookies, or by contacting us at support@simpledigitalhelp.com.
-
-**Opting out of Google Analytics directly:** You can install Google's official opt-out browser add-on at https://tools.google.com/dlpage/gaoptout.
+If your business appears in a customer's spreadsheet. Milos research public business information inside our customers' own accounts, and we do not keep that information. We cannot see or change our customers' spreadsheets. If your business appears in one, please contact that customer directly.
 
 ## 9. Security
 
-We take reasonable administrative, technical, and physical safeguards to protect your information. Passwords are stored in hashed form. Connections to the Service are encrypted using TLS. Our service providers (Supabase, Stripe, and others) maintain their own industry-standard security practices.
+We use reasonable safeguards, including encrypted (TLS) connections, passwordless sign-in and limits on who can access data. No system is perfectly secure. If a breach affects your personal information, we will notify you as the law requires.
 
-No system is perfectly secure. If we learn of a security breach that affects your personal information, we will notify you as required by applicable law.
+## 10. Children
 
-## 10. Children's Privacy
+The Service is for businesses and is not directed to anyone under 18. We do not knowingly collect information from children. If you believe we have, contact us and we will delete it.
 
-The Service is not directed to children under 18, and we do not knowingly collect information from children under 18. If you believe we have collected information from a child, contact us at support@simpledigitalhelp.com and we will delete it.
+## 11. Changes and contact
 
-## 11. International Users
+When we update this policy, we will post the new version here and change the “Last updated” date. For material changes, we will email account holders, or post a notice on the site, at least 15 days before the changes take effect.
 
-The Service is operated from the United States. If you access the Service from outside the United States, your information will be transferred to, stored in, and processed in the United States. U.S. privacy laws may differ from those in your country. By using the Service, you consent to this transfer.
-
-## 12. Changes to This Policy
-
-We may update this Privacy Policy from time to time. If we make a material change, we will notify you by email (to the address associated with your account) or by posting a prominent notice in the Service at least 15 days before the change takes effect. The "Last Updated" date at the top of this Policy indicates the latest revision.
-
-## 13. Contact Us
-
-Questions about this Privacy Policy, or requests to exercise your rights? Contact us at:
-
-Experimental LLC
-1150 Malabar Rd STE 111 Box #171
-Palm Bay, FL 32907
-support@simpledigitalhelp.com
+Experimental LLC (Simple Digital Help) 1150 Malabar Rd STE 111 Box #171, Palm Bay, FL 32907 support@simpledigitalhelp.com

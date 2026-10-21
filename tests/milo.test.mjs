@@ -43,7 +43,7 @@ function webhook({ eventId = "evt_local", type = "checkout.session.completed", s
   });
 }
 function checkout(origin = process.env.APP_URL, body = "") {
-  return new Request(`${process.env.APP_URL}/api/checkout/milo`, { method: "POST", headers: { origin }, body });
+  return new Request(`${process.env.APP_URL}/api/checkout/milo`, { method: "POST", headers: { origin }, body: new URLSearchParams({legalAccepted:"true",termsVersion:"2026-10-21",untrusted:body}) });
 }
 
 test("Milo payment and durable fulfillment", async t => {
@@ -82,7 +82,7 @@ test("Milo payment and durable fulfillment", async t => {
       const result = await handleCheckout(checkout(undefined, JSON.stringify({ price: "price_evil", amount: 1, success_url: "https://attacker.test" })), deps);
       assert.equal(result.status, 303); assert.equal(created, 1);
       assert.deepEqual(checkoutParams.line_items, [{ price: "price_milo", quantity: 1 }]);
-      assert.deepEqual(checkoutParams.metadata, { product: "milo-florida-roofing-contractors", version: "2.4", product_code: "PD-ROOF-FL", release_version: "2.4" });
+      assert.deepEqual(Object.fromEntries(Object.entries(checkoutParams.metadata).filter(([k])=>!k.startsWith('terms_')&&!k.startsWith('legal_'))), { product: "milo-florida-roofing-contractors", version: "2.4", product_code: "PD-ROOF-FL", release_version: "2.4" });
       assert.equal(checkoutParams.payment_intent_data.metadata.product_code, "PD-ROOF-FL");
       assert.equal(checkoutParams.payment_intent_data.metadata.release_version, "2.4");
       assert.equal(checkoutParams.mode, "payment"); assert.equal(checkoutParams.allow_promotion_codes, false);

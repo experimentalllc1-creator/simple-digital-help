@@ -1,4 +1,6 @@
 "use client";
+import { LegalAcceptance } from "./legal-acceptance";
+import { TERMS_VERSION } from "@/lib/legal-version";
 import { useEffect, useState } from "react";
 import { miloAssignments } from "@/lib/milo-assignments";
 import { salesWorkers } from "@/lib/sales-order";
@@ -13,6 +15,7 @@ async function api(input?: object) {
 }
 function label(slug: string) { const a = miloAssignments.find(a => a.slug === slug)!; return `${salesWorkers.find(w => w.id === a.agentId)!.customerType} — ${a.region}`; }
 export default function MiloStorefrontCheckout() {
+  const [accepted, setAccepted] = useState(false);
   const checkout = useCheckoutTab();
   const [state, setState] = useState<State | null>(null); const [selected, setSelected] = useState<string[]>([]); const [email, setEmail] = useState("");
   const [error, setError] = useState(""); const [notice, setNotice] = useState(""); const [busy, setBusy] = useState(false);
@@ -49,7 +52,8 @@ export default function MiloStorefrontCheckout() {
       <label>Add an assignment <select style={{maxWidth:"100%",width:"100%"}} value="" disabled={selected.length >= 100} onChange={event => { if (event.target.value) update([...selected, event.target.value]); }}><option value="">Choose a Milo</option>{miloAssignments.filter(a => a.available && !selected.includes(a.slug)).map(a => <option key={a.slug} value={a.slug}>{label(a.slug)}</option>)}</select></label>
       {quote && <div aria-live="polite"><p>Selected Milos: {selected.length}</p><p>Total: {money(quote.subtotalCents)}</p>{quote.savingsCents > 0 && <p>You save {money(quote.savingsCents)}</p>}{quote.creditCents > 0 && <p>One-time Audit credit: −{money(quote.creditCents)} (recommended assignments only)</p>}<strong>Net checkout total: {money(quote.totalCents)}</strong></div>}
       <p>Payment and final eligibility are validated on the server. Each assignment receives its own installation prompt and guide.</p>
-      <button className="button button-dark" style={{maxWidth:"100%",whiteSpace:"normal"}} disabled={busy || !selected.length || !state?.verified} onClick={() => run(async () => { await checkout.open(async () => (await api({ action: "checkout", slugs: selected })).url); })}>Continue to secure Stripe checkout</button>
+      <LegalAcceptance checked={accepted} onChange={setAccepted} />
+      <button className="button button-dark" style={{maxWidth:"100%",whiteSpace:"normal"}} disabled={!accepted || busy || !selected.length || !state?.verified} onClick={() => run(async () => { await checkout.open(async () => (await api({ action: "checkout", slugs: selected, legalAccepted: accepted, termsVersion: TERMS_VERSION })).url); })}>Continue to secure Stripe checkout</button>
       <CheckoutStatus checkout={checkout} />
       {state?.orderStatus === "pending" && <button className="button button-dark" disabled={busy} onClick={() => run(async () => { await api({ action: "cancel" }); setState(await api()); })}>Cancel pending checkout to change selection</button>}
       {state?.orderStatus && <p role="status">{state.orderStatus === "delivered" ? "Your installation packages have been sent." : state.orderStatus === "delivery_pending" ? "Payment confirmed. Delivery is pending and will retry." : `Order status: ${state.orderStatus}`}</p>}

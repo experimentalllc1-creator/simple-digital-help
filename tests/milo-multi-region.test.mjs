@@ -35,7 +35,7 @@ const paid = {
 };
 const sdk = new Stripe("sk_test_local_only");
 function checkout(selected = slugs) {
-  const form = new URLSearchParams(); selected.forEach(slug => form.append("product", slug));
+  const form = new URLSearchParams({legalAccepted:"true",termsVersion:"2026-10-21"}); selected.forEach(slug => form.append("product", slug));
   return new Request(`${process.env.APP_URL}/api/checkout/milo`, { method: "POST", headers: { origin: process.env.APP_URL }, body: form });
 }
 function webhook(type = "checkout.session.completed") {

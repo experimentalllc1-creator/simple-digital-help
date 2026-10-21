@@ -56,7 +56,7 @@ for(const selected of [[manufacturer],[miloAssignments.find(a=>a.productCode==='
    for(const file of ['001_milo_deliveries.sql','002_milo_identity.sql','003_milo_product_codes.sql'])await db.exec(await readFile('db/migrations/'+file,'utf8'));
    const store=new DeliveryStore(db);let params,session;const sends=[];
    const deps={store:()=>store,stripe:()=>({webhooks:sdk.webhooks,prices:{retrieve:async id=>prices[id]},checkout:{sessions:{create:async p=>{params=p;return {url:'https://checkout.stripe.com/c/pay/test'};},retrieve:async()=>session}}}),send:async msg=>{sends.push(structuredClone(msg));return {id:'12345678-1234-1234-1234-123456789abc'};}};
-   const form=new URLSearchParams();selected.forEach(a=>form.append('product',a.slug));
+   const form = new URLSearchParams({legalAccepted:"true",termsVersion:"2026-10-21"});selected.forEach(a=>form.append('product',a.slug));
    const response=await handleCheckout(new Request(process.env.APP_URL+'/api/checkout/milo',{method:'POST',headers:{origin:process.env.APP_URL},body:form}),deps);assert.equal(response.status,303);
    assert.deepEqual(params.line_items,selected.map(a=>({price:process.env[a.priceEnv],quantity:1})));assert.equal(params.metadata.version,'2.4');assert.equal(params.success_url,process.env.APP_URL+'/checkout/success/'+(selected.length===1?'manufacturers':'regions'));
    session=paid(selected,params.metadata,`cs_bmm_${selected.length}`);

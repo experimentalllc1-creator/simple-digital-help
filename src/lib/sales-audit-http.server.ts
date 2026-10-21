@@ -1,4 +1,5 @@
 import "server-only";
+import { hasLegalAcceptance } from "./legal-acceptance.server";
 import { accountsEnabled, CustomerAccounts } from "./customer-accounts.server";
 import { createHmac, randomUUID, timingSafeEqual } from "node:crypto";
 import Stripe from "stripe";
@@ -74,6 +75,7 @@ export async function handleAudit(request: Request, overrides: Partial<typeof de
     }
     if (request.headers.get("origin") !== appOrigin()) return json({ error: "Invalid origin." }, 403);
     const input = await body(request);
+    if (input.action === "checkout" && !hasLegalAcceptance(input)) return json({ error: "Please accept the current Terms of Service and acknowledge the Privacy Policy and Product & AI Disclaimers." }, 400);
     if (input.action === "restore") {
       const id = typeof input.token === "string" ? tokenAuditId(input.token) : undefined;
       const audit = id ? await getAudit(id) : undefined;
@@ -149,7 +151,7 @@ export async function handleAudit(request: Request, overrides: Partial<typeof de
         }
         await client.query("COMMIT");
       } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
-      return json({ url: await checkoutMiloBasket(order, deps.stripe(), deps.attachments) });
+      return json({ url: await checkoutMiloBasket(order, deps.stripe(), deps.attachments, input) });
     }
     if (input.action === "cancel") {
       const orders = await auditPool().query("SELECT * FROM sales_audit_orders WHERE audit_id=$1 AND source='audit' AND status='pending'", [audit.id]);

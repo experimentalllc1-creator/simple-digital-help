@@ -1,4 +1,5 @@
 import "server-only";
+import { hasLegalAcceptance, acceptanceMetadata } from "./legal-acceptance.server";
 import type Stripe from "stripe";
 import { randomUUID } from "node:crypto";
 import { appOrigin, checkoutEnabled, deliveryEnabled, MILO_AMOUNT, MILO_CURRENCY,
@@ -28,16 +29,18 @@ export async function handleCheckout(request: Request, overrides: Partial<Depend
     const origin = appOrigin();
     // Ignore supplied amounts, prices, recipients and redirect URLs. Only accept same-origin POSTs.
     if (request.headers.get("origin") !== origin) return response({ error: "Invalid origin." }, 403);
-    // Existing empty/bodyless Florida requests remain valid; forms select a known assignment only.
+    let acceptance: { legalAccepted?: unknown; termsVersion?: unknown } = {};
     let slugs = [MILO_SLUG];
     if (/^(application\/x-www-form-urlencoded|multipart\/form-data)/i.test(request.headers.get("content-type") ?? "")) {
       const form = await request.formData();
+      acceptance = { legalAccepted: form.get("legalAccepted"), termsVersion: form.get("termsVersion") };
       const selections = form.getAll("product");
       if (selections.some(value => typeof value !== "string")) {
         return response({ error: "Select available Discovery assignments." }, 400);
       }
       if (selections.length) slugs = selections as string[];
     }
+    if (!hasLegalAcceptance(acceptance)) return response({ error: "Please accept the current Terms of Service and acknowledge the Privacy Policy and Product & AI Disclaimers." }, 400);
     if (slugs.length > 100 || new Set(slugs).size !== slugs.length || slugs.some(slug =>
       !miloAssignments.some(item => item.slug === slug && item.available))) {
       return response({ error: "Unavailable or duplicate Discovery assignment." }, 400);
@@ -72,6 +75,7 @@ export async function handleCheckout(request: Request, overrides: Partial<Depend
       { product: MILO_BASKET, version: MILO_VERSION, products: JSON.stringify(slugs),
         product_codes: JSON.stringify(assignments.map(item => item.productCode)), release_version: MILO_VERSION };
     if (Object.values(metadata).some(value => value && value.length > 500)) throw new Error("Discovery selection exceeds Stripe metadata limits");
+    Object.assign(metadata, acceptanceMetadata());
     const recommendation = await recommendationAttribution(request,slugs);
     if (recommendation) metadata.recommendation_click_id = recommendation;
     const { version: _version, ...intentMetadata } = metadata;

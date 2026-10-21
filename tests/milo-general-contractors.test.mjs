@@ -78,7 +78,7 @@ test('General Contractors-only and mixed orders use one payment and isolated rep
       const deps = {store:()=>store, stripe:()=>({webhooks:sdk.webhooks,prices:{retrieve:async id=>prices[id]},checkout:{sessions:{
         create:async value=>{params=value;creates++;return {url:'https://checkout.stripe.com/c/pay/test'};}, retrieve:async()=>session,
       }}}), send:async message=>{sent.push(structuredClone(message));return {id:'12345678-1234-1234-1234-123456789abc'};} };
-      const form = new URLSearchParams(); state.productSlugs.forEach(slug=>form.append('product',slug));
+      const form = new URLSearchParams({legalAccepted:"true",termsVersion:"2026-10-21"}); state.productSlugs.forEach(slug=>form.append('product',slug));
       const request = new Request(process.env.APP_URL+'/api/checkout/milo',{method:'POST',headers:{origin:process.env.APP_URL},body:form});
       assert.equal((await handleCheckout(request,deps)).status,303); assert.equal(creates,1);
       assert.deepEqual(params.line_items,selected.map(a=>({price:process.env[a.priceEnv],quantity:1})));

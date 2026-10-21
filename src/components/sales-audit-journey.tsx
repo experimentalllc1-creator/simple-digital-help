@@ -1,4 +1,6 @@
 "use client";
+import { LegalAcceptance } from "./legal-acceptance";
+import { TERMS_VERSION } from "@/lib/legal-version";
 import { useEffect, useState } from "react";
 import { auditTargets, auditBasket, matchSalesAudit, type Recommendation, type AuditAnswers } from "@/lib/sales-audit";
 import { geographicRegions } from "@/lib/geographic-regions";
@@ -22,6 +24,7 @@ export function AuditPurchase({ enabled }: { enabled: boolean }) {
   }}>Purchase Agent Fit Audit — $199</button><p>{enabled ? "One-time secure Stripe checkout." : "Purchase is awaiting launch approval."}</p><CheckoutStatus checkout={checkout} /></div>;
 }
 export function SalesAuditJourney({ free = false, miloCheckoutEnabled = false }: { free?: boolean; miloCheckoutEnabled?: boolean }) {
+  const [accepted, setAccepted] = useState(false);
   const [state, setState] = useState<State | null>(free ? { report: null, answers: null, deliveredAt: null, creditEligible: false, refundStatus: "none", owned: [], tiersEnabled: false, identityVerified: false, bookingUrl: null, orderStatus: null } : null); const [error, setError] = useState(""); const [busy, setBusy] = useState(false);
   const [targets, setTargets] = useState<string[]>([]); const [regions, setRegions] = useState<string[]>([]); const [newYork, setNewYork] = useState<boolean | undefined>();
   const [selected, setSelected] = useState<string[]>([]);
@@ -84,10 +87,11 @@ export function SalesAuditJourney({ free = false, miloCheckoutEnabled = false }:
           {!free && <p>{state.creditEligible ? "One $99 credit is available for recommended agents until 30 days after Audit delivery. It is used only on a successful purchase." : "Audit credit is used, expired, or has less than 31 minutes remaining to complete secure checkout. No credit is applied."}</p>}
           {!free && <p>Every Milo costs $99, regardless of quantity or purchase history.</p>}
           {!free && !state.identityVerified && <p>Open the private access link in your Audit purchase email to verify your identity and purchase recommended Milos.</p>}
+          {!free && <LegalAcceptance checked={accepted} onChange={setAccepted} />}
           {free ? <CheckoutForm action="/api/checkout/milo" method="post">
             {selected.map(slug => <input key={slug} type="hidden" name="product" value={slug} />)}
             <button className="button button-dark" disabled={busy || !selected.length || !miloCheckoutEnabled}>Buy selected Milos in one checkout</button>
-          </CheckoutForm> : <button className="button button-dark" disabled={busy || !selected.length || !state.identityVerified} onClick={() => run(async () => { await checkout.open(async () => (await api({ action: "checkout", slugs: selected })).url); })}>Buy selected Milos in one checkout</button>}
+          </CheckoutForm> : <button className="button button-dark" disabled={!accepted || busy || !selected.length || !state.identityVerified} onClick={() => run(async () => { await checkout.open(async () => (await api({ action: "checkout", slugs: selected, legalAccepted: accepted, termsVersion: TERMS_VERSION })).url); })}>Buy selected Milos in one checkout</button>}
           <CheckoutStatus checkout={checkout} />
           {state.orderStatus === "pending" && <button className="button button-dark" disabled={busy} onClick={() => run(async () => { await api({ action: "cancel" }); await refresh(); })}>Cancel pending checkout to change selection</button>}
           {state.orderStatus && <p role="status">{state.orderStatus === "delivered" ? "Your selected installation packages have been sent." : state.orderStatus === "delivery_pending" ? "Payment confirmed. Package delivery is still pending; fulfillment will retry." : state.orderStatus === "pending" ? "A checkout is pending. Resume the same selection or cancel it to choose again." : `Order status: ${state.orderStatus}`}</p>}

@@ -29,7 +29,7 @@ const session = {
   line_items: { has_more: false, data: [{ quantity: 1, amount_total: 9900, amount_subtotal: 9900, price }] },
 };
 function checkout(products = [slug]) {
-  const form = new URLSearchParams();
+  const form = new URLSearchParams({legalAccepted:"true",termsVersion:"2026-10-21"});
   for (const product of products) form.append("product", product);
   return new Request(`${process.env.APP_URL}/api/checkout/milo`, { method: "POST", headers: { origin: process.env.APP_URL }, body: form });
 }
@@ -54,7 +54,7 @@ test("California uses the existing checkout and durable delivery pattern", async
     await t.test("California checkout pins its $99 price, metadata, files and return paths", async () => {
       assert.equal((await handleCheckout(checkout(), deps)).status, 303);
       assert.deepEqual(params.line_items, [{ price: "price_california", quantity: 1 }]);
-      assert.deepEqual(params.metadata, session.metadata);
+      assert.deepEqual(Object.fromEntries(Object.entries(params.metadata).filter(([k])=>!k.startsWith('terms_')&&!k.startsWith('legal_'))), session.metadata);
       assert.equal(params.payment_intent_data.metadata.product_code, "PD-ROOF-CA");
       assert.equal(params.success_url, `${process.env.APP_URL}/checkout/success/california`);
       assert.equal(params.cancel_url, `${process.env.APP_URL}/products/${slug}`);
@@ -159,7 +159,7 @@ test("California and all three regions retain $99/$297 totals and separate deliv
     await t.test("one payment checkout has three $99 lines", async () => {
       assert.equal((await handleCheckout(checkout(all.productSlugs), deps)).status, 303);
       assert.deepEqual(params.line_items, ["florida", "texas", "california"].map(region => ({ price: `price_${region}`, quantity: 1 })));
-      assert.deepEqual(params.metadata, paid.metadata);
+      assert.deepEqual(Object.fromEntries(Object.entries(params.metadata).filter(([k])=>!k.startsWith('terms_')&&!k.startsWith('legal_'))), paid.metadata);
       assert.equal(params.success_url, `${process.env.APP_URL}/checkout/success/regions`);
     });
     await t.test("California missing assets or a wrong regional price prevent checkout", async () => {

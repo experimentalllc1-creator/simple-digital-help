@@ -1,4 +1,5 @@
 import "server-only";
+import { hasLegalAcceptance, acceptanceMetadata } from "./legal-acceptance.server";
 import type Stripe from "stripe";
 import { createHash } from "node:crypto";
 import { paymentConfig, appOrigin, MILO_VERSION } from "./milo-config.server";
@@ -22,10 +23,12 @@ async function stripeCustomer(order: MiloBasketOrder, stripe: Stripe) {
     return customer.id;
   } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
 }
-export async function checkoutMiloBasket(order: MiloBasketOrder, stripe: Stripe, attachments: typeof miloAttachments) {
+export async function checkoutMiloBasket(order: MiloBasketOrder, stripe: Stripe, attachments: typeof miloAttachments, acceptance: { legalAccepted?: unknown; termsVersion?: unknown }) {
+  if (!hasLegalAcceptance(acceptance)) throw new Error("Current legal acceptance required");
   if (order.checkout_id) {
     const session = await stripe.checkout.sessions.retrieve(order.checkout_id);
     if (session.status !== "open" || (session.expires_at && session.expires_at <= Date.now() / 1000) || !session.url || new URL(session.url).origin !== "https://checkout.stripe.com") throw new Error("Pending checkout is not open; cancel or reconcile it");
+    await stripe.checkout.sessions.update(session.id, { metadata: acceptanceMetadata() });
     return session.url;
   }
   const configs = order.products.map(slug => paymentConfig(slug));
@@ -38,7 +41,7 @@ export async function checkoutMiloBasket(order: MiloBasketOrder, stripe: Stripe,
   if (order.quote.expiresAt < Date.now() / 1000 + 1800) throw new Error("Checkout reservation requires reconciliation");
   const storefront = order.source === "storefront";
   const destination = storefront ? "/checkout/milos" : "/agent-fit-audit/report";
-  const metadata = { product: storefront ? "milo-volume-cart" : "sales-audit-cart", order_id: order.id, ...(order.audit_id ? { audit_id: order.audit_id } : {}), version: MILO_VERSION, release_version: MILO_VERSION };
+  const metadata = { ...acceptanceMetadata(), product: storefront ? "milo-volume-cart" : "sales-audit-cart", order_id: order.id, ...(order.audit_id ? { audit_id: order.audit_id } : {}), version: MILO_VERSION, release_version: MILO_VERSION };
   const customer = await stripeCustomer(order, stripe);
   // Stripe makes a valid existing Customer email non-editable in Checkout.
   const session = await stripe.checkout.sessions.create({ mode: "payment", customer, payment_method_types: ["card"], expires_at: order.quote.expiresAt,

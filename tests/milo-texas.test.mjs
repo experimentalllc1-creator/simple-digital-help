@@ -29,7 +29,7 @@ const session = {
   line_items: { has_more: false, data: [{ quantity: 1, amount_total: 9900, amount_subtotal: 9900, price }] },
 };
 function checkout(products = [slug]) {
-  const form = new URLSearchParams();
+  const form = new URLSearchParams({legalAccepted:"true",termsVersion:"2026-10-21"});
   for (const product of products) form.append("product", product);
   return new Request(`${process.env.APP_URL}/api/checkout/milo`, { method: "POST", headers: { origin: process.env.APP_URL }, body: form });
 }
@@ -54,7 +54,7 @@ test("Texas uses the existing checkout and durable delivery pattern", async t =>
     await t.test("Texas checkout pins its $99 price, metadata, files and return paths", async () => {
       assert.equal((await handleCheckout(checkout(), deps)).status, 303);
       assert.deepEqual(params.line_items, [{ price: "price_texas", quantity: 1 }]);
-      assert.deepEqual(params.metadata, session.metadata);
+      assert.deepEqual(Object.fromEntries(Object.entries(params.metadata).filter(([k])=>!k.startsWith('terms_')&&!k.startsWith('legal_'))), session.metadata);
       assert.equal(params.payment_intent_data.metadata.product_code, "PD-ROOF-TX");
       assert.equal(params.success_url, `${process.env.APP_URL}/checkout/success/texas`);
       assert.equal(params.cancel_url, `${process.env.APP_URL}/products/${slug}`);

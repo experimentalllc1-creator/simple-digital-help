@@ -19,6 +19,10 @@ export default function LegalDocument({ text }: { text: string }) {
     if (block.startsWith("### ")) return <h3 key={i}>{inline(block.slice(4))}</h3>;
     if (block.startsWith("## ")) return <h2 key={i}>{inline(block.slice(3))}</h2>;
     if (block.startsWith("# ")) return <h1 key={i}>{inline(block.slice(2))}</h1>;
+    if (block.startsWith("| ")) {
+      const rows = block.split("\n").map(line => line.split("|").slice(1, -1).map(cell => cell.trim()));
+      return <div key={i} style={{overflowX:"auto"}}><table><thead><tr>{rows[0].map((cell,j)=><th scope="col" key={j}>{inline(cell)}</th>)}</tr></thead><tbody>{rows.slice(2).map((row,j)=><tr key={j}>{row.map((cell,k)=><td key={k}>{inline(cell)}</td>)}</tr>)}</tbody></table></div>;
+    }
     if (block.split("\n").every(line => line.startsWith("- "))) {
       return <ul key={i}>{block.split("\n").map((line, j) => <li key={j}>{inline(line.slice(2))}</li>)}</ul>;
     }

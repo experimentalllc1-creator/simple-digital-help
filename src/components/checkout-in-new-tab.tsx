@@ -1,4 +1,5 @@
 "use client";
+import { LegalAcceptance } from "./legal-acceptance";
 import { useRef, useState, type FormHTMLAttributes } from "react";
 
 export function useCheckoutTab() {
@@ -39,10 +40,12 @@ export function CheckoutStatus({ checkout }: { checkout: ReturnType<typeof useCh
   return <>{checkout.busy && <p role="status">Opening checkout in a new tab…</p>}{checkout.error && <p role="alert">{checkout.error}</p>}{checkout.fallbackUrl && <p><a href={checkout.fallbackUrl} target="_blank" rel="noopener noreferrer">Open the same checkout in a new tab</a></p>}</>;
 }
 export function CheckoutForm({ children, onSubmit, ...props }: FormHTMLAttributes<HTMLFormElement>) {
+  const [accepted, setAccepted] = useState(false);
   const checkout = useCheckoutTab();
   return <form {...props} aria-busy={checkout.busy} onSubmit={event => {
     onSubmit?.(event);
     if (event.defaultPrevented) return;
+    if (!accepted || !event.currentTarget.reportValidity()) { event.preventDefault(); return; }
     event.preventDefault();
     const form = event.currentTarget;
     void checkout.open(async () => {
@@ -52,5 +55,5 @@ export function CheckoutForm({ children, onSubmit, ...props }: FormHTMLAttribute
       if (typeof result.url !== "string") throw new Error("Checkout did not return a payment page. Please try again.");
       return result.url;
     });
-  }}>{children}<CheckoutStatus checkout={checkout} /></form>;
+  }}><LegalAcceptance checked={accepted} onChange={setAccepted} /><fieldset disabled={!accepted || checkout.busy} style={{border:0,padding:0,margin:0,minWidth:0}}>{children}</fieldset><CheckoutStatus checkout={checkout} /></form>;
 }

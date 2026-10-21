@@ -29,7 +29,7 @@ const session = {
   line_items: { has_more: false, data: [{ quantity: 1, amount_total: 9900, amount_subtotal: 9900, price }] },
 };
 function checkout(products = [slug]) {
-  const form = new URLSearchParams();
+  const form = new URLSearchParams({legalAccepted:"true",termsVersion:"2026-10-21"});
   for (const product of products) form.append("product", product);
   return new Request(`${process.env.APP_URL}/api/checkout/milo`, { method: "POST", headers: { origin: process.env.APP_URL }, body: form });
 }
@@ -54,7 +54,7 @@ test("Pacific Northwest uses the existing checkout and durable delivery pattern"
     await t.test("Pacific Northwest checkout pins its $99 price, metadata, files and return paths", async () => {
       assert.equal((await handleCheckout(checkout(), deps)).status, 303);
       assert.deepEqual(params.line_items, [{ price: "price_pacificnorthwest", quantity: 1 }]);
-      assert.deepEqual(params.metadata, session.metadata);
+      assert.deepEqual(Object.fromEntries(Object.entries(params.metadata).filter(([k])=>!k.startsWith('terms_')&&!k.startsWith('legal_'))), session.metadata);
       assert.equal(params.payment_intent_data.metadata.product_code, "PD-ROOF-PACIFIC-NORTHWEST");
       assert.equal(params.success_url, `${process.env.APP_URL}/checkout/success/pacific-northwest`);
       assert.equal(params.cancel_url, `${process.env.APP_URL}/products/${slug}`);
@@ -163,7 +163,7 @@ test("nine-region checkout is $891 and each Milo retains a separate two-file ema
     await t.test("all selected line items reach one Stripe checkout", async () => {
       assert.equal((await handleCheckout(checkout(all.productSlugs), deps)).status, 303);
       assert.deepEqual(params.line_items, regions.map(region => ({ price: `price_${region.replaceAll('-', '')}`, quantity: 1 })));
-      assert.deepEqual(params.metadata, paid.metadata); assert.equal(params.success_url, `${process.env.APP_URL}/checkout/success/regions`);
+      assert.deepEqual(Object.fromEntries(Object.entries(params.metadata).filter(([k])=>!k.startsWith('terms_')&&!k.startsWith('legal_'))), paid.metadata); assert.equal(params.success_url, `${process.env.APP_URL}/checkout/success/regions`);
     });
     await t.test("missing Pacific Northwest files or an incorrect nineth line fail closed", async () => {
       assert.equal((await handleCheckout(checkout(all.productSlugs), { ...deps, attachments: async code => { if (code === "PD-ROOF-PACIFIC-NORTHWEST") throw Error("missing package"); return []; } })).status, 503);

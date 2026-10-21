@@ -1,0 +1,2 @@
+export const TERMS_VERSION = "2026-10-21";
+export const TERMS_SHA256 = "af1c7d57bcc135e0bca58accff9b457415975cf79f68d5952d2fa3548064a702";

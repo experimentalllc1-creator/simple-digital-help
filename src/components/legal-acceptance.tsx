@@ -1,0 +1,5 @@
+"use client";
+import { TERMS_VERSION } from "@/lib/legal-version";
+export function LegalAcceptance({ checked, onChange }: { checked: boolean; onChange: (value: boolean) => void }) {
+ return <div style={{margin: "16px 0", fontSize: "14px", lineHeight: 1.6, overflowWrap: "anywhere"}}><label style={{display:"flex",gap:"10px",alignItems:"flex-start"}}><input type="checkbox" name="legalAccepted" value="true" required checked={checked} onChange={event=>onChange(event.target.checked)} style={{width:"18px",height:"18px",flexShrink:0,marginTop:"4px"}} /><span>I have read and agree to the <a href="/legal/terms" target="_blank" rel="noopener noreferrer" style={{textDecoration:"underline"}}>Terms of Service</a> and acknowledge the <a href="/legal/privacy" target="_blank" rel="noopener noreferrer" style={{textDecoration:"underline"}}>Privacy Policy</a> and <a href="/legal/disclaimers" target="_blank" rel="noopener noreferrer" style={{textDecoration:"underline"}}>Product &amp; AI Disclaimers</a>.</span></label><input type="hidden" name="termsVersion" value={TERMS_VERSION} /></div>;
+}

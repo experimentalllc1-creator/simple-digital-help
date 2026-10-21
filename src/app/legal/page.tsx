@@ -9,12 +9,8 @@ export default function LegalPage() {
   return (
     <section className={`page-width ${styles.page}`}>
       <h1>Legal</h1>
-      <p className={styles.notice}>
-        Temporary source documents from the existing Right Hand / Simple Digital Help service.
-        Their legal wording has been preserved and has not yet been revised for the Simple Digital Help Agent Store.
-      </p>
       <ul className={styles.links}>
-        {[["privacy", "Privacy Policy"], ["terms", "Terms of Service"], ["disclaimers", "Disclaimers"]].map(([slug, title]) => (
+        {[["privacy", "Privacy Policy"], ["terms", "Terms of Service"], ["disclaimers", "Product & AI Disclaimers"]].map(([slug, title]) => (
           <li key={slug}>
             <Link href={`/legal/${slug}`}>{title}<ArrowUpRight size={20} aria-hidden="true" /></Link>
           </li>

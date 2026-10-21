@@ -9,7 +9,7 @@ import styles from "../legal.module.css";
 const documents = {
   privacy: "Privacy Policy",
   terms: "Terms of Service",
-  disclaimers: "Disclaimers",
+  disclaimers: "Product & AI Disclaimers",
 } as const;
 
 type Props = { params: Promise<{ document: string }> };
@@ -35,9 +35,6 @@ export default async function LegalDocumentPage({ params }: Props) {
   return (
     <section className={`page-width ${styles.page}`}>
       <Link className={styles.back} href="/legal">Back to Legal</Link>
-      <p className={styles.notice}>
-        Temporary source material. This document has not yet been revised for the Simple Digital Help Agent Store.
-      </p>
       <article className={styles.document}><LegalDocument text={text} /></article>
     </section>
   );

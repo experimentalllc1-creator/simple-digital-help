@@ -1,232 +1,231 @@
 # Terms of Service
 
-**Simple Digital Help**
+Simple Digital Help · Operated by Experimental LLC
 
-*Operated by Experimental LLC*
+Effective date: October 21, 2026 · Last updated: October 21, 2026
 
-**Effective Date:** May 1, 2026
+The short version (the full Terms below control): You buy a time-limited license to a Milo, a preconfigured AI workflow, with a one-time payment. You install it in your own ChatGPT and Google accounts, and the license runs for 52 weeks from successful activation. AI research can be wrong, and results are not guaranteed. Refunds are available before activation, if the Milo can't be installed despite our help, or if a platform change breaks it and we can't restore it (Sections 8 and 9). You may use your Milo in your own business, but you may not resell or share it.
 
-**Last Updated:** April 27, 2026
+## 1. Who we are and what these Terms cover
 
-## 1. Acceptance of These Terms
+Simple Digital Help (“Simple Digital Help,” “we,” “us,” or “our”) is operated by Experimental LLC, a Florida limited liability company. Our address is 1150 Malabar Rd STE 111 Box #171, Palm Bay, FL 32907, and our email is support@simpledigitalhelp.com.
 
-These Terms of Service (the "Terms") govern your use of Simple Digital Help, a business diagnostic service operated by Experimental LLC ("we," "us," or "our"). By creating an account, making a purchase, or using the Service, you agree to these Terms. If you do not agree, do not use the Service.
+These Terms of Service (“Terms”) apply when you visit simpledigitalhelp.com, create an account, or buy or use any product we sell (together, the “Service”). You agree to these Terms, our Privacy Policy and our Product & AI Disclaimers when you do any of the following:
 
-If you are using the Service on behalf of a business, you represent that you have the authority to bind that business to these Terms, and "you" refers to both you personally and that business.
+- accept these Terms when you buy;
+- create an account; or
+- install a Milo.
 
-## 2. About Us
+If you do not agree, do not use the Service.
 
-Simple Digital Help is operated by:
+If you act for a business, you confirm that you are authorized to bind it, and “you” includes that business.
 
-Experimental LLC
-A Florida limited liability company
-Mailing address: 1150 Malabar Rd STE 111 Box #171, Palm Bay, FL 32907
-Contact: support@simpledigitalhelp.com
+## 2. Who may buy
 
-## 3. What the Service Is
+To buy or use a Milo, you must:
 
-Simple Digital Help provides an AI-guided business diagnostic conversation designed for small business owners. The diagnostic identifies areas of your business that may benefit from attention and generates a written assessment and suggested 90-day action plan at the end.
+- be at least 18 and able to enter a binding contract; and
+- buy for business or professional purposes, not for personal, family or household use.
 
-The Service is delivered through an interactive conversation with an AI assistant referred to as "Morgan." Morgan asks questions about your business and generates findings based on your responses.
+We operate the Service from the United States. If you buy from another country, you are responsible for complying with your local laws.
 
-**Language:** The Service is currently offered in English and Spanish. Additional languages may be added in the future.
+## 3. What a Milo is
 
-**What the Service is not:** The Service is not professional advice. See Section 7 ("What This Service Is Not") for the full disclaimer.
+A “Milo” is a preconfigured, AI-powered digital workflow that we license to you for a limited period. It is not a managed service.
 
-## 4. Eligibility
+Each purchase includes:
 
-To use the Service, you must:
+- an installation package for the specified Milo assignment (a TXT instruction file and an illustrated PDF installation guide); and
+- permission to use that assignment during its 52-week License Term (Section 7).
 
-- Be at least 18 years old.
-- Have the legal capacity to enter into a binding contract.
-- Own, operate, or work in a business relevant to the diagnostic, or have the permission of someone who does.
-- Not be prohibited from using the Service under the laws of your jurisdiction.
+You install and operate the Milo in your own compatible ChatGPT and Google accounts. We do not run, supervise or monitor your scheduled tasks, and we do not provide a managed prospecting service.
 
-The Service is offered to users in the United States and select countries in Latin America. If you access the Service from another country, you do so at your own risk and are responsible for compliance with your local laws.
+We provide installation instructions, access to the installation materials you bought, and reasonable technical support for the original product configuration.
 
-## 5. Your Account
+Each Milo's product page describes its intended function, geographic coverage and operating limits at the time of purchase (the “Product Description”).
 
-To use the Service, you must create an account with a valid email address and a password. You are responsible for:
+## 4. What you need to use a Milo
 
-- Keeping your account credentials confidential.
-- All activity that occurs under your account.
-- Notifying us immediately if you suspect unauthorized access to your account.
+You must have, at your own cost:
 
-We may suspend or terminate your account if we reasonably believe it has been used in violation of these Terms.
+- a compatible ChatGPT plan that supports scheduled tasks, web research and the Google Drive and Sheets actions described on the product page (some features or scheduling options may require a paid plan); and
+- a Google account with access to Google Sheets, connected to ChatGPT so the Milo can create and update a spreadsheet.
 
-## 6. Fees, Payment, and Refunds
+ChatGPT and Google are not included in the purchase price. You are responsible for keeping these accounts active and connected during your License Term.
 
-### 6.1 Pricing
+## 5. Delivery and your account
 
-The diagnostic is sold for a one-time fee of $199 USD. The fee is disclosed before purchase and is charged at the time of purchase. We may change our pricing at any time, but changes will not apply to purchases already made.
+We deliver your installation package by email after purchase.
 
-### 6.2 Payment Processing
+Creating a Simple Digital Help account is optional. An account gives you access to your purchase history and to available installation files. Accounts use passwordless sign-in links sent to your email, so keep access to that email account secure. If you suspect unauthorized access, tell us promptly at support@simpledigitalhelp.com.
 
-Payments are processed by Stripe, Inc. By purchasing the Service, you agree to Stripe's terms and authorize us and Stripe to charge your selected payment method for the amount disclosed at checkout.
+## 6. Price and payment
 
-### 6.3 Discount Codes and Promotions
+- One-time price. Each Milo is sold for the one-time price shown at checkout, in U.S. dollars. There is no subscription, and nothing renews automatically. A new License Term requires a new purchase.
+- Payment. Stripe processes payments. We do not see or store your full card number.
+- Taxes. Prices do not include taxes unless stated. You pay any sales or similar taxes that apply.
+- Price changes and promotions. We may change prices or offer discount codes at any time. Price changes do not affect purchases already made. Discount codes have no cash value and follow the terms shown with them.
 
-We may offer discount codes or promotional pricing from time to time. Discount codes are subject to the terms disclosed at the time of the offer, may expire, and may be discontinued at any time. Discount codes are not redeemable for cash and cannot be combined with other offers unless expressly permitted.
+## 7. Activation and the 52-week License Term
 
-### 6.4 Refund Policy
+7.1 Activation. A Milo is successfully activated when all three of these are true:
 
-**Technical issues:** If you cannot complete the diagnostic due to a problem on our end, we will refund you in full. Contact support@simpledigitalhelp.com.
+- the required ChatGPT and Google connections are in place;
+- its assigned Google spreadsheet has been created or verified; and
+- its recurring scheduled task has been set up and confirmed active, as described in the installation guide.
 
-**Unused purchase:** If you purchase the Service but have not begun the diagnostic within 7 days of purchase, contact us for a full refund.
+A first discovery run is not required. Our purchase records do not by themselves show whether a Milo was activated, because we do not see inside your ChatGPT account.
 
-**All other refund requests:** All other refund requests are considered on a case-by-case basis at our discretion, except where required by applicable law.
+7.2 Activation window. You have 12 months from the purchase date to successfully activate your Milo. If it is not activated within 12 months, the right to activate that purchased assignment expires. That does not happen if the delay was caused by us, or if applicable law requires an extension.
 
-Refunds are issued to the original payment method and typically take 5–10 business days to appear, depending on your bank.
+If you have installation difficulties, contact support before the activation window expires. The refund provisions in Section 8 still apply. This activation window applies to purchases made on or after the effective date of these Terms.
 
-## 7. What This Service Is Not (Important Disclaimer)
+7.3 License Term. Each Milo assignment is licensed for 52 consecutive weeks from successful activation (the “License Term”). Time between purchase and activation does not reduce the License Term. For example, a Milo bought in October 2026 and activated in March 2027 is licensed until March 2028.
 
-The Service provides general business information and suggestions based on what you share with Morgan. The Service is not, and is not intended to be, a substitute for professional advice.
+7.4 No automatic renewal. Each purchase is a one-time transaction. Nothing renews or is charged automatically.
 
-**The Service does not provide:** legal advice, tax advice, accounting advice, financial planning advice, investment advice, medical advice, or any other form of professional advice. Morgan is an AI assistant, not a licensed professional of any kind.
+7.5 Expiration. When the License Term ends, your license to run the Milo ends, and its scheduled operation is intended to stop. If it keeps running, you agree to turn off its scheduled task. The prospect information already saved in your Google account stays yours.
 
-**No professional relationship:** Using the Service does not create an attorney-client relationship, a CPA-client relationship, a financial-advisor-client relationship, or any other professional fiduciary relationship between you and us.
+7.6 Installation help. If you have trouble installing a Milo, contact us for help. A Milo whose installation has not been completed is not considered activated.
 
-**Your decisions are your own:** Any decision you make based on the diagnostic — including decisions about pricing, staffing, investments, legal structure, taxes, contracts, or financing — is your decision alone. You agree that you will not rely on the Service as the sole or a primary basis for any business decision. You are strongly encouraged to consult qualified licensed professionals (such as a certified public accountant, attorney, or financial advisor) before making decisions with material financial or legal consequences.
+7.7 One Milo, one assignment. Each purchase covers one Milo, installed in one ChatGPT account, for the industry and market in its Product Description.
 
-**AI-generated content:** Morgan's responses are generated by artificial intelligence. AI systems can make errors, misinterpret information, produce incorrect calculations, or generate misleading inferences. You should independently verify any factual claim, number, or recommendation before acting on it.
+## 8. Refunds
 
-**No guarantee of outcomes:** We make no promise or guarantee that using the Service will increase your revenue, reduce your costs, improve your operations, or produce any specific business result. Results depend on many factors outside our control, including how you apply the suggestions and circumstances unique to your business.
+Before activation. You may request a full refund within 30 days of purchase if the Milo has not been successfully activated.
 
-## 8. Acceptable Use
+Installation problems. You may follow the installation instructions and still be unable to activate the Milo. If the cause is a problem with the supplied product, or with its compatibility with the requirements on its product page, we will provide reasonable troubleshooting help. If we cannot resolve the problem, you may request a full refund. Installation-related refund requests must be made within 90 days of purchase.
 
-You agree not to:
+Billing and delivery errors. We will correct or refund duplicate charges, incorrect charges, and purchases for which we cannot provide the installation package.
 
-- Use the Service for any illegal, fraudulent, or harmful purpose.
-- Attempt to reverse engineer, decompile, scrape, or extract the underlying code, prompts, or AI systems of the Service.
-- Share your account credentials with anyone else or resell access to the Service.
-- Upload, input, or transmit any content that is unlawful, infringing, defamatory, or that contains malware.
-- Interfere with the operation of the Service or attempt to gain unauthorized access to any part of the Service or our systems.
-- Use the Service to develop a competing product or service.
-- Provide false or misleading information during the diagnostic with the intent to deceive or damage the quality of the Service.
+After activation. Refunds are not ordinarily provided for a change of mind, for dissatisfaction with the number or usefulness of prospects, or for failure to achieve a particular business outcome. Section 9 covers third-party platform changes.
 
-## 9. Intellectual Property
+How to ask. Email support@simpledigitalhelp.com with your order number and the reason. Refunds are issued to the original payment method when available.
 
-### 9.1 Our Content
+Chargebacks. Please contact us before disputing a charge with your bank. We can usually resolve problems faster.
 
-The Service, including the Morgan AI assistant, the diagnostic framework, the question sequences, the findings format, and all related software, text, graphics, and designs, is owned by Experimental LLC or its licensors and is protected by copyright, trademark, and other intellectual property laws.
+Nothing in this policy limits rights or remedies that cannot lawfully be excluded.
 
-### 9.2 Your Content
+## 9. When ChatGPT, Google or other platforms change
 
-You retain ownership of the information you provide about your business during the diagnostic ("Your Content"). By using the Service, you grant us a limited, non-exclusive, royalty-free license to use Your Content solely to:
+Milos depend on third-party platforms, including ChatGPT and Google. Their features, terms, permissions and availability may change.
 
-- Operate and deliver the Service to you.
-- Generate your diagnostic findings and action plan.
-- Improve the Service (in aggregated and de-identified form only). We do not use your individual Diagnostic Content to train AI models, and we do not permit our AI provider (Anthropic, PBC) to use your Diagnostic Content for model training purposes.
-- Comply with legal obligations.
+A material third-party change may prevent a Milo from performing its principal assigned function during your active License Term. If that happens, contact us. We will make reasonable efforts to provide a compatible update or an alternative configuration, where feasible.
 
-### 9.3 Findings and Action Plan
+If we cannot restore the Milo's principal function, you may request a prorated refund for the unused part of your License Term. It is calculated as follows: the amount you paid × the remaining full weeks ÷ 52.
 
-The written findings and action plan generated at the end of your diagnostic are provided for your own business use. You may share them with your own advisors, employees, or partners. You may not resell them or distribute them publicly as original content.
+The remedies in this Section are your only remedies for problems caused by third-party platform changes.
 
-## 10. Limitation of Liability
+## 10. Your license and our intellectual property
 
-TO THE FULLEST EXTENT PERMITTED BY LAW, EXPERIMENTAL LLC, ITS MEMBERS, OFFICERS, EMPLOYEES, CONTRACTORS, AND AFFILIATES (COLLECTIVELY, THE "COMPANY PARTIES") WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING LOST PROFITS, LOST REVENUE, LOST DATA, OR BUSINESS INTERRUPTION, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SERVICE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+10.1 Your license. For each Milo you buy, we give you a limited, non-exclusive, non-transferable license. It lets you install the Milo in one ChatGPT account that you or your business control, and run it during the License Term for your own internal business purposes. Your employees and contractors may use its results for your business.
 
-IN ANY EVENT, THE TOTAL LIABILITY OF THE COMPANY PARTIES TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATED TO THE SERVICE WILL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID US IN THE TWELVE MONTHS PRECEDING THE CLAIM, OR (B) $100 USD.
+10.2 What you may not do. Unless we agree in writing, you may not:
 
-THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR ACCURACY.
+- sell, resell, share, sublicense, publish or give away a Milo, its instructions or its guide;
+- install a Milo in more than one ChatGPT account, or in a client's account;
+- upload a Milo, or a modified version of one, to a GPT store, template library, marketplace or public website;
+- use a Milo to build or train a competing product; or
+- remove our copyright or ownership notices.
 
-Some jurisdictions do not allow certain limitations of liability. To the extent a limitation in these Terms is not enforceable in your jurisdiction, that limitation applies to the maximum extent permitted by law.
+You may adjust the settings the installation guide invites you to change. Any other changes are at your own risk, and we may not be able to support a changed Milo. If you want to run Milos for clients, contact us about agency terms.
 
-## 11. Indemnification
+10.3 What we own. We and our licensors own the Milos, their instructions, workflows and guides, and our names, logos and website content. Buying a Milo gives you a license, not ownership. If you send us suggestions, we may use them without any obligation to you.
 
-You agree to indemnify, defend, and hold harmless the Company Parties from any claim, demand, loss, damage, cost, or expense (including reasonable attorneys' fees) arising out of or related to:
+## 11. Your responsibilities
 
-- Your use of the Service.
-- Your breach of these Terms.
-- Your violation of any law or the rights of any third party.
-- Decisions you make based on the Service, including business, financial, legal, or tax decisions.
+You agree to:
 
-## 12. Third-Party Services
+- keep your ChatGPT and Google accounts active, secure and properly connected, and keep your Simple Digital Help sign-in email secure if you create an account;
+- follow OpenAI's and Google's terms and usage policies;
+- review the Milo's results before relying on them; and
+- use the Milo and its results only for lawful purposes.
 
-The Service relies on third-party providers including (without limitation):
+Prospect information and outreach. Prospect Discovery Milos research publicly available business information. They do not collect personal contact information, and they do not contact prospects.
 
-- Anthropic, PBC (AI language model)
-- Supabase, Inc. (database and authentication)
-- Stripe, Inc. (payment processing)
-- Resend, Inc. (email delivery)
-- Vercel, Inc. (hosting)
+You are responsible for complying with all laws that apply when you use prospect information or carry out outreach. These include the CAN-SPAM Act, the Telephone Consumer Protection Act, the Florida Telephone Solicitation Act and do-not-call rules.
 
-We are not responsible for the availability, performance, or data practices of these providers, but we select providers that maintain reasonable industry-standard security practices. Your use of the Service is also subject to the terms and privacy policies of these providers.
+Each Milo's product page describes the information it is designed to collect. You may not modify a Milo to collect information beyond that. You also may not use a Milo to harass, spam or discriminate, or to access websites in violation of their terms.
 
-## 13. Service Changes and Availability
+## 12. Your data and the prospect data
 
-We may modify, suspend, or discontinue any part of the Service at any time, with or without notice. We will use reasonable efforts to notify active users of material changes that affect them.
+The spreadsheet, and the information a Milo saves to it, belong to you and stay in your Google account. We ordinarily do not access your ChatGPT account, your Google account or your spreadsheets.
 
-We do not guarantee that the Service will be available at all times or free from errors, downtime, or interruption.
+If you voluntarily send us screenshots, files or spreadsheet contents for troubleshooting, we use them only to help you. OpenAI's and Google's terms, together with your account settings, govern how those companies handle your information. Our Privacy Policy explains what information we collect.
 
-## 14. Termination
+## 13. AI-generated information and no guarantees
 
-You may stop using the Service at any time. We may suspend or terminate your access to the Service, with or without notice, if we reasonably believe you have violated these Terms or that your use of the Service poses a risk to us or to other users.
+Milos use artificial intelligence to research publicly available business information. AI can produce information that is incomplete, outdated, inaccurate or duplicated, and source websites can be wrong.
 
-Sections that by their nature should survive termination (including Sections 7, 9, 10, 11, and 14 through 17) will survive.
+- What “qualified” means. A qualified business is one that appears to match the criteria in the Product Description, based on public information at the time of research. It does not confirm a business's license status, insurance, financial condition, reputation, or interest in buying from you. Verify anything important yourself, for example by checking contractor licenses with the state licensing agency.
+- Targets are not guarantees. A daily target, such as “up to five per scheduled workday,” is a maximum. Some days the Milo may find fewer prospects, or none.
+- No guaranteed results. We do not guarantee any number of prospects, sales, customers, revenue or other outcome.
+- Not professional advice. Nothing a Milo produces is legal, tax, financial or other professional advice.
 
-## 15. Governing Law and Dispute Resolution
+## 14. Third-party services and independence
 
-### 15.1 Governing Law
+The Service relies on third-party providers, including OpenAI, Google and Stripe. Each has its own terms and privacy policies. We are not responsible for their services, availability or practices.
 
-These Terms are governed by the laws of the State of Florida, without regard to its conflict of laws rules.
+Simple Digital Help is independent. We are not affiliated with, endorsed by, or sponsored by OpenAI, Google or Stripe. ChatGPT, Google, Google Sheets and Stripe are trademarks of their respective owners.
 
-### 15.2 Venue
+## 15. Disclaimer of warranties
 
-Any lawsuit arising out of or related to these Terms or the Service must be brought exclusively in the state or federal courts located in Brevard County, Florida. You consent to the jurisdiction of those courts and waive any objection based on venue or forum non conveniens.
+EXCEPT AS EXPRESSLY STATED IN THESE TERMS, THE SERVICE AND ALL MILOS ARE PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT ANY MILO OR THIRD-PARTY PLATFORM WILL RUN WITHOUT INTERRUPTION OR ERROR.
 
-### 15.3 Informal Resolution First
+## 16. Limitation of liability
 
-Before filing a lawsuit, you agree to contact us at support@simpledigitalhelp.com and attempt to resolve the dispute informally for a period of at least 30 days.
+TO THE FULLEST EXTENT PERMITTED BY LAW:
 
-### 15.4 Arbitration and Class Action Waiver
+- EXPERIMENTAL LLC AND ITS MEMBERS, MANAGERS, EMPLOYEES AND CONTRACTORS ARE NOT LIABLE FOR ANY OF THE FOLLOWING, EVEN IF WE WERE TOLD THEY WERE POSSIBLE:
+- INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES;
+- LOST PROFITS, REVENUE, BUSINESS OPPORTUNITIES OR DATA; OR
+- DECISIONS MADE BASED ON AI-GENERATED INFORMATION.
+- OUR TOTAL LIABILITY FOR ALL CLAIMS RELATING TO A MILO OR THE SERVICE IS LIMITED TO THE GREATER OF (A) THE AMOUNT YOU PAID FOR THE MILO THE CLAIM RELATES TO, OR (B) $100.
 
-YOU AND THE COMPANY AGREE THAT ANY DISPUTE, CLAIM, OR CONTROVERSY ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICE WILL BE RESOLVED BY BINDING ARBITRATION, rather than in court, except that either party may bring an individual claim in small claims court if the claim qualifies. This agreement to arbitrate applies to all claims regardless of when they arose or whether they are based in contract, tort, statute, fraud, misrepresentation, or any other legal theory.
+These limits do not apply to liability that cannot be limited under applicable law.
 
-Arbitration will be conducted by the American Arbitration Association ("AAA") under its Consumer Arbitration Rules, which are available at www.adr.org. Arbitration will take place in Brevard County, Florida, or by video conference if both parties agree. The arbitrator's award will be final and binding and may be entered as a judgment in any court of competent jurisdiction.
+## 17. Indemnification
 
-YOU AND THE COMPANY WAIVE ANY RIGHT TO A JURY TRIAL. If for any reason a claim proceeds in court rather than in arbitration, both parties waive the right to a jury trial.
+You agree to indemnify and hold harmless Experimental LLC and its members, managers, employees and contractors. This covers claims, losses and reasonable attorneys' fees arising from:
 
-YOU AND THE COMPANY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, CONSOLIDATED, OR REPRESENTATIVE PROCEEDING. No arbitrator may consolidate more than one person's claims or preside over any class proceeding. If this class action waiver is found unenforceable with respect to any claim, then this entire arbitration provision will be null and void as to that claim, and that claim will proceed in court.
+- your breach of these Terms;
+- your violation of law; or
+- your use of a Milo's results, including any outreach to prospects.
 
-## 16. Changes to These Terms
+## 18. Suspension and termination
 
-We may update these Terms from time to time. If we make a material change, we will notify you by email (to the address associated with your account) or through a prominent notice in the Service at least 15 days before the change takes effect. If you do not agree to the revised Terms, your sole remedy is to stop using the Service.
+You may stop using the Service at any time. We may suspend or end your account or license if you materially breach these Terms, for example by reselling a Milo or using it unlawfully.
 
-Your continued use of the Service after the effective date of a revised version of these Terms means you accept the revised Terms.
+If we stop offering a Milo or the Service for reasons other than your breach, we will refund the prorated unused part of your License Term.
 
-## 17. Miscellaneous
+Sections 7.5, 10.2, 10.3 and 11 through 21 survive termination.
 
-### 17.1 Entire Agreement
+## 19. Disputes
 
-These Terms, together with the Privacy Policy and any other notices we provide, are the entire agreement between you and us regarding the Service and supersede any prior agreements.
+19.1 Governing law. Florida law governs these Terms, without regard to conflict-of-law rules.
 
-### 17.2 Severability
+19.2 Talk to us first. Before filing any claim, contact support@simpledigitalhelp.com and give us 30 days to try to resolve it informally.
 
-If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full force and effect.
+19.3 Where claims are heard. Either party may bring a qualifying claim in small claims court. Any other claim must be brought in the state or federal courts located in Brevard County, Florida, and both parties consent to the jurisdiction of those courts.
 
-### 17.3 No Waiver
+19.4 Individual claims; no jury. To the extent permitted by law, claims may be brought only individually, not as a class or representative action. Both parties waive the right to a jury trial.
 
-Our failure to enforce any provision of these Terms is not a waiver of that provision or any other provision.
+19.5 Time limit. To the extent permitted by law, any claim must be filed within one year after it arises.
 
-### 17.4 Assignment
+## 20. Changes to these Terms
 
-You may not assign or transfer your rights under these Terms without our written consent. We may assign these Terms without restriction, including in connection with a merger, acquisition, or sale of assets.
+We may update these Terms. For material changes, we will email account holders, or post a notice on the site, at least 15 days before the change takes effect. Changes will not reduce the License Term or the refund rights for Milos you have already bought. If you keep using the Service after the effective date, you accept the updated Terms.
 
-### 17.5 No Third-Party Beneficiaries
+## 21. General terms
 
-These Terms do not create any rights for any third party.
+- Entire agreement. These Terms, the Privacy Policy and the Product & AI Disclaimers are the entire agreement between you and us about the Service.
+- Severability. If any part is unenforceable, the rest remains in effect.
+- No waiver. Our failure to enforce a term is not a waiver of it.
+- Transfer. You may not transfer these Terms without our written consent. We may transfer them as part of a merger, acquisition or sale of assets.
+- Events beyond our control. We are not liable for delays or failures caused by events beyond our reasonable control.
+- No third-party beneficiaries. No one else has rights under these Terms.
+- Headings. Headings are for convenience only.
 
-### 17.6 Headings
+## 22. Contact
 
-Section headings are for convenience only and do not affect interpretation.
-
-## 18. Contact Us
-
-Questions about these Terms? Contact us at:
-
-Experimental LLC
-1150 Malabar Rd STE 111 Box #171
-Palm Bay, FL 32907
-support@simpledigitalhelp.com
+Experimental LLC (Simple Digital Help) 1150 Malabar Rd STE 111 Box #171, Palm Bay, FL 32907 support@simpledigitalhelp.com

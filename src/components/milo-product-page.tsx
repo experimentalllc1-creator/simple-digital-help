@@ -1,3 +1,4 @@
+import MiloBeforeYouBuy from "./milo-before-you-buy";
 import { CheckoutForm } from "./checkout-in-new-tab";
 import Link from "next/link";
 import { Check } from "lucide-react";
@@ -41,6 +42,7 @@ export default function MiloProductPage({ product, presentation }: {
           <ul className={styles.fields}>{presentation.fields.map((field) => <li key={field}><Check size={17} aria-hidden="true" />{field}</li>)}</ul>
           <p>{presentation.qualificationCopy}</p>
         </section>
+        <MiloBeforeYouBuy industry={product.industry} region={product.region} schedule={isProjects ? "Milo researches publicly available development information weekly, in flexible local mornings. Discoveries are selective; zero-project weeks are possible, and no minimum discoveries or immediate identification is promised." : product.slug === "milo-us-building-materials-manufacturers" ? "Milo researches publicly available business information and is designed to identify up to two qualified manufacturers per weekly Monday run, in the morning in your local time zone, when available." : "Milo researches publicly available business information and is designed to identify up to five qualified prospects per scheduled workday, Monday–Friday in the morning in your local time zone, when available."} />
         <section className={styles.purchase} aria-labelledby="milo-purchase">
           <div>
             <p className="eyebrow">ONE-TIME PAYMENT</p>

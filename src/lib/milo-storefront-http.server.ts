@@ -1,4 +1,5 @@
 import "server-only";
+import { hasLegalAcceptance } from "./legal-acceptance.server";
 import { randomUUID } from "node:crypto";
 import { appOrigin, checkoutEnabled, paymentConfig, required } from "./milo-config.server";
 import { auditPool, ownedAssignments, checkoutCreditEligible } from "./sales-audit-store.server";
@@ -31,6 +32,7 @@ export async function handleStorefront(request: Request, overrides: Partial<type
     if (request.headers.get("origin") !== appOrigin()) return json({ error: "Invalid origin." }, 403);
     const raw = await request.text(); if (raw.length > 16000) return json({ error: "Request too large." }, 413);
     const input = JSON.parse(raw);
+    if (input.action === "checkout" && !hasLegalAcceptance(input)) return json({ error: "Please accept the current Terms of Service and acknowledge the Privacy Policy and Product & AI Disclaimers." }, 400);
     if (input.action === "verify-email") { await requestCustomerVerification(input.email, deps.send, deps.store()); return json({ sent: true }); }
     if (input.action === "restore") return json({ verified: true }, 200, { "Set-Cookie": await restoreCustomer(input.token) });
     if (!customer) return json({ error: "Verify your purchase email first." }, 403);
@@ -68,6 +70,6 @@ export async function handleStorefront(request: Request, overrides: Partial<type
       }
       await client.query("COMMIT");
     } catch (error) { await client.query("ROLLBACK"); throw error; } finally { client.release(); }
-    return json({ url: await checkoutMiloBasket(order, deps.stripe(), deps.attachments) });
+    return json({ url: await checkoutMiloBasket(order, deps.stripe(), deps.attachments, input) });
   } catch { return json({ error: "Unable to complete checkout. Verify your email, check the basket, or resume/cancel the pending checkout." }, 400); }
 }
