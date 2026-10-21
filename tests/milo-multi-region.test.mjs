@@ -67,7 +67,9 @@ test("multi-region checkout and fulfillment use every configured line item/packa
       assert.equal((await handleCheckout(checkout(), deps)).status, 303);
       assert.equal(created, 1);
       assert.deepEqual(params.line_items, [{ price: "price_florida", quantity: 1 }, { price: "price_texas", quantity: 1 }]);
-      assert.deepEqual(params.metadata, metadata);
+      assert.deepEqual(Object.fromEntries(Object.entries(params.metadata).filter(([key]) => !key.startsWith('terms_') && !key.startsWith('legal_'))), metadata);
+      assert.equal(params.metadata.terms_version, '2026-10-21');
+      assert.ok(Date.parse(params.metadata.legal_accepted_at));
       assert.equal(params.payment_intent_data.metadata.product_codes, JSON.stringify(codes));
       assert.equal(params.success_url, `${process.env.APP_URL}/checkout/success/regions`);
       assert.equal(params.cancel_url, `${process.env.APP_URL}/categories/sales`);
