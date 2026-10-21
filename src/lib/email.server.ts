@@ -9,6 +9,7 @@ export type EmailMessage = {
   text: string;
   // Reuse for retries of the same logical email; use a new value for a new email.
   idempotencyKey: string;
+  replyTo?: string;
   attachments?: { filename: string; content: string }[];
 };
 
@@ -33,6 +34,9 @@ export async function sendEmail(message: EmailMessage): Promise<{ id: string }> 
     throw new EmailSendError("A valid idempotency key is required.");
   }
 
+  if (message.replyTo !== undefined && (message.replyTo.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(message.replyTo))) {
+    throw new EmailSendError("A valid reply address is required.");
+  }
   let response: Response;
   try {
     response = await fetch("https://api.resend.com/emails", {
@@ -46,6 +50,7 @@ export async function sendEmail(message: EmailMessage): Promise<{ id: string }> 
         from: SUPPORT_EMAIL,
         to: [message.to],
         subject: message.subject,
+        ...(message.replyTo ? { reply_to: message.replyTo } : {}),
         text: message.text,
         ...(message.attachments ? { attachments: message.attachments } : {}),
       }),

@@ -100,6 +100,7 @@ export function Footer() {
             <Link href="/#sales-growth">Sales &amp; Growth</Link>
             <Link href="/#marketing-content">Marketing &amp; Content</Link>
             <Link href="/legal">Legal</Link>
+            <Link href="/support">Contact &amp; Support</Link>
           </div>
         </div>
       </div>
