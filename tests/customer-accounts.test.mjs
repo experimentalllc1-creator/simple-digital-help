@@ -54,6 +54,8 @@ test('Better Auth passwordless links and sessions against isolated PostgreSQL',a
  try{
  const response=await auth.handler(request('/sign-in/magic-link',{email:'auth@example.test',callbackURL:'/account',errorCallbackURL:'/account/login?error=link'}));assert.equal(response.status,200,await response.clone().text());assert.equal(sent.length,1);
  const url=sent[0].text.match(/http:\/\/[^\s]+/)[0];const token=new URL(url).searchParams.get('token');const rows=(await db.query('SELECT * FROM milo_auth_verifications')).rows;assert.ok(rows.length);assert.ok(rows.every(row=>!row.identifier.includes(token)&&!row.value.includes(token)));
+ const remaining=new Date(rows[0].expiresAt).getTime()-Date.now();assert.ok(remaining>86300000&&remaining<=86400000,'new link has 24-hour expiry');
+ await db.query(`UPDATE milo_auth_verifications SET "expiresAt"=now()+interval '1 hour'`);
  const verify=await auth.handler(new Request(url));assert.equal(verify.status,302,await verify.clone().text());const cookies=verify.headers.getSetCookie().map(v=>v.split(';')[0]).join('; ');assert.ok(cookies.includes('sdh_account'));
  const session=await auth.api.getSession({headers:new Headers({cookie:cookies})});assert.ok(session?.user.emailVerified);assert.equal(session.user.email,'auth@example.test');assert.equal(sent.filter(m=>m.subject==='Would you like to hear from us occasionally?').length,1);
  await t.test('reused and forged links cannot establish sessions',async()=>{for(const link of [url,url.replace(token,'forged')]){const r=await auth.handler(new Request(link));assert.ok(r.headers.get('location')?.includes('error='));assert.ok(!r.headers.getSetCookie().some(v=>v.startsWith('sdh_account.session_token=')));}});

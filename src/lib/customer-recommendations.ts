@@ -1,9 +1,9 @@
 import { miloAssignments } from "./milo-assignments";
 import { salesWorkers } from "./sales-order";
 
-export const RECOMMENDATION_VERSION="complementary-markets-v1";
+export const RECOMMENDATION_VERSION="complementary-owned-markets-v2";
 const complements: Record<string,string[]>={
- roofing:["architects","builders","general-contractors"],hvac:["general-contractors","builders","property-managers"],
+ roofing:["architects","general-contractors","building-materials-manufacturers","builders"],hvac:["general-contractors","builders","property-managers"],
  plumbing:["general-contractors","builders","property-managers"],electrical:["architects","builders","general-contractors"],
  "general-contractors":["architects","builders","property-managers"],architects:["builders","general-contractors"],
  builders:["architects","general-contractors"],landscaping:["property-managers","hoas","hotels"],
@@ -16,13 +16,13 @@ export const workerImages:Record<string,string>={roofing:"Cheerful Robot Roofer 
 export function assignmentLabel(agentId:string){return salesWorkers.find(w=>w.id===agentId)?.customerType ?? (agentId==="projects-developments"?"Projects & Developments":agentId);}
 export function recommendAssignments(ownedSlugs:string[],limit=6){
  const owned=new Set(ownedSlugs),sources=miloAssignments.filter(a=>owned.has(a.slug));
+ const markets=new Set(sources.map(a=>a.regionId));
  if(!sources.length)return [];
- return miloAssignments.filter(a=>a.available&&!owned.has(a.slug)).map(a=>{
+ return miloAssignments.filter(a=>a.available&&!owned.has(a.slug)&&(markets.has(a.regionId)||a.regionId==="united-states")).map(a=>{
   let score=0,reason="";
   for(const source of sources){
    const sameMarket=a.regionId===source.regionId||a.regionId==="united-states";
-   if(complements[source.agentId]?.includes(a.agentId)&&sameMarket){const value=100-complements[source.agentId].indexOf(a.agentId);if(value>score){score=value;reason=`Complement your ${assignmentLabel(source.agentId)} discovery in ${source.region}.`;}}
-   if(a.agentId===source.agentId&&a.regionId!==source.regionId&&score<60){score=60;reason=`Extend your ${assignmentLabel(a.agentId)} discovery into ${a.region}.`;}
+   if(complements[source.agentId]?.includes(a.agentId)&&sameMarket){const value=(a.regionId===source.regionId?200:100)-complements[source.agentId].indexOf(a.agentId);if(value>score){score=value;reason=`Complement your ${assignmentLabel(source.agentId)} discovery with ${assignmentLabel(a.agentId)} in ${a.region}.`;}}
   }
   return {...a,score,reason,label:assignmentLabel(a.agentId),image:`/images/agents/${workerImages[a.agentId]??workerImages.roofing}`};
  }).filter(a=>a.score>0).sort((a,b)=>b.score-a.score||a.slug.localeCompare(b.slug)).slice(0,limit);

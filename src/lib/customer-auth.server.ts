@@ -24,8 +24,8 @@ export function createCustomerAuth(database = auditPool(), send = sendEmail) {
   advanced: { cookiePrefix:"sdh_account", useSecureCookies:appOrigin().startsWith("https:") },
   logger:{disabled:true},
   databaseHooks: { session: { create: { after: async session => { await new CustomerAccounts(database).register(session.userId,send).catch(()=>{}); } } } },
-  plugins: [magicLink({ expiresIn: 60*10, storeToken:"hashed", sendMagicLink: async ({email,url,token}) => {
-   await send({to:email,subject:"Your Simple Digital Help sign-in link",text:`Sign in or create your free account:\n${url}\n\nThis private link expires in 10 minutes and can be used once. If you did not request it, ignore this email. Your purchased products are delivered independently of account registration.`,idempotencyKey:`account-login/${createHash("sha256").update(token).digest("hex")}`});
+  plugins: [magicLink({ expiresIn: 60*60*24, storeToken:"hashed", sendMagicLink: async ({email,url,token}) => {
+   await send({to:email,subject:"Your Simple Digital Help sign-in link",text:`Sign in or create your free account:\n${url}\n\nThis private link expires in 24 hours and can be used once. If you did not request it, ignore this email. Your purchased products are delivered independently of account registration.`,idempotencyKey:`account-login/${createHash("sha256").update(token).digest("hex")}`});
   } })],
  });
 }

@@ -61,9 +61,18 @@ export class CustomerAccounts {
   const message = snapshot.deliveries ? snapshot.deliveries[index]?.message : codes.length === 1 ? snapshot : null;
   return message?.attachments?.find(a=>a.filename.toLowerCase().endsWith(`.${kind}`)) ?? null;
  }
- async consent(customerId: string, granted: boolean, source: "account-preferences"|"email-unsubscribe") {
-  await this.db.query(`WITH event AS (INSERT INTO milo_consent_events(id,customer_id,granted,source,wording_version,wording) VALUES($1,$2,$3,$4,$5,$6) RETURNING customer_id,recorded_at)
-   UPDATE milo_customer_profiles p SET marketing_consent=$3,marketing_consent_at=event.recorded_at,updated_at=now() FROM event WHERE p.id=event.customer_id`,[randomUUID(),customerId,granted,source,CONSENT_VERSION,CONSENT_WORDING]);
+ async consent(customerId: string, granted: boolean, source: "account-preferences"|"email-unsubscribe", send?: typeof sendEmail) {
+  const eventId=randomUUID();
+  const result=await this.db.query(`WITH previous AS (SELECT id,email,marketing_consent FROM milo_customer_profiles WHERE id=$2 FOR UPDATE),
+   event AS (INSERT INTO milo_consent_events(id,customer_id,granted,source,wording_version,wording)
+    SELECT $1,id,$3,$4,$5,$6 FROM previous WHERE marketing_consent IS DISTINCT FROM $3 RETURNING customer_id,recorded_at),
+   updated AS (UPDATE milo_customer_profiles p SET marketing_consent=$3,marketing_consent_at=event.recorded_at,updated_at=now() FROM event WHERE p.id=event.customer_id RETURNING p.email)
+   SELECT email FROM updated`,[eventId,customerId,granted,source,CONSENT_VERSION,CONSENT_WORDING]);
+  if(!granted||!send||!result.rows.length)return "saved";
+  try{
+   await send({to:result.rows[0].email as string,subject:"You’re subscribed to Simple Digital Help updates",text:`Thanks for subscribing. You’ll receive occasional Milo improvements, free resources, and customer offers. Manage your preferences: ${appOrigin()}/account/preferences\n\nUnsubscribe at any time: ${appOrigin()}/account/unsubscribe?token=${unsubscribeToken(customerId)}`,idempotencyKey:`account-subscription/${eventId}`});
+   return "confirmed";
+  }catch{return "email-unconfirmed";}
  }
  async register(customerId: string, send = sendEmail) {
   await this.db.query("UPDATE milo_customer_profiles SET registered_at=COALESCE(registered_at,now()) WHERE id=$1 AND email_verified=true",[customerId]);
